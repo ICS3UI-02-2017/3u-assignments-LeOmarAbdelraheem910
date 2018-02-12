@@ -21,7 +21,7 @@ public class RobotExample {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args, double d) {
        
         // create a City for the robot
         City fruitopia = new City();
@@ -62,13 +62,7 @@ public class RobotExample {
         
         speedyboi.examineLights();
         
-        
-        
-        
-        
-        
-    
-    
-    
+        speedyboi.countThingsInBackpack();
+
     }
 }
