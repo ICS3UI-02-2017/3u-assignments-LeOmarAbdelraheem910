@@ -11,6 +11,7 @@ import becker.robots.IPredicate;
 import becker.robots.RobotSE;
 import becker.robots.Thing;
 import becker.robots.Wall;
+import java.awt.Color;
 
 /**
  *
@@ -52,13 +53,19 @@ public class A2Q2 {
         new Wall(fruitopia, 2, 10, Direction.EAST);
         new Wall(fruitopia, 2, 11, Direction.EAST);
         
+        
         //create a thing as a marker for the finish line/the end of the race
         new Thing(fruitopia, 2, 14);
         
         //create a robot named speedyboi that will complete the race. Place speedyboi at (2,0) facing east
         RobotSE speedyboi = new RobotSE(fruitopia, 2, 0, Direction.EAST);
        
+        //set the colour of speedyboi to black
+        speedyboi.setColor(Color.black);
+        
+        //execute this command while speedyboi cannot pick something up
         while(!speedyboi.canPickThing()){
+        //if speedyboi's path is blocked by a hurdle, perform a movement to move around the hurdle
         if(!speedyboi.frontIsClear()){
             speedyboi.turnLeft();
             speedyboi.move();
@@ -67,8 +74,11 @@ public class A2Q2 {
             speedyboi.turnRight();
             speedyboi.move();
             speedyboi.turnLeft();
+        //if speedyboi's path is clear, move one space to the east
         }else if(speedyboi.frontIsClear()){
             speedyboi.move();
+        //once speedyboi reaches the thing that marks the finish line of the hurdle race, it will stop
+            
             
            
                  }
