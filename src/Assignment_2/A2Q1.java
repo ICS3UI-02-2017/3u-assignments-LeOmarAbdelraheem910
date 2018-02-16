@@ -35,21 +35,33 @@ public class A2Q1 {
         new Thing(fruitopia, 1, 9);
         new Thing(fruitopia, 1, 10);
         new Thing(fruitopia, 1, 11);
-        
+       
         //create a robot named speedyboi at coordinates (1,1) facing east
         RobotSE speedyboi = new RobotSE(fruitopia, 1, 1, Direction.EAST);
         
         //set the colour of speedyboi to black
         speedyboi.setColor(Color.black);
         
-        //set up an instruction to cause the speedyboi to move forward while picking up the things until the count of the backpack has reached exactly 7
-        while(speedyboi.countThingsInBackpack()<= 6){
+        //execute this command while speedyboi has 5 or less things in its backpack
+        while(speedyboi.countThingsInBackpack()<= 5){
+            //move speedyboi one space to the east and then pick up a thing from the row
             speedyboi.move();
-            speedyboi.pickThing();
+            speedyboi.pickThing(); 
             
-            while(speedyboi.countThingsInBackpack()== 7){
+            //execute this command while speedyboi has 6 things in its backpack
+            while(speedyboi.countThingsInBackpack()== 6){
+                //if speedyboi cannot pick up a thing, make speedyboi move one space to the east, pick a thing up from the row after repositioning itself, and move another space to the east
+                if(!speedyboi.canPickThing()){
+                    speedyboi.move();
+                    speedyboi.pickThing();
+                    speedyboi.move();
+            //execute this command while speedyboi has 7 things or more in its backpack          
+            while(speedyboi.countThingsInBackpack()>= 7){
+                //if speedyboi can pick up a thing, make it move forward towards the east until
                 if(speedyboi.canPickThing()){
                     speedyboi.move();  
+                
+            
                 
         }
         
@@ -63,5 +75,7 @@ public class A2Q1 {
         
     }
    
+    }
+}
     }
 }
