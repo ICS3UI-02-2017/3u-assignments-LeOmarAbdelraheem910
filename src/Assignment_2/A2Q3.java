@@ -23,36 +23,56 @@ public class A2Q3 {
         //create a city for the this monstrosity of question to exist
         City fruitopia = new City();
         
-        //create a robot named speedyboi at the coordinates(3,4)
-         RobotSE speedyboi = new RobotSE(fruitopia, 2, 1, Direction.NORTH);
+        //create a robot named speedyboi at the coordinates(?,?)
+         RobotSE speedyboi = new RobotSE(fruitopia, -10, 6, Direction.WEST);
          
         //set the colour of speedyboi to black
         speedyboi.setColor(Color.black);
         
         //while the front of the speedyboi's path is clear, execute this command
-        while(speedyboi.getStreet()!=0){
-            if(speedyboi.isFacingNorth()){
-                speedyboi.move();
-        }else if(speedyboi.isFacingSouth()){
-            speedyboi.turnAround();
+        while(speedyboi.getStreet()>0){
+            if(!speedyboi.isFacingNorth()){
+                speedyboi.turnRight();
+        }else if(speedyboi.isFacingNorth()){
             speedyboi.move();
         }
-        
-        while(speedyboi.getAvenue()!=0){
-           
-            if(speedyboi.isFacingEast()){
-                speedyboi.turnAround();
-            
-            }else if(speedyboi.isFacingWest()){
-                speedyboi.move();
-                
-        while(speedyboi.getStreet() == 0){
+        if(speedyboi.getStreet() == 0){
             speedyboi.turnRight();
             }
-            
+        }
+        
+        while(speedyboi.getStreet()<0){
+            if(!speedyboi.isFacingSouth()){
+                speedyboi.turnRight();
+        }else if(speedyboi.isFacingSouth()){
+            speedyboi.move();
+        }
+        if(speedyboi.getStreet() == 0){
+            speedyboi.turnRight();
+            }
+        }
+        
+        while(speedyboi.getAvenue()>0){
+            if(!speedyboi.isFacingWest()){
+                speedyboi.turnRight();
+        }else if(speedyboi.isFacingWest()){
+            speedyboi.move();
+        }        
+
+        }
+        while(speedyboi.getAvenue()<0){
+            if(!speedyboi.isFacingEast()){
+                speedyboi.turnRight();
+        }else if(speedyboi.isFacingEast()){
+            speedyboi.move();
+        }
+            }
+        }
         
         }
-    }
-        }
-}
-}
+    
+
+        
+
+
+
