@@ -22,7 +22,7 @@ public class A2Q4 {
     public static void main(String[] args) {
         // create a city for King Java's castle to exist
         City fruitopia = new City();
-        
+
         //create the walls for Java's Castle
         //create the walls for the northwest tower using a 1x1 space
         new Wall(fruitopia, 1, 1, Direction.NORTH);
@@ -53,15 +53,15 @@ public class A2Q4 {
         new Wall(fruitopia, 3, 2, Direction.WEST);
         new Wall(fruitopia, 3, 3, Direction.SOUTH);
         new Wall(fruitopia, 3, 3, Direction.EAST);
-        
+
         //create the castle guard named speedyboi at coordinates (2,0)
         RobotSE speedyboi = new RobotSE(fruitopia, 2, 0, Direction.NORTH);
-        
+
         //set the colour of speedyboi to pink
         speedyboi.setColor(Color.pink);
-        
+
         //set up a condition that while the front is clear, manuever around the castle in a loop
-        while(speedyboi.frontIsClear()){
+        while (speedyboi.frontIsClear()) {
             speedyboi.move(2);
             speedyboi.turnRight();
             speedyboi.move(2);
@@ -72,9 +72,9 @@ public class A2Q4 {
             speedyboi.turnLeft();
             speedyboi.move();
             speedyboi.turnRight();
-            
-            
+
+
         }
-        
+
     }
 }

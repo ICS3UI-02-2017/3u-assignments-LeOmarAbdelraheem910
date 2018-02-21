@@ -20,7 +20,7 @@ public class A2ChallengeQuestion {
     public static void main(String[] args) {
         // create the snowy winter city in which two star crossed lovers help each other in shoveling people's driveways
         City snowyfruitopia = new City();
-        
+
         //create the walls that will set the boundaries for the road
         //create the left boundary for the road
         new Wall(snowyfruitopia, 0, 0, Direction.WEST);
@@ -83,8 +83,7 @@ public class A2ChallengeQuestion {
         new Wall(snowyfruitopia, 9, 3, Direction.SOUTH);
         new Wall(snowyfruitopia, 9, 3, Direction.SOUTH);
         new Wall(snowyfruitopia, 9, 3, Direction.SOUTH);
-       
-        
+
+
     }
-    
 }

@@ -20,7 +20,7 @@ public class A2Q1p2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
         //create a city for which the first question will be answered
         City fruitopia = new City();
 
@@ -41,14 +41,14 @@ public class A2Q1p2 {
 
         //set the colour of speedyboi to black
         speedyboi.setColor(Color.black);
-        
+
         //cause speedyboi to move one space to the east
         speedyboi.move();
-        
+
         //execute this loop while speedyboi is able to pick up a thing from the row
-        while(speedyboi.canPickThing()){
+        while (speedyboi.canPickThing()) {
             //if the count in sppedyboi's backpack is less than or equal to 6, pick up a thing from the row
-            if(speedyboi.countThingsInBackpack() <= 6){
+            if (speedyboi.countThingsInBackpack() <= 6) {
                 speedyboi.pickThing();
             }
             //let speedyboi continue to move, so long as there are still things it can pick up
