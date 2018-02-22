@@ -158,16 +158,20 @@ public class A2ChallengeQuestion {
                 speedyboi.putAllThings();
             }
             if (!speedyboi.isBesideThing(IPredicate.aWall)) {
-               if(speedyboi.isFacingSouth()){
-                   speedyboi.turnLeft();
-               } 
+                   if(speedyboi.getAvenue()==2){
+                       speedyboi.turnLeft();
+                   }else if(speedyboi.getAvenue()!=2){
+                       speedyboi.move();
+                   }
             }
             if (speedyboi.canPickThing()) {
                 speedyboi.pickThing();
             }
             if (!speedyboi.frontIsClear()) {
-                speedyboi.turnAround();
-            }
+                if(!speedyboi.isFacingSouth()){
+                    speedyboi.turnAround();
+                }
+        }
         }
 
         speedygurl.turnRight(4);
