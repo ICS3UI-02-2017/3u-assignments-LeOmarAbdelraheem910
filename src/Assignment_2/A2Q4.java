@@ -20,6 +20,7 @@ public class A2Q4 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         // create a city for King Java's castle to exist
         City fruitopia = new City();
 
@@ -54,7 +55,7 @@ public class A2Q4 {
         new Wall(fruitopia, 3, 3, Direction.SOUTH);
         new Wall(fruitopia, 3, 3, Direction.EAST);
 
-        //create the castle guard named speedyboi at coordinates (2,0)
+        //create the castle guard named speedyboi
         RobotSE speedyboi = new RobotSE(fruitopia, 2, 0, Direction.NORTH);
 
         //set the colour of speedyboi to pink
@@ -72,9 +73,6 @@ public class A2Q4 {
             speedyboi.turnLeft();
             speedyboi.move();
             speedyboi.turnRight();
-
-
         }
-
     }
 }
