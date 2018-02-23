@@ -174,8 +174,6 @@ public class A2ChallengeQuestion {
         }
         }
 
-        speedygurl.turnRight(4);
-
         while (speedygurl.frontIsClear()) {
             speedygurl.move();
             if (speedygurl.canPickThing()) {
