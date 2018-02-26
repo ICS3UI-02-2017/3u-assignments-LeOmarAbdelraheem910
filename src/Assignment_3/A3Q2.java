@@ -42,21 +42,18 @@ public class A3Q2 {
         //create the robot, speedyboi, on the pile of ten things
         RobotSE speedyboi = new RobotSE(fruitopia, 0, 0, Direction.EAST);
 
-            int movingThingsOver = 10;
-            //move the pile of ten Things, one Thing at a time, over to the next intersection 
-            while (movingThingsOver > 0) {
-                speedyboi.pickThing();
-                speedyboi.move();
-                speedyboi.turnAround();
-                speedyboi.putThing();
-                speedyboi.move();
-                speedyboi.turnAround();
-                movingThingsOver = movingThingsOver - 1;
-            }
-            //reposition back overtop of the pile of things
-                speedyboi.move();
+        int movingThingsOver = 10;
+        //move the pile of ten Things, one Thing at a time, over to the next intersection 
+        while (movingThingsOver > 0) {
+            speedyboi.pickThing();
+            speedyboi.move();
+            speedyboi.turnAround();
+            speedyboi.putThing();
+            speedyboi.move();
+            speedyboi.turnAround();
+            movingThingsOver = movingThingsOver - 1;
         }
-
+        //reposition back overtop of the pile of things
+        speedyboi.move();
     }
-
-
+}

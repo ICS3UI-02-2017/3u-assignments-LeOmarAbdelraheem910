@@ -27,7 +27,7 @@ public class A3Q3 {
         RobotSE speedyboi = new RobotSE(fruitopia, 1, 1, Direction.EAST, 20);
 
         //Repeat the seed planting process for each of the four rows
-        for (int beAFarmer = 0; beAFarmer < 4; beAFarmer++) {
+        for (int plantTheRows = 0; plantTheRows < 4; plantTheRows++) {
             //it will plant the seeds in a row
             for (int plantSeeds = 5; plantSeeds > 0; plantSeeds--) {
                 speedyboi.putThing();
@@ -44,10 +44,5 @@ public class A3Q3 {
             speedyboi.move();
             speedyboi.turnLeft();
         }
-        }
- {
-            
-
     }
-
 }
