@@ -21,7 +21,7 @@ public class A3Q1 {
     public static void main(String[] args) {
         //create a city
         City fruitopia = new City();
-        
+
         //create a 2x2 space of walls]
         new Wall(fruitopia, 1, 1, Direction.NORTH);
         new Wall(fruitopia, 1, 2, Direction.NORTH);
@@ -31,25 +31,24 @@ public class A3Q1 {
         new Wall(fruitopia, 2, 1, Direction.SOUTH);
         new Wall(fruitopia, 2, 1, Direction.WEST);
         new Wall(fruitopia, 1, 1, Direction.WEST);
-        
+
         //create a robot named speedyboi
         RobotSE speedyboi = new RobotSE(fruitopia, 0, 2, Direction.WEST);
-        
+
+        //make speedyboi round the 2x2 square twice, returning to the starting position after the completeion of the second lap
         int numberOfLaps = 2;
-                while(numberOfLaps > 0){
-                    speedyboi.move(2);
-                    speedyboi.turnLeft();
-                    speedyboi.move(3);
-                    speedyboi.turnLeft();
-                    speedyboi.move(3);
-                    speedyboi.turnLeft();
-                    speedyboi.move(3);
-                    speedyboi.turnLeft();
-                    speedyboi.move();
-                 numberOfLaps = numberOfLaps - 1;
-                }
-                
-                
-        
+        while (numberOfLaps > 0) {
+            speedyboi.move(2);
+            speedyboi.turnLeft();
+            speedyboi.move(3);
+            speedyboi.turnLeft();
+            speedyboi.move(3);
+            speedyboi.turnLeft();
+            speedyboi.move(3);
+            speedyboi.turnLeft();
+            speedyboi.move();
+            numberOfLaps = numberOfLaps - 1;
+        }
+
     }
 }

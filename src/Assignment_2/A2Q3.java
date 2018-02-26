@@ -20,16 +20,16 @@ public class A2Q3 {
      */
     public static void main(String[] args) {
 
-        //create a city for the this monstrosity of question to exist
+        //create a city for the this great question to exist
         City fruitopia = new City();
 
-        //create a robot named speedyboi at the coordinates(3,4)
+        //create a robot named speedyboi
         RobotSE speedyboi = new RobotSE(fruitopia, 2, 1, Direction.NORTH);
 
         //set the colour of speedyboi to black
         speedyboi.setColor(Color.black);
 
-        //If ever in a positive integer street coordinate, to reach street 0, face north!
+        //If speedyboi is ever in a positive integer street, face north!
         while (speedyboi.getStreet() > 0) {
             if (!speedyboi.isFacingNorth()) {
                 speedyboi.turnRight();
@@ -40,7 +40,8 @@ public class A2Q3 {
                 speedyboi.turnRight();
             }
         }
-        //If ever in a negative integer street coordinate, to reach street 0, face south!
+
+        //If speedyboi is ever in a negative integer street, face south!
         while (speedyboi.getStreet() < 0) {
             if (!speedyboi.isFacingSouth()) {
                 speedyboi.turnRight();
@@ -51,7 +52,8 @@ public class A2Q3 {
                 speedyboi.turnRight();
             }
         }
-        //If ever in a positive integer avenue coordinate, to reach avenue 0, face west!
+
+        //If speedyboi is ever in a positive integer avenue, face west!
         while (speedyboi.getAvenue() > 0) {
             if (!speedyboi.isFacingWest()) {
                 speedyboi.turnRight();
@@ -59,7 +61,8 @@ public class A2Q3 {
                 speedyboi.move();
             }
         }
-        //If ever in a negative integer avenue coordinate, to reach avenue 0, face east!
+
+        //If speedyboi is ever in a negative integer avenue, face east!
         while (speedyboi.getAvenue() < 0) {
             if (!speedyboi.isFacingEast()) {
                 speedyboi.turnRight();
@@ -68,4 +71,5 @@ public class A2Q3 {
             }
         }
     }
+
 }

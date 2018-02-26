@@ -42,40 +42,16 @@ public class A2Q1 {
         //set the colour of speedyboi to black
         speedyboi.setColor(Color.black);
 
-        //execute this command while speedyboi has 5 or less things in its backpack
-        while (speedyboi.countThingsInBackpack() <= 5) {
-            //move speedyboi one space to the east and then pick up a thing from the row
-            speedyboi.move();
-            speedyboi.pickThing();
+        //cause speedyboi to move one space to the east
+        speedyboi.move();
 
-            //execute this command while speedyboi has 6 things in its backpack
-            while (speedyboi.countThingsInBackpack() == 6) {
-                //if speedyboi cannot pick up a thing, make speedyboi move one space to the east, pick a thing up from the row after repositioning itself, and move another space to the east
-                if (!speedyboi.canPickThing()) {
-                    speedyboi.move();
-                    speedyboi.pickThing();
-                    speedyboi.move();
-                    //execute this command while speedyboi has 7 things or more in its backpack          
-                    while (speedyboi.countThingsInBackpack() >= 7) {
-                        //if speedyboi can pick up a thing, make it move forward towards the east until
-                        if (speedyboi.canPickThing()) {
-                            speedyboi.move();
-
-
-
-                        }
-
-
-                    }
-
-
-
-
-
-
-                }
-
+        //execute this loop while speedyboi is able to pick up a thing from the row
+        while (speedyboi.canPickThing()) {
+            if (speedyboi.countThingsInBackpack() <= 6) {
+                speedyboi.pickThing();
             }
+            //let speedyboi continue to move, so long as there are still things it can pick up
+            speedyboi.move();
         }
     }
 }

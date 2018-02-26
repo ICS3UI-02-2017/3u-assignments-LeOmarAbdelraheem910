@@ -27,7 +27,7 @@ public class A2Q2 {
         //create a city for the hurdle race to exist
         City fruitopia = new City();
 
-        //create the the hurdle race for which the robot will speed through using wall structures:
+        //create the the hurdle race for which the robot will speed through
         //create the base of the racing track
         new Wall(fruitopia, 2, 0, Direction.SOUTH);
         new Wall(fruitopia, 2, 1, Direction.SOUTH);
@@ -53,19 +53,18 @@ public class A2Q2 {
         new Wall(fruitopia, 2, 10, Direction.EAST);
         new Wall(fruitopia, 2, 11, Direction.EAST);
 
-
         //create a thing as a marker for the finish line/the end of the race
         new Thing(fruitopia, 2, 14);
 
-        //create a robot named speedyboi that will complete the race. Place speedyboi at (2,0) facing east
+        //create a robot named speedyboi that will complete the race.
         RobotSE speedyboi = new RobotSE(fruitopia, 2, 0, Direction.EAST);
 
         //set the colour of speedyboi to black
         speedyboi.setColor(Color.black);
 
-        //execute this command while speedyboi cannot pick something up
+        //as long as speedyboi has not reached the finish line, execute the command
         while (!speedyboi.canPickThing()) {
-            //if speedyboi's path is blocked by a hurdle, perform a movement to move around the hurdle
+            //if speedyboi's path is blocked by a hurdle, perform a maneuver around the hurdle
             if (!speedyboi.frontIsClear()) {
                 speedyboi.turnLeft();
                 speedyboi.move();
@@ -74,19 +73,9 @@ public class A2Q2 {
                 speedyboi.turnRight();
                 speedyboi.move();
                 speedyboi.turnLeft();
-                //if speedyboi's path is clear, move one space to the east
             } else if (speedyboi.frontIsClear()) {
                 speedyboi.move();
-                //once speedyboi reaches the thing that marks the finish line of the hurdle race, it will stop
-
-
-
             }
-
-
         }
-
-
-
     }
 }

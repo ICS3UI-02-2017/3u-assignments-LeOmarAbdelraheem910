@@ -140,40 +140,46 @@ public class A2ChallengeQuestion {
         new Thing(snowyfruitopia, 9, 4);
         new Thing(snowyfruitopia, 9, 6);
 
-        //create the first shoveling bot, speedyboi, who will shovel the snow from the driveways to the sidewalk at coordinates (0,2)
+        //create the first shoveling bot, speedyboi, who will shovel the snow from the driveways to the sidewalk
         RobotSE speedyboi = new RobotSE(snowyfruitopia, 0, 2, Direction.SOUTH);
 
         //set the colour of speedyboi to black
         speedyboi.setColor(Color.black);
 
-        //create the second shoveling bot, speedygurl, who will shovel the snow to the end of the sidewalk at coordinates (0,2)
+        //create the second shoveling bot, speedygurl, who will shovel the snow to the end of the sidewalk
         RobotSE speedygurl = new RobotSE(snowyfruitopia, 0, 2, Direction.SOUTH);
 
         //set the colour of speedygurl to white
         speedygurl.setColor(Color.white);
 
+        //whenever the front is clear, execute the command below
         while (speedyboi.frontIsClear()) {
             speedyboi.move();
+            //move snow from the driveways onto the sidewalk
             if (speedyboi.getAvenue() == 2) {
                 speedyboi.putAllThings();
             }
+            //detect a sidewalk and enter it
             if (!speedyboi.isBesideThing(IPredicate.aWall)) {
-                   if(speedyboi.getAvenue()==2){
-                       speedyboi.turnLeft();
-                   }else if(speedyboi.getAvenue()!=2){
-                       speedyboi.move();
-                   }
+                if (speedyboi.getAvenue() == 2) {
+                    speedyboi.turnLeft();
+                } else if (speedyboi.getAvenue() != 2) {
+                    speedyboi.move();
+                }
             }
+            //pick up the snow off the driveway!
             if (speedyboi.canPickThing()) {
                 speedyboi.pickThing();
             }
+            //Prevent speedyboi from turning around at the end of the sidewalk and avoid crashing into walls
             if (!speedyboi.frontIsClear()) {
-                if(!speedyboi.isFacingSouth()){
+                if (!speedyboi.isFacingSouth()) {
                     speedyboi.turnAround();
                 }
-        }
+            }
         }
 
+        //when the front is clear, let speedygurl travel to the end of the sidewalk, pushing all the sidewalk to the end with it
         while (speedygurl.frontIsClear()) {
             speedygurl.move();
             if (speedygurl.canPickThing()) {
