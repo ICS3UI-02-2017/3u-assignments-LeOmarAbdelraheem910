@@ -42,8 +42,6 @@ public class A3Q2 {
         //create the robot, speedyboi, on the pile of ten things
         RobotSE speedyboi = new RobotSE(fruitopia, 0, 0, Direction.EAST);
 
-        //When speedyboi's path is clear...
-        while (speedyboi.frontIsClear()) {
             int movingThingsOver = 10;
             //move the pile of ten Things, one Thing at a time, over to the next intersection 
             while (movingThingsOver > 0) {
@@ -56,11 +54,9 @@ public class A3Q2 {
                 movingThingsOver = movingThingsOver - 1;
             }
             //reposition back overtop of the pile of things
-            if (!speedyboi.canPickThing()) {
                 speedyboi.move();
-            }
         }
 
     }
 
-}
+
