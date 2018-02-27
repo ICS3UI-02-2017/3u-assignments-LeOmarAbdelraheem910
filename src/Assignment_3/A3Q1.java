@@ -36,18 +36,18 @@ public class A3Q1 {
         RobotSE speedyboi = new RobotSE(fruitopia, 0, 2, Direction.WEST);
 
         //make speedyboi round the 2x2 square twice, returning to the starting position after the completeion of the second lap
-        int numberOfLaps = 2;
-        while (numberOfLaps > 0) {
-            speedyboi.move(2);
-            speedyboi.turnLeft();
-            speedyboi.move(3);
-            speedyboi.turnLeft();
-            speedyboi.move(3);
-            speedyboi.turnLeft();
-            speedyboi.move(3);
+        int completeALap = 1;
+        speedyboi.move(2);
+        while (completeALap > 0) {
+            int completeATurn = 7;
+            while (completeATurn > 0) {
+                speedyboi.turnLeft();
+                speedyboi.move(3);
+                completeATurn = completeATurn - 1;
+            }
             speedyboi.turnLeft();
             speedyboi.move();
-            numberOfLaps = numberOfLaps - 1;
+            completeALap = completeALap - 1;
         }
 
     }

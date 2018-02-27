@@ -71,22 +71,13 @@ public class A3Q4 {
         //complete a counterclockwise movement 4 times in order to go around each block until the starting position is reached
         //the code is set up in such a way that speedyboi will be able to cross over to the next block flawlessly
         //first segement of the movement
-        for (int counterclockwiseManeuverPartOne = 4; counterclockwiseManeuverPartOne > 0; counterclockwiseManeuverPartOne--) {
+        for (int counterclockwiseMovement = 4; counterclockwiseMovement > 0; counterclockwiseMovement--) {
             speedyboi.move(3);
-            speedyboi.turnLeft();
             //second segment of the movement
-            for (int counterclockwiseManeuverPartTwo = 1; counterclockwiseManeuverPartTwo > 0; counterclockwiseManeuverPartTwo--) {
-                speedyboi.move(3);
+            for (int circleTheBlocks = 3; circleTheBlocks > 0; circleTheBlocks--) {
                 speedyboi.turnLeft();
-                //final segment of the movement
-                for (int counterclockwiseManeuverPartThree = 1; counterclockwiseManeuverPartThree > 0; counterclockwiseManeuverPartThree--) {
-                    speedyboi.move(3);
-                    speedyboi.turnLeft();
-                    speedyboi.move(3);
-                }
+                speedyboi.move(3);
             }
         }
-
     }
-
 }
