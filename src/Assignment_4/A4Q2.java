@@ -21,6 +21,17 @@ public class A4Q2 {
         
         //Prompt the user to enter in a measurement in inches to convert
         System.out.println("Are you too lazy to do the math? Do you not want to memorize conversions?");
+        System.out.println("Well, enter in a measurement in inches and we'll convert to centimetres: ");
+        
+        double measurementInInches = input.nextDouble();
         System.out.println("");
+        double measurementInCentimetres = measurementInInches * 2.54;
+        //measurementInCentimetres = Math.round(measurementInCentimetres);
+        
+        System.out.println("Hey! Here's your conversion to centimetres! Enjoy cheating your way through life! ");
+        System.out.printf("%.2f inches is equivalent to %.2f cm!\n", measurementInInches, measurementInCentimetres);
+        
+        
+        
     }
 }
