@@ -24,26 +24,27 @@ public class A4Q4 {
         System.out.println("");
         
         System.out.print("How much does the food cost? : ");
-        int costOfFood = input.nextInt();
+        double costOfFood = input.nextDouble();
         
         System.out.print("How much does the DJ cost? : ");
-        int costOfDJ = input.nextInt();
+        double costOfDJ = input.nextDouble();
         
         System.out.print("How much does it cost to rent the hall? : ");
-        int costToRentHall = input.nextInt();
+        double costToRentHall = input.nextDouble();
         
         System.out.print("How much do the decorations cost? : ");
-        int costOfDecorations = input.nextInt();
+        double costOfDecorations = input.nextDouble();
         
         System.out.print("How much does it cost for staff? : ");
-        int costOfStaff= input.nextInt();
+        double costOfStaff= input.nextDouble();
         
         System.out.print("How much for miscellaneous costs? : ");
-        int miscellaneousExpenses = input.nextInt();
+        double miscellaneousExpenses = input.nextDouble();
         
-        int totalCost = costOfFood + costOfDJ + costToRentHall + costOfDecorations + costOfStaff + miscellaneousExpenses;
-        int amountOfTickets = totalCost / 35;
+        System.out.println("");
         
+        double totalCost = costOfFood + costOfDJ + costToRentHall + costOfDecorations + costOfStaff + miscellaneousExpenses;
+        double amountOfTickets = Math.ceil(totalCost / 35);
         System.out.println("The total cost of your prom experience will be $" + totalCost + "." + "\nYou will need to sell " + amountOfTickets + " tickets in order to break even!");
         System.out.println("");
         

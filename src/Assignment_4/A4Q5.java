@@ -25,6 +25,8 @@ public class A4Q5 {
         String name = input.nextLine();
         
         System.out.println("");
+        System.out.println("Answer the questions about your tests in math class below:");
+        System.out.println("");
         
         System.out.print("What was the first test out of? HUH? : ");
         double firstTestTotalMarks = input.nextInt();
@@ -34,30 +36,30 @@ public class A4Q5 {
         System.out.println("");
         
         System.out.print("What was the second test out of? HUH? : ");
-        double secondTestTotalMarks = input.nextInt();
+        double secondTestTotalMarks = input.nextDouble();
         System.out.print("How many marks out of " + secondTestTotalMarks + " did you obtain??? : ");
-        double secondTestMarksAcheived = input.nextInt();
+        double secondTestMarksAcheived = input.nextDouble();
         
         System.out.println("");
         
         System.out.print("What was the third test out of? HUH? : ");
-        double thirdTestTotalMarks = input.nextInt();
+        double thirdTestTotalMarks = input.nextDouble();
         System.out.print("How many marks out of " + thirdTestTotalMarks + " did you obtain??? : ");
-        double thirdTestMarksAcheived = input.nextInt();
+        double thirdTestMarksAcheived = input.nextDouble();
         
         System.out.println("");
         
         System.out.print("What was the fourth test out of? HUH? : ");
-        double fourthTestTotalMarks = input.nextInt();
+        double fourthTestTotalMarks = input.nextDouble();
         System.out.print("How many marks out of " + fourthTestTotalMarks + " did you obtain??? : ");
-        double fourthTestMarksAcheived = input.nextInt();
+        double fourthTestMarksAcheived = input.nextDouble();
         
         System.out.println("");
         
         System.out.print("What was the fifth test out of? HUH? : ");
-        double fifthTestTotalMarks = input.nextInt();
+        double fifthTestTotalMarks = input.nextDouble();
         System.out.print("How many marks out of " + fifthTestTotalMarks + " did you obtain??? : ");
-        double fifthTestMarksAcheived = input.nextInt();
+        double fifthTestMarksAcheived = input.nextDouble();
         
         System.out.println("");
         
