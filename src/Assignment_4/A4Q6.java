@@ -26,6 +26,6 @@ public class A4Q6 {
         int speedLimit = input.nextInt();
         System.out.print("Enter the recorded speed of your vehicle! : ");
         int recordedSpeed = input.nextInt();
-        if (input.speedLimit < recordedSpeed <= 20);
+        
         }
 }
