@@ -23,11 +23,13 @@ public class A4Q2 {
         System.out.println("Are you too lazy to do the math? Do you not want to memorize conversions?");
         System.out.println("Well, enter in a measurement in inches and we'll convert to centimetres: ");
         
+        //Let the user enter a measurement in inches
         double measurementInInches = input.nextDouble();
         System.out.println("");
+        //Convert between inches and centrimetre
         double measurementInCentimetres = measurementInInches * 2.54;
-        //measurementInCentimetres = Math.round(measurementInCentimetres);
         
+        //State the conversion to the user and leave a nice comment for them :)
         System.out.println("Hey! Here's your conversion to centimetres! Enjoy cheating your way through life! ");
         System.out.printf("%.2f inches is equivalent to %.2f cm!\n", measurementInInches, measurementInCentimetres);
         
