@@ -68,7 +68,7 @@ public class InputOutput {
             birthYear = input.nextInt();
             age = 2018 - birthYear;
         }
-        System.out.println("You are " + age + " year old!");
+        System.out.println("You are " + age + " years old!");
         
         if(age < 0){
             System.out.println("I don't think so...");
