@@ -29,26 +29,24 @@ public class A4Q7 {
         System.out.println("You have now started a game of Snakes and Ladders! " + name1 + " rolls first!");
         System.out.print("Enter the sum of the dice: ");
         int sumOfDice = input.nextInt();
-        int startingSpace = 1;
-        int moveGamePiece = startingSpace + sumOfDice;
+        int currentSpace = 1;
+        while(currentSpace !=100){
         if (sumOfDice == 0){
             System.out.println("You Forfeit!");
         }
         while (sumOfDice > 1 && sumOfDice <13){
-            System.out.println("You are now on square " + moveGamePiece);
+            System.out.println("You are now on square " + currentSpace);
             System.out.print("Enter the sum of the dice: ");
             sumOfDice = input.nextInt();
-            int continueMovingGamePiece = moveGamePiece + sumOfDice;
+            currentSpace = currentSpace + sumOfDice;
         }
         while (sumOfDice == 1 || sumOfDice > 12){
             System.out.println("Please enter a sum between 2 and 12...");
             System.out.print("Enter the sum of the dice: ");
             sumOfDice = input.nextInt();
-            int continueMovingGamePiece = moveGamePiece + sumOfDice;
-            
-
+            currentSpace = currentSpace + sumOfDice;
         }
-        input.nextLine();
+        }
         
     }   
     
