@@ -27,28 +27,34 @@ public class A4Q7 {
         String name2 = input.nextLine();
         System.out.println("");
         System.out.println("You have now started a game of Snakes and Ladders! " + name1 + " rolls first!");
+        
+        int currentSpace = 1;
+        while(currentSpace < 100 || currentSpace == 100){
+        
+        if(currentSpace > 100){
+            System.out.println("You Rick-Rolled too high! Please roll again on your turn:");
+        }
+        if(currentSpace == 100){
+            System.out.println("YOU WIN!!!!");
+        }
         System.out.print("Enter the sum of the dice: ");
         int sumOfDice = input.nextInt();
-        int startingSpace = 1;
-        int moveGamePiece = startingSpace + sumOfDice;
+       
         if (sumOfDice == 0){
             System.out.println("You Forfeit!");
         }
-        while (sumOfDice > 1 && sumOfDice <13){
-            System.out.println("You are now on square " + moveGamePiece);
-            System.out.print("Enter the sum of the dice: ");
-            sumOfDice = input.nextInt();
-            int continueMovingGamePiece = moveGamePiece + sumOfDice;
+        
+        
+        if (sumOfDice > 1 && sumOfDice <13){
+            currentSpace = currentSpace + sumOfDice;
+            System.out.println("You are now on square " + currentSpace);
         }
-        while (sumOfDice == 1 || sumOfDice > 12){
+        if (sumOfDice == 1 || sumOfDice > 12){
             System.out.println("Please enter a sum between 2 and 12...");
-            System.out.print("Enter the sum of the dice: ");
-            sumOfDice = input.nextInt();
-            int continueMovingGamePiece = moveGamePiece + sumOfDice;
             
-
         }
-        input.nextLine();
+        
+        }
         
     }   
     
