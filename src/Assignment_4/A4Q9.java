@@ -164,19 +164,19 @@ public class A4Q9 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       
+
         String firstNumberString = firstNumberTextField.getText();
- 
+
         double firstNumber = Double.parseDouble(firstNumberString);
-        
+
         String secondNumberString = secondNumberTextField.getText();
- 
+
         double secondNumber = Double.parseDouble(secondNumberString);
-        
+
         double result = firstNumber - secondNumber;
-        
+
         String resultText = Double.toString(result);
-        
+
         resultTextField.setText(resultText);
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -185,53 +185,53 @@ public class A4Q9 extends javax.swing.JFrame {
     }//GEN-LAST:event_resultTextFieldActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+
         String firstNumberString = firstNumberTextField.getText();
- 
+
         double firstNumber = Double.parseDouble(firstNumberString);
-        
+
         String secondNumberString = secondNumberTextField.getText();
- 
+
         double secondNumber = Double.parseDouble(secondNumberString);
-        
+
         double result = firstNumber + secondNumber;
-        
+
         String resultText = Double.toString(result);
-        
+
         resultTextField.setText(resultText);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        
+
         String firstNumberString = firstNumberTextField.getText();
- 
+
         double firstNumber = Double.parseDouble(firstNumberString);
-        
+
         String secondNumberString = secondNumberTextField.getText();
- 
+
         double secondNumber = Double.parseDouble(secondNumberString);
-        
+
         double result = firstNumber * secondNumber;
-        
+
         String resultText = Double.toString(result);
-        
+
         resultTextField.setText(resultText);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
         String firstNumberString = firstNumberTextField.getText();
- 
+
         double firstNumber = Double.parseDouble(firstNumberString);
-        
+
         String secondNumberString = secondNumberTextField.getText();
- 
+
         double secondNumber = Double.parseDouble(secondNumberString);
-        
+
         double result = firstNumber / secondNumber;
-        
+
         String resultText = Double.toString(result);
-        
+
         resultTextField.setText(resultText);
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -273,7 +273,6 @@ public class A4Q9 extends javax.swing.JFrame {
             }
         });
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField firstNumberTextField;
     private javax.swing.JButton jButton1;
