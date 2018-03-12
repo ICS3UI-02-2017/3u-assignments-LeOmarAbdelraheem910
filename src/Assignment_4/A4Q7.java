@@ -19,19 +19,28 @@ public class A4Q7 {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
+        
+        
         System.out.println("Welcome to Snakes and Ladders!");
         System.out.println("We didn't have a true board for you and your friend to play on but you know what that's okay because we have a coding edition! :)");
+        
+        //Have Players 1 and 2 enter their names
         System.out.print("Please Enter Player 1's Name : ");
         String name1 = input.nextLine();
+        
         System.out.print("Please Enter Player 2's Name : ");
         String name2 = input.nextLine();
+        
         System.out.println("");
 
+        //Initialize  
         System.out.print("Test values for " + name1 + ". Please enter in an integer that is not zero Entering a zero will terminate the game: ");
         int sumOfDice = input.nextInt();
+        
         System.out.print("Test values for " + name2 + ". Please enter in an integer that is not zero. Entering a zero will terminate the game: ");
         int sumOfDice2 = input.nextInt();
         System.out.println("");
+       
         System.out.println("You have now started a game of Snakes and Ladders! " + name1 + " rolls first!");
         System.out.println("");
 
@@ -49,6 +58,7 @@ public class A4Q7 {
                         System.out.println(name1 + " you are now on square " + currentSpace);
                         System.out.println("");
                     } else if (sumOfDice == 1 || sumOfDice > 12) {
+                        
                         while (!(sumOfDice > 1 && sumOfDice < 13)) {
                             System.out.println(name1 + " please enter a sum between 2 and 12...");
                             System.out.println("");
@@ -112,7 +122,9 @@ public class A4Q7 {
                 }
             }
             for (int name2Turn = 0; name2Turn < 1; name2Turn++) {
+               
                 if (!(sumOfDice == 0)) {
+                    
                     if (!(currentSpace == 100)) {
                         System.out.print(name2 + " enter the sum of the dice: ");
                         sumOfDice2 = input.nextInt();
@@ -122,6 +134,7 @@ public class A4Q7 {
                             System.out.println(name2 + " you are now on square " + currentSpace2);
                             System.out.println("");
                         } else if (sumOfDice2 == 1 || sumOfDice2 > 12) {
+                            
                             while (!(sumOfDice2 > 1 && sumOfDice2 < 13)) {
                                 System.out.println(name2 + " please enter a sum between 2 and 12...");
                                 System.out.println("");

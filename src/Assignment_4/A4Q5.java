@@ -19,7 +19,8 @@ public class A4Q5 {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-
+        
+        //Prompt the user to enter their name
         System.out.println("You are a Huron Heights Secondary School Student and you want know your marks (approximately) in math class!");
         System.out.print("Please enter your lovely name: ");
         String name = input.nextLine();
@@ -27,7 +28,8 @@ public class A4Q5 {
         System.out.println("");
         System.out.println("Answer the questions about your tests in math class below:");
         System.out.println("");
-
+        
+        //Ask the user what their five tests where out of and how many marks they obtained 
         System.out.print("What was the first test out of? HUH? : ");
         double firstTestTotalMarks = input.nextInt();
         System.out.print("How many marks out of " + firstTestTotalMarks + " did you obtain??? : ");
@@ -62,7 +64,8 @@ public class A4Q5 {
         double fifthTestMarksAcheived = input.nextDouble();
 
         System.out.println("");
-
+        
+        //Present the five test scores as percentages to the user
         System.out.println("Here are your test scores for " + name + " :");
 
         System.out.println("");
@@ -84,6 +87,7 @@ public class A4Q5 {
 
         System.out.println("");
 
+        //Finally, state their overall average considering all of their test scores
         double averagePercentage = (percentageFirstTest + percentageSecondTest + percentageThirdTest + percentageFourthTest + percentageFifthTest) / 5;
         System.out.println("Average: " + averagePercentage + "%");
     }
