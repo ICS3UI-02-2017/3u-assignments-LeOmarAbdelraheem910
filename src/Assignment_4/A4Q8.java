@@ -31,7 +31,7 @@ public class A4Q8 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         outputText = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
+        sayHelloButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,10 +50,10 @@ public class A4Q8 extends javax.swing.JFrame {
         outputText.setBorder(null);
         jScrollPane1.setViewportView(outputText);
 
-        jButton1.setText("Say Hello");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        sayHelloButton.setText("Say Hello");
+        sayHelloButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                sayHelloButtonActionPerformed(evt);
             }
         });
 
@@ -72,7 +72,7 @@ public class A4Q8 extends javax.swing.JFrame {
                             .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(194, 194, 194)
-                        .addComponent(jButton1)))
+                        .addComponent(sayHelloButton)))
                 .addContainerGap(60, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -85,19 +85,20 @@ public class A4Q8 extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
+                .addComponent(sayHelloButton)
                 .addContainerGap(88, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+    private void sayHelloButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sayHelloButtonActionPerformed
+        //Take the name present in the text field 
         String name = nameTextField.getText();
 
+        //and make the program greet the user with their name.
         outputText.setText("Hello " + name + "!");
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_sayHelloButtonActionPerformed
 
     private void nameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTextFieldActionPerformed
         // TODO add your handling code here:
@@ -138,10 +139,10 @@ public class A4Q8 extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField nameTextField;
     private javax.swing.JTextArea outputText;
+    private javax.swing.JButton sayHelloButton;
     // End of variables declaration//GEN-END:variables
 }

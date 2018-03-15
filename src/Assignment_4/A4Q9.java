@@ -33,10 +33,10 @@ public class A4Q9 extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         resultTextField = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        additionButton = new javax.swing.JButton();
+        subtractionButton = new javax.swing.JButton();
+        multiplicationButton = new javax.swing.JButton();
+        divisionButton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
@@ -61,31 +61,31 @@ public class A4Q9 extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Add");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        additionButton.setText("Add");
+        additionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                additionButtonActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Sub");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        subtractionButton.setText("Sub");
+        subtractionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                subtractionButtonActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Multi");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        multiplicationButton.setText("Multi");
+        multiplicationButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                multiplicationButtonActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Div");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        divisionButton.setText("Div");
+        divisionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                divisionButtonActionPerformed(evt);
             }
         });
 
@@ -119,13 +119,13 @@ public class A4Q9 extends javax.swing.JFrame {
                                         .addComponent(firstNumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(secondNumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton1)
+                                .addComponent(additionButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton2)
+                                .addComponent(subtractionButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton3)
+                                .addComponent(multiplicationButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton4))))
+                                .addComponent(divisionButton))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel4)))
@@ -153,18 +153,18 @@ public class A4Q9 extends javax.swing.JFrame {
                             .addComponent(jLabel3))))
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
+                    .addComponent(additionButton)
+                    .addComponent(subtractionButton)
+                    .addComponent(multiplicationButton)
+                    .addComponent(divisionButton))
                 .addContainerGap(90, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
+    private void subtractionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subtractionButtonActionPerformed
+        //Convert the two numbers entered in the two text fields in doubles (number form)
         String firstNumberString = firstNumberTextField.getText();
 
         double firstNumber = Double.parseDouble(firstNumberString);
@@ -173,18 +173,20 @@ public class A4Q9 extends javax.swing.JFrame {
 
         double secondNumber = Double.parseDouble(secondNumberString);
 
+        //perform the operation between the first and second number (indicated by the button --> substraction)
         double result = firstNumber - secondNumber;
 
+        //display the result in the results section
         String resultText = Double.toString(result);
 
         resultTextField.setText(resultText);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_subtractionButtonActionPerformed
 
     private void resultTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_resultTextFieldActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void additionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_additionButtonActionPerformed
 
         String firstNumberString = firstNumberTextField.getText();
 
@@ -194,14 +196,15 @@ public class A4Q9 extends javax.swing.JFrame {
 
         double secondNumber = Double.parseDouble(secondNumberString);
 
+        //perform the operation between the first and second number (indicated by the button --> addition)
         double result = firstNumber + secondNumber;
 
         String resultText = Double.toString(result);
 
         resultTextField.setText(resultText);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_additionButtonActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void multiplicationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicationButtonActionPerformed
 
         String firstNumberString = firstNumberTextField.getText();
 
@@ -211,14 +214,15 @@ public class A4Q9 extends javax.swing.JFrame {
 
         double secondNumber = Double.parseDouble(secondNumberString);
 
+        //perform the operation between the first and second number (indicated by the button --> multiplication)
         double result = firstNumber * secondNumber;
 
         String resultText = Double.toString(result);
 
         resultTextField.setText(resultText);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_multiplicationButtonActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void divisionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divisionButtonActionPerformed
 
         String firstNumberString = firstNumberTextField.getText();
 
@@ -228,12 +232,13 @@ public class A4Q9 extends javax.swing.JFrame {
 
         double secondNumber = Double.parseDouble(secondNumberString);
 
+        //perform the operation between the first and second number (indicated by the button --> division)
         double result = firstNumber / secondNumber;
 
         String resultText = Double.toString(result);
 
         resultTextField.setText(resultText);
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_divisionButtonActionPerformed
 
     private void secondNumberTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_secondNumberTextFieldActionPerformed
         // TODO add your handling code here:
@@ -274,17 +279,17 @@ public class A4Q9 extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton additionButton;
+    private javax.swing.JButton divisionButton;
     private javax.swing.JTextField firstNumberTextField;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JButton multiplicationButton;
     private javax.swing.JTextField resultTextField;
     private javax.swing.JTextField secondNumberTextField;
+    private javax.swing.JButton subtractionButton;
     // End of variables declaration//GEN-END:variables
 }

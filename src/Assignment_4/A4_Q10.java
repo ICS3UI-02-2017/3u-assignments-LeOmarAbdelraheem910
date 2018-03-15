@@ -9,12 +9,12 @@ package Assignment_4;
  *
  * @author Omar
  */
-public class A4Q_10 extends javax.swing.JFrame {
+public class A4_Q10 extends javax.swing.JFrame {
 
     /**
-     * Creates new form A4Q10
+     * Creates new form A4_Q10
      */
-    public A4Q_10() {
+    public A4_Q10() {
         initComponents();
     }
 
@@ -27,19 +27,15 @@ public class A4Q_10 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         degreesFahrenheitTextField = new javax.swing.JTextField();
         degreesCelsiusTextField = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        fahrenheitToCelsiusButton = new javax.swing.JButton();
+        celsiusToFahrenheitButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("TemperatureConverter");
-
-        jLabel1.setText("Degrees Fahrenheit:");
-
-        jLabel2.setText("Degrees Celsius:");
+        setTitle("Temperature Converter");
 
         degreesFahrenheitTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -53,52 +49,58 @@ public class A4Q_10 extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("F -> C");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        fahrenheitToCelsiusButton.setText("F --> C");
+        fahrenheitToCelsiusButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                fahrenheitToCelsiusButtonActionPerformed(evt);
             }
         });
 
-        jButton2.setText("C -> F");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        celsiusToFahrenheitButton.setText("C --> F");
+        celsiusToFahrenheitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                celsiusToFahrenheitButtonActionPerformed(evt);
             }
         });
+
+        jLabel1.setText("Degrees Fahrenheit:");
+
+        jLabel2.setText("Degrees Celsius:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel1)
-                .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(degreesCelsiusTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
-                .addComponent(degreesFahrenheitTextField))
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)
-                .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(24, 24, 24)));
+                    .addComponent(degreesCelsiusTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
+                    .addComponent(degreesFahrenheitTextField))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fahrenheitToCelsiusButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(celsiusToFahrenheitButton, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap())
+        );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                .addGap(43, 43, 43)
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(51, 51, 51)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(jLabel1)
-                .addComponent(degreesFahrenheitTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(jButton1))
-                .addGap(36, 36, 36)
+                    .addComponent(degreesFahrenheitTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fahrenheitToCelsiusButton)
+                    .addComponent(jLabel1))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(jLabel2)
-                .addComponent(degreesCelsiusTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(jButton2))
-                .addContainerGap(175, Short.MAX_VALUE)));
+                    .addComponent(degreesCelsiusTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(celsiusToFahrenheitButton)
+                    .addComponent(jLabel2))
+                .addContainerGap(185, Short.MAX_VALUE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -107,36 +109,47 @@ public class A4Q_10 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_degreesCelsiusTextFieldActionPerformed
 
-    private void degreesFahrenheitTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_degreesFahrenheitTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_degreesFahrenheitTextFieldActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+    private void fahrenheitToCelsiusButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fahrenheitToCelsiusButtonActionPerformed
+        //Use the Fahrenheit value entered in the text field and
         String degreesFahrenheitString = degreesFahrenheitTextField.getText();
 
         double degreesFahrenheit = Double.parseDouble(degreesFahrenheitString);
 
+        //perform a conversion calculation from Fahrenheit to Celsius.
+        degreesFahrenheit = degreesFahrenheit * 100;
+
         double degreesCelsius = Math.round((degreesFahrenheit - 32) * 5 / 9);
 
+        degreesCelsius = degreesCelsius / 100;
+
+        //The end result will be a display of the corresponding Celsius temperature.
         String degreesCelsiusText = Double.toString(degreesCelsius);
 
         degreesCelsiusTextField.setText(degreesCelsiusText);
+    }//GEN-LAST:event_fahrenheitToCelsiusButtonActionPerformed
 
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
+    private void celsiusToFahrenheitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_celsiusToFahrenheitButtonActionPerformed
+        //Use the Celsius value entered in the text field and 
         String degreesCelsiusString = degreesCelsiusTextField.getText();
 
         double degreesCelsius = Double.parseDouble(degreesCelsiusString);
 
+        //perform a conversion calculation from Celsius to Fahrenheit.
+        degreesCelsius = degreesCelsius * 100;
+
         double degreesFahrenheit = Math.round(degreesCelsius * 1.8 + 32);
 
+        degreesFahrenheit = degreesFahrenheit / 100;
+
+        //This time, the end result will be a display of the corresponding Fahrenheit temperature. 
         String degreesFahrenheitText = Double.toString(degreesFahrenheit);
 
         degreesFahrenheitTextField.setText(degreesFahrenheitText);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_celsiusToFahrenheitButtonActionPerformed
+
+    private void degreesFahrenheitTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_degreesFahrenheitTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_degreesFahrenheitTextFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,13 +168,13 @@ public class A4Q_10 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(A4Q_10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(A4_Q10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(A4Q_10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(A4_Q10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(A4Q_10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(A4_Q10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(A4Q_10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(A4_Q10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -169,15 +182,16 @@ public class A4Q_10 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new A4Q_10().setVisible(true);
+                new A4_Q10().setVisible(true);
             }
         });
     }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton celsiusToFahrenheitButton;
     private javax.swing.JTextField degreesCelsiusTextField;
     private javax.swing.JTextField degreesFahrenheitTextField;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton fahrenheitToCelsiusButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables

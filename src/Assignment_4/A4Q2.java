@@ -33,7 +33,5 @@ public class A4Q2 {
         System.out.println("Hey! Here's your conversion to centimetres! Enjoy cheating your way through life! ");
         System.out.printf("%.2f inches is equivalent to %.2f cm!\n", measurementInInches, measurementInCentimetres);
 
-
-
     }
 }
