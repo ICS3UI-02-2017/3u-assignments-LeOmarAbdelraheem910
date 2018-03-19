@@ -29,7 +29,7 @@ public class A5_UbbiDubbiTranslator {
         String t = wordOrSentence;
         while (length < t.length()) {
             String s = t.substring(0, length);
-            String e = t.substring(length + 1);
+            String e = t.substring(length);
             t = s + e;
             while (t.charAt(length) == 'u' || t.charAt(length) == 'e' || t.charAt(length) == 'a' || t.charAt(length) == 'i' || t.charAt(length) == 'o' || t.charAt(length) == 'U' || t.charAt(length) == 'A' || t.charAt(length) == 'E' || t.charAt(length) == 'I' || t.charAt(length) == 'O') {
                 if (t.charAt(length) == 'u') {
