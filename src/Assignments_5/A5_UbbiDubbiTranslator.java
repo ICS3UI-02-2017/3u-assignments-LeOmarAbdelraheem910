@@ -18,70 +18,41 @@ public class A5_UbbiDubbiTranslator {
      */
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter in a sentence in regular English.");
-        String wordOrSentence = input.nextLine();
+        //Continually repeat the translation process
+        while (true) {
 
-        wordOrSentence = wordOrSentence + "   ";
+            Scanner input = new Scanner(System.in);
 
-        int length = 1;
-       
-        String t = wordOrSentence;
-        while (length < t.length()) {
-            String s = t.substring(0, length);
-            String e = t.substring(length);
-            t = s + e;
-            while (t.charAt(length) == 'u' || t.charAt(length) == 'e' || t.charAt(length) == 'a' || t.charAt(length) == 'i' || t.charAt(length) == 'o' || t.charAt(length) == 'U' || t.charAt(length) == 'A' || t.charAt(length) == 'E' || t.charAt(length) == 'I' || t.charAt(length) == 'O') {
-                if (t.charAt(length) == 'u') {
-                    t = s + "ub" + e;
-                }
-                if (t.charAt(length) == 'a') {
-                    t = s + "ub" + e;
-                }
+            //Prompt the user to enter in a sentence or word 
+            System.out.println("Enter in a sentence or word in regular English:");
+            String wordOrSentence = input.nextLine();
 
-                if (t.charAt(length) == 'e') {
-                    t = s + "ub" + e;
-                }
+            //Change the case of all letters in the word for ease of translation
+            wordOrSentence = wordOrSentence.toLowerCase();
 
-                if (t.charAt(length) == 'i') {
-                    t = s + "ub" + e;
-                }
+            int length = wordOrSentence.length();
 
-                if (t.charAt(length) == 'o') {
-                    t = s + "ub" + e;
-                }
+            //Check every single letter position of the word or sentence to search for vowels.
+            for (int letterPosition = 0; letterPosition < length; letterPosition++) {
+                String translatedWord = wordOrSentence;
+                if (translatedWord.charAt(letterPosition) == 'a'
+                        || translatedWord.charAt(letterPosition) == 'e'
+                        || translatedWord.charAt(letterPosition) == 'i'
+                        || translatedWord.charAt(letterPosition) == 'o'
+                        || translatedWord.charAt(letterPosition) == 'u') {
 
-                if (t.charAt(length) == 'U') {
-                    t = s + "UB" + e;
-                }
+                    //Break up the word into two parts, one before the vowel and one including the vowel and continuing to the end of the sentence/word.
+                    String startOfWordOrSentence = wordOrSentence.substring(0, letterPosition);
+                    String endOfWordOrSentence = wordOrSentence.substring(letterPosition);
 
-                if (t.charAt(length) == 'A') {
-                    t = s + "UB" + e;
-                }
+                    //Create the translated word by adding ub between the segments (this adds ub in front of the vowel).
+                    translatedWord = startOfWordOrSentence + "ub" + endOfWordOrSentence;
 
-                if (t.charAt(length) == 'E') {
-                    t = s + "UB" + e;
+                    
+                    
                 }
-
-                if (t.charAt(length) == 'I') {
-                    t = s + "UB" + e;
-                }
-
-                if (t.charAt(length) == 'O') {
-                    t = s + "UB" + e;
-                }
-                length = length + 3;
-                if (length > t.length()) {
-                    length = length - 3;
-                }
-            }
-            length = length + 1;
-        
-            if(length == t.length()){
-            System.out.println(t);
+                System.out.println(translatedWord);
             }
         }
-        
     }
-
 }
