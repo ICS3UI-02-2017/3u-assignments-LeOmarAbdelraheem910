@@ -30,11 +30,11 @@ public class A5_UbbiDubbiTranslator {
             //Change the case of all letters in the word for ease of translation
             wordOrSentence = wordOrSentence.toLowerCase();
 
-            int length = wordOrSentence.length();
+            String translatedWord = wordOrSentence;
 
             //Check every single letter position of the word or sentence to search for vowels.
-            for (int letterPosition = 0; letterPosition < length; letterPosition++) {
-                String translatedWord = wordOrSentence;
+            for (int letterPosition = 0; letterPosition < translatedWord.length(); letterPosition++) {
+
                 if (translatedWord.charAt(letterPosition) == 'a'
                         || translatedWord.charAt(letterPosition) == 'e'
                         || translatedWord.charAt(letterPosition) == 'i'
@@ -42,17 +42,19 @@ public class A5_UbbiDubbiTranslator {
                         || translatedWord.charAt(letterPosition) == 'u') {
 
                     //Break up the word into two parts, one before the vowel and one including the vowel and continuing to the end of the sentence/word.
-                    String startOfWordOrSentence = wordOrSentence.substring(0, letterPosition);
-                    String endOfWordOrSentence = wordOrSentence.substring(letterPosition);
+                    String startOfWordOrSentence = translatedWord.substring(0, letterPosition);
+                    String endOfWordOrSentence = translatedWord.substring(letterPosition);
 
                     //Create the translated word by adding ub between the segments (this adds ub in front of the vowel).
                     translatedWord = startOfWordOrSentence + "ub" + endOfWordOrSentence;
 
-                    
-                    
+                    //After adding ub before the vowel, move three characters forward to continue checking the next letter in the word/sentence.
+                    letterPosition = letterPosition + 2;
+
                 }
-                System.out.println(translatedWord);
+
             }
+            System.out.println(translatedWord);
         }
     }
 }
