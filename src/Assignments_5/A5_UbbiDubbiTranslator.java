@@ -22,48 +22,96 @@ public class A5_UbbiDubbiTranslator {
         while (true) {
 
             Scanner input = new Scanner(System.in);
+            System.out.println("Enter 'English' to translate from English to Ubbi Dubbi and 'Ubbi Dubbi' to translate from Ubbi Dubbi to English.");
+            String translator = input.nextLine();
+            if (translator.contains("English")) {
+                //Prompt the user to enter in a sentence or word 
+                System.out.println("Enter in a sentence or word in regular English:");
+                String wordOrSentence = input.nextLine();
 
-            //Prompt the user to enter in a sentence or word 
-            System.out.println("Enter in a sentence or word in regular English:");
-            String wordOrSentence = input.nextLine();
+                //Change the case of all letters in the word for ease of translation
+                wordOrSentence = wordOrSentence.toLowerCase();
 
-            //Change the case of all letters in the word for ease of translation
-            wordOrSentence = wordOrSentence.toLowerCase();
+                //Change the original word/sentence to a new variable in order for every version of the translation to be combined into one translation.
+                String translatedWord = " " + wordOrSentence;
 
-            //Change the original word/sentence to a new variable in order for every version of the translation to be combined into one translation.
-            String translatedWord = " " + wordOrSentence;
-
-            //Check every single letter position of the word or sentence to search for vowels.
-            for (int letterPosition = 0; letterPosition < translatedWord.length(); letterPosition++) {
+                //Check every single letter position of the word or sentence to search for vowels.
+                for (int letterPosition = 0; letterPosition < translatedWord.length(); letterPosition++) {
 
 
-                if (translatedWord.charAt(letterPosition) == 'a'
-                        || translatedWord.charAt(letterPosition) == 'e'
-                        || translatedWord.charAt(letterPosition) == 'i'
-                        || translatedWord.charAt(letterPosition) == 'o'
-                        || translatedWord.charAt(letterPosition) == 'u') {
+                    if (translatedWord.charAt(letterPosition) == 'a'
+                            || translatedWord.charAt(letterPosition) == 'e'
+                            || translatedWord.charAt(letterPosition) == 'i'
+                            || translatedWord.charAt(letterPosition) == 'o'
+                            || translatedWord.charAt(letterPosition) == 'u') {
 
-                    //If for any reason there is a vowel before another vowel, do not at ub in front of the vowel. This allows only one ub to be placed in front a of string of multiple vowels.
-                    if (!(translatedWord.charAt(letterPosition - 1) == 'a'
-                            || translatedWord.charAt(letterPosition - 1) == 'e'
-                            || translatedWord.charAt(letterPosition - 1) == 'i'
-                            || translatedWord.charAt(letterPosition - 1) == 'o'
-                            || translatedWord.charAt(letterPosition - 1) == 'u')) {
-                        //Break up the word into two parts, one before the vowel and one including the vowel and continuing to the end of the sentence/word.
-                        String startOfWordOrSentence = translatedWord.substring(0, letterPosition);
-                        String endOfWordOrSentence = translatedWord.substring(letterPosition);
+                        //If for any reason there is a vowel before another vowel, do not at ub in front of the vowel. This allows only one ub to be placed in front a of string of multiple vowels.
+                        if (!(translatedWord.charAt(letterPosition - 1) == 'a'
+                                || translatedWord.charAt(letterPosition - 1) == 'e'
+                                || translatedWord.charAt(letterPosition - 1) == 'i'
+                                || translatedWord.charAt(letterPosition - 1) == 'o'
+                                || translatedWord.charAt(letterPosition - 1) == 'u')) {
+                            //Break up the word into two parts, one before the vowel and one including the vowel and continuing to the end of the sentence/word.
+                            String startOfWordOrSentence = translatedWord.substring(0, letterPosition);
+                            String endOfWordOrSentence = translatedWord.substring(letterPosition);
 
-                        //Create the translated word by adding ub between the segments (this adds ub in front of the vowel).
-                        translatedWord = startOfWordOrSentence + "ub" + endOfWordOrSentence;
+                            //Create the translated word by adding ub between the segments (this adds ub in front of the vowel).
+                            translatedWord = startOfWordOrSentence + "ub" + endOfWordOrSentence;
 
-                        //After adding ub before the vowel, move three characters forward to continue checking the next letter in the word/sentence.
-                        letterPosition = letterPosition + 2;
+                            //After adding ub before the vowel, move three characters forward to continue checking the next letter in the word/sentence.
+                            letterPosition = letterPosition + 2;
 
+                        }
+                    }
+                    System.out.println(wordOrSentence + " is" + translatedWord + " in Ubbi Dubbi!");
+                }
+                if (translator.contains("Ubbi Dubbi")) {
+                    //Prompt the user to enter in a sentence or word 
+                    System.out.println("Enter in a sentence or word in Ubbi Dubbi:");
+                    wordOrSentence = input.nextLine();
+
+                    //Change the case of all letters in the word for ease of translation
+                    wordOrSentence = wordOrSentence.toLowerCase();
+
+                    //Change the original word/sentence to a new variable in order for every version of the translation to be combined into one translation.
+                    translatedWord = " " + wordOrSentence;
+
+                    //Check every single letter position of the word or sentence to search for vowels.
+                    for (int letterPosition = 0; letterPosition < translatedWord.length(); letterPosition++) {
+
+
+                        if (translatedWord.charAt(letterPosition) == 'a'
+                                || translatedWord.charAt(letterPosition) == 'e'
+                                || translatedWord.charAt(letterPosition) == 'i'
+                                || translatedWord.charAt(letterPosition) == 'o'
+                                || translatedWord.charAt(letterPosition) == 'u') {
+
+                            //Break up the word into two parts, one before the vowel and one including the vowel and continuing to the end of the sentence/word.
+                            String startOfWordOrSentence = translatedWord.substring(0, letterPosition);
+                            String endOfWordOrSentence = translatedWord.substring(letterPosition);
+                            if (startOfWordOrSentence.endsWith("ub")) {
+                            }
+                            //Create the translated word by adding ub between the segments (this adds ub in front of the vowel).
+
+                            translatedWord = startOfWordOrSentence + endOfWordOrSentence;
+
+                            //If for any reason there is a vowel before another vowel, do not at ub in front of the vowel. This allows only one ub to be placed in front a of string of multiple vowels.
+                            if (!(translatedWord.charAt(letterPosition - 1) == 'a'
+                                    || translatedWord.charAt(letterPosition - 1) == 'e'
+                                    || translatedWord.charAt(letterPosition - 1) == 'i'
+                                    || translatedWord.charAt(letterPosition - 1) == 'o'
+                                    || translatedWord.charAt(letterPosition - 1) == 'u')) {
+
+
+                                //After adding ub before the vowel, move three characters forward to continue checking the next letter in the word/sentence.
+                                letterPosition = letterPosition + 2;
+                            }
+                            //Display the translated version of the English word/sentence to the user.
+                            System.out.println(wordOrSentence + " is" + translatedWord + " in Ubbi Dubbi!");
+                        }
                     }
                 }
             }
-            //Display the translated version of the English word/sentence to the user.
-            System.out.println(wordOrSentence + " is" + translatedWord + " in Ubbi Dubbi!");
         }
     }
 }
