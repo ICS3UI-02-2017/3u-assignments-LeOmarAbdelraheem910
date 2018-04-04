@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Assignments_5;
+package Assignment_5;
 
 import java.util.Scanner;
 
