@@ -26,17 +26,14 @@ public class A6Q3 {
 
         int[] A = new int[2];
 
-        //Create a sorting system for the numbers. The numbers will be ordered from least to greatest.
-        for (int check = 0; check < 2; check++) {
-            A[check] = input.nextInt();
-        }
-        for (int check = 0; check < 1; check++) {
-            if (A[check] > A[check + 1]) {
-                int firstInt = A[check];
-                int secondInt = A[check + 1];
-                firstInt = A[check + 1];
-                secondInt = A[check];
+        int firstInt = A[0] = input.nextInt();
+        int secondInt = A[1] = input.nextInt();
 
+        //Create a sorting system for the numbers. The numbers will be ordered from least to greatest, meaning if the first integer is larger than the second, their positions will be swapped.
+        for (int check = 0; check < 1; check++) {
+            if (A[0] > A[1]) {
+                A[0] = secondInt;
+                A[1] = firstInt;
             }
         }
         System.out.println(Arrays.toString(A));
