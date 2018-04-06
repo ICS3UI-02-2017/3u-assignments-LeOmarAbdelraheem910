@@ -32,23 +32,34 @@ public class A6Q2 {
         int aboveAverage = 0;
 
         //Now, the user will be asked to enter in the heights of every person in the reading.
-        System.out.println("With that out of the way, enter in the heights of each person in centimetres. A reminder: Average human height worldwide is 5 feet and 6 inches or 167.64 centimetres!");
+        System.out.println("With that out of the way, enter in the heights of each person in centimetres. : ");
         for (int i = 0; i < collectedHeights.length; i++) {
             double individualHeights = input.nextDouble();
-
-            //After that, the program will sift through the array, checking if any of the heights entered are above the worldwide average for height.
-            for (int check = 0; check < 1; check++) {
-                if (individualHeights < 167.64) {
-                    System.out.println("The person with a height of " + individualHeights + " cm is below average height. Sorry, better luck next time :)");
-                } else if (individualHeights == 167.64) {
-                    System.out.println("The person with a height of " + individualHeights + " cm is of average height. What an average fellow...");
-                } else if (individualHeights > 167.64) {
-                    System.out.println("The person with a height of " + individualHeights + " cm is above average height! Wow you're tall!");
-                    aboveAverage = aboveAverage + 1;
-                }
-            }
         }
-        //State a final total of the number of people above average height in the reading.
-        System.out.println("The amount of people that are about average height in the reading are " + aboveAverage + ".");
+
+        //All of the heights of the people will be added together.
+        double averageOfGroup = 0;
+        for (int i = 0; i < collectedHeights.length; i++) {
+            double individualHeights = collectedHeights[i];
+            averageOfGroup = averageOfGroup + individualHeights;
+        }
+        //Calculate the average height of the group.
+        averageOfGroup = averageOfGroup * 100;
+        averageOfGroup = Math.round(averageOfGroup / collectedHeights.length);
+        averageOfGroup = averageOfGroup / 100;
+
+        //After that, the program will sift through the array, checking if any of the heights entered are above the average height of the group.
+        for (int check = 0; check < 1; check++) {
+            if (collectedHeights[check] < averageOfGroup) {
+                System.out.println("The person with a height of " + collectedHeights[check] + " cm is below average height. Sorry, better luck next time :)");
+            } else if (collectedHeights[check] == 167.64) {
+                System.out.println("The person with a height of " + collectedHeights[check] + " cm is of average height. What an average fellow...");
+            } else if (collectedHeights[check] > 167.64) {
+                System.out.println("The person with a height of " + collectedHeights[check] + " cm is above average height! Wow you're tall!");
+                aboveAverage = aboveAverage + 1;
+            }
+            //State a final total of the number of people above average height in the reading.
+            System.out.println("The amount of people that are above average height in the reading are " + aboveAverage + ".");
+        }
     }
 }

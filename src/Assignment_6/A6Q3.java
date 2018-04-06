@@ -32,8 +32,11 @@ public class A6Q3 {
         }
         for (int check = 0; check < 1; check++) {
             if (A[check] > A[check + 1]) {
-                A[check] = A[check + 1];
-                A[check + 1] = A[check];
+                int firstInt = A[check];
+                int secondInt = A[check + 1];
+                firstInt = A[check + 1];
+                secondInt = A[check];
+
             }
         }
         System.out.println(Arrays.toString(A));
