@@ -26,22 +26,16 @@ public class A6Q3 {
 
         int[] A = new int[2];
 
-        //Set up a for statement to allow the user to enter in the two integers.
-        for (int check = 0; check < 2; check++) {
-            A[check] = input.nextInt();
-        }
-        //Create a sorting system that will rearrange the two integers if the first is larger than the second. If not, the original array will be displayed to the user. 
+        int firstInt = A[0] = input.nextInt();
+        int secondInt = A[1] = input.nextInt();
+
+        //Create a sorting system for the numbers. The numbers will be ordered from least to greatest, meaning if the first integer is larger than the second, their positions will be swapped.
         for (int check = 0; check < 1; check++) {
-            //If first integer is greater than the second integer, then split and rearrange the array.
-            if (A[check] > A[check + 1]) {
-                int[] firstInt = Arrays.copyOfRange(A, 0, check + 1);
-                int[] secondInt = Arrays.copyOfRange(A, check + 1, A.length);
-                System.out.println("The integers entered from least to greatest are: " + Arrays.toString(secondInt) + " , " + Arrays.toString(firstInt) + ".");
-            } 
-            //If not, leave as is. 
-            else if (A[check] < A[check + 1]) {
-                System.out.println("The integers entered from least to greatest are: " + Arrays.toString(A) + ".");
+            if (A[0] > A[1]) {
+                A[0] = secondInt;
+                A[1] = firstInt;
             }
+            System.out.println("The two integers listed from least to greatest are: " + Arrays.toString(A) + ".");
         }
     }
 }
