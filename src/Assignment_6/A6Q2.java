@@ -33,11 +33,11 @@ public class A6Q2 {
 
         //Now, the user will be asked to enter in the heights of every person in the reading.
         System.out.println("With that out of the way, enter in the heights of each person in centimetres. A reminder: Average human height worldwide is 5 feet and 6 inches or 167.64 centimetres!");
-        for (int i = 0; i < collectedHeights.length; i++) {
+        for (int check = 0; check < collectedHeights.length; check++) {
             double individualHeights = input.nextDouble();
 
             //After that, the program will sift through the array, checking if any of the heights entered are above the worldwide average for height.
-            for (int check = 0; check < 1; check++) {
+            for (check = 0; check < 1; check++) {
                 if (individualHeights < 167.64) {
                     System.out.println("The person with a height of " + individualHeights + " cm is below average height. Sorry, better luck next time :)");
                 } else if (individualHeights == 167.64) {
