@@ -61,14 +61,13 @@ public class A6Q5 {
         //If the amount of marks stored in the array is an even number, determine and output the media.
         if ((numberOfMarks % 2) == 0) {
             int x = numberOfMarks / 2;
-            int y = x + 1;
-            double media = classMarks[x] + classMarks[y];
+            double media = classMarks[x - 1] + classMarks[x];
             media /= 2;
             System.out.println("The media of this set of marks is: " + media + ".");
         } //If the amount of marks stored in the array is an odd number, determine and output the median.
         else if (!((numberOfMarks % 2) == 0)) {
             int x = Math.round(numberOfMarks / 2);
-            int median = classMarks[x]; 
+            int median = classMarks[x];
             System.out.println("The median of this set of marks is: " + median + ".");
         }
 

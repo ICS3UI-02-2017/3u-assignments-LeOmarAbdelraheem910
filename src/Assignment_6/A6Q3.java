@@ -22,7 +22,7 @@ public class A6Q3 {
         Scanner input = new Scanner(System.in);
 
         //Force the user to enter in two integers... literally any integers. Store the integers in an array.
-        System.out.println("HEY YOU! You'd better enter in two integers right now! Any integers, let's go mister/miss. >:(");
+        System.out.println("HEY YOU! You'd better enter in two integers right now! Any integers; let's go mister/miss:");
 
         int[] A = new int[2];
 

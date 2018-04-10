@@ -32,7 +32,7 @@ public class A6Q4 {
             classMarks[i] = input.nextInt();
         }
         System.out.println("");
-        
+
         //What must be done now is to sort the student marks from least to greatest if not already done so.
         //First, run through every mark in the array, repeating 10 times to make sure the program checks every value.
         for (int i = 0; i < 10; i++) {

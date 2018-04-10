@@ -21,26 +21,36 @@ public class A6Q7 {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter in a number n: ");
+        //Greet the user and prompt them to enter in a number n to create a range between 2 and n. 
+        System.out.println("Let's say you're lazy and don't want to determine all of the prime numbers between 2 and a certain number by yourself. Mental math is a challenge for you... \nWell look no further because here is a program that can do all of that math for you!");
+        System.out.print("Enter in a number n to limit your range: ");
         int n = input.nextInt();
 
-       boolean range[] = new boolean[n +1];
-     
-       for(int i=0;i<range.length;i++)
+        //Create a boolean array that contains all the numbers between 0 and n
+        boolean[] range = new boolean[n + 1];
+
+        //Make the program assume that all of the numbers in the range are prime
+        for (int i = 0; i < range.length; i++) {
             range[i] = true;
-        for(int p = 2; p*p <=n; p++)
-        {
-            if(range[p] == true)
-            {
-                for(int i = p*2; i <= n; i += p)
+        }
+
+        //Check through every number in the range,
+        for (int p = 2; p <= n; p++) {
+            //if any of the numbers are unmarked, they are prime or p,
+            if (range[p] == true) {
+                //and find every multiple of the p starting from two times p to the integer n; adding the p to itself until it reaches n. Mark every multiple of the prime (these are the composite numbers).
+                for (int i = p * 2; i <= n; i += p) {
                     range[i] = false;
+                }
             }
         }
-         
-        for(int i = 2; i <= n; i++)
-        {
-            if(range[i] == true)
-                System.out.print(i + " ");
+
+        //Present and print all of the unmarked or prime numbers between 2 and n to the user!
+        System.out.print("All of the prime numbers between and including 2 and " + n + " are: ");
+        for (int i = 2; i <= n; i++) {
+            if (range[i] == true) {
+                System.out.print(i + ", ");
+            }
         }
     }
 }
