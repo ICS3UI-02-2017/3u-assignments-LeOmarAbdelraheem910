@@ -31,7 +31,7 @@ public class A6Q2 {
         //Now, the user will be asked to enter in the heights of every person in the reading.
         System.out.println("With that out of the way, enter in the heights of each person in centimetres. : ");
         for (int i = 0; i < collectedHeights.length; i++) {
-             collectedHeights[i] = input.nextDouble();
+            collectedHeights[i] = input.nextDouble();
         }
 
         //All of the heights of the people will be added together.
@@ -44,9 +44,10 @@ public class A6Q2 {
         averageOfGroup *= 100;
         averageOfGroup = Math.round(averageOfGroup / collectedHeights.length);
         averageOfGroup /= 100;
-        System.out.println("The average of the entire group is " + averageOfGroup + ".");
         System.out.println("");
-        
+        System.out.println("The average height of the entire group is " + averageOfGroup + ".");
+        System.out.println("");
+
         //After that, the program will sift through the array, checking if any of the heights entered are above the average height of the group.
         for (int check = 0; check < collectedHeights.length; check++) {
             if (collectedHeights[check] > averageOfGroup) {
