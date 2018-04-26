@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Assignments_7;
+package Assignment_7;
 
 import java.util.Scanner;
 
@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class A7Q2 {
 
-    public static int examGrade(int mark) {
+    public static void examGrade(int mark) {
         //Check the mark entered by the user. Depending the mark, the user will receive a grade accordingly.
         if (mark < 50) {
             System.out.println("Since your mark is " + mark + "%, your grade is an F... well done mate! *slow claping in the distance*");
@@ -30,17 +30,17 @@ public class A7Q2 {
         if (mark >= 80) {
             System.out.println("Since your mark is " + mark + "%, your grade is an A... you shouldn't even be here you Einstein!");
         }
-        return mark;
     }
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        
+
         //Ask the user to input their exam average into the program.
         System.out.println("Welcome to the program that will assign you a grade level, based on your average on an exam!");
         System.out.print("Enter in the average here: ");
         int studentMark = input.nextInt();
         System.out.println("");
-        
+
         //Based on the user's input, determine their grade letter level.
         examGrade(studentMark);
     }
