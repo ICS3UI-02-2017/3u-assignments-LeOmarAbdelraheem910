@@ -30,17 +30,17 @@ public class A7Q2 {
         if (mark >= 80) {
             System.out.println("Since your mark is " + mark + "%, your grade is an A... you shouldn't even be here you Einstein!");
         }
-    
     }
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        
+
         //Ask the user to input their exam average into the program.
         System.out.println("Welcome to the program that will assign you a grade level, based on your average on an exam!");
         System.out.print("Enter in the average here: ");
         int studentMark = input.nextInt();
         System.out.println("");
-        
+
         //Based on the user's input, determine their grade letter level.
         examGrade(studentMark);
     }
