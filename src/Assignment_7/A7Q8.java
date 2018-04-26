@@ -11,9 +11,9 @@ package Assignment_7;
  */
 public class A7Q8 {
 
-    /**
-     * @param args the command line arguments
-     */
+    public static void allDigitsOdd(int num){
+        boolean[] oddDigits = new boolean[num];
+    }
     public static void main(String[] args) {
         // TODO code application logic here
     }
