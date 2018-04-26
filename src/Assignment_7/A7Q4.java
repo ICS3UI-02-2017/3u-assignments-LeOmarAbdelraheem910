@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Assignments_7;
+package Assignment_7;
 
 import java.util.Scanner;
 
@@ -16,7 +16,6 @@ public class A7Q4 {
     public static double compoundInterest(double P, double r, double n){
         //Calculate the final balance after compound interest.
         double B = P*(Math.pow((1+r), n));
-        System.out.printf("The value of your balance after compound interest is: %.2f. \n", B); 
         return B;
     }
     public static void main(String[] args) {
@@ -35,7 +34,8 @@ public class A7Q4 {
         System.out.println("");
         
         //Call upon the compoundInterest method to calculate and output the new balance to the user.
-        compoundInterest(principal, interest, years);
+        double B = compoundInterest(principal, interest, years);
+        System.out.printf("The value of your balance after compound interest is: %.2f. \n", B);
     }
     
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Assignments_7;
+package Assignment_7;
 
 import java.util.Scanner;
 
@@ -15,7 +15,7 @@ public class A7Q1 {
 
     public static double areaCircle(double r){
         //Calculate the area of a circle.
-        double answer = r*r * 3.14159265359;
+        double answer = r*r * Math.PI;     
         return answer;
     }
     public static void main(String[] args) {
@@ -27,8 +27,9 @@ public class A7Q1 {
         double radius = input.nextDouble();
         
         //Call upon the method areaCircle to calculate the area of the cicle and output it to the user.
-        double area = areaCircle(radius);
-        System.out.println("The area of the circle you want to calculate is: " + area + " units^2.");
+        double answer = areaCircle(radius);
+        System.out.printf("The area of the circle you want to calculate is: %.2f units^2. \n", answer );
+        
     }
     
 }

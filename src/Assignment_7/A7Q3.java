@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Assignments_7;
+package Assignment_7;
 
 import java.util.Scanner;
 
@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class A7Q3 {
 
-   public static int factors(int number){
+   public static void factors(int number){
        //Create an array to store an amount of numbers equal to the integer that the factors need to be determined for.
        int[] range = new int[number];
        
@@ -28,9 +28,7 @@ public class A7Q3 {
            if((number % range[i]) == 0){
                System.out.print(range[i] + ", "); 
            }
-       }
-       
-       return number;
+       }      
    }
    
     public static void main(String[] args) {
