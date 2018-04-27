@@ -11,8 +11,17 @@ package Assignment_7;
  */
 public class A7Q8 {
 
-    public static void allDigitsOdd(int num){
-        boolean[] oddDigits = new boolean[num];
+    public static boolean allDigitsOdd(int num){
+        
+        for (int i = 0; i < num; i++) {
+            int remainder = num % 10;
+        if(remainder % 2 == 0){
+            return false;
+        }else if(!(remainder % 2 == 0)){
+            num = (num - remainder)/10;
+        }
+        }
+        return true;
     }
     public static void main(String[] args) {
         // TODO code application logic here
