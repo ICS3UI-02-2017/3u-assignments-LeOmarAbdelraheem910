@@ -16,14 +16,12 @@ public class A7Q7 {
     //Create a method that will be used to find the first digit of an integer entered by the user. Eventually this can be displayed to the user in the main method.
     public static int firstDigit(int num) {
         //When the integer entered on by the user is positive, divide by ten until it is between 0 and 10, but not including 10.
+
         for (int i = 0; i < num; i++) {
             if (num > 10 && !(num == 10)) {
                 num = num / 10;
-            }
-        }
-        //When the integer entered on by the user is negative, divide by ten until it is between 0 and 10, but not including 10.
-        for (int i = 0; i > num; i--) {
-            if (num < -10 && !(num == -10)) {
+            } //When negative, divide by ten until it is between 0 and -10, but not including -10.
+            else if (num < -10 && !(num == -10)) {
                 num = num / 10;
             }
         }
