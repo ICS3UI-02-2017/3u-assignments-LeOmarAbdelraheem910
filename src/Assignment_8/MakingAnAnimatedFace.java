@@ -1,4 +1,4 @@
-package Examples;
+package Assignment_8;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -18,35 +18,28 @@ import javax.swing.Timer;
  *
  * @author abdeo8431
  */
-public class newJava_Game_Class extends JComponent implements ActionListener {
+public class MakingAnAnimatedFace extends JComponent implements ActionListener {
 
     // Height and Width of our game
-    static final int WIDTH = 800;
-    static final int HEIGHT = 600;
-
+    static final int WIDTH = 1000;
+    static final int HEIGHT = 1000;
     //Title of the window
-    String title = "Graphics Example";
-
+    String title = "My Game";
     // sets the framerate and delay for our game
     // this calculates the number of milliseconds per frame
     // you just need to select an approproate framerate
     int desiredFPS = 60;
     int desiredTime = Math.round((1000 / desiredFPS));
-    
     // timer used to run the game loop
     // this is what keeps our time running smoothly :)
     Timer gameTimer;
 
     // YOUR GAME VARIABLES WOULD GO HERE
-    Color purple = new Color(82, 11, 84);
-
-
+    Color blackCat = new Color(22, 22, 22);
     // GAME VARIABLES END HERE    
-
-    
     // Constructor to create the Frame and place the panel in
     // You will learn more about this in Grade 12 :)
-    public newJava_Game_Class(){
+    public MakingAnAnimatedFace() {
         // creates a windows to show my game
         JFrame frame = new JFrame(title);
 
@@ -68,8 +61,8 @@ public class newJava_Game_Class extends JComponent implements ActionListener {
         this.addMouseMotionListener(m);
         this.addMouseWheelListener(m);
         this.addMouseListener(m);
-        
-        gameTimer = new Timer(desiredTime,this);
+
+        gameTimer = new Timer(desiredTime, this);
         gameTimer.setRepeats(true);
         gameTimer.start();
     }
@@ -83,48 +76,24 @@ public class newJava_Game_Class extends JComponent implements ActionListener {
         g.clearRect(0, 0, WIDTH, HEIGHT);
 
         // GAME DRAWING GOES HERE
-        //create a custom colour variable
-        g.setColor(purple);
-        
-        //create a "background"
-        g.fillRect(0,0,WIDTH,HEIGHT);
-        
-        // set the colour
-        g.setColor(Color.PINK);
-        
-        //draw a filled in rectangle
-        // ((x, y, width, height)
-        g.fillRect(100, 75, 150, 50);
-	
-        g.setColor(Color.GREEN);
-        //draw anything that is an "oval"
-        // (x, y, width, height)
-        g.fillOval(100, 75, 150, 50);
-        g.fillOval(100, 125, 150, 50);
-	
-        //Drawing outlines of shapes --> draw
-        g.setColor(Color.BLACK);
-        g.drawOval(100, 75, 150, 50);
-        
-        //rounds the corners
-        //(x, y, width, height, radiusWidth, radiusHeight)
-        g.fillRoundRect(300, 75, 150, 50, 10, 20);
-        
-        //draw a polygon
-        int[] triangleX = {500, 600, 450,};
-        int[] triangleY = {400, 500, 500};
-        
-        //(array of x points, array of y points, number of points in polygon)
+
+        g.setColor(blackCat);
+        g.fillOval(50, 200, 500, 400);
+
+
+        int[] triangleX = {50, 300, 175};
+        int[] triangleY = {400, 300, 50};
         g.fillPolygon(triangleX, triangleY, 3);
+
+        int[] triangleX1 = {300, 425, 550};
+        int[] triangleY1 = {300, 50, 400};  
+        g.fillPolygon(triangleX1, triangleY1, 3);
+
+        g.setColor(Color.CYAN);
+        g.fillOval(100, 300, 50, 50);
         
-        // draw an arc!
         g.setColor(Color.YELLOW);
-        // (x, y, width, height, start angle, amount to rotate)
-        g.fillArc(100, 400, 100, 100, 45, 270);
-        
-        g.setColor(Color.BLACK);
-        // (x, y, x, y)
-        g.drawLine(250, 125, 500, 400);
+        g.fillOval(400, 300, 50, 50);
         // GAME DRAWING ENDS HERE
     }
 
@@ -132,13 +101,11 @@ public class newJava_Game_Class extends JComponent implements ActionListener {
     // This is run before the game loop begins!
     public void preSetup() {
         // Any of your pre setup before the loop starts should go here
-
     }
 
     // The main game loop
     // In here is where all the logic for my game will go
     public void gameLoop() {
-        
     }
 
     // Used to implement any of the Mouse Actions
@@ -147,25 +114,21 @@ public class newJava_Game_Class extends JComponent implements ActionListener {
         // if a mouse button has been pressed down
         @Override
         public void mousePressed(MouseEvent e) {
-
         }
 
         // if a mouse button has been released
         @Override
         public void mouseReleased(MouseEvent e) {
-
         }
 
         // if the scroll wheel has been moved
         @Override
         public void mouseWheelMoved(MouseWheelEvent e) {
-
         }
 
         // if the mouse has moved positions
         @Override
         public void mouseMoved(MouseEvent e) {
-
         }
     }
 
@@ -175,13 +138,11 @@ public class newJava_Game_Class extends JComponent implements ActionListener {
         // if a key has been pressed down
         @Override
         public void keyPressed(KeyEvent e) {
-
         }
 
         // if a key has been released
         @Override
         public void keyReleased(KeyEvent e) {
-
         }
     }
 
@@ -197,7 +158,6 @@ public class newJava_Game_Class extends JComponent implements ActionListener {
      */
     public static void main(String[] args) {
         // creates an instance of my game
-        newJava_Game_Class game = new newJava_Game_Class();
+        MakingAnAnimatedFace game = new MakingAnAnimatedFace();
     }
 }
-
