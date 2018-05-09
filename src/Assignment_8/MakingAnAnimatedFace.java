@@ -1,10 +1,12 @@
 package Assignment_8;
 
+import java.awt.BasicStroke;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import java.awt.Color;
+import java.awt.Graphics2D;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -33,9 +35,11 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
     // timer used to run the game loop
     // this is what keeps our time running smoothly :)
     Timer gameTimer;
+    
+    BasicStroke thickerLine = new BasicStroke(10);
 
     // YOUR GAME VARIABLES WOULD GO HERE
-    Color blackCat = new Color(22, 22, 22);
+    Color blackCat = new Color(30, 30, 30);
     // GAME VARIABLES END HERE    
     // Constructor to create the Frame and place the panel in
     // You will learn more about this in Grade 12 :)
@@ -72,13 +76,18 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
     // NOTE: This is already double buffered!(helps with framerate/speed)
     @Override
     public void paintComponent(Graphics g) {
+        Graphics2D g2d = (Graphics2D)g;
+        
         // always clear the screen first!
         g.clearRect(0, 0, WIDTH, HEIGHT);
 
         // GAME DRAWING GOES HERE
-
+        
         g.setColor(blackCat);
         g.fillOval(50, 200, 500, 400);
+        
+        g2d.setStroke(thickerLine);
+        g.drawOval(50, 200, 500, 400);
 
 
         int[] triangleX = {50, 300, 175};
@@ -90,10 +99,21 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.fillPolygon(triangleX1, triangleY1, 3);
 
         g.setColor(Color.CYAN);
-        g.fillOval(100, 300, 50, 50);
+        g.fillOval(175, 300, 50, 50);
         
         g.setColor(Color.YELLOW);
-        g.fillOval(400, 300, 50, 50);
+        g.fillOval(375, 300, 50, 50);
+        
+        g.setColor(Color.BLACK);
+        int[] triangleX2 = {250, 300, 350};
+        int[] triangleY2 = {450, 350, 450};  
+        g.fillPolygon(triangleX2, triangleY2, 3);
+        
+        g2d.setStroke(thickerLine);
+        g.drawArc(300, 425, 100, 50, 180, 180);
+        g.drawArc(200, 425, 100, 50, 180, 180);
+        
+        
         // GAME DRAWING ENDS HERE
     }
 
