@@ -87,12 +87,12 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.fillOval(50, 200, 500, 400);
         
         g.setColor(blackCat);
-        int[] triangleX = {50, 125, 175, 300};
-        int[] triangleY = {400, 100, 100, 300};
+        int[] triangleX = {50, 124, 175, 300};
+        int[] triangleY = {400, 100, 90, 300};
         g.fillPolygon(triangleX, triangleY, 4);
         
-        g.setColor(Color.BLACK);
-        g.fillArc(125, 100, 50, 75, 90, 180);
+        g.setColor(blackCat);
+        g.fillArc(124, 60, 50, 100, 0, 180);
 
         g.setColor(blackCat);
         int[] triangleX1 = {300, 425, 550};
