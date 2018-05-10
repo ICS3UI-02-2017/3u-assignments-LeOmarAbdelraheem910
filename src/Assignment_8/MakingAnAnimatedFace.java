@@ -86,17 +86,22 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.setColor(blackCat);
         g.fillOval(50, 200, 500, 400);
         
-        g2d.setStroke(thickerLine);
-        g.drawOval(50, 200, 500, 400);
+        g.setColor(blackCat);
+        int[] triangleX = {50, 125, 175, 300};
+        int[] triangleY = {400, 100, 100, 300};
+        g.fillPolygon(triangleX, triangleY, 4);
+        
+        g.setColor(Color.BLACK);
+        g.fillArc(125, 100, 50, 75, 90, 180);
 
-
-        int[] triangleX = {50, 300, 175};
-        int[] triangleY = {400, 300, 50};
-        g.fillPolygon(triangleX, triangleY, 3);
-
+        g.setColor(blackCat);
         int[] triangleX1 = {300, 425, 550};
         int[] triangleY1 = {300, 50, 400};  
         g.fillPolygon(triangleX1, triangleY1, 3);
+        
+        g.setColor(Color.BLACK);
+        g2d.setStroke(thickerLine);
+        g.drawOval(50, 200, 500, 400);
 
         g.setColor(Color.CYAN);
         g.fillOval(175, 300, 50, 50);
@@ -112,7 +117,6 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g2d.setStroke(thickerLine);
         g.drawArc(300, 425, 100, 50, 180, 180);
         g.drawArc(200, 425, 100, 50, 180, 180);
-        
         
         // GAME DRAWING ENDS HERE
     }
