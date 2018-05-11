@@ -85,55 +85,60 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         // GAME DRAWING GOES HERE
         AffineTransform old = g2d.getTransform();
         g.setColor(blackCat);
-        g.fillOval(50, 200, 500, 350);
+        g.fillOval(250, 200, 500, 350);
         
-        g2d.rotate(50, 270, 400);
-        int[] triangleX = {70, 145, 199, 320};
+        g2d.rotate(50, 470, 400);
+        int[] triangleX = {270, 345, 399, 520};
         int[] triangleY = {400, 97, 82, 300};
         g.fillPolygon(triangleX, triangleY, 4);
         
-        g.fillArc(144, 60, 60, 100, 0, 180);
+        g.fillArc(344, 60, 60, 100, 0, 180);
         g.setColor(Color.BLACK);
         g2d.setStroke(thickerLine);
-        g.drawArc(144, 60, 60, 61, 6, 180);
-        g.drawLine(105, 250, 143, 97);
-        g.drawLine(257, 200, 204, 82);
+        g.drawArc(344, 60, 60, 61, 6, 180);
+        g.drawLine(305, 250, 343, 97);
+        g.drawLine(457, 200, 404, 82);
         g2d.setTransform(old);
 
-        // g.setColor(Color.BLACK);
         g.setColor(blackCat);
-        g2d.rotate(6.5, 300, 300);
-        int[] triangleX1 = {300, 421, 475, 550};
+        g2d.rotate(6.5, 500, 300);
+        int[] triangleX1 = {500, 621, 675, 750};
         int[] triangleY1 = {300, 82, 97, 400};  
         g.fillPolygon(triangleX1, triangleY1, 4);
         
-        g.fillArc(416, 60, 60, 100, 0, 180);
+        g.fillArc(616, 60, 60, 100, 0, 180);
+        g.setColor(Color.BLACK);
+        g2d.setStroke(thickerLine);
+        g.drawArc(616, 60, 60, 61, 6, 180);
+        g.drawLine(567, 190, 618, 82);
+        g.drawLine(705, 233, 677, 97);
         g2d.setTransform(old);
 
         g.setColor(Color.BLACK);
         g2d.setStroke(thickerLine);
-        g.drawOval(50, 200, 500, 350);
+        g.drawOval(250, 200, 500, 350);
 
         g.setColor(Color.CYAN);
-        g.fillOval(165, 300, 50, 50);
+        g.fillOval(365, 300, 50, 50);
         
         g.setColor(Color.YELLOW);
-        g.fillOval(385, 300, 50, 50);
+        g.fillOval(585, 300, 50, 50);
         
         g.setColor(Color.BLACK);
-        int[] triangleX2 = {270, 265, 289, 312, 335, 331};
+        int[] triangleX2 = {470, 465, 489, 512, 535, 531};
         int[] triangleY2 = {341, 364, 384, 384, 364, 341};  
         g.fillPolygon(triangleX2, triangleY2, 6);
         
-        g.fillArc(258, 340, 25, 25, 90, 180);
-        g.fillArc(318, 340, 25, 25, 270, 180);
-        g.fillArc(287, 364, 27, 25, 180, 180);
+        g.fillArc(458, 340, 25, 25, 90, 180);
+        g.fillArc(518, 340, 25, 25, 270, 180);
+        g.fillArc(487, 364, 27, 25, 180, 180);
 
         
         g2d.setStroke(thickerLine);
-        g.drawArc(300, 358, 80, 50, 180, 180);
-        g.drawArc(220, 358, 80, 50, 180, 180);
+        g.drawArc(500, 358, 80, 50, 180, 180);
+        g.drawArc(420, 358, 80, 50, 180, 180);
         
+       // g.fillArc
         // GAME DRAWING ENDS HERE
     }
 
