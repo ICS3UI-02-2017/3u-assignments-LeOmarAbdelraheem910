@@ -35,37 +35,37 @@ public class A1Q1 {
         new Wall(fruitopia, 1, 1, Direction.WEST);
         
         //create a robot to complete the task in the first question
-        RobotSE peterpan = new RobotSE(fruitopia, 0, 2, Direction.WEST);
+        RobotSE speedyboi = new RobotSE(fruitopia, 0, 2, Direction.WEST);
         
-        //set colour of peterpan to black
-        peterpan.setColor(Color.black);
+        //set colour of speedyboi to black
+        speedyboi.setColor(Color.black);
         
-        //move peterpan two spaces to the west
-        peterpan.move(2);
+        //move speedyboi two spaces to the west
+        speedyboi.move(2);
         
-        //make peterpan turn left
-        peterpan.turnLeft();
+        //make speedyboi turn left
+        speedyboi.turnLeft();
         
-        //move peterpan two spaces to the south
-        peterpan.move(3);
+        //move speedyboi two spaces to the south
+        speedyboi.move(3);
         
-        //make peterpan turn left again
-        peterpan.turnLeft();
+        //make speedyboi turn left again
+        speedyboi.turnLeft();
         
-        //move peterpan two spaces to the east
-        peterpan.move(3);
+        //move speedyboi two spaces to the east
+        speedyboi.move(3);
         
-        //make peterpan turn left again
-        peterpan.turnLeft();
+        //make speedyboi turn left again
+        speedyboi.turnLeft();
         
-        //move peterpan two spaces to the north
-        peterpan.move(3);
+        //move speedyboi two spaces to the north
+        speedyboi.move(3);
         
-        //make peterpan turn left again
-        peterpan.turnLeft();
+        //make speedyboi turn left again
+        speedyboi.turnLeft();
         
-        //move peterpan two spaces to the north
-        peterpan.move();
+        //move speedyboi two spaces to the north
+        speedyboi.move();
         
         
         

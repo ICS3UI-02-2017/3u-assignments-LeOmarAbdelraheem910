@@ -25,7 +25,7 @@ public class A1Q5 {
         //create the city in which the supermarket and home will exist
         City fruitopia = new City();
         
-        //create the first robot's home, peterpan, in an approximate "9" shape
+        //create the first robot's home, speedyboi, in an approximate "9" shape
         new Wall(fruitopia, 2, 3, Direction.WEST);
         new Wall(fruitopia, 2, 3, Direction.NORTH);
         new Wall(fruitopia, 2, 3, Direction.EAST);
@@ -49,74 +49,74 @@ public class A1Q5 {
         //expensive item at (2,2)
         new Thing(fruitopia, 2, 2);
         
-        //create the first robot, peterpan, in its home at coordinates (3,3)
-        RobotSE peterpan = new RobotSE(fruitopia, 3, 3, Direction.EAST);
+        //create the first robot, speedyboi, in its home at coordinates (3,3)
+        RobotSE speedyboi = new RobotSE(fruitopia, 3, 3, Direction.EAST);
         
-        //change the colour of peterpan to green
-        peterpan.setColor(Color.green);
+        //change the colour of speedyboi to green
+        speedyboi.setColor(Color.green);
         
-        //set the label of peterpan to "P"
-        peterpan.setLabel("P");
+        //set the label of speedyboi to "P"
+        speedyboi.setLabel("P");
         
-        //create the second robot, tinkerbell, at coordinates (0,1)
-        RobotSE tinkerbell = new RobotSE(fruitopia, 0, 1, Direction.WEST);
+        //create the second robot, speedygurl, at coordinates (0,1)
+        RobotSE speedygurl = new RobotSE(fruitopia, 0, 1, Direction.WEST);
         
         //change the colour of tinker bell to pink
-        tinkerbell.setColor(Color.pink);
+        speedygurl.setColor(Color.pink);
         
-        //set the label of tinkerbell to "T"
-        tinkerbell.setLabel("T");
+        //set the label of speedygurl to "T"
+        speedygurl.setLabel("T");
         
-        //make peterpan do a full 180 degree spin 
-        peterpan.turnAround();
+        //make speedyboi do a full 180 degree spin 
+        speedyboi.turnAround();
         
-        //move tinkerbell one space to the west
-        tinkerbell.move();
+        //move speedygurl one space to the west
+        speedygurl.move();
         
-        //move peterpan one space to the west
-        peterpan.move();
+        //move speedyboi one space to the west
+        speedyboi.move();
         
-        //turn peterpan to the right
-        peterpan.turnRight();
+        //turn speedyboi to the right
+        speedyboi.turnRight();
         
-        //move peterpan one space to the north
-        peterpan.move();
+        //move speedyboi one space to the north
+        speedyboi.move();
         
-        //make tinkerbell pick up the expensive item at (0,0)
-        tinkerbell.pickThing();
+        //make speedygurl pick up the expensive item at (0,0)
+        speedygurl.pickThing();
         
-        //make peterpan pick up the expensive item at (2,2)
-        peterpan.pickThing();
+        //make speedyboi pick up the expensive item at (2,2)
+        speedyboi.pickThing();
         
-        //turn tinkerbell to the left
-        tinkerbell.turnLeft();
+        //turn speedygurl to the left
+        speedygurl.turnLeft();
         
-        //move tinkerbell one space to the south
-        tinkerbell.move();
+        //move speedygurl one space to the south
+        speedygurl.move();
         
-        //move peterpan one space to the north
-        peterpan.move();
+        //move speedyboi one space to the north
+        speedyboi.move();
         
-        //make peterpan pick up the expensive item at (1,2)
-        peterpan.pickThing();
+        //make speedyboi pick up the expensive item at (1,2)
+        speedyboi.pickThing();
         
-        //make tinkerbell pick up the expensive item at (1,0)
-        tinkerbell.pickThing();
+        //make speedygurl pick up the expensive item at (1,0)
+        speedygurl.pickThing();
         
-        //turn tinkerbell to the left
-        tinkerbell.turnLeft();
+        //turn speedygurl to the left
+        speedygurl.turnLeft();
         
-        //turn peterpan to the left
-        peterpan.turnLeft();
+        //turn speedyboi to the left
+        speedyboi.turnLeft();
         
-        //move tinkerbell one space to the east
-        tinkerbell.move();
+        //move speedygurl one space to the east
+        speedygurl.move();
         
-        //make tinkerbell pick up the thing at (1,1)
-        tinkerbell.pickThing();
+        //make speedygurl pick up the thing at (1,1)
+        speedygurl.pickThing();
         
-        //move peterpan one space to the west
-        peterpan.move();
+        //move speedyboi one space to the west
+        speedyboi.move();
         
         
         

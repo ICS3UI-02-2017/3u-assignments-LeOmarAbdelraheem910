@@ -116,9 +116,10 @@ public class A4_Q10 extends javax.swing.JFrame {
         double degreesFahrenheit = Double.parseDouble(degreesFahrenheitString);
 
         //perform a conversion calculation from Fahrenheit to Celsius.
-        degreesFahrenheit = degreesFahrenheit * 100;
-
-        double degreesCelsius = Math.round((degreesFahrenheit - 32) * 5 / 9);
+        
+        double degreesCelsius = (degreesFahrenheit - 32) * 5 / 9;
+        
+        degreesCelsius = Math.round(degreesCelsius * 100);
 
         degreesCelsius = degreesCelsius / 100;
 
@@ -134,10 +135,11 @@ public class A4_Q10 extends javax.swing.JFrame {
 
         double degreesCelsius = Double.parseDouble(degreesCelsiusString);
 
-        //perform a conversion calculation from Celsius to Fahrenheit.
-        degreesCelsius = degreesCelsius * 100;
+        //perform a conversion calculation from Celsius to Fahrenheit
 
-        double degreesFahrenheit = Math.round(degreesCelsius * 1.8 + 32);
+        double degreesFahrenheit = degreesCelsius * 1.8 + 32;
+        
+        degreesFahrenheit = Math.round(degreesFahrenheit * 100);
 
         degreesFahrenheit = degreesFahrenheit / 100;
 

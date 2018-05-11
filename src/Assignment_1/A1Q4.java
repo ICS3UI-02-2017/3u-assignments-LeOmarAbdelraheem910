@@ -30,49 +30,49 @@ public class A1Q4 {
         new Wall(fruitopia, 1, 1, Direction.WEST);
         new Wall(fruitopia, 1, 1, Direction.SOUTH);
         
-        //create the first robot named peterpan at coordinates (0,0)
-        RobotSE peterpan = new RobotSE(fruitopia, 0, 0, Direction.SOUTH);
+        //create the first robot named speedyboi at coordinates (0,0)
+        RobotSE speedyboi = new RobotSE(fruitopia, 0, 0, Direction.SOUTH);
         
-        //change the colour of peterpan to green
-        peterpan.setColor(Color.green);
-        //create the second robot named tinkerbell at corrdinates (0,1)
-        RobotSE tinkerbell = new RobotSE(fruitopia, 0, 1, Direction.SOUTH);
+        //change the colour of speedyboi to green
+        speedyboi.setColor(Color.green);
+        //create the second robot named speedygurl at corrdinates (0,1)
+        RobotSE speedygurl = new RobotSE(fruitopia, 0, 1, Direction.SOUTH);
         
         //change the colour of tinker to pink
-        tinkerbell.setColor(Color.pink);
+        speedygurl.setColor(Color.pink);
         
-        //move peterpan one space to the south
-        peterpan.move();
+        //move speedyboi one space to the south
+        speedyboi.move();
         
-        //move tinkerbell one space to the south
-        tinkerbell.move();
+        //move speedygurl one space to the south
+        speedygurl.move();
         
-        //turn tinkerbell to the left
-        tinkerbell.turnLeft();
+        //turn speedygurl to the left
+        speedygurl.turnLeft();
         
-        //move tinkerbell one space to the east
-        tinkerbell.move();
+        //move speedygurl one space to the east
+        speedygurl.move();
         
-        //move peterpan one more space to the south
-        peterpan.move();
+        //move speedyboi one more space to the south
+        speedyboi.move();
         
-        //turn peterpan to the left
-        peterpan.turnLeft();
+        //turn speedyboi to the left
+        speedyboi.turnLeft();
         
-        //turn tinkerbell to the right
-        tinkerbell.turnRight();
+        //turn speedygurl to the right
+        speedygurl.turnRight();
         
-        //move tinkerbell one space to the south
-        tinkerbell.move();
+        //move speedygurl one space to the south
+        speedygurl.move();
         
-        //turn tinkerbell to the right
-        tinkerbell.turnRight();
+        //turn speedygurl to the right
+        speedygurl.turnRight();
         
-        //move peterpan one space to the east
-        peterpan.move();
+        //move speedyboi one space to the east
+        speedyboi.move();
         
-        //move tinkerbell one space to the west
-        tinkerbell.move();
+        //move speedygurl one space to the west
+        speedygurl.move();
         
         
         

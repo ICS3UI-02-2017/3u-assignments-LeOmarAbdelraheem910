@@ -10,7 +10,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.Graphics2D;
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.awt.geom.*;
+import javax.swing.Timer;
 
 public class TwoDGraphicsTest extends JFrame {
 
@@ -92,6 +94,8 @@ public class TwoDGraphicsTest extends JFrame {
 
             graph2.fill(drawTransRect);
 
+            Timer t = new Timer(5, (ActionListener) this);
+            
         }
     }
 }

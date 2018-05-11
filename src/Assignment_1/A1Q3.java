@@ -41,67 +41,67 @@ public class A1Q3 {
         new Thing(fruitopia, 3, 1);
         
         //create the robot that will pick up the flag and climb up and down the mountain at coordinates (3,0)
-        RobotSE peterpan = new RobotSE(fruitopia, 3, 0, Direction.EAST);
+        RobotSE speedyboi = new RobotSE(fruitopia, 3, 0, Direction.EAST);
         
         //set colour of robot to black
-        peterpan.setColor(Color.black);
+        speedyboi.setColor(Color.black);
         
         //move robot one space to the east
-        peterpan.move();
+        speedyboi.move();
         
         //make the robot pick up the flag
-        peterpan.pickThing();
+        speedyboi.pickThing();
         
         //turn the robot to the left
-        peterpan.turnLeft();
+        speedyboi.turnLeft();
         
         //move the robot one space to the north
-        peterpan.move();
+        speedyboi.move();
         
         //turn the robot to the right
-        peterpan.turnRight();
+        speedyboi.turnRight();
         
         //move the robot one space to the west
-        peterpan.move();
+        speedyboi.move();
         
         //turn the robot to the left
-        peterpan.turnLeft();
+        speedyboi.turnLeft();
         
         //move the robot two spaces to the north
-        peterpan.move(2);
+        speedyboi.move(2);
         
         //turn the robot to the right 
-        peterpan.turnRight();
+        speedyboi.turnRight();
         
         //move the robot one space to the east
-        peterpan.move();
+        speedyboi.move();
         
         //make the robot drop the flag at coordinates (0,3)
-        peterpan.putThing();
+        speedyboi.putThing();
         
         //move the robot one space to the east
-        peterpan.move();
+        speedyboi.move();
         
         //turn the robot to the right
-        peterpan.turnRight();
+        speedyboi.turnRight();
         
         //move the robot one space to the south
-        peterpan.move();
+        speedyboi.move();
         
         //turn the robot to the left
-        peterpan.turnLeft();
+        speedyboi.turnLeft();
         
         //move the robot one space to the east
-        peterpan.move();
+        speedyboi.move();
         
         //turn the robot to the right
-        peterpan.turnRight();
+        speedyboi.turnRight();
         
         //move the robot two spaces to the south
-        peterpan.move(2);
+        speedyboi.move(2);
         
         //turn the robot to the left
-        peterpan.turnLeft();
+        speedyboi.turnLeft();
         
         
         

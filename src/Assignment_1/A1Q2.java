@@ -39,54 +39,54 @@ public class A1Q2 {
         //create the newspaper at the coordinates (2,2)
         new Thing(fruitopia, 2, 2);
 
-        //create the robot peterpan at the coordinates (1,2)
-        RobotSE peterpan = new RobotSE(fruitopia, 1, 2, Direction.SOUTH);
+        //create the robot speedyboi at the coordinates (1,2)
+        RobotSE speedyboi = new RobotSE(fruitopia, 1, 2, Direction.SOUTH);
         
         //set the colour of the robot to black
-        peterpan.setColor(black);
+        speedyboi.setColor(black);
         
         //turn the robot to the right
-        peterpan.turnRight();
+        speedyboi.turnRight();
         
         //move the robot one space towards the west
-        peterpan.move();
+        speedyboi.move();
         
         //turn the robot to the left 
-        peterpan.turnLeft();
+        speedyboi.turnLeft();
         
         //move the robot a space down towards the south
-        peterpan.move();
+        speedyboi.move();
         
         //turn the robot to the left
-        peterpan.turnLeft();
+        speedyboi.turnLeft();
         
         //move the robot forward one space to the east
-        peterpan.move();
+        speedyboi.move();
         
         //have the robot pick up the newspaper
-        peterpan.pickThing();
+        speedyboi.pickThing();
         
         //make the robot do a 180 degree turn to return to its original position
-        peterpan.turnAround();
+        speedyboi.turnAround();
         
         //now, the robot will repeat all of its movements before pcking up the newspaper in reverse order to reach its orignal position
         //move the robot forward one space to the west
-        peterpan.move();
+        speedyboi.move();
         
         //turn the robot to the right
-        peterpan.turnRight();
+        speedyboi.turnRight();
         
         //move the robot a space down towards the north
-        peterpan.move();
+        speedyboi.move();
         
         //turn the robot to the right 
-        peterpan.turnRight();
+        speedyboi.turnRight();
         
         //move the robot one space towards the east
-        peterpan.move();
+        speedyboi.move();
 
         //turn the robot to the right
-        peterpan.turnRight();
+        speedyboi.turnRight();
     }
     
 }
