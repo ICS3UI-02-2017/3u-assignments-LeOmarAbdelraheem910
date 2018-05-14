@@ -15,7 +15,13 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
 import java.awt.geom.AffineTransform;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import javax.swing.Timer;
+import sun.audio.*;
+
 
 /**
  *
@@ -47,6 +53,7 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
     Color aPurple = new Color(134, 100, 186);
     Color fishyOrange = new Color(209, 112, 8);
     Color skyBlueBackground = new Color(77, 139, 193);
+    Color inspiringYellow = new Color(255, 248, 53);
     
     // GAME VARIABLES END HERE    
     // Constructor to create the Frame and place the panel in
@@ -271,30 +278,244 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawArc(415, 580, 10, 40, 90, 180);
         g2d.setTransform(old);
         
-        //g2d.setStroke(slightlyThickerLine);
-        //g.drawLine(775, 620, 810, 607);
-        //g.drawLine(775, 620, 810, 633);
-        //g.drawLine(820, 610, 820, 630);
-        //g.drawArc(810, 605, 10, 10, 0, 95);
-        //g.drawArc(810, 625, 10, 10, 180, 270);
-        //g.drawOval(675, 600, 120, 40);
-
-        //g.setColor(Color.ORANGE);
-        //g.fillOval(675, 600, 120, 40);
-        //int[] pentX = {775, 810, 820, 820, 810};
-        //int[] pentY = {620, 607, 610, 630, 633};
-        //g.fillPolygon(pentX, pentY, 5);
-        //g.fillArc(810, 605, 10, 10, 0, 180);
-        //g.fillArc(810, 625, 10, 10, 180, 180);
-        //g.setColor(Color.BLACK);
-        //g.fillOval(695, 615, 5, 5);
-        //g2d.setStroke(evenSlighterThickerLine);
-        //g.drawArc(710, 600, 10, 40, 270, 180);
+        g.setColor(inspiringYellow);
+        int[] starX = {100, 89, 50, 82, 69, 100, 131, 117, 150, 111};
+        int[] starY = {25, 65, 65, 86, 120, 99, 120, 86, 65, 65};
+        g.fillPolygon(starX, starY, 10);
         
+        g.setColor(Color.BLACK);
+        g.drawLine(100, 25, 89, 65);
+        g.drawLine(89, 65, 50, 65);
+        g.drawLine(50, 65, 82, 86);
+        g.drawLine(82, 86, 69, 120);
+        g.drawLine(69, 120, 100, 99);
+        g.drawLine(100, 99, 131, 120);
+        g.drawLine(131, 120, 117, 86);
+        g.drawLine(117, 86, 150, 65);
+        g.drawLine(150, 65, 111, 65);
+        g.drawLine(111, 65, 100, 25);
         
+        g.setColor(inspiringYellow);
+        int[] starXX = {300, 289, 250, 282, 269, 300, 331, 317, 350, 311};
+        int[] starYY = {25, 65, 65, 86, 120, 99, 120, 86, 65, 65};
+        g.fillPolygon(starXX, starYY, 10);
+        
+        g.setColor(Color.BLACK);
+        g.drawLine(300, 25, 289, 65);
+        g.drawLine(289, 65, 250, 65);
+        g.drawLine(250, 65, 282, 86);
+        g.drawLine(282, 86, 269, 120);
+        g.drawLine(269, 120, 300, 99);
+        g.drawLine(300, 99, 331, 120);
+        g.drawLine(331, 120, 317, 86);
+        g.drawLine(317, 86, 350, 65);
+        g.drawLine(350, 65, 311, 65);
+        g.drawLine(311, 65, 300, 25);
+        
+        g.setColor(inspiringYellow);
+        int[] starX2 = {100, 89, 50, 82, 69, 100, 131, 117, 150, 111};
+        int[] starY2 = {225, 265, 265, 286, 320, 299, 320, 286, 265, 265};
+        g.fillPolygon(starX2, starY2, 10);
+        
+        g.setColor(Color.BLACK);
+        g.drawLine(100, 225, 89, 265);
+        g.drawLine(89, 265, 50, 265);
+        g.drawLine(50, 265, 82, 286);
+        g.drawLine(82, 286, 69, 320);
+        g.drawLine(69, 320, 100, 299);
+        g.drawLine(100, 299, 131, 320);
+        g.drawLine(131, 320, 117, 286);
+        g.drawLine(117, 286, 150, 265);
+        g.drawLine(150, 265, 111, 265);
+        g.drawLine(111, 265, 100, 225);
+        
+        g.setColor(inspiringYellow);
+        int[] starX22 = {300, 289, 250, 282, 269, 300, 331, 317, 350, 311};
+        int[] starY22 = {225, 265, 265, 286, 320, 299, 320, 286, 265, 265};
+        g.fillPolygon(starX22, starY22, 10);
+        
+        g.setColor(Color.BLACK);
+        g.drawLine(300, 225, 289, 265);
+        g.drawLine(289, 265, 250, 265);
+        g.drawLine(250, 265, 282, 286);
+        g.drawLine(282, 286, 269, 320);
+        g.drawLine(269, 320, 300, 299);
+        g.drawLine(300, 299, 331, 320);
+        g.drawLine(331, 320, 317, 286);
+        g.drawLine(317, 286, 350, 265);
+        g.drawLine(350, 265, 311, 265);
+        g.drawLine(311, 265, 300, 225);
 
+        g.setColor(inspiringYellow);
+        int[] starX3 = {100, 89, 50, 82, 69, 100, 131, 117, 150, 111};
+        int[] starY3 = {425, 465, 465, 486, 520, 499, 520, 486, 465, 465};
+        g.fillPolygon(starX3, starY3, 10);
+        
+        g.setColor(Color.BLACK);
+        g.drawLine(100, 425, 89, 465);
+        g.drawLine(89, 465, 50, 465);
+        g.drawLine(50, 465, 82, 486);
+        g.drawLine(82, 486, 69, 520);
+        g.drawLine(69, 520, 100, 499);
+        g.drawLine(100, 499, 131, 520);
+        g.drawLine(131, 520, 117, 486);
+        g.drawLine(117, 486, 150, 465);
+        g.drawLine(150, 465, 111, 465);
+        g.drawLine(111, 465, 100, 425);
+        
+        g.setColor(inspiringYellow);
+        int[] starX4 = {100, 89, 50, 82, 69, 100, 131, 117, 150, 111};
+        int[] starY4 = {625, 665, 665, 686, 720, 699, 720, 686, 665, 665};
+        g.fillPolygon(starX4, starY4, 10);
+        
+        g.setColor(Color.BLACK);
+        g.drawLine(100, 625, 89, 665);
+        g.drawLine(89, 665, 50, 665);
+        g.drawLine(50, 665, 82, 686);
+        g.drawLine(82, 686, 69, 720);
+        g.drawLine(69, 720, 100, 699);
+        g.drawLine(100, 699, 131, 720);
+        g.drawLine(131, 720, 117, 686);
+        g.drawLine(117, 686, 150, 665);
+        g.drawLine(150, 665, 111, 665);
+        g.drawLine(111, 665, 100, 625);
+        
+        g.setColor(inspiringYellow);
+        int[] starX44 = {300, 289, 250, 282, 269, 300, 331, 317, 350, 311};
+        int[] starY44 = {625, 665, 665, 686, 720, 699, 720, 686, 665, 665};
+        g.fillPolygon(starX44, starY44, 10);
+        
+        g.setColor(Color.BLACK);
+        g.drawLine(300, 625, 289, 665);
+        g.drawLine(289, 665, 250, 665);
+        g.drawLine(250, 665, 282, 686);
+        g.drawLine(282, 686, 269, 720);
+        g.drawLine(269, 720, 300, 699);
+        g.drawLine(300, 699, 331, 720);
+        g.drawLine(331, 720, 317, 686);
+        g.drawLine(317, 686, 350, 665);
+        g.drawLine(350, 665, 311, 665);
+        g.drawLine(311, 665, 300, 625);
+        
+        g.setColor(inspiringYellow);
+        int[] starX5 = {675, 664, 625, 657, 644, 675, 706, 692, 725, 686};
+        int[] starY5 = {25, 65, 65, 86, 120, 99, 120, 86, 65, 65};
+        g.fillPolygon(starX5, starY5, 10);
+        
+        g.setColor(Color.BLACK);
+        g.drawLine(675, 25, 664, 65);
+        g.drawLine(664, 65, 625, 65);
+        g.drawLine(625, 65, 657, 86);
+        g.drawLine(657, 86, 644, 120);
+        g.drawLine(644, 120, 675, 99);
+        g.drawLine(675, 99, 706, 120);
+        g.drawLine(706, 120, 692, 86);
+        g.drawLine(692, 86, 725, 65);
+        g.drawLine(725, 65, 686, 65);
+        g.drawLine(686, 65, 675, 25);
 
-
+        g.setColor(inspiringYellow);
+        int[] starX6 = {1250, 1239, 1200, 1232, 1219, 1250, 1281, 1267, 1300, 1261};
+        int[] starY6 = {25, 65, 65, 86, 120, 99, 120, 86, 65, 65};
+        g.fillPolygon(starX6, starY6, 10);
+        
+        g.setColor(Color.BLACK);
+        g.drawLine(1250, 25, 1239, 65);
+        g.drawLine(1239, 65, 1200, 65);
+        g.drawLine(1200, 65, 1232, 86);
+        g.drawLine(1232, 86, 1219, 120);
+        g.drawLine(1219, 120, 1250, 99);
+        g.drawLine(1250, 99, 1281, 120);
+        g.drawLine(1281, 120, 1267, 86);
+        g.drawLine(1267, 86, 1300, 65);
+        g.drawLine(1300, 65, 1261, 65);
+        g.drawLine(1261, 65, 1250, 25);
+        
+        g.setColor(inspiringYellow);
+        int[] starX66 = {1050, 1039, 1000, 1032, 1019, 1050, 1081, 1067, 1100, 1061};
+        int[] starY66 = {25, 65, 65, 86, 120, 99, 120, 86, 65, 65};
+        g.fillPolygon(starX66, starY66, 10);
+        
+        g.setColor(Color.BLACK);
+        g.drawLine(1050, 25, 1039, 65);
+        g.drawLine(1039, 65, 1000, 65);
+        g.drawLine(1000, 65, 1032, 86);
+        g.drawLine(1032, 86, 1019, 120);
+        g.drawLine(1019, 120, 1050, 99);
+        g.drawLine(1050, 99, 1081, 120);
+        g.drawLine(1081, 120, 1067, 86);
+        g.drawLine(1067, 86, 1100, 65);
+        g.drawLine(1100, 65, 1061, 65);
+        g.drawLine(1061, 65, 1050, 25);
+        
+        g.setColor(inspiringYellow);
+        int[] starX7 = {1250, 1239, 1200, 1232, 1219, 1250, 1281, 1267, 1300, 1261};
+        int[] starY7 = {225, 265, 265, 286, 320, 299, 320, 286, 265, 265};
+        g.fillPolygon(starX7, starY7, 10);
+        
+        g.setColor(Color.BLACK);
+        g.drawLine(1250, 225, 1239, 265);
+        g.drawLine(1239, 265, 1200, 265);
+        g.drawLine(1200, 265, 1232, 286);
+        g.drawLine(1232, 286, 1219, 320);
+        g.drawLine(1219, 320, 1250, 299);
+        g.drawLine(1250, 299, 1281, 320);
+        g.drawLine(1281, 320, 1267, 286);
+        g.drawLine(1267, 286, 1300, 265);
+        g.drawLine(1300, 265, 1261, 265);
+        g.drawLine(1261, 265, 1250, 225);
+        
+        g.setColor(inspiringYellow);
+        int[] starX77 = {1050, 1039, 1000, 1032, 1019, 1050, 1081, 1067, 1100, 1061};
+        int[] starY77 = {225, 265, 265, 286, 320, 299, 320, 286, 265, 265};
+        g.fillPolygon(starX77, starY77, 10);
+        
+        g.setColor(Color.BLACK);
+        g.drawLine(1050, 225, 1039, 265);
+        g.drawLine(1039, 265, 1000, 265);
+        g.drawLine(1000, 265, 1032, 286);
+        g.drawLine(1032, 286, 1019, 320);
+        g.drawLine(1019, 320, 1050, 299);
+        g.drawLine(1050, 299, 1081, 320);
+        g.drawLine(1081, 320, 1067, 286);
+        g.drawLine(1067, 286, 1100, 265);
+        g.drawLine(1100, 265, 1061, 265);
+        g.drawLine(1061, 265, 1050, 225);
+        
+        g.setColor(inspiringYellow);
+        int[] starX8 = {1250, 1239, 1200, 1232, 1219, 1250, 1281, 1267, 1300, 1261};
+        int[] starY8 = {625, 665, 665, 686, 720, 699, 720, 686, 665, 665};
+        g.fillPolygon(starX8, starY8, 10);
+        
+        g.setColor(Color.BLACK);
+        g.drawLine(1250, 625, 1239, 665);
+        g.drawLine(1239, 665, 1200, 665);
+        g.drawLine(1200, 665, 1232, 686);
+        g.drawLine(1232, 686, 1219, 720);
+        g.drawLine(1219, 720, 1250, 699);
+        g.drawLine(1250, 699, 1281, 720);
+        g.drawLine(1281, 720, 1267, 686);
+        g.drawLine(1267, 686, 1300, 665);
+        g.drawLine(1300, 665, 1261, 665);
+        g.drawLine(1261, 665, 1250, 625);
+        
+        g.setColor(inspiringYellow);
+        int[] starX9 = {1050, 1039, 1000, 1032, 1019, 1050, 1081, 1067, 1100, 1061};
+        int[] starY9 = {625, 665, 665, 686, 720, 699, 720, 686, 665, 665};
+        g.fillPolygon(starX9, starY9, 10);
+        
+        g.setColor(Color.BLACK);
+        g.drawLine(1050, 625, 1039, 665);
+        g.drawLine(1039, 665, 1000, 665);
+        g.drawLine(1000, 665, 1032, 686);
+        g.drawLine(1032, 686, 1019, 720);
+        g.drawLine(1019, 720, 1050, 699);
+        g.drawLine(1050, 699, 1081, 720);
+        g.drawLine(1081, 720, 1067, 686);
+        g.drawLine(1067, 686, 1100, 665);
+        g.drawLine(1100, 665, 1061, 665);
+        g.drawLine(1061, 665, 1050, 625);
+        
         // GAME DRAWING ENDS HERE
     }
 
@@ -303,7 +524,6 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
     public void preSetup() {
         // Any of your pre setup before the loop starts should go here
     }
-
     // The main game loop
     // In here is where all the logic for my game will go
     public void gameLoop() {
