@@ -36,8 +36,6 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
     // timer used to run the game loop
     // this is what keeps our time running smoothly :)
     Timer gameTimer;
-    
-
     // YOUR GAME VARIABLES WOULD GO HERE
     BasicStroke thickerLine = new BasicStroke(10);
     BasicStroke slightlyThickerLine = new BasicStroke(5);
@@ -48,7 +46,11 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
     Color fishyOrange = new Color(209, 112, 8);
     Color skyBlueBackground = new Color(77, 139, 193);
     Color inspiringYellow = new Color(255, 248, 53);
-    
+    int leftPawX = 425;
+    int rightPawX = 725;
+    boolean leftPawMoves = false;
+    boolean rightPawMoves = false;
+
     // GAME VARIABLES END HERE    
     // Constructor to create the Frame and place the panel in
     // You will learn more about this in Grade 12 :)
@@ -62,7 +64,7 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         frame.add(this);
 
         // sets some options and size of the window automatically
-        frame.setResizable(false);
+        frame.setResizable(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         // shows the window to the user
@@ -85,17 +87,17 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
     // NOTE: This is already double buffered!(helps with framerate/speed)
     @Override
     public void paintComponent(Graphics g) {
-        Graphics2D g2d = (Graphics2D)g;
-        
+        Graphics2D g2d = (Graphics2D) g;
+
         // always clear the screen first!
         g.clearRect(0, 0, WIDTH, HEIGHT);
 
         // GAME DRAWING GOES HERE
         AffineTransform old = g2d.getTransform();
-        
+
         g.setColor(skyBlueBackground);
         g.fillRect(0, 0, WIDTH, HEIGHT);
-        
+
         g.setColor(softGreen);
         g.fillArc(860, 420, 440, 205, 250, 180);
         g.setColor(skyBlueBackground);
@@ -105,7 +107,7 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.fillArc(200, 295, 951, 250, 180, 180);
         g.fillArc(200, 120, 950, 575, 180, 180);
         g.fillArc(425, 585, 500, 145, 180, 180);
-        
+
         g.setColor(aPurple);
         g.fillArc(250, 375, 850, 75, 0, 360);
         g.fillArc(211, 196, 927, 500, 180, 180);
@@ -114,15 +116,15 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g2d.setStroke(thickerLine);
         g.drawArc(250, 375, 850, 75, 0, 360);
         g.drawArc(200, 350, 950, 100, 0, 180);
-       
+
         g.setColor(blackCat);
         g.fillOval(425, 150, 500, 350);
-        
+
         g2d.rotate(50, 645, 350);
         int[] triangleX = {445, 520, 574, 695};
         int[] triangleY = {350, 47, 32, 250};
         g.fillPolygon(triangleX, triangleY, 4);
-        
+
         g.fillArc(518, 10, 60, 100, 0, 180);
         g.setColor(Color.BLACK);
         g2d.setStroke(thickerLine);
@@ -134,9 +136,9 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.setColor(blackCat);
         g2d.rotate(6.5, 680, 250);
         int[] triangleX1 = {680, 801, 864, 930};
-        int[] triangleY1 = {250, 32, 47, 350};  
+        int[] triangleY1 = {250, 32, 47, 350};
         g.fillPolygon(triangleX1, triangleY1, 4);
-        
+
         g.fillArc(804, 10, 60, 100, 0, 180);
         g.setColor(Color.BLACK);
         g.drawArc(804, 10, 60, 61, -6, 180);
@@ -149,25 +151,25 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
 
         g.setColor(Color.CYAN);
         g.fillOval(540, 250, 50, 50);
-        
+
         g.setColor(Color.YELLOW);
         g.fillOval(760, 250, 50, 50);
-        
+
         g.setColor(Color.BLACK);
         int[] triangleX2 = {645, 640, 664, 687, 710, 706};
-        int[] triangleY2 = {291, 314, 334, 334, 314, 291};  
+        int[] triangleY2 = {291, 314, 334, 334, 314, 291};
         g.fillPolygon(triangleX2, triangleY2, 6);
-        
+
         g.fillArc(633, 290, 25, 25, 90, 180);
         g.fillArc(693, 290, 25, 25, 270, 180);
         g.fillArc(662, 314, 27, 25, 180, 180);
 
         g.drawArc(675, 308, 80, 50, 180, 180);
         g.drawArc(595, 308, 80, 50, 180, 180);
-        
+
         g.setColor(softGreen);
         g.fillArc(218, 354, 915, 185, 180, 180);
-        
+
         g.setColor(Color.BLACK);
         g.drawArc(250, 375, 850, 75, 0, -234);
         g.drawArc(200, 122, 950, 575, 180, 180);
@@ -175,15 +177,15 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawArc(860, 420, 440, 205, 250, 180);
         g.drawArc(958, 460, 300, 125, 250, 184);
         g.drawArc(200, 295, 951, 250, 180, 180);
-        
+
         g.setColor(blackCat);
-        g.fillOval(425, 400, 200, 100);
-        g.fillOval(725, 400, 200, 100);
-        
+        g.fillOval(leftPawX, 400, 200, 100);
+        g.fillOval(rightPawX, 400, 200, 100);
+
         g.setColor(Color.BLACK);
-        g.drawOval(425, 400, 200, 100);
-        g.drawOval(725, 400, 200, 100);
-        
+        g.drawOval(leftPawX, 400, 200, 100);
+        g.drawOval(rightPawX, 400, 200, 100);
+
         g2d.rotate(-0.1, 700, 600);
         g2d.setStroke(slightlyThickerLine);
         g.drawLine(800, 620, 835, 607);
@@ -205,7 +207,7 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g2d.setStroke(evenSlighterThickerLine);
         g.drawArc(735, 600, 10, 40, 270, 180);
         g2d.setTransform(old);
-        
+
         g2d.rotate(-0.3, 995, 550);
         g2d.setStroke(slightlyThickerLine);
         g.drawLine(995, 570, 1030, 557);
@@ -271,12 +273,12 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g2d.setStroke(evenSlighterThickerLine);
         g.drawArc(415, 580, 10, 40, 90, 180);
         g2d.setTransform(old);
-        
+
         g.setColor(inspiringYellow);
         int[] starX = {100, 89, 50, 82, 69, 100, 131, 117, 150, 111};
         int[] starY = {25, 65, 65, 86, 120, 99, 120, 86, 65, 65};
         g.fillPolygon(starX, starY, 10);
-        
+
         g.setColor(Color.BLACK);
         g.drawLine(100, 25, 89, 65);
         g.drawLine(89, 65, 50, 65);
@@ -288,12 +290,12 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(117, 86, 150, 65);
         g.drawLine(150, 65, 111, 65);
         g.drawLine(111, 65, 100, 25);
-        
+
         g.setColor(inspiringYellow);
         int[] starXX = {300, 289, 250, 282, 269, 300, 331, 317, 350, 311};
         int[] starYY = {25, 65, 65, 86, 120, 99, 120, 86, 65, 65};
         g.fillPolygon(starXX, starYY, 10);
-        
+
         g.setColor(Color.BLACK);
         g.drawLine(300, 25, 289, 65);
         g.drawLine(289, 65, 250, 65);
@@ -305,12 +307,12 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(317, 86, 350, 65);
         g.drawLine(350, 65, 311, 65);
         g.drawLine(311, 65, 300, 25);
-        
+
         g.setColor(inspiringYellow);
         int[] starX2 = {100, 89, 50, 82, 69, 100, 131, 117, 150, 111};
         int[] starY2 = {225, 265, 265, 286, 320, 299, 320, 286, 265, 265};
         g.fillPolygon(starX2, starY2, 10);
-        
+
         g.setColor(Color.BLACK);
         g.drawLine(100, 225, 89, 265);
         g.drawLine(89, 265, 50, 265);
@@ -322,12 +324,12 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(117, 286, 150, 265);
         g.drawLine(150, 265, 111, 265);
         g.drawLine(111, 265, 100, 225);
-        
+
         g.setColor(inspiringYellow);
         int[] starX22 = {300, 289, 250, 282, 269, 300, 331, 317, 350, 311};
         int[] starY22 = {225, 265, 265, 286, 320, 299, 320, 286, 265, 265};
         g.fillPolygon(starX22, starY22, 10);
-        
+
         g.setColor(Color.BLACK);
         g.drawLine(300, 225, 289, 265);
         g.drawLine(289, 265, 250, 265);
@@ -344,7 +346,7 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         int[] starX3 = {100, 89, 50, 82, 69, 100, 131, 117, 150, 111};
         int[] starY3 = {425, 465, 465, 486, 520, 499, 520, 486, 465, 465};
         g.fillPolygon(starX3, starY3, 10);
-        
+
         g.setColor(Color.BLACK);
         g.drawLine(100, 425, 89, 465);
         g.drawLine(89, 465, 50, 465);
@@ -356,12 +358,12 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(117, 486, 150, 465);
         g.drawLine(150, 465, 111, 465);
         g.drawLine(111, 465, 100, 425);
-        
+
         g.setColor(inspiringYellow);
         int[] starX4 = {100, 89, 50, 82, 69, 100, 131, 117, 150, 111};
         int[] starY4 = {625, 665, 665, 686, 720, 699, 720, 686, 665, 665};
         g.fillPolygon(starX4, starY4, 10);
-        
+
         g.setColor(Color.BLACK);
         g.drawLine(100, 625, 89, 665);
         g.drawLine(89, 665, 50, 665);
@@ -373,12 +375,12 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(117, 686, 150, 665);
         g.drawLine(150, 665, 111, 665);
         g.drawLine(111, 665, 100, 625);
-        
+
         g.setColor(inspiringYellow);
         int[] starX44 = {300, 289, 250, 282, 269, 300, 331, 317, 350, 311};
         int[] starY44 = {625, 665, 665, 686, 720, 699, 720, 686, 665, 665};
         g.fillPolygon(starX44, starY44, 10);
-        
+
         g.setColor(Color.BLACK);
         g.drawLine(300, 625, 289, 665);
         g.drawLine(289, 665, 250, 665);
@@ -390,12 +392,12 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(317, 686, 350, 665);
         g.drawLine(350, 665, 311, 665);
         g.drawLine(311, 665, 300, 625);
-        
+
         g.setColor(inspiringYellow);
         int[] starX5 = {675, 664, 625, 657, 644, 675, 706, 692, 725, 686};
         int[] starY5 = {25, 65, 65, 86, 120, 99, 120, 86, 65, 65};
         g.fillPolygon(starX5, starY5, 10);
-        
+
         g.setColor(Color.BLACK);
         g.drawLine(675, 25, 664, 65);
         g.drawLine(664, 65, 625, 65);
@@ -412,7 +414,7 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         int[] starX6 = {1250, 1239, 1200, 1232, 1219, 1250, 1281, 1267, 1300, 1261};
         int[] starY6 = {25, 65, 65, 86, 120, 99, 120, 86, 65, 65};
         g.fillPolygon(starX6, starY6, 10);
-        
+
         g.setColor(Color.BLACK);
         g.drawLine(1250, 25, 1239, 65);
         g.drawLine(1239, 65, 1200, 65);
@@ -424,12 +426,12 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(1267, 86, 1300, 65);
         g.drawLine(1300, 65, 1261, 65);
         g.drawLine(1261, 65, 1250, 25);
-        
+
         g.setColor(inspiringYellow);
         int[] starX66 = {1050, 1039, 1000, 1032, 1019, 1050, 1081, 1067, 1100, 1061};
         int[] starY66 = {25, 65, 65, 86, 120, 99, 120, 86, 65, 65};
         g.fillPolygon(starX66, starY66, 10);
-        
+
         g.setColor(Color.BLACK);
         g.drawLine(1050, 25, 1039, 65);
         g.drawLine(1039, 65, 1000, 65);
@@ -441,12 +443,12 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(1067, 86, 1100, 65);
         g.drawLine(1100, 65, 1061, 65);
         g.drawLine(1061, 65, 1050, 25);
-        
+
         g.setColor(inspiringYellow);
         int[] starX7 = {1250, 1239, 1200, 1232, 1219, 1250, 1281, 1267, 1300, 1261};
         int[] starY7 = {225, 265, 265, 286, 320, 299, 320, 286, 265, 265};
         g.fillPolygon(starX7, starY7, 10);
-        
+
         g.setColor(Color.BLACK);
         g.drawLine(1250, 225, 1239, 265);
         g.drawLine(1239, 265, 1200, 265);
@@ -458,12 +460,12 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(1267, 286, 1300, 265);
         g.drawLine(1300, 265, 1261, 265);
         g.drawLine(1261, 265, 1250, 225);
-        
+
         g.setColor(inspiringYellow);
         int[] starX77 = {1050, 1039, 1000, 1032, 1019, 1050, 1081, 1067, 1100, 1061};
         int[] starY77 = {225, 265, 265, 286, 320, 299, 320, 286, 265, 265};
         g.fillPolygon(starX77, starY77, 10);
-        
+
         g.setColor(Color.BLACK);
         g.drawLine(1050, 225, 1039, 265);
         g.drawLine(1039, 265, 1000, 265);
@@ -475,12 +477,12 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(1067, 286, 1100, 265);
         g.drawLine(1100, 265, 1061, 265);
         g.drawLine(1061, 265, 1050, 225);
-        
+
         g.setColor(inspiringYellow);
         int[] starX8 = {1250, 1239, 1200, 1232, 1219, 1250, 1281, 1267, 1300, 1261};
         int[] starY8 = {625, 665, 665, 686, 720, 699, 720, 686, 665, 665};
         g.fillPolygon(starX8, starY8, 10);
-        
+
         g.setColor(Color.BLACK);
         g.drawLine(1250, 625, 1239, 665);
         g.drawLine(1239, 665, 1200, 665);
@@ -492,12 +494,12 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(1267, 686, 1300, 665);
         g.drawLine(1300, 665, 1261, 665);
         g.drawLine(1261, 665, 1250, 625);
-        
+
         g.setColor(inspiringYellow);
         int[] starX9 = {1050, 1039, 1000, 1032, 1019, 1050, 1081, 1067, 1100, 1061};
         int[] starY9 = {625, 665, 665, 686, 720, 699, 720, 686, 665, 665};
         g.fillPolygon(starX9, starY9, 10);
-        
+
         g.setColor(Color.BLACK);
         g.drawLine(1050, 625, 1039, 665);
         g.drawLine(1039, 665, 1000, 665);
@@ -509,7 +511,7 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(1067, 686, 1100, 665);
         g.drawLine(1100, 665, 1061, 665);
         g.drawLine(1061, 665, 1050, 625);
-        
+
         // GAME DRAWING ENDS HERE
     }
 
@@ -520,7 +522,17 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
     }
     // The main game loop
     // In here is where all the logic for my game will go
+
     public void gameLoop() {
+        leftPawX = leftPawX - 10;
+        
+       // else if(leftPawX == 250) {
+         //   leftPawX = leftPawX + 10;
+        //}
+       // rightPawX = rightPawX + 10;
+       // else if (rightPawX >= 1150) {
+          //  rightPawX = rightPawX - 10;
+        //}
     }
 
     // Used to implement any of the Mouse Actions
