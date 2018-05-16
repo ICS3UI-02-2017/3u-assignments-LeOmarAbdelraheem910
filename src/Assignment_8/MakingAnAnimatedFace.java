@@ -48,8 +48,12 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
     Color inspiringYellow = new Color(255, 248, 53);
     int leftPawX = 425;
     int rightPawX = 725;
-    boolean leftPawMoves = false;
-    boolean rightPawMoves = false;
+    int leftPawY = 425;
+    int rightPawY = 725;
+    boolean leftPawMoves = true;
+    boolean rightPawMoves = true;
+    boolean leftPawMovesVert = true;
+    boolean rightPawMovesVert = true;
 
     // GAME VARIABLES END HERE    
     // Constructor to create the Frame and place the panel in
@@ -524,15 +528,31 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
     // In here is where all the logic for my game will go
 
     public void gameLoop() {
-        leftPawX = leftPawX - 10;
+        if(leftPawX == 425 || leftPawX >= 425){
+            leftPawMoves = true;
+        }
+        if(leftPawX <= 0 && leftPawX <= 425){
+            leftPawMoves = false;
+        }
         
-       // else if(leftPawX == 250) {
-         //   leftPawX = leftPawX + 10;
-        //}
-       // rightPawX = rightPawX + 10;
-       // else if (rightPawX >= 1150) {
-          //  rightPawX = rightPawX - 10;
-        //}
+        if (leftPawMoves) {
+            leftPawX = leftPawX - 5;
+        } else {
+            leftPawX = leftPawX + 5;
+        }
+        
+        if(rightPawX == 725 || rightPawX <= 725){
+            rightPawMoves = true;
+        }
+        if(rightPawX >= 1150 && rightPawX >= 725){
+            rightPawMoves = false;
+        }
+        
+        if (rightPawMoves) {
+            rightPawX = rightPawX + 5;
+        } else {
+            rightPawX = rightPawX - 5;
+        }
     }
 
     // Used to implement any of the Mouse Actions
