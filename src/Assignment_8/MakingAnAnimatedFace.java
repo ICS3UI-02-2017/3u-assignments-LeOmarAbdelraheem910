@@ -40,20 +40,25 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
     BasicStroke thickerLine = new BasicStroke(10);
     BasicStroke slightlyThickerLine = new BasicStroke(5);
     BasicStroke evenSlighterThickerLine = new BasicStroke(2);
+    
     Color blackCat = new Color(30, 30, 30);
     Color softGreen = new Color(76, 234, 58);
     Color aPurple = new Color(134, 100, 186);
     Color fishyOrange = new Color(209, 112, 8);
     Color skyBlueBackground = new Color(77, 139, 193);
     Color inspiringYellow = new Color(255, 248, 53);
+    
     int leftPawX = 425;
     int rightPawX = 725;
-    int leftPawY = 425;
-    int rightPawY = 725;
+    int leftPawY = 400;
+    int rightPawY = 400;
+    double catHeadRotate = 50;
+    
     boolean leftPawMoves = true;
     boolean rightPawMoves = true;
     boolean leftPawMovesVert = true;
     boolean rightPawMovesVert = true;
+    boolean catHeadMoves = true;
 
     // GAME VARIABLES END HERE    
     // Constructor to create the Frame and place the panel in
@@ -120,7 +125,8 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g2d.setStroke(thickerLine);
         g.drawArc(250, 375, 850, 75, 0, 360);
         g.drawArc(200, 350, 950, 100, 0, 180);
-
+        
+        g2d.rotate(catHeadRotate, 675, 325);
         g.setColor(blackCat);
         g.fillOval(425, 150, 500, 350);
 
@@ -170,7 +176,9 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
 
         g.drawArc(675, 308, 80, 50, 180, 180);
         g.drawArc(595, 308, 80, 50, 180, 180);
+        g2d.setTransform(old);
 
+        
         g.setColor(softGreen);
         g.fillArc(218, 354, 915, 185, 180, 180);
 
@@ -183,12 +191,12 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawArc(200, 295, 951, 250, 180, 180);
 
         g.setColor(blackCat);
-        g.fillOval(leftPawX, 400, 200, 100);
-        g.fillOval(rightPawX, 400, 200, 100);
+        g.fillOval(leftPawX, leftPawY, 200, 100);
+        g.fillOval(rightPawX, rightPawY, 200, 100);
 
         g.setColor(Color.BLACK);
-        g.drawOval(leftPawX, 400, 200, 100);
-        g.drawOval(rightPawX, 400, 200, 100);
+        g.drawOval(leftPawX, leftPawY, 200, 100);
+        g.drawOval(rightPawX, rightPawY, 200, 100);
 
         g2d.rotate(-0.1, 700, 600);
         g2d.setStroke(slightlyThickerLine);
@@ -528,10 +536,11 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
     // In here is where all the logic for my game will go
 
     public void gameLoop() {
+        //left paw moves horizontally
         if(leftPawX == 425 || leftPawX >= 425){
             leftPawMoves = true;
         }
-        if(leftPawX <= 0 && leftPawX <= 425){
+        if(leftPawX <= 225 && leftPawX <= 425){
             leftPawMoves = false;
         }
         
@@ -540,11 +549,23 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         } else {
             leftPawX = leftPawX + 5;
         }
+       
+        if(leftPawY == 400 || leftPawY >= 400){
+            leftPawMovesVert = true;
+        }
+        if(leftPawY <= 360 && leftPawY <= 400){
+            leftPawMovesVert = false;
+        }
+        if(leftPawMovesVert){
+            leftPawY = leftPawY - 1;
+        } else {
+            leftPawY = leftPawY + 1;
+        }
         
         if(rightPawX == 725 || rightPawX <= 725){
             rightPawMoves = true;
         }
-        if(rightPawX >= 1150 && rightPawX >= 725){
+        if(rightPawX >= 925 && rightPawX >= 725){
             rightPawMoves = false;
         }
         
@@ -553,6 +574,31 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         } else {
             rightPawX = rightPawX - 5;
         }
+        
+        if(rightPawY == 400 || rightPawY >= 400){
+            rightPawMovesVert = true;
+        }
+        if(rightPawY <= 360 && rightPawY <= 400){
+            rightPawMovesVert = false;
+        }
+        if(rightPawMovesVert){
+            rightPawY = rightPawY - 1;
+        } else {
+            rightPawY = rightPawY + 1;
+        }
+        
+        if(catHeadRotate == 50 || catHeadRotate >= 50){
+            catHeadMoves = true;
+        }
+        if(catHeadRotate >= 50.1 && catHeadRotate <= 50){
+            catHeadMoves = false;
+        }
+        if(catHeadMoves){
+            catHeadRotate = catHeadRotate + 0.1;
+        } else {
+            catHeadRotate = catHeadRotate - 0.1;
+        }
+        
     }
 
     // Used to implement any of the Mouse Actions
