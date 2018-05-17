@@ -40,25 +40,39 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
     BasicStroke thickerLine = new BasicStroke(10);
     BasicStroke slightlyThickerLine = new BasicStroke(5);
     BasicStroke evenSlighterThickerLine = new BasicStroke(2);
-    
+
     Color blackCat = new Color(30, 30, 30);
     Color softGreen = new Color(76, 234, 58);
     Color aPurple = new Color(134, 100, 186);
     Color fishyOrange = new Color(209, 112, 8);
     Color skyBlueBackground = new Color(77, 139, 193);
     Color inspiringYellow = new Color(255, 248, 53);
-    
+
     int leftPawX = 425;
     int rightPawX = 725;
     int leftPawY = 400;
     int rightPawY = 400;
-    double catHeadRotate = 50;
-    
+    int eyeColourSwitcher = 0;
+    int leftEyeX = 540;
+    int rightEyeX = 760;
+    int leftEyeShrinkX = 50;
+    int rightEyeShrinkX = 50;
+    int changedLeftShrinkX = 0;
+    int changedRightShrinkX = 0;
+    int changedLeftEyeX = 0;
+    int changedRightEyeX = 1300;
+    double leftEarRotate = 50;
+    double rightEarRotate = 6.5;
+    double starsRotate = 0;
+
     boolean leftPawMoves = true;
     boolean rightPawMoves = true;
     boolean leftPawMovesVert = true;
     boolean rightPawMovesVert = true;
-    boolean catHeadMoves = true;
+    boolean leftEarMoves = true;
+    boolean rightEarMoves = true;
+    boolean starsMove = true;
+    boolean colourSwitcherDefines = true;
 
     // GAME VARIABLES END HERE    
     // Constructor to create the Frame and place the panel in
@@ -104,6 +118,8 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         // GAME DRAWING GOES HERE
         AffineTransform old = g2d.getTransform();
 
+        g.drawRect(eyeColourSwitcher, 0, 1, 1);
+        
         g.setColor(skyBlueBackground);
         g.fillRect(0, 0, WIDTH, HEIGHT);
 
@@ -125,13 +141,10 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g2d.setStroke(thickerLine);
         g.drawArc(250, 375, 850, 75, 0, 360);
         g.drawArc(200, 350, 950, 100, 0, 180);
-        
-        g2d.rotate(catHeadRotate, 675, 325);
-        g.setColor(blackCat);
-        g.fillOval(425, 150, 500, 350);
 
-        g2d.rotate(50, 645, 350);
-        int[] triangleX = {445, 520, 574, 695};
+        g.setColor(blackCat);
+        g2d.rotate(leftEarRotate, 645, 350);
+        int[] triangleX = {453, 520, 574, 695};
         int[] triangleY = {350, 47, 32, 250};
         g.fillPolygon(triangleX, triangleY, 4);
 
@@ -139,12 +152,12 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.setColor(Color.BLACK);
         g2d.setStroke(thickerLine);
         g.drawArc(518, 10, 60, 61, 6, 180);
-        g.drawLine(480, 200, 517, 44);
-        g.drawLine(632, 150, 577, 32);
+        g.drawLine(482, 200, 517, 44);
+        g.drawLine(633, 148, 577, 32);
         g2d.setTransform(old);
 
         g.setColor(blackCat);
-        g2d.rotate(6.5, 680, 250);
+        g2d.rotate(rightEarRotate, 680, 250);
         int[] triangleX1 = {680, 801, 864, 930};
         int[] triangleY1 = {250, 32, 47, 350};
         g.fillPolygon(triangleX1, triangleY1, 4);
@@ -156,14 +169,22 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(895, 200, 865, 43);
         g2d.setTransform(old);
 
+        g.setColor(blackCat);
+        g.fillOval(425, 150, 500, 350);
+
         g.setColor(Color.BLACK);
         g.drawOval(425, 150, 500, 350);
 
         g.setColor(Color.CYAN);
-        g.fillOval(540, 250, 50, 50);
+        g.fillOval(leftEyeX, 250, leftEyeShrinkX, 50);
 
         g.setColor(Color.YELLOW);
-        g.fillOval(760, 250, 50, 50);
+        g.fillOval(rightEyeX, 250, rightEyeShrinkX, 50);
+
+        g.fillOval(changedLeftEyeX, 250, changedLeftShrinkX, 50);
+
+        g.setColor(Color.CYAN);
+        g.fillOval(changedRightEyeX, 250, changedLeftShrinkX, 50);
 
         g.setColor(Color.BLACK);
         int[] triangleX2 = {645, 640, 664, 687, 710, 706};
@@ -176,9 +197,7 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
 
         g.drawArc(675, 308, 80, 50, 180, 180);
         g.drawArc(595, 308, 80, 50, 180, 180);
-        g2d.setTransform(old);
 
-        
         g.setColor(softGreen);
         g.fillArc(218, 354, 915, 185, 180, 180);
 
@@ -286,6 +305,7 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawArc(415, 580, 10, 40, 90, 180);
         g2d.setTransform(old);
 
+        g2d.rotate(starsRotate, 100, 65);
         g.setColor(inspiringYellow);
         int[] starX = {100, 89, 50, 82, 69, 100, 131, 117, 150, 111};
         int[] starY = {25, 65, 65, 86, 120, 99, 120, 86, 65, 65};
@@ -302,7 +322,9 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(117, 86, 150, 65);
         g.drawLine(150, 65, 111, 65);
         g.drawLine(111, 65, 100, 25);
+        g2d.setTransform(old);
 
+        g2d.rotate(starsRotate, 300, 65);
         g.setColor(inspiringYellow);
         int[] starXX = {300, 289, 250, 282, 269, 300, 331, 317, 350, 311};
         int[] starYY = {25, 65, 65, 86, 120, 99, 120, 86, 65, 65};
@@ -319,7 +341,9 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(317, 86, 350, 65);
         g.drawLine(350, 65, 311, 65);
         g.drawLine(311, 65, 300, 25);
+        g2d.setTransform(old);
 
+        g2d.rotate(starsRotate, 100, 265);
         g.setColor(inspiringYellow);
         int[] starX2 = {100, 89, 50, 82, 69, 100, 131, 117, 150, 111};
         int[] starY2 = {225, 265, 265, 286, 320, 299, 320, 286, 265, 265};
@@ -336,7 +360,9 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(117, 286, 150, 265);
         g.drawLine(150, 265, 111, 265);
         g.drawLine(111, 265, 100, 225);
+        g2d.setTransform(old);
 
+        g2d.rotate(starsRotate, 300, 265);
         g.setColor(inspiringYellow);
         int[] starX22 = {300, 289, 250, 282, 269, 300, 331, 317, 350, 311};
         int[] starY22 = {225, 265, 265, 286, 320, 299, 320, 286, 265, 265};
@@ -353,7 +379,9 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(317, 286, 350, 265);
         g.drawLine(350, 265, 311, 265);
         g.drawLine(311, 265, 300, 225);
+        g2d.setTransform(old);
 
+        g2d.rotate(starsRotate, 100, 465);
         g.setColor(inspiringYellow);
         int[] starX3 = {100, 89, 50, 82, 69, 100, 131, 117, 150, 111};
         int[] starY3 = {425, 465, 465, 486, 520, 499, 520, 486, 465, 465};
@@ -370,7 +398,9 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(117, 486, 150, 465);
         g.drawLine(150, 465, 111, 465);
         g.drawLine(111, 465, 100, 425);
+        g2d.setTransform(old);
 
+        g2d.rotate(starsRotate, 100, 665);
         g.setColor(inspiringYellow);
         int[] starX4 = {100, 89, 50, 82, 69, 100, 131, 117, 150, 111};
         int[] starY4 = {625, 665, 665, 686, 720, 699, 720, 686, 665, 665};
@@ -387,7 +417,9 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(117, 686, 150, 665);
         g.drawLine(150, 665, 111, 665);
         g.drawLine(111, 665, 100, 625);
+        g2d.setTransform(old);
 
+        g2d.rotate(starsRotate, 300, 665);
         g.setColor(inspiringYellow);
         int[] starX44 = {300, 289, 250, 282, 269, 300, 331, 317, 350, 311};
         int[] starY44 = {625, 665, 665, 686, 720, 699, 720, 686, 665, 665};
@@ -404,7 +436,9 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(317, 686, 350, 665);
         g.drawLine(350, 665, 311, 665);
         g.drawLine(311, 665, 300, 625);
+        g2d.setTransform(old);
 
+        g2d.rotate(starsRotate, 675, 65);
         g.setColor(inspiringYellow);
         int[] starX5 = {675, 664, 625, 657, 644, 675, 706, 692, 725, 686};
         int[] starY5 = {25, 65, 65, 86, 120, 99, 120, 86, 65, 65};
@@ -421,7 +455,9 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(692, 86, 725, 65);
         g.drawLine(725, 65, 686, 65);
         g.drawLine(686, 65, 675, 25);
+        g2d.setTransform(old);
 
+        g2d.rotate(starsRotate, 1250, 65);
         g.setColor(inspiringYellow);
         int[] starX6 = {1250, 1239, 1200, 1232, 1219, 1250, 1281, 1267, 1300, 1261};
         int[] starY6 = {25, 65, 65, 86, 120, 99, 120, 86, 65, 65};
@@ -438,7 +474,9 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(1267, 86, 1300, 65);
         g.drawLine(1300, 65, 1261, 65);
         g.drawLine(1261, 65, 1250, 25);
+        g2d.setTransform(old);
 
+        g2d.rotate(starsRotate, 1050, 65);
         g.setColor(inspiringYellow);
         int[] starX66 = {1050, 1039, 1000, 1032, 1019, 1050, 1081, 1067, 1100, 1061};
         int[] starY66 = {25, 65, 65, 86, 120, 99, 120, 86, 65, 65};
@@ -455,7 +493,9 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(1067, 86, 1100, 65);
         g.drawLine(1100, 65, 1061, 65);
         g.drawLine(1061, 65, 1050, 25);
+        g2d.setTransform(old);
 
+        g2d.rotate(starsRotate, 1250, 265);
         g.setColor(inspiringYellow);
         int[] starX7 = {1250, 1239, 1200, 1232, 1219, 1250, 1281, 1267, 1300, 1261};
         int[] starY7 = {225, 265, 265, 286, 320, 299, 320, 286, 265, 265};
@@ -472,7 +512,9 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(1267, 286, 1300, 265);
         g.drawLine(1300, 265, 1261, 265);
         g.drawLine(1261, 265, 1250, 225);
+        g2d.setTransform(old);
 
+        g2d.rotate(starsRotate, 1050, 265);
         g.setColor(inspiringYellow);
         int[] starX77 = {1050, 1039, 1000, 1032, 1019, 1050, 1081, 1067, 1100, 1061};
         int[] starY77 = {225, 265, 265, 286, 320, 299, 320, 286, 265, 265};
@@ -489,7 +531,9 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(1067, 286, 1100, 265);
         g.drawLine(1100, 265, 1061, 265);
         g.drawLine(1061, 265, 1050, 225);
+        g2d.setTransform(old);
 
+        g2d.rotate(starsRotate, 1250, 665);
         g.setColor(inspiringYellow);
         int[] starX8 = {1250, 1239, 1200, 1232, 1219, 1250, 1281, 1267, 1300, 1261};
         int[] starY8 = {625, 665, 665, 686, 720, 699, 720, 686, 665, 665};
@@ -506,7 +550,9 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(1267, 686, 1300, 665);
         g.drawLine(1300, 665, 1261, 665);
         g.drawLine(1261, 665, 1250, 625);
+        g2d.setTransform(old);
 
+        g2d.rotate(starsRotate, 1050, 665);
         g.setColor(inspiringYellow);
         int[] starX9 = {1050, 1039, 1000, 1032, 1019, 1050, 1081, 1067, 1100, 1061};
         int[] starY9 = {625, 665, 665, 686, 720, 699, 720, 686, 665, 665};
@@ -523,6 +569,7 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(1067, 686, 1100, 665);
         g.drawLine(1100, 665, 1061, 665);
         g.drawLine(1061, 665, 1050, 625);
+        g2d.setTransform(old);
 
         // GAME DRAWING ENDS HERE
     }
@@ -537,71 +584,128 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
 
     public void gameLoop() {
         //left paw moves horizontally
-        if(leftPawX == 425 || leftPawX >= 425){
+        if (leftPawX == 425 || leftPawX >= 425) {
             leftPawMoves = true;
         }
-        if(leftPawX <= 225 && leftPawX <= 425){
+        if (leftPawX <= 225 && leftPawX <= 425) {
             leftPawMoves = false;
         }
-        
+
         if (leftPawMoves) {
             leftPawX = leftPawX - 5;
         } else {
             leftPawX = leftPawX + 5;
         }
-       
-        if(leftPawY == 400 || leftPawY >= 400){
+
+        if (leftPawY == 400 || leftPawY >= 400) {
             leftPawMovesVert = true;
         }
-        if(leftPawY <= 360 && leftPawY <= 400){
+        if (leftPawY <= 360 && leftPawY <= 400) {
             leftPawMovesVert = false;
         }
-        if(leftPawMovesVert){
+        if (leftPawMovesVert) {
             leftPawY = leftPawY - 1;
         } else {
             leftPawY = leftPawY + 1;
         }
-        
-        if(rightPawX == 725 || rightPawX <= 725){
+
+        if (rightPawX == 725 || rightPawX <= 725) {
             rightPawMoves = true;
         }
-        if(rightPawX >= 925 && rightPawX >= 725){
+        if (rightPawX >= 925 && rightPawX >= 725) {
             rightPawMoves = false;
         }
-        
+
         if (rightPawMoves) {
             rightPawX = rightPawX + 5;
         } else {
             rightPawX = rightPawX - 5;
         }
-        
-        if(rightPawY == 400 || rightPawY >= 400){
+
+        if (rightPawY == 400 || rightPawY >= 400) {
             rightPawMovesVert = true;
         }
-        if(rightPawY <= 360 && rightPawY <= 400){
+        if (rightPawY <= 360 && rightPawY <= 400) {
             rightPawMovesVert = false;
         }
-        if(rightPawMovesVert){
+        if (rightPawMovesVert) {
             rightPawY = rightPawY - 1;
         } else {
             rightPawY = rightPawY + 1;
         }
-        
-        if(catHeadRotate == 50 || catHeadRotate >= 50){
-            catHeadMoves = true;
-        }
-        if(catHeadRotate >= 50.1 && catHeadRotate <= 50){
-            catHeadMoves = false;
-        }
-        if(catHeadMoves){
-            catHeadRotate = catHeadRotate + 0.1;
-        } else {
-            catHeadRotate = catHeadRotate - 0.1;
-        }
-        
-    }
 
+        if (starsRotate >= 0) {
+            starsMove = true;
+        }
+        if (starsRotate <= -1) {
+            starsMove = false;
+        }
+        if (starsMove) {
+            starsRotate = starsRotate - 0.05;
+        } else {
+            starsRotate = starsRotate + 0.05;
+        }
+
+        if (leftEarRotate >= 50) {
+            leftEarMoves = true;
+        }
+        if (leftEarRotate <= 49.8) {
+            leftEarMoves = false;
+        }
+        if (leftEarMoves) {
+            leftEarRotate = leftEarRotate - 0.005;
+        } else {
+            leftEarRotate = leftEarRotate + 0.005;
+        }
+
+        if (rightEarRotate <= 6.5) {
+            rightEarMoves = true;
+        }
+        if (rightEarRotate >= 6.7) {
+            rightEarMoves = false;
+        }
+        if (rightEarMoves) {
+            rightEarRotate = rightEarRotate + 0.005125;
+        } else {
+            rightEarRotate = rightEarRotate - 0.005125;
+        }
+
+        //aksdhsakjhdsakjdhaskjdhsakjdhaskldjhsakljdhsadkjlashdkads
+        if(eyeColourSwitcher <= 0){
+        colourSwitcherDefines = true;
+        }
+        if(eyeColourSwitcher > 1350 && eyeColourSwitcher >= 0){
+            colourSwitcherDefines = false;
+        }
+        if(colourSwitcherDefines){
+            eyeColourSwitcher = eyeColourSwitcher + 17;
+        } else {
+            eyeColourSwitcher = eyeColourSwitcher - 17;
+        }
+        
+        if (eyeColourSwitcher >= 0 && eyeColourSwitcher <= 680) {
+            leftEyeX = 540;
+            leftEyeShrinkX = 50;
+            rightEyeX = 760;
+            rightEyeShrinkX = 50;
+            changedLeftEyeX = 0;
+            changedLeftShrinkX = 0;  
+            changedRightEyeX = 1300;
+            changedRightShrinkX = 0;
+            }
+        else if(eyeColourSwitcher >= 680 && eyeColourSwitcher <= 1360) {
+            leftEyeX = 0;
+            leftEyeShrinkX = 0;
+            rightEyeX = 1300;
+            rightEyeShrinkX = 0;
+            changedLeftEyeX = 540;
+            changedLeftShrinkX = 50;  
+            changedRightEyeX = 760;
+            changedRightShrinkX = 50;
+        }
+    }
     // Used to implement any of the Mouse Actions
+
     private class Mouse extends MouseAdapter {
 
         // if a mouse button has been pressed down
