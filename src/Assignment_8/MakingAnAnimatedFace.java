@@ -15,7 +15,13 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
 import java.awt.geom.AffineTransform;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import javax.swing.Timer;
+import sun.audio.AudioPlayer;
+import sun.audio.AudioStream;
+
 
 /**
  *
@@ -37,7 +43,7 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
     // this is what keeps our time running smoothly :)
     Timer gameTimer;
     // YOUR GAME VARIABLES WOULD GO HERE
-    
+
     //Set line thicknesses for outlines
     BasicStroke thickerLine = new BasicStroke(10);
     BasicStroke slightlyThickerLine = new BasicStroke(5);
@@ -56,24 +62,24 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
     int rightPawX = 725;
     int leftPawY = 400;
     int rightPawY = 400;
-    
+
     //Movement variables for the left, right, changedleft, and changedrights eyes
     int leftEyeX = 540;
     int rightEyeX = 760;
     int changedLeftEyeX = 0;
     int changedRightEyeX = 1300;
-    
+
     //Create variables to shrink and enlarge the left, right, changedleft, and changedrights eyes
     int leftEyeShrinkX = 50;
     int rightEyeShrinkX = 50;
     int changedLeftShrinkX = 0;
     int changedRightShrinkX = 0;
-    
+
     //Create variables to rotate the left and right ears, and all stars
     double leftEarRotate = 50;
     double rightEarRotate = 6.5;
     double starsRotate = 0;
-    
+
     //Create a position variable for the tiny eye colour changing rectangle
     int eyeColourSwitcher = 0;
 
@@ -82,12 +88,12 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
     boolean rightPawMoves = true;
     boolean leftPawMovesVert = true;
     boolean rightPawMovesVert = true;
-    
+
     //Condition variables for rotation of the left and right ears and the stars.
     boolean leftEarMoves = true;
     boolean rightEarMoves = true;
     boolean starsMove = true;
-    
+
     //Create a condition variable for the movement of the tiny eye colour changing rectangle 
     boolean colourSwitcherDefines = true;
 
@@ -122,6 +128,23 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         gameTimer.start();
     }
 
+    //Set up a method to play music while the animation is running.
+    public static void playMusic(String filepath){
+        InputStream music;
+        try
+        {
+            //Be able to locate and play and audio files.
+            music = new FileInputStream(new File(filepath));
+            AudioStream audio = new AudioStream(music);   
+            AudioPlayer.player.start(audio);
+        }
+        catch(Exception e){
+            //Print out an error message if the file cannot be found/played.
+            System.out.println("Music file cannot be played!");
+            e.printStackTrace();
+        }
+    }
+
     // drawing of the game happens in here
     // we use the Graphics object, g, to perform the drawing
     // NOTE: This is already double buffered!(helps with framerate/speed)
@@ -138,7 +161,7 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
 
         //A tiny rectangle used to change the colour of the eyes of the cat
         g.drawRect(eyeColourSwitcher, 0, 1, 1);
-        
+
         //Create a sky blue background
         g.setColor(skyBlueBackground);
         g.fillRect(0, 0, WIDTH, HEIGHT);
@@ -423,7 +446,7 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.drawLine(1100, 665, 1061, 665);
         g.drawLine(1061, 665, 1050, 625);
         g2d.setTransform(old);
-        
+
         //Fill in the colours of cup and around the cup
         g.setColor(softGreen);
         g.fillArc(860, 420, 440, 205, 250, 180);
@@ -437,7 +460,7 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         g.setColor(aPurple);
         g.fillArc(250, 375, 850, 75, 0, 360);
         g.fillArc(211, 196, 927, 500, 180, 180);
-        
+
         //Create outlines for the cup
         g.setColor(Color.BLACK);
         g2d.setStroke(thickerLine);
@@ -648,7 +671,7 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         } else {
             leftPawX = leftPawX + 5;
         }
-        
+
         //Move the left paw vertically, back and forth along the rim of the cup
         if (leftPawY >= 400) {
             leftPawMovesVert = true;
@@ -728,18 +751,18 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
         }
 
         //Move the tiny colour changing rectangle across the width of the screen (it will bounce between the boundaries)
-        if(eyeColourSwitcher <= 0){
-        colourSwitcherDefines = true;
+        if (eyeColourSwitcher <= 0) {
+            colourSwitcherDefines = true;
         }
-        if(eyeColourSwitcher > 1350 && eyeColourSwitcher >= 0){
+        if (eyeColourSwitcher > 1350 && eyeColourSwitcher >= 0) {
             colourSwitcherDefines = false;
         }
-        if(colourSwitcherDefines){
+        if (colourSwitcherDefines) {
             eyeColourSwitcher = eyeColourSwitcher + 17;
         } else {
             eyeColourSwitcher = eyeColourSwitcher - 17;
         }
-        
+
         //Switch the colour of the eyes strategically (make both versions of the eyes disappear!)
         if (eyeColourSwitcher >= 0 && eyeColourSwitcher <= 680) {
             leftEyeX = 540;
@@ -747,17 +770,16 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
             rightEyeX = 760;
             rightEyeShrinkX = 50;
             changedLeftEyeX = 0;
-            changedLeftShrinkX = 0;  
+            changedLeftShrinkX = 0;
             changedRightEyeX = 1300;
             changedRightShrinkX = 0;
-            }
-        else if(eyeColourSwitcher >= 680 && eyeColourSwitcher <= 1360) {
+        } else if (eyeColourSwitcher >= 680 && eyeColourSwitcher <= 1360) {
             leftEyeX = 0;
             leftEyeShrinkX = 0;
             rightEyeX = 1300;
             rightEyeShrinkX = 0;
             changedLeftEyeX = 540;
-            changedLeftShrinkX = 50;  
+            changedLeftShrinkX = 50;
             changedRightEyeX = 760;
             changedRightShrinkX = 50;
         }
@@ -814,5 +836,7 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
     public static void main(String[] args) {
         // creates an instance of my game
         MakingAnAnimatedFace game = new MakingAnAnimatedFace();
+        //Play the cat's theme song!!!!!!!!!!!!!!!!!!!!
+        playMusic("HitPointNekoAtsumeTheme.wav");
     }
 }
