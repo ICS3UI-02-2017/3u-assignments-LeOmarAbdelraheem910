@@ -1,4 +1,4 @@
-package FINAL_ASSIGNMENT;
+package MiscellaneousProjects;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -152,7 +152,6 @@ public class SonicLeHedgehogRemake extends JComponent implements ActionListener 
         g.fillRect(0, 0, WIDTH, HEIGHT);
         g.drawImage(sonic, (int) sonicX, (int) sonicY, null);
         g.drawImage(robotnik, (int) robotnikX, (int) robotnikY, null);
-        //g.drawImage(sonicRolling1, (int) sonicX, (int) sonicY, null);
         g.drawImage(eHZGround, 0 - (int) terrainMovementX, 472 + (int) terrainMovementY, null);
         g.drawImage(eHZGround, 128 - (int) terrainMovementX, 472 + (int) terrainMovementY, null);
         g.drawImage(eHZGround, 256 - (int) terrainMovementX, 472 + (int) terrainMovementY, null);
@@ -167,6 +166,9 @@ public class SonicLeHedgehogRemake extends JComponent implements ActionListener 
         g.drawImage(eHZGround, 1408 - (int) terrainMovementX, 472 + (int) terrainMovementY, null);
         g.drawImage(eHZGround, 1536 - (int) terrainMovementX, 472 + (int) terrainMovementY, null);
 
+        if(rolling && xsp >= 1.03125 || xsp <= -1.03125){
+            g.drawImage(sonicRolling1, (int) sonicX, (int) sonicY, null);
+        }
         // GAME DRAWING ENDS HERE
     }
 
