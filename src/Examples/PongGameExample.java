@@ -192,11 +192,31 @@ public class PongGameExample extends JComponent implements ActionListener {
             } else if (keyCode == KeyEvent.VK_S) {
                 paddle1Down = true;
             }
+            //paddle 2 controls
+            if (keyCode == KeyEvent.VK_UP) {
+                paddle2Up = true;
+            } else if (keyCode == KeyEvent.VK_DOWN) {
+                paddle2Down = true;
+            }
         }
 
         // if a key has been released
         @Override
         public void keyReleased(KeyEvent e) {
+        int keyCode = e.getKeyCode();
+            //paddle 1 controls
+            if (keyCode == KeyEvent.VK_W) {
+                paddle1Up = false;
+            } else if (keyCode == KeyEvent.VK_S) {
+                paddle1Down = false;
+            }
+            //paddle 2 controls
+            if (keyCode == KeyEvent.VK_UP) {
+                paddle2Up = false;
+            } else if (keyCode == KeyEvent.VK_DOWN) {
+                paddle2Down = false;
+            }
+        
         }
     }
 
