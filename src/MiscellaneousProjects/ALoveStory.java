@@ -1,4 +1,4 @@
-package FINAL_ASSIGNMENT;
+package MiscellaneousProjects;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
