@@ -5,6 +5,7 @@ import java.awt.Graphics;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -43,14 +44,21 @@ public class PongGameExample extends JComponent implements ActionListener {
     //ball variables
     Rectangle ball = new Rectangle(395, 295, 10, 10);
     int ballAngle = 45;
-    int ballSpeed = 7;
+    int ballSpeed = 10;
     //control variables
     boolean paddle1Up = false;
     boolean paddle1Down = false;
     boolean paddle2Up = false;
     boolean paddle2Down = false;
-    int paddleSpeed = 5;
+    int paddleSpeed = 10;
 
+    //player scores
+    int score1 = 0;
+    int score2 = 0;
+    
+    //create a custom font
+    Font biggerFont = new Font("arial", Font.BOLD, 36);
+    
     // GAME VARIABLES END HERE    
     // Constructor to create the Frame and place the panel in
     // You will learn more about this in Grade 12 :)
@@ -102,6 +110,10 @@ public class PongGameExample extends JComponent implements ActionListener {
         g.fillRect(paddle2.x, paddle2.y, paddle2.width, paddle2.height);
 
         g.fillRect(ball.x, ball.y, ball.width, ball.height);
+        
+        g.setFont(biggerFont);
+        g.drawString("" + score1, WIDTH/2 - 50, 50);
+        g.drawString("" + score2, WIDTH/2 + 50, 50);
 
         // GAME DRAWING ENDS HERE
     }
@@ -140,7 +152,21 @@ public class PongGameExample extends JComponent implements ActionListener {
         } else if (paddle1Down) {
             paddle1.y = paddle1.y + paddleSpeed;
         }
-
+        
+        //is paddle1 too far up?
+        if(paddle1.y < 0){
+            paddle1.y = 0;
+        }else if(paddle1.y + paddle1.height > HEIGHT){
+            paddle1.y = HEIGHT - paddle1.height;
+        }
+        
+        //is paddle2 too far up?
+        if(paddle2.y < 0){
+            paddle2.y = 0;
+        }else if(paddle2.y + paddle1.height > HEIGHT){
+            paddle2.y = HEIGHT - paddle1.height;
+        }
+        
         //player 2 control
         if (paddle2Up) {
             paddle2.y = paddle2.y - paddleSpeed;
@@ -150,9 +176,42 @@ public class PongGameExample extends JComponent implements ActionListener {
     }
 
     private void checkForCollision() {
+        // collision with bottom/top
+        if (ball.y < 0) {
+            ballAngle = ballAngle * -1;
+        }
+        if (ball.y + ball.height > HEIGHT) {
+            ballAngle = ballAngle * -1;
+        }
+        //NOTE: % 360 just makes sure we don't go over 360 degrees
+        //does the ball hit paddle1
+        if (ball.intersects(paddle1)) {
+            ballAngle = (180 + ballAngle * -1) % 360;
+        }
+        //does the ball hit paddle2
+        if (ball.intersects(paddle2)) {
+            ballAngle = (180 + ballAngle * -1) % 360;
+        }
+
     }
 
     private void checkForGoal() {
+        //ball off lefthand side
+        if(ball.x < 0){
+            //add to player 2 score
+            score2++;
+            //put ball back at centre
+            ball.x = WIDTH/2 - ball.width/2;
+            ball.y = HEIGHT/2 - ball.height/2;
+        }
+        //ball off righthand side
+        if(ball.x + ball.width > WIDTH){
+            //add to player 1 score
+            score1++;
+            //put ball back at centre
+            ball.x = WIDTH/2 - ball.width/2;
+            ball.y = HEIGHT/2 - ball.height/2;
+        }
     }
 
     // Used to implement any of the Mouse Actions
@@ -203,7 +262,7 @@ public class PongGameExample extends JComponent implements ActionListener {
         // if a key has been released
         @Override
         public void keyReleased(KeyEvent e) {
-        int keyCode = e.getKeyCode();
+            int keyCode = e.getKeyCode();
             //paddle 1 controls
             if (keyCode == KeyEvent.VK_W) {
                 paddle1Up = false;
@@ -216,7 +275,7 @@ public class PongGameExample extends JComponent implements ActionListener {
             } else if (keyCode == KeyEvent.VK_DOWN) {
                 paddle2Down = false;
             }
-        
+
         }
     }
 
