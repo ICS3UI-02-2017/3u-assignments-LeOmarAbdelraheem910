@@ -33,7 +33,7 @@ public class MakingAnAnimatedFace extends JComponent implements ActionListener {
     static final int WIDTH = 1350;
     static final int HEIGHT = 750;
     //Title of the window
-    String title = "My Game";
+    String title = "It's a Very Adorable Cat :')";
     // sets the framerate and delay for our game
     // this calculates the number of milliseconds per frame
     // you just need to select an approproate framerate
