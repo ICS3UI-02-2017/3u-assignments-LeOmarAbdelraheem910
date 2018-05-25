@@ -26,35 +26,29 @@ public class Asteroids extends JComponent implements ActionListener {
     // Height and Width of our game
     static final int WIDTH = 800;
     static final int HEIGHT = 600;
-
     //Title of the window
     String title = "RIGHT THEN";
-
     // sets the framerate and delay for our game
     // this calculates the number of milliseconds per frame
     // you just need to select an approproate framerate
     int desiredFPS = 60;
     int desiredTime = Math.round((1000 / desiredFPS));
-    
     // timer used to run the game loop
     // this is what keeps our time running smoothly :)
     Timer gameTimer;
-
     // YOUR GAME VARIABLES WOULD GO HERE
-    Rectangle spaceship = new Rectangle(WIDTH/2 - 12, HEIGHT/2 - 25, 25, 50);
+    Rectangle spaceship = new Rectangle(WIDTH / 2 - 12, HEIGHT / 2 - 25, 25, 50);
     int spaceshipSpeed = 2;
-    
     boolean isMovingRight = false;
     boolean isMovingLeft = false;
     boolean isMovingForward = false;
     boolean isMovingBackward = false;
+    boolean applyInertia = false;
 
     // GAME VARIABLES END HERE    
-
-    
     // Constructor to create the Frame and place the panel in
     // You will learn more about this in Grade 12 :)
-    public Asteroids(){
+    public Asteroids() {
         // creates a windows to show my game
         JFrame frame = new JFrame(title);
 
@@ -76,8 +70,8 @@ public class Asteroids extends JComponent implements ActionListener {
         this.addMouseMotionListener(m);
         this.addMouseWheelListener(m);
         this.addMouseListener(m);
-        
-        gameTimer = new Timer(desiredTime,this);
+
+        gameTimer = new Timer(desiredTime, this);
         gameTimer.setRepeats(true);
         gameTimer.start();
     }
@@ -93,10 +87,10 @@ public class Asteroids extends JComponent implements ActionListener {
 
         // GAME DRAWING GOES HERE
         AffineTransform old = g2d.getTransform();
-        
+
         g.fillRect(spaceship.x, spaceship.y, spaceship.width, spaceship.height);
-	
-		
+
+
         // GAME DRAWING ENDS HERE
     }
 
@@ -104,7 +98,6 @@ public class Asteroids extends JComponent implements ActionListener {
     // This is run before the game loop begins!
     public void preSetup() {
         // Any of your pre setup before the loop starts should go here
-
     }
 
     // The main game loop
@@ -114,17 +107,34 @@ public class Asteroids extends JComponent implements ActionListener {
     }
 
     private void moveRocketship() {
-        if(isMovingRight){
-            spaceship.x = spaceship.x + spaceshipSpeed;
+        if (isMovingRight) {
+            spaceship.x += spaceshipSpeed;
+        } else {
+            if(applyInertia){
+                spaceship.x += spaceshipSpeed;
+            }
+
         }
-        if(isMovingLeft){
-            spaceship.x = spaceship.x - spaceshipSpeed;
+        if (isMovingLeft) {
+            spaceship.x -= spaceshipSpeed;
+        } else {
+            if(applyInertia){
+                spaceship.x -= spaceshipSpeed;
+            }
         }
-        if(isMovingForward){
-            spaceship.y = spaceship.y + spaceshipSpeed;
+        if (isMovingForward) {
+            spaceship.y -= spaceshipSpeed;
+        } else {
+            if(applyInertia){
+                spaceship.y -= spaceshipSpeed;
+            }
         }
-        if(isMovingBackward){
-            spaceship.y = spaceship.y - spaceshipSpeed;
+        if (isMovingBackward) {
+            spaceship.y += spaceshipSpeed;
+        } else {
+            if(applyInertia){
+                spaceship.y += spaceshipSpeed;
+            }
         }
     }
 
@@ -134,25 +144,21 @@ public class Asteroids extends JComponent implements ActionListener {
         // if a mouse button has been pressed down
         @Override
         public void mousePressed(MouseEvent e) {
-
         }
 
         // if a mouse button has been released
         @Override
         public void mouseReleased(MouseEvent e) {
-
         }
 
         // if the scroll wheel has been moved
         @Override
         public void mouseWheelMoved(MouseWheelEvent e) {
-
         }
 
         // if the mouse has moved positions
         @Override
         public void mouseMoved(MouseEvent e) {
-
         }
     }
 
@@ -162,13 +168,43 @@ public class Asteroids extends JComponent implements ActionListener {
         // if a key has been pressed down
         @Override
         public void keyPressed(KeyEvent e) {
-
+            //get keyCode
+            int keyCode = e.getKeyCode();
+            if (keyCode == KeyEvent.VK_W) {
+                isMovingForward = true;
+                applyInertia = false;
+            } else if (keyCode == KeyEvent.VK_S) {
+                isMovingBackward = true;
+                applyInertia = false;
+            }
+            if (keyCode == KeyEvent.VK_D) {
+                isMovingRight = true;
+                applyInertia = false;
+            } else if (keyCode == KeyEvent.VK_A) {
+                isMovingLeft = true;
+                applyInertia = false;
+            }
         }
 
         // if a key has been released
         @Override
         public void keyReleased(KeyEvent e) {
-
+            //get keyCode
+            int keyCode = e.getKeyCode();
+            if (keyCode == KeyEvent.VK_W) {
+                isMovingForward = false;
+                applyInertia = true;
+            } else if (keyCode == KeyEvent.VK_S) {
+                isMovingBackward = false;
+                applyInertia = true;
+            }
+            if (keyCode == KeyEvent.VK_D) {
+                isMovingRight = false;
+                applyInertia = true;
+            } else if (keyCode == KeyEvent.VK_A) {
+                isMovingLeft = false;
+                applyInertia = true;
+            }
         }
     }
 
@@ -187,4 +223,3 @@ public class Asteroids extends JComponent implements ActionListener {
         Asteroids game = new Asteroids();
     }
 }
-
