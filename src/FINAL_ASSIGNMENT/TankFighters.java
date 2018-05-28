@@ -24,8 +24,8 @@ import javax.swing.Timer;
 public class TankFighters extends JComponent implements ActionListener {
 
     // Height and Width of our game
-    static final int WIDTH = 800;
-    static final int HEIGHT = 600;
+    static final int WIDTH = 1000;
+    static final int HEIGHT = 800;
     //Title of the window
     String title = "RIGHT THEN";
     // sets the framerate and delay for our game
@@ -99,8 +99,11 @@ public class TankFighters extends JComponent implements ActionListener {
         // GAME DRAWING GOES HERE
         AffineTransform old = g2d.getTransform();
 
+        g.setColor(Color.RED);
         g.fillRect(tank1.x, tank1.y, tank1.width, tank1.height);
         g.fillRect(tank2.x, tank2.y, tank2.width, tank2.height);
+        
+        g.setColor(Color.GRAY);
         g.fillRect(border1.x, border1.y, border1.width, border1.height);
         g.fillRect(border2.x, border2.y, border2.width, border2.height);
         g.fillRect(border3.x, border3.y, border3.width, border3.height);
@@ -150,8 +153,9 @@ public class TankFighters extends JComponent implements ActionListener {
     }
 
     private void detectACollision() {
-        if (tank1.intersects(border1)){  
+        if (Color.RED.equals(Color.GRAY)){  
             tank1.y = 10;
+            tank2.y = 10;
         }
         if(tank1.intersects(border2)) {
             tank1.x = 10;
