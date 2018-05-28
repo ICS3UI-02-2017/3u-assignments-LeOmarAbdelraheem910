@@ -21,7 +21,7 @@ import javax.swing.Timer;
  *
  * @author abdeo8431
  */
-public class Asteroids extends JComponent implements ActionListener {
+public class TankFighters extends JComponent implements ActionListener {
 
     // Height and Width of our game
     static final int WIDTH = 800;
@@ -37,18 +37,29 @@ public class Asteroids extends JComponent implements ActionListener {
     // this is what keeps our time running smoothly :)
     Timer gameTimer;
     // YOUR GAME VARIABLES WOULD GO HERE
-    Rectangle spaceship = new Rectangle(WIDTH / 2 - 12, HEIGHT / 2 - 25, 25, 50);
-    int spaceshipSpeed = 2;
-    boolean isMovingRight = false;
-    boolean isMovingLeft = false;
-    boolean isMovingForward = false;
-    boolean isMovingBackward = false;
-    boolean applyInertia = false;
+    Rectangle tank1 = new Rectangle(50, HEIGHT / 2 - 12, 25, 25);
+    Rectangle tank2 = new Rectangle(750, HEIGHT / 2 - 12, 25, 25);
+    Rectangle bullet1 = new Rectangle(0, 0, WIDTH, 10);
+    Rectangle bullet2 = new Rectangle(0, 0, WIDTH, 10);
+    Rectangle border1 = new Rectangle(0, 0, WIDTH, 10);
+    Rectangle border2 = new Rectangle(0, 0, 10, HEIGHT);
+    Rectangle border3 = new Rectangle(0, HEIGHT - 10, WIDTH, 10);
+    Rectangle border4 = new Rectangle(WIDTH - 10, 0, 10, HEIGHT);
+
+    int tankSpeed = 2;
+    boolean tank1Up = false;
+    boolean tank1Down = false;
+    boolean tank1Right = false;
+    boolean tank1Left = false;
+    boolean tank2Up = false;
+    boolean tank2Down = false;
+    boolean tank2Right = false;
+    boolean tank2Left = false;
 
     // GAME VARIABLES END HERE    
     // Constructor to create the Frame and place the panel in
     // You will learn more about this in Grade 12 :)
-    public Asteroids() {
+    public TankFighters() {
         // creates a windows to show my game
         JFrame frame = new JFrame(title);
 
@@ -88,8 +99,12 @@ public class Asteroids extends JComponent implements ActionListener {
         // GAME DRAWING GOES HERE
         AffineTransform old = g2d.getTransform();
 
-        g.fillRect(spaceship.x, spaceship.y, spaceship.width, spaceship.height);
-
+        g.fillRect(tank1.x, tank1.y, tank1.width, tank1.height);
+        g.fillRect(tank2.x, tank2.y, tank2.width, tank2.height);
+        g.fillRect(border1.x, border1.y, border1.width, border1.height);
+        g.fillRect(border2.x, border2.y, border2.width, border2.height);
+        g.fillRect(border3.x, border3.y, border3.width, border3.height);
+        g.fillRect(border4.x, border4.y, border4.width, border4.height);
 
         // GAME DRAWING ENDS HERE
     }
@@ -103,38 +118,60 @@ public class Asteroids extends JComponent implements ActionListener {
     // The main game loop
     // In here is where all the logic for my game will go
     public void gameLoop() {
-        moveRocketship();
+        moveTanks();
+        detectACollision();
     }
 
-    private void moveRocketship() {
-        if (isMovingRight) {
-            spaceship.x += spaceshipSpeed;
-        } else {
-            if(applyInertia){
-                spaceship.x += spaceshipSpeed;
-            }
+    private void moveTanks() {
+        if (tank1Right) {
+            tank1.x += tankSpeed;
+        } else if (tank1Left) {
+            tank1.x -= tankSpeed;
+        }
 
+        if (tank1Up) {
+            tank1.y -= tankSpeed;
+        } else if (tank1Down) {
+            tank1.y += tankSpeed;
         }
-        if (isMovingLeft) {
-            spaceship.x -= spaceshipSpeed;
-        } else {
-            if(applyInertia){
-                spaceship.x -= spaceshipSpeed;
-            }
+
+        if (tank2Right) {
+            tank2.x += tankSpeed;
+        } else if (tank2Left) {
+            tank2.x -= tankSpeed;
         }
-        if (isMovingForward) {
-            spaceship.y -= spaceshipSpeed;
-        } else {
-            if(applyInertia){
-                spaceship.y -= spaceshipSpeed;
-            }
+
+        if (tank2Up) {
+            tank2.y -= tankSpeed;
+        } else if (tank2Down) {
+            tank2.y += tankSpeed;
         }
-        if (isMovingBackward) {
-            spaceship.y += spaceshipSpeed;
-        } else {
-            if(applyInertia){
-                spaceship.y += spaceshipSpeed;
-            }
+
+    }
+
+    private void detectACollision() {
+        if (tank1.intersects(border1)){  
+            tank1.y = 10;
+        }
+        if(tank1.intersects(border2)) {
+            tank1.x = 10;
+        } if(tank1.intersects(border3)){ 
+            tank1.y = HEIGHT - 35;
+        }
+        if(tank1.intersects(border4)){
+            tank1.x = WIDTH - 35;
+        }
+        
+        if (tank2.intersects(border1)){  
+            tank2.y = 10;
+        }
+        if(tank2.intersects(border2)) {
+            tank2.x = 10;
+        } if(tank2.intersects(border3)){ 
+            tank2.y = HEIGHT - 35;
+        }
+        if(tank2.intersects(border4)){
+            tank2.x = WIDTH - 35;
         }
     }
 
@@ -171,18 +208,24 @@ public class Asteroids extends JComponent implements ActionListener {
             //get keyCode
             int keyCode = e.getKeyCode();
             if (keyCode == KeyEvent.VK_W) {
-                isMovingForward = true;
-                applyInertia = false;
+                tank1Up = true;
             } else if (keyCode == KeyEvent.VK_S) {
-                isMovingBackward = true;
-                applyInertia = false;
+                tank1Down = true;
             }
             if (keyCode == KeyEvent.VK_D) {
-                isMovingRight = true;
-                applyInertia = false;
+                tank1Right = true;
             } else if (keyCode == KeyEvent.VK_A) {
-                isMovingLeft = true;
-                applyInertia = false;
+                tank1Left = true;
+            }
+            if (keyCode == KeyEvent.VK_UP) {
+                tank2Up = true;
+            } else if (keyCode == KeyEvent.VK_DOWN) {
+                tank2Down = true;
+            }
+            if (keyCode == KeyEvent.VK_RIGHT) {
+                tank2Right = true;
+            } else if (keyCode == KeyEvent.VK_LEFT) {
+                tank2Left = true;
             }
         }
 
@@ -192,18 +235,24 @@ public class Asteroids extends JComponent implements ActionListener {
             //get keyCode
             int keyCode = e.getKeyCode();
             if (keyCode == KeyEvent.VK_W) {
-                isMovingForward = false;
-                applyInertia = true;
+                tank1Up = false;
             } else if (keyCode == KeyEvent.VK_S) {
-                isMovingBackward = false;
-                applyInertia = true;
+                tank1Down = false;
             }
             if (keyCode == KeyEvent.VK_D) {
-                isMovingRight = false;
-                applyInertia = true;
+                tank1Right = false;
             } else if (keyCode == KeyEvent.VK_A) {
-                isMovingLeft = false;
-                applyInertia = true;
+                tank1Left = false;
+            }
+            if (keyCode == KeyEvent.VK_UP) {
+                tank2Up = false;
+            } else if (keyCode == KeyEvent.VK_DOWN) {
+                tank2Down = false;
+            }
+            if (keyCode == KeyEvent.VK_RIGHT) {
+                tank2Right = false;
+            } else if (keyCode == KeyEvent.VK_LEFT) {
+                tank2Left = false;
             }
         }
     }
@@ -220,6 +269,6 @@ public class Asteroids extends JComponent implements ActionListener {
      */
     public static void main(String[] args) {
         // creates an instance of my game
-        Asteroids game = new Asteroids();
+        TankFighters game = new TankFighters();
     }
 }
