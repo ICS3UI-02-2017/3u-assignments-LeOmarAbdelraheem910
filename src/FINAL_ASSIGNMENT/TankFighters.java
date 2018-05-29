@@ -1,10 +1,10 @@
 package FINAL_ASSIGNMENT;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
-import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
@@ -38,9 +38,9 @@ public class TankFighters extends JComponent implements ActionListener {
     Timer gameTimer;
     // YOUR GAME VARIABLES WOULD GO HERE
     Rectangle tank1 = new Rectangle(50, HEIGHT / 2 - 12, 25, 25);
-    Rectangle tank2 = new Rectangle(750, HEIGHT / 2 - 12, 25, 25);
-    Rectangle bullet1 = new Rectangle(0, 0, WIDTH, 10);
-    Rectangle bullet2 = new Rectangle(0, 0, WIDTH, 10);
+    Rectangle tank2 = new Rectangle(WIDTH - 50, HEIGHT / 2 - 12, 25, 25);
+    Rectangle bullet1 = new Rectangle(65, HEIGHT / 2 - 6, 10, 10);
+    Rectangle bullet2 = new Rectangle(WIDTH - 50, HEIGHT / 2 - 6, 10, 10);
     Rectangle border1 = new Rectangle(0, 0, WIDTH, 10);
     Rectangle border2 = new Rectangle(0, 0, 10, HEIGHT);
     Rectangle border3 = new Rectangle(0, HEIGHT - 10, WIDTH, 10);
@@ -48,6 +48,7 @@ public class TankFighters extends JComponent implements ActionListener {
     Rectangle wall1 = new Rectangle(WIDTH / 2 - 50, HEIGHT / 2 - 150, 100, 300);
 
     int tankSpeed = 3;
+    int bulletSpeed = 6;
     boolean tank1Up = false;
     boolean tank1Down = false;
     boolean tank1Right = false;
@@ -56,6 +57,8 @@ public class TankFighters extends JComponent implements ActionListener {
     boolean tank2Down = false;
     boolean tank2Right = false;
     boolean tank2Left = false;
+    boolean tank1Shoot = false;
+    boolean tank2Shoot = false;
 
     // GAME VARIABLES END HERE    
     // Constructor to create the Frame and place the panel in
@@ -110,6 +113,10 @@ public class TankFighters extends JComponent implements ActionListener {
         g.fillRect(border3.x, border3.y, border3.width, border3.height);
         g.fillRect(border4.x, border4.y, border4.width, border4.height);
         g.fillRect(wall1.x, wall1.y, wall1.width, wall1.height);
+        
+        g.setColor(Color.GREEN);
+        g.fillOval(bullet1.x, bullet1.y, bullet1.width, bullet1.height);
+        g.fillOval(bullet2.x, bullet2.y, bullet2.width, bullet2.height);
         // GAME DRAWING ENDS HERE
     }
 
@@ -124,6 +131,7 @@ public class TankFighters extends JComponent implements ActionListener {
     public void gameLoop() {
         moveTanks();
         detectACollision();
+        bulletLogic();
     }
 
     private void moveTanks() {
@@ -167,14 +175,14 @@ public class TankFighters extends JComponent implements ActionListener {
             tank1.x = WIDTH - 35;
         }
         if (tank1.intersects(wall1)) {
-            if ((tank1.x + 25) >= wall1.x && (tank1.x + 25) <= (wall1.x + 2)) {
+            if ((tank1.x + 25) >= wall1.x && (tank1.x + 25) <= (wall1.x + 3)) {
                 tank1.x = wall1.x - 25;
-            } else if (tank1.x <= wall1.x + 100 && tank1.x >= wall1.x + 98) {
+            } else if (tank1.x <= wall1.x + 100 && tank1.x >= wall1.x + 97) {
                 tank1.x = wall1.x + 100;
             }
-            if ((tank1.y + 25) >= wall1.y && (tank1.y + 25) <= (wall1.y + 2)) {
+            if ((tank1.y + 25) >= wall1.y && (tank1.y + 25) <= (wall1.y + 3)) {
                 tank1.y = wall1.y - 25;
-            }else if(tank1.y <= wall1.y + 300 && tank1.y >= wall1.y + 298) {
+            }else if(tank1.y <= wall1.y + 300 && tank1.y >= wall1.y + 297) {
                 tank1.y = wall1.y + 300;
             }
         }
@@ -193,16 +201,33 @@ public class TankFighters extends JComponent implements ActionListener {
 
         }
         if (tank2.intersects(wall1)) {
-            if ((tank2.x + 25) >= wall1.x && (tank2.x + 25) <= (wall1.x + 2)) {
+            if ((tank2.x + 25) >= wall1.x && (tank2.x + 25) <= (wall1.x + 3)) {
                 tank2.x = wall1.x - 25;
-            } else if (tank2.x <= wall1.x + 100 && tank2.x >= wall1.x + 98) {
+            } else if (tank2.x <= wall1.x + 100 && tank2.x >= wall1.x + 97) {
                 tank2.x = wall1.x + 100;
             }
-            if ((tank2.y + 25) >= wall1.y && (tank2.y + 25) <= (wall1.y + 2)) {
+            if ((tank2.y + 25) >= wall1.y && (tank2.y + 25) <= (wall1.y + 3)) {
                 tank2.y = wall1.y - 25;
-            }else if(tank2.y <= wall1.y + 300 && tank2.y >= wall1.y + 298) {
+            }else if(tank2.y <= wall1.y + 300 && tank2.y >= wall1.y + 297) {
                 tank2.y = wall1.y + 300;
             }
+        }
+    }
+
+    private void bulletLogic() {
+        int[] tank1Bullet = new int[5];
+        //while(tank1Bullet < 5){
+            
+       // }
+        for (int i = 0; i < 5; i++) {
+           tank1Bullet[i] = 0;
+           if(tank1Shoot){
+            bullet1.x += bulletSpeed;
+        } 
+        }
+        
+        if(tank2Shoot){
+            bullet2.x -=bulletSpeed;
         }
     }
 
@@ -243,20 +268,31 @@ public class TankFighters extends JComponent implements ActionListener {
             } else if (keyCode == KeyEvent.VK_S) {
                 tank1Down = true;
             }
+            
             if (keyCode == KeyEvent.VK_D) {
                 tank1Right = true;
             } else if (keyCode == KeyEvent.VK_A) {
                 tank1Left = true;
             }
+            
+            if (keyCode == KeyEvent.VK_R){
+                tank1Shoot = true;
+            }
+            
             if (keyCode == KeyEvent.VK_UP) {
                 tank2Up = true;
             } else if (keyCode == KeyEvent.VK_DOWN) {
                 tank2Down = true;
             }
+            
             if (keyCode == KeyEvent.VK_RIGHT) {
                 tank2Right = true;
             } else if (keyCode == KeyEvent.VK_LEFT) {
                 tank2Left = true;
+            }
+            
+            if(keyCode == KeyEvent.VK_CONTROL){
+                tank2Shoot = true;
             }
         }
 
@@ -270,20 +306,31 @@ public class TankFighters extends JComponent implements ActionListener {
             } else if (keyCode == KeyEvent.VK_S) {
                 tank1Down = false;
             }
+            
             if (keyCode == KeyEvent.VK_D) {
                 tank1Right = false;
             } else if (keyCode == KeyEvent.VK_A) {
                 tank1Left = false;
             }
+            
+            if (keyCode == KeyEvent.VK_R){
+                tank1Shoot = true;
+            }
+            
             if (keyCode == KeyEvent.VK_UP) {
                 tank2Up = false;
             } else if (keyCode == KeyEvent.VK_DOWN) {
                 tank2Down = false;
             }
+            
             if (keyCode == KeyEvent.VK_RIGHT) {
                 tank2Right = false;
             } else if (keyCode == KeyEvent.VK_LEFT) {
                 tank2Left = false;
+            }
+            
+            if(keyCode == KeyEvent.VK_CONTROL){
+                tank2Shoot = true;
             }
         }
     }
