@@ -25,7 +25,7 @@ public class TankFighters extends JComponent implements ActionListener {
 
     // Height and Width of our game
     static final int WIDTH = 1000;
-    static final int HEIGHT = 800;
+    static final int HEIGHT = 600;
     //Title of the window
     String title = "RIGHT THEN";
     // sets the framerate and delay for our game
@@ -45,8 +45,9 @@ public class TankFighters extends JComponent implements ActionListener {
     Rectangle border2 = new Rectangle(0, 0, 10, HEIGHT);
     Rectangle border3 = new Rectangle(0, HEIGHT - 10, WIDTH, 10);
     Rectangle border4 = new Rectangle(WIDTH - 10, 0, 10, HEIGHT);
+    Rectangle wall1 = new Rectangle(WIDTH / 2 - 50, HEIGHT / 2 - 150, 100, 300);
 
-    int tankSpeed = 2;
+    int tankSpeed = 3;
     boolean tank1Up = false;
     boolean tank1Down = false;
     boolean tank1Right = false;
@@ -102,13 +103,13 @@ public class TankFighters extends JComponent implements ActionListener {
         g.setColor(Color.RED);
         g.fillRect(tank1.x, tank1.y, tank1.width, tank1.height);
         g.fillRect(tank2.x, tank2.y, tank2.width, tank2.height);
-        
+
         g.setColor(Color.GRAY);
         g.fillRect(border1.x, border1.y, border1.width, border1.height);
         g.fillRect(border2.x, border2.y, border2.width, border2.height);
         g.fillRect(border3.x, border3.y, border3.width, border3.height);
         g.fillRect(border4.x, border4.y, border4.width, border4.height);
-
+        g.fillRect(wall1.x, wall1.y, wall1.width, wall1.height);
         // GAME DRAWING ENDS HERE
     }
 
@@ -153,29 +154,55 @@ public class TankFighters extends JComponent implements ActionListener {
     }
 
     private void detectACollision() {
-        if (Color.RED.equals(Color.GRAY)){  
+        if (tank1.intersects(border1)) {
             tank1.y = 10;
-            tank2.y = 10;
         }
-        if(tank1.intersects(border2)) {
+        if (tank1.intersects(border2)) {
             tank1.x = 10;
-        } if(tank1.intersects(border3)){ 
+        }
+        if (tank1.intersects(border3)) {
             tank1.y = HEIGHT - 35;
         }
-        if(tank1.intersects(border4)){
+        if (tank1.intersects(border4)) {
             tank1.x = WIDTH - 35;
         }
-        
-        if (tank2.intersects(border1)){  
+        if (tank1.intersects(wall1)) {
+            if ((tank1.x + 25) >= wall1.x && (tank1.x + 25) <= (wall1.x + 2)) {
+                tank1.x = wall1.x - 25;
+            } else if (tank1.x <= wall1.x + 100 && tank1.x >= wall1.x + 98) {
+                tank1.x = wall1.x + 100;
+            }
+            if ((tank1.y + 25) >= wall1.y && (tank1.y + 25) <= (wall1.y + 2)) {
+                tank1.y = wall1.y - 25;
+            }else if(tank1.y <= wall1.y + 300 && tank1.y >= wall1.y + 298) {
+                tank1.y = wall1.y + 300;
+            }
+        }
+
+        if (tank2.intersects(border1)) {
             tank2.y = 10;
         }
-        if(tank2.intersects(border2)) {
+        if (tank2.intersects(border2)) {
             tank2.x = 10;
-        } if(tank2.intersects(border3)){ 
+        }
+        if (tank2.intersects(border3)) {
             tank2.y = HEIGHT - 35;
         }
-        if(tank2.intersects(border4)){
+        if (tank2.intersects(border4)) {
             tank2.x = WIDTH - 35;
+
+        }
+        if (tank2.intersects(wall1)) {
+            if ((tank2.x + 25) >= wall1.x && (tank2.x + 25) <= (wall1.x + 2)) {
+                tank2.x = wall1.x - 25;
+            } else if (tank2.x <= wall1.x + 100 && tank2.x >= wall1.x + 98) {
+                tank2.x = wall1.x + 100;
+            }
+            if ((tank2.y + 25) >= wall1.y && (tank2.y + 25) <= (wall1.y + 2)) {
+                tank2.y = wall1.y - 25;
+            }else if(tank2.y <= wall1.y + 300 && tank2.y >= wall1.y + 298) {
+                tank2.y = wall1.y + 300;
+            }
         }
     }
 
@@ -203,7 +230,7 @@ public class TankFighters extends JComponent implements ActionListener {
         }
     }
 
-    // Used to implements any of the Keyboard Actions
+// Used to implements any of the Keyboard Actions
     private class Keyboard extends KeyAdapter {
 
         // if a key has been pressed down
