@@ -219,6 +219,45 @@ public class TankFighters extends JComponent implements ActionListener {
                 tank2.y = wall1.y + 300;
             }
         }
+
+        if (bullet1.intersects(border2) || bullet1.intersects(border4)) {
+            tank1BarrelPosition = (180 + tank1BarrelPosition * -1) % 360;
+        }
+        if (bullet1.intersects(border1) || bullet1.intersects(border3)) {
+            tank1BarrelPosition = tank1BarrelPosition * -1;
+        }
+        if (bullet1.intersects(wall1)) {
+            if ((bullet1.x + 10) >= wall1.x && (bullet1.x + 10) <= (wall1.x + 6)) {
+                tank1BarrelPosition = (180 + tank1BarrelPosition * -1) % 360;
+            } else if (bullet1.x <= wall1.x + 100 && bullet1.x >= wall1.x + 94) {
+                tank1BarrelPosition = (180 + tank1BarrelPosition * -1) % 360;
+            }
+            if ((bullet1.y + 10) >= wall1.y && (bullet1.y + 10) <= (wall1.y + 6)) {
+                tank1BarrelPosition = tank1BarrelPosition * -1;
+            } else if (bullet1.y <= wall1.y + 300 && bullet1.y >= wall1.y + 294) {
+                tank1BarrelPosition = tank1BarrelPosition * -1;
+            }
+        }
+        
+        if (bullet2.intersects(border2) || bullet2.intersects(border4)) {
+            tank2BarrelPosition = (180 + tank2BarrelPosition * -1) % 360;
+        }
+        if (bullet2.intersects(border1) || bullet2.intersects(border3)) {
+            tank2BarrelPosition = tank2BarrelPosition * -1;
+        }
+        
+        if (bullet2.intersects(wall1)) {
+            if ((bullet2.x + 10) >= wall1.x && (bullet2.x + 10) <= (wall1.x + 6)) {
+                tank2BarrelPosition = (180 + tank2BarrelPosition * -1) % 360;
+            } else if (bullet2.x <= wall1.x + 100 && bullet2.x >= wall1.x + 94) {
+                tank2BarrelPosition = (180 + tank2BarrelPosition * -1) % 360;
+            }
+            if ((bullet2.y + 10) >= wall1.y && (bullet2.y + 10) <= (wall1.y + 6)) {
+                tank2BarrelPosition = tank2BarrelPosition * -1;
+            } else if (bullet2.y <= wall1.y + 300 && bullet2.y >= wall1.y + 294) {
+                tank2BarrelPosition = tank2BarrelPosition * -1;
+            }
+        }
     }
 
     private void bulletLogic() {
@@ -235,7 +274,7 @@ public class TankFighters extends JComponent implements ActionListener {
         double newAngle2 = Math.toRadians(tank2BarrelPosition);
         double tank1BulletX = bulletSpeed1 * Math.cos(newAngle);
         double tank1BulletY = bulletSpeed1 * Math.sin(newAngle);
-        
+
         if (tank1Shoot) {
             bulletSpeed1 = 6;
         }
@@ -244,7 +283,7 @@ public class TankFighters extends JComponent implements ActionListener {
             bullet1.y = bullet1.y + (int) tank1BulletY;
         }
 
-    if (bulletSpeed2 > 0 || bulletSpeed2 < 0) {
+        if (bulletSpeed2 > 0 || bulletSpeed2 < 0) {
             shotsFired = true;
         }
         if (tank2RotateBarrelL) {
@@ -253,7 +292,6 @@ public class TankFighters extends JComponent implements ActionListener {
             tank2BarrelPosition += 3;
         }
 
-        
         double tank2BulletX = bulletSpeed2 * Math.cos(newAngle2);
         double tank2BulletY = bulletSpeed2 * Math.sin(newAngle2);
         if (tank2Shoot) {
