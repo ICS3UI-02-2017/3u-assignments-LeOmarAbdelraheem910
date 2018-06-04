@@ -2,6 +2,7 @@ package FINAL_ASSIGNMENT;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.Graphics;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
@@ -25,7 +26,7 @@ public class TankFighters extends JComponent implements ActionListener {
 
     // Height and Width of our game
     static final int WIDTH = 1000;
-    static final int HEIGHT = 600;
+    static final int HEIGHT = 650;
     //Title of the window
     String title = "RIGHT THEN";
     // sets the framerate and delay for our game
@@ -42,15 +43,18 @@ public class TankFighters extends JComponent implements ActionListener {
     Rectangle bullet1 = new Rectangle(65, HEIGHT / 2 - 6, 10, 10);
     Rectangle bullet2 = new Rectangle(WIDTH - 50, HEIGHT / 2 - 6, 10, 10);
     Rectangle border1 = new Rectangle(0, 0, WIDTH, 10);
-    Rectangle border2 = new Rectangle(0, 0, 10, HEIGHT);
-    Rectangle border3 = new Rectangle(0, HEIGHT - 10, WIDTH, 10);
+    Rectangle border2 = new Rectangle(0, 0, 11, HEIGHT);
+    Rectangle border3 = new Rectangle(0, 590, WIDTH, 10);
     Rectangle border4 = new Rectangle(WIDTH - 10, 0, 10, HEIGHT);
     Rectangle wall1 = new Rectangle(WIDTH / 2 - 50, HEIGHT / 2 - 150, 100, 300);
-    int tankSpeed = 3;
+    int tankSpeed1 = 0;
+    int tankSpeed2 = 0;
     int bulletSpeed1 = 0;
     int bulletSpeed2 = 0;
+    int bullet1Angle = 0;
+    int bullet2Angle = 0;
     int tank1BarrelPosition = 0;
-    int tank2BarrelPosition = 0;
+    int tank2BarrelPosition = 180;
     boolean shotsFired = false;
     boolean tank1Up = false;
     boolean tank1Down = false;
@@ -76,10 +80,11 @@ public class TankFighters extends JComponent implements ActionListener {
     boolean tank2RotateBarrelR = false;
     long timeFired = 0;
     int delay = 10000; // 3 se3cond delay
-    int[][] xPointsBullet1 = new int[5][2];
-    int[][] yPointsBullet1 = new int[5][2];
-    int[][] xPointsBullet2 = new int[5][2];
-    int[][] yPointsBullet2 = new int[5][2];
+    int player1Score = 0;
+    int player2Score = 0;
+    
+    //create a custom font!
+    Font scoreboardFont = new Font("Comic Sans", Font.BOLD, 36);
     // GAME VARIABLES END HERE    
     // Constructor to create the Frame and place the panel in
     // You will learn more about this in Grade 12 :)
@@ -126,11 +131,22 @@ public class TankFighters extends JComponent implements ActionListener {
 
         g.setColor(Color.GREEN);
         g.fillOval(bullet1.x, bullet1.y, bullet1.width, bullet1.height);
+        g.setColor(Color.MAGENTA);
         g.fillOval(bullet2.x, bullet2.y, bullet2.width, bullet2.height);
 
         g.setColor(Color.RED);
         g.fillRect(tank1.x, tank1.y, tank1.width, tank1.height);
+        g.setColor(Color.BLUE);
         g.fillRect(tank2.x, tank2.y, tank2.width, tank2.height);
+
+        g.setColor(Color.BLACK);
+        g2d.rotate(Math.toRadians(tank1BarrelPosition), tank1.x + 12, tank1.y + 12);
+        g.drawRect(tank1.x + 12, tank1.y + 10, 15, 5);
+        g2d.setTransform(old);
+
+        g2d.rotate(Math.toRadians(tank2BarrelPosition), tank2.x + 12, tank2.y + 12);
+        g.drawRect(tank2.x + 12, tank2.y + 10, 15, 5);
+        g2d.setTransform(old);
 
         g.setColor(Color.GRAY);
         g.fillRect(border1.x, border1.y, border1.width, border1.height);
@@ -139,7 +155,11 @@ public class TankFighters extends JComponent implements ActionListener {
         g.fillRect(border4.x, border4.y, border4.width, border4.height);
         g.fillRect(wall1.x, wall1.y, wall1.width, wall1.height);
 
-
+        g.fillRect(0, 600, WIDTH, 50);
+        g.setColor(Color.BLACK);
+        g.setFont(scoreboardFont);
+        g.drawString("" + player1Score, WIDTH/2 - 50, 625);
+        g.drawString("" + player2Score, WIDTH/2 + 50, 625);
         // GAME DRAWING ENDS HERE
     }
 
@@ -147,29 +167,7 @@ public class TankFighters extends JComponent implements ActionListener {
     // This is run before the game loop begins!
     public void preSetup() {
         // Any of your pre setup before the loop starts should go here\
-        xPointsBullet1[0][0] = 65;
-        xPointsBullet1[1][0] = 65;
-        xPointsBullet1[2][0] = 65;
-        xPointsBullet1[3][0] = 65;
-        xPointsBullet1[4][0] = 65;
 
-        yPointsBullet1[0][0] = HEIGHT / 2 - 6;
-        yPointsBullet1[1][0] = HEIGHT / 2 - 6;
-        yPointsBullet1[2][0] = HEIGHT / 2 - 6;
-        yPointsBullet1[3][0] = HEIGHT / 2 - 6;
-        yPointsBullet1[4][0] = HEIGHT / 2 - 6;
-
-        xPointsBullet2[0][0] = WIDTH - 50;
-        xPointsBullet2[1][0] = WIDTH - 50;
-        xPointsBullet2[2][0] = WIDTH - 50;
-        xPointsBullet2[3][0] = WIDTH - 50;
-        xPointsBullet2[4][0] = WIDTH - 50;
-
-        yPointsBullet2[0][0] = HEIGHT / 2 - 6;
-        yPointsBullet2[1][0] = HEIGHT / 2 - 6;
-        yPointsBullet2[2][0] = HEIGHT / 2 - 6;
-        yPointsBullet2[3][0] = HEIGHT / 2 - 6;
-        yPointsBullet2[4][0] = HEIGHT / 2 - 6;
     }
 
     // The main game loop
@@ -178,80 +176,99 @@ public class TankFighters extends JComponent implements ActionListener {
         moveTanksAndBullets();
         detectACollision();
         bulletLogic();
+        scoreTally();
     }
 
     private void moveTanksAndBullets() {
         if (tank1Right) {
-            tank1.x += tankSpeed;
+            tank1.x += tankSpeed1;
         } else if (tank1Left) {
-            tank1.x -= tankSpeed;
+            tank1.x -= tankSpeed1;
         }
 
         if (tank1Up) {
-            tank1.y -= tankSpeed;
+            tank1.y -= tankSpeed1;
         } else if (tank1Down) {
-            tank1.y += tankSpeed;
+            tank1.y += tankSpeed1;
         }
 
         if (tank2Right) {
-            tank2.x += tankSpeed;
+            tank2.x += tankSpeed2;
         } else if (tank2Left) {
-            tank2.x -= tankSpeed;
+            tank2.x -= tankSpeed2;
         }
 
         if (tank2Up) {
-            tank2.y -= tankSpeed;
+            tank2.y -= tankSpeed2;
         } else if (tank2Down) {
-            tank2.y += tankSpeed;
+            tank2.y += tankSpeed2;
         }
 
-        if (shotsFired) {
+        if (bulletSpeed1 > 0 || bulletSpeed1 < 0) {
+            tankSpeed1 = 0;
+            tank1Down = false;
+            tank1Right = false;
+            tank1Left = false;
             bullet1Up = false;
             bullet1Down = false;
             bullet1Right = false;
             bullet1Left = false;
+
+        } else if (bulletSpeed1 == 0) {
+            tankSpeed1 = 3;
+        }
+
+        if (bulletSpeed2 > 0 || bulletSpeed2 < 0) {
+            tankSpeed2 = 0;
+            tank2Up = false;
+            tank2Down = false;
+            tank2Right = false;
+            tank2Left = false;
             bullet2Up = false;
             bullet2Down = false;
             bullet2Right = false;
             bullet2Left = false;
+        } else if (bulletSpeed2 == 0){
+            tankSpeed2 = 3;
         }
+
         if (bullet1Up) {
-            bullet1.y -= tankSpeed;
+            bullet1.y -= tankSpeed1;
         } else if (bullet1Down) {
-            bullet1.y += tankSpeed;
+            bullet1.y += tankSpeed1;
         }
-        
-        if(bullet1Right){
-            bullet1.x += tankSpeed;
-        } else if (bullet1Left){
-            bullet1.x -= tankSpeed;
+
+        if (bullet1Right) {
+            bullet1.x += tankSpeed1;
+        } else if (bullet1Left) {
+            bullet1.x -= tankSpeed1;
         }
-        
+
         if (bullet2Up) {
-            bullet2.y -= tankSpeed;
+            bullet2.y -= tankSpeed2;
         } else if (bullet1Down) {
-            bullet2.y += tankSpeed;
+            bullet2.y += tankSpeed2;
         }
-        
-        if(bullet2Right){
-            bullet2.x += tankSpeed;
-        } else if (bullet1Left){
-            bullet2.x -= tankSpeed;
+
+        if (bullet2Right) {
+            bullet2.x += tankSpeed2;
+        } else if (bullet2Left) {
+            bullet2.x -= tankSpeed2;
         }
     }
 
     private void detectACollision() {
         if (tank1.intersects(border1)) {
-            tank1.y = 10;
+            tank1.y += 3;
         }
         if (tank1.intersects(border2)) {
-            tank1.x = 10;
+            tank1.x += 3;
         }
         if (tank1.intersects(border3)) {
-            tank1.y = HEIGHT - 35;
+            tank1.y -= 3;
         }
         if (tank1.intersects(border4)) {
-            tank1.x = WIDTH - 35;
+            tank1.x -= 3;
         }
         if (tank1.intersects(wall1)) {
             if ((tank1.x + 25) >= wall1.x && (tank1.x + 25) <= (wall1.x + 3)) {
@@ -267,16 +284,16 @@ public class TankFighters extends JComponent implements ActionListener {
         }
 
         if (tank2.intersects(border1)) {
-            tank2.y = 10;
+            tank2.y += 3;
         }
         if (tank2.intersects(border2)) {
-            tank2.x = 10;
+            tank2.x += 3;
         }
         if (tank2.intersects(border3)) {
-            tank2.y = HEIGHT - 35;
+            tank2.y -= 3;
         }
         if (tank2.intersects(border4)) {
-            tank2.x = WIDTH - 35;
+            tank2.x -= 3;
 
         }
         if (tank2.intersects(wall1)) {
@@ -293,41 +310,41 @@ public class TankFighters extends JComponent implements ActionListener {
         }
 
         if (bullet1.intersects(border2) || bullet1.intersects(border4)) {
-            tank1BarrelPosition = (180 + tank1BarrelPosition * -1) % 360;
+            bullet1Angle = (180 + bullet1Angle * -1) % 360;
         }
         if (bullet1.intersects(border1) || bullet1.intersects(border3)) {
-            tank1BarrelPosition = tank1BarrelPosition * -1;
+            bullet1Angle = bullet1Angle * -1;
         }
         if (bullet1.intersects(wall1)) {
             if ((bullet1.x + 10) >= wall1.x && (bullet1.x + 10) <= (wall1.x + 6)) {
-                tank1BarrelPosition = (180 + tank1BarrelPosition * -1) % 360;
+                bullet1Angle = (180 + bullet1Angle * -1) % 360;
             } else if (bullet1.x <= wall1.x + 100 && bullet1.x >= wall1.x + 94) {
-                tank1BarrelPosition = (180 + tank1BarrelPosition * -1) % 360;
+                bullet1Angle = (180 + bullet1Angle * -1) % 360;
             }
             if ((bullet1.y + 10) >= wall1.y && (bullet1.y + 10) <= (wall1.y + 6)) {
-                tank1BarrelPosition = tank1BarrelPosition * -1;
+                bullet1Angle = bullet1Angle * -1;
             } else if (bullet1.y <= wall1.y + 300 && bullet1.y >= wall1.y + 294) {
-                tank1BarrelPosition = tank1BarrelPosition * -1;
+                bullet1Angle = bullet1Angle * -1;
             }
         }
 
         if (bullet2.intersects(border2) || bullet2.intersects(border4)) {
-            tank2BarrelPosition = (180 + tank2BarrelPosition * -1) % 360;
+            bullet2Angle = (180 + bullet2Angle * -1) % 360;
         }
         if (bullet2.intersects(border1) || bullet2.intersects(border3)) {
-            tank2BarrelPosition = tank2BarrelPosition * -1;
+            bullet2Angle = bullet2Angle * -1;
         }
 
         if (bullet2.intersects(wall1)) {
             if ((bullet2.x + 10) >= wall1.x && (bullet2.x + 10) <= (wall1.x + 6)) {
-                tank2BarrelPosition = (180 + tank2BarrelPosition * -1) % 360;
+                bullet2Angle = (180 + bullet2Angle * -1) % 360;
             } else if (bullet2.x <= wall1.x + 100 && bullet2.x >= wall1.x + 94) {
-                tank2BarrelPosition = (180 + tank2BarrelPosition * -1) % 360;
+                bullet2Angle = (180 + bullet2Angle * -1) % 360;
             }
             if ((bullet2.y + 10) >= wall1.y && (bullet2.y + 10) <= (wall1.y + 6)) {
-                tank2BarrelPosition = tank2BarrelPosition * -1;
+                bullet2Angle = bullet2Angle * -1;
             } else if (bullet2.y <= wall1.y + 300 && bullet2.y >= wall1.y + 294) {
-                tank2BarrelPosition = tank2BarrelPosition * -1;
+                bullet2Angle = bullet2Angle * -1;
             }
         }
     }
@@ -340,11 +357,13 @@ public class TankFighters extends JComponent implements ActionListener {
         }
         if (tank1RotateBarrelL) {
             tank1BarrelPosition -= 3;
+            bullet1Angle -= 3;
         } else if (tank1RotateBarrelR) {
             tank1BarrelPosition += 3;
+            bullet1Angle += 3;
         }
 
-        double newAngle = Math.toRadians(tank1BarrelPosition);
+        double newAngle = Math.toRadians(bullet1Angle);
         double tank1BulletX = bulletSpeed1 * Math.cos(newAngle);
         double tank1BulletY = bulletSpeed1 * Math.sin(newAngle);
 
@@ -355,6 +374,17 @@ public class TankFighters extends JComponent implements ActionListener {
         if (shotsFired) {
             bullet1.x = bullet1.x + (int) tank1BulletX;
             bullet1.y = bullet1.y + (int) tank1BulletY;
+        }
+
+        // timer should stop
+        if (System.currentTimeMillis() > timeFired + delay) {
+            shotsFired = false;
+            bulletSpeed1 = 0;
+            tank1BarrelPosition = bullet1Angle;
+        }
+        if (bulletSpeed1 == 0) {
+            bullet1.x = tank1.x + 15;
+            bullet1.y = tank1.y + 7;
         }
 
         // timer should stop
@@ -374,11 +404,13 @@ public class TankFighters extends JComponent implements ActionListener {
         }
         if (tank2RotateBarrelL) {
             tank2BarrelPosition -= 3;
+            bullet2Angle -= 3;
         } else if (tank2RotateBarrelR) {
             tank2BarrelPosition += 3;
+            bullet2Angle += 3;
         }
 
-        double newAngle2 = Math.toRadians(tank2BarrelPosition);
+        double newAngle2 = Math.toRadians(bullet2Angle);
         double tank2BulletX = bulletSpeed2 * Math.cos(newAngle2);
         double tank2BulletY = bulletSpeed2 * Math.sin(newAngle2);
         if (tank2Shoot && bulletSpeed2 == 0) {
@@ -393,11 +425,22 @@ public class TankFighters extends JComponent implements ActionListener {
         if (System.currentTimeMillis() > timeFired + delay) {
             shotsFired = false;
             bulletSpeed2 = 0;
+            tank2BarrelPosition = 180 + bullet2Angle;
         }
 
         if (bulletSpeed2 == 0) {
-            bullet2.x = WIDTH - 50;
-            bullet2.y = HEIGHT / 2 - 6;
+            bullet2.x = tank2.x;
+            bullet2.y = tank2.y + 7;
+        }
+    }
+
+    private void scoreTally() {
+        if(!(tank1.intersects(tank2))){
+        if(bullet1.intersects(tank2)){
+            player1Score++;
+        }
+        if(bullet2.intersects(tank1))
+            player2Score++;
         }
     }
 
