@@ -62,14 +62,28 @@ public class TankFighters extends JComponent implements ActionListener {
     boolean tank2Left = false;
     boolean tank1Shoot = false;
     boolean tank2Shoot = false;
+    boolean bullet1Up = false;
+    boolean bullet1Down = false;
+    boolean bullet1Right = false;
+    boolean bullet1Left = false;
+    boolean bullet2Up = false;
+    boolean bullet2Down = false;
+    boolean bullet2Right = false;
+    boolean bullet2Left = false;
     boolean tank1RotateBarrelL = false;
     boolean tank1RotateBarrelR = false;
     boolean tank2RotateBarrelL = false;
     boolean tank2RotateBarrelR = false;
-
+    long timeFired = 0;
+    int delay = 10000; // 3 se3cond delay
+    int[][] xPointsBullet1 = new int[5][2];
+    int[][] yPointsBullet1 = new int[5][2];
+    int[][] xPointsBullet2 = new int[5][2];
+    int[][] yPointsBullet2 = new int[5][2];
     // GAME VARIABLES END HERE    
     // Constructor to create the Frame and place the panel in
     // You will learn more about this in Grade 12 :)
+
     public TankFighters() {
         // creates a windows to show my game
         JFrame frame = new JFrame(title);
@@ -92,7 +106,7 @@ public class TankFighters extends JComponent implements ActionListener {
         this.addMouseMotionListener(m);
         this.addMouseWheelListener(m);
         this.addMouseListener(m);
-
+        preSetup();
         gameTimer = new Timer(desiredTime, this);
         gameTimer.setRepeats(true);
         gameTimer.start();
@@ -110,6 +124,10 @@ public class TankFighters extends JComponent implements ActionListener {
         // GAME DRAWING GOES HERE
         AffineTransform old = g2d.getTransform();
 
+        g.setColor(Color.GREEN);
+        g.fillOval(bullet1.x, bullet1.y, bullet1.width, bullet1.height);
+        g.fillOval(bullet2.x, bullet2.y, bullet2.width, bullet2.height);
+
         g.setColor(Color.RED);
         g.fillRect(tank1.x, tank1.y, tank1.width, tank1.height);
         g.fillRect(tank2.x, tank2.y, tank2.width, tank2.height);
@@ -121,27 +139,48 @@ public class TankFighters extends JComponent implements ActionListener {
         g.fillRect(border4.x, border4.y, border4.width, border4.height);
         g.fillRect(wall1.x, wall1.y, wall1.width, wall1.height);
 
-        g.setColor(Color.GREEN);
-        g.fillOval(bullet1.x, bullet1.y, bullet1.width, bullet1.height);
-        g.fillOval(bullet2.x, bullet2.y, bullet2.width, bullet2.height);
+
         // GAME DRAWING ENDS HERE
     }
 
     // This method is used to do any pre-setup you might need to do
     // This is run before the game loop begins!
     public void preSetup() {
-        // Any of your pre setup before the loop starts should go here
+        // Any of your pre setup before the loop starts should go here\
+        xPointsBullet1[0][0] = 65;
+        xPointsBullet1[1][0] = 65;
+        xPointsBullet1[2][0] = 65;
+        xPointsBullet1[3][0] = 65;
+        xPointsBullet1[4][0] = 65;
+
+        yPointsBullet1[0][0] = HEIGHT / 2 - 6;
+        yPointsBullet1[1][0] = HEIGHT / 2 - 6;
+        yPointsBullet1[2][0] = HEIGHT / 2 - 6;
+        yPointsBullet1[3][0] = HEIGHT / 2 - 6;
+        yPointsBullet1[4][0] = HEIGHT / 2 - 6;
+
+        xPointsBullet2[0][0] = WIDTH - 50;
+        xPointsBullet2[1][0] = WIDTH - 50;
+        xPointsBullet2[2][0] = WIDTH - 50;
+        xPointsBullet2[3][0] = WIDTH - 50;
+        xPointsBullet2[4][0] = WIDTH - 50;
+
+        yPointsBullet2[0][0] = HEIGHT / 2 - 6;
+        yPointsBullet2[1][0] = HEIGHT / 2 - 6;
+        yPointsBullet2[2][0] = HEIGHT / 2 - 6;
+        yPointsBullet2[3][0] = HEIGHT / 2 - 6;
+        yPointsBullet2[4][0] = HEIGHT / 2 - 6;
     }
 
     // The main game loop
     // In here is where all the logic for my game will go
     public void gameLoop() {
-        moveTanks();
+        moveTanksAndBullets();
         detectACollision();
         bulletLogic();
     }
 
-    private void moveTanks() {
+    private void moveTanksAndBullets() {
         if (tank1Right) {
             tank1.x += tankSpeed;
         } else if (tank1Left) {
@@ -166,6 +205,39 @@ public class TankFighters extends JComponent implements ActionListener {
             tank2.y += tankSpeed;
         }
 
+        if (shotsFired) {
+            bullet1Up = false;
+            bullet1Down = false;
+            bullet1Right = false;
+            bullet1Left = false;
+            bullet2Up = false;
+            bullet2Down = false;
+            bullet2Right = false;
+            bullet2Left = false;
+        }
+        if (bullet1Up) {
+            bullet1.y -= tankSpeed;
+        } else if (bullet1Down) {
+            bullet1.y += tankSpeed;
+        }
+        
+        if(bullet1Right){
+            bullet1.x += tankSpeed;
+        } else if (bullet1Left){
+            bullet1.x -= tankSpeed;
+        }
+        
+        if (bullet2Up) {
+            bullet2.y -= tankSpeed;
+        } else if (bullet1Down) {
+            bullet2.y += tankSpeed;
+        }
+        
+        if(bullet2Right){
+            bullet2.x += tankSpeed;
+        } else if (bullet1Left){
+            bullet2.x -= tankSpeed;
+        }
     }
 
     private void detectACollision() {
@@ -238,14 +310,14 @@ public class TankFighters extends JComponent implements ActionListener {
                 tank1BarrelPosition = tank1BarrelPosition * -1;
             }
         }
-        
+
         if (bullet2.intersects(border2) || bullet2.intersects(border4)) {
             tank2BarrelPosition = (180 + tank2BarrelPosition * -1) % 360;
         }
         if (bullet2.intersects(border1) || bullet2.intersects(border3)) {
             tank2BarrelPosition = tank2BarrelPosition * -1;
         }
-        
+
         if (bullet2.intersects(wall1)) {
             if ((bullet2.x + 10) >= wall1.x && (bullet2.x + 10) <= (wall1.x + 6)) {
                 tank2BarrelPosition = (180 + tank2BarrelPosition * -1) % 360;
@@ -263,6 +335,8 @@ public class TankFighters extends JComponent implements ActionListener {
     private void bulletLogic() {
         if (bulletSpeed1 > 0 || bulletSpeed1 < 0) {
             shotsFired = true;
+            tank1RotateBarrelL = false;
+            tank1RotateBarrelR = false;
         }
         if (tank1RotateBarrelL) {
             tank1BarrelPosition -= 3;
@@ -271,20 +345,32 @@ public class TankFighters extends JComponent implements ActionListener {
         }
 
         double newAngle = Math.toRadians(tank1BarrelPosition);
-        double newAngle2 = Math.toRadians(tank2BarrelPosition);
         double tank1BulletX = bulletSpeed1 * Math.cos(newAngle);
         double tank1BulletY = bulletSpeed1 * Math.sin(newAngle);
 
-        if (tank1Shoot) {
+        if (tank1Shoot && bulletSpeed1 == 0) {
             bulletSpeed1 = 6;
+            timeFired = System.currentTimeMillis(); // the time it shot
         }
         if (shotsFired) {
             bullet1.x = bullet1.x + (int) tank1BulletX;
             bullet1.y = bullet1.y + (int) tank1BulletY;
         }
 
+        // timer should stop
+        if (System.currentTimeMillis() > timeFired + delay) {
+            shotsFired = false;
+            bulletSpeed1 = 0;
+        }
+        if (bulletSpeed1 == 0) {
+            bullet1.x = 65;
+            bullet1.y = HEIGHT / 2 - 6;
+        }
+
         if (bulletSpeed2 > 0 || bulletSpeed2 < 0) {
             shotsFired = true;
+            tank2RotateBarrelL = false;
+            tank2RotateBarrelR = false;
         }
         if (tank2RotateBarrelL) {
             tank2BarrelPosition -= 3;
@@ -292,16 +378,27 @@ public class TankFighters extends JComponent implements ActionListener {
             tank2BarrelPosition += 3;
         }
 
+        double newAngle2 = Math.toRadians(tank2BarrelPosition);
         double tank2BulletX = bulletSpeed2 * Math.cos(newAngle2);
         double tank2BulletY = bulletSpeed2 * Math.sin(newAngle2);
-        if (tank2Shoot) {
+        if (tank2Shoot && bulletSpeed2 == 0) {
             bulletSpeed2 = -6;
+            timeFired = System.currentTimeMillis(); // the time it shot
         }
         if (shotsFired) {
             bullet2.x = bullet2.x + (int) tank2BulletX;
             bullet2.y = bullet2.y + (int) tank2BulletY;
         }
+        // timer should stop
+        if (System.currentTimeMillis() > timeFired + delay) {
+            shotsFired = false;
+            bulletSpeed2 = 0;
+        }
 
+        if (bulletSpeed2 == 0) {
+            bullet2.x = WIDTH - 50;
+            bullet2.y = HEIGHT / 2 - 6;
+        }
     }
 
     // Used to implement any of the Mouse Actions
@@ -338,14 +435,18 @@ public class TankFighters extends JComponent implements ActionListener {
             int keyCode = e.getKeyCode();
             if (keyCode == KeyEvent.VK_W) {
                 tank1Up = true;
+                bullet1Up = true;
             } else if (keyCode == KeyEvent.VK_S) {
                 tank1Down = true;
+                bullet1Down = true;
             }
 
             if (keyCode == KeyEvent.VK_D) {
                 tank1Right = true;
+                bullet1Right = true;
             } else if (keyCode == KeyEvent.VK_A) {
                 tank1Left = true;
+                bullet1Left = true;
             }
 
             if (keyCode == KeyEvent.VK_E) {
@@ -360,14 +461,18 @@ public class TankFighters extends JComponent implements ActionListener {
 
             if (keyCode == KeyEvent.VK_I) {
                 tank2Up = true;
+                bullet2Up = true;
             } else if (keyCode == KeyEvent.VK_K) {
                 tank2Down = true;
+                bullet2Down = true;
             }
 
             if (keyCode == KeyEvent.VK_L) {
                 tank2Right = true;
+                bullet2Right = true;
             } else if (keyCode == KeyEvent.VK_J) {
                 tank2Left = true;
+                bullet2Left = true;
             }
 
             if (keyCode == KeyEvent.VK_H) {
@@ -388,14 +493,18 @@ public class TankFighters extends JComponent implements ActionListener {
             int keyCode = e.getKeyCode();
             if (keyCode == KeyEvent.VK_W) {
                 tank1Up = false;
+                bullet1Up = false;
             } else if (keyCode == KeyEvent.VK_S) {
                 tank1Down = false;
+                bullet1Down = false;
             }
 
             if (keyCode == KeyEvent.VK_D) {
                 tank1Right = false;
+                bullet1Right = false;
             } else if (keyCode == KeyEvent.VK_A) {
                 tank1Left = false;
+                bullet1Left = false;
             }
 
             if (keyCode == KeyEvent.VK_E) {
@@ -410,14 +519,18 @@ public class TankFighters extends JComponent implements ActionListener {
 
             if (keyCode == KeyEvent.VK_I) {
                 tank2Up = false;
+                bullet2Up = false;
             } else if (keyCode == KeyEvent.VK_K) {
                 tank2Down = false;
+                bullet2Down = false;
             }
 
             if (keyCode == KeyEvent.VK_L) {
                 tank2Right = false;
+                bullet2Right = false;
             } else if (keyCode == KeyEvent.VK_J) {
                 tank2Left = false;
+                bullet2Left = false;
             }
 
             if (keyCode == KeyEvent.VK_H) {
@@ -434,7 +547,6 @@ public class TankFighters extends JComponent implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        preSetup();
         gameLoop();
         repaint();
     }
