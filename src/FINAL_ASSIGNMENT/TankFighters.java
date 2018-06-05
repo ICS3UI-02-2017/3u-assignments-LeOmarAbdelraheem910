@@ -40,8 +40,6 @@ public class TankFighters extends JComponent implements ActionListener {
     // YOUR GAME VARIABLES WOULD GO HERE
     Rectangle tank1 = new Rectangle(50, HEIGHT / 2 - 12, 25, 25);
     Rectangle tank2 = new Rectangle(WIDTH - 50, HEIGHT / 2 - 12, 25, 25);
-    Rectangle bullet1 = new Rectangle(65, HEIGHT / 2 - 6, 10, 10);
-    Rectangle bullet2 = new Rectangle(WIDTH - 50, HEIGHT / 2 - 6, 10, 10);
     Rectangle border1 = new Rectangle(0, 0, WIDTH, 10);
     Rectangle border2 = new Rectangle(0, 0, 11, HEIGHT);
     Rectangle border3 = new Rectangle(0, 590, WIDTH, 10);
@@ -79,10 +77,11 @@ public class TankFighters extends JComponent implements ActionListener {
     boolean tank2RotateBarrelL = false;
     boolean tank2RotateBarrelR = false;
     long timeFired = 0;
-    int delay = 10000; // 3 se3cond delay
+    int delay = 10000; // 10 second delay
     int player1Score = 0;
     int player2Score = 0;
-    
+    Rectangle[] bullet1 = new Rectangle[5];
+    Rectangle[] bullet2 = new Rectangle[5];
     //create a custom font!
     Font scoreboardFont = new Font("Comic Sans", Font.BOLD, 36);
     // GAME VARIABLES END HERE    
@@ -92,7 +91,7 @@ public class TankFighters extends JComponent implements ActionListener {
     public TankFighters() {
         // creates a windows to show my game
         JFrame frame = new JFrame(title);
-
+        preSetup();
         // sets the size of my game
         this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
         // adds the game to the window
@@ -111,7 +110,7 @@ public class TankFighters extends JComponent implements ActionListener {
         this.addMouseMotionListener(m);
         this.addMouseWheelListener(m);
         this.addMouseListener(m);
-        preSetup();
+        
         gameTimer = new Timer(desiredTime, this);
         gameTimer.setRepeats(true);
         gameTimer.start();
@@ -129,10 +128,15 @@ public class TankFighters extends JComponent implements ActionListener {
         // GAME DRAWING GOES HERE
         AffineTransform old = g2d.getTransform();
 
-        g.setColor(Color.GREEN);
-        g.fillOval(bullet1.x, bullet1.y, bullet1.width, bullet1.height);
-        g.setColor(Color.MAGENTA);
-        g.fillOval(bullet2.x, bullet2.y, bullet2.width, bullet2.height);
+        for (int i = 0; i < bullet1.length; i++) {
+            g.setColor(Color.GREEN);
+            g.fillOval(bullet1[i].x, bullet1[i].y, bullet1[i].width, bullet1[i].height);
+        }
+
+        for (int x = 0; x < bullet2.length; x++) {
+            g.setColor(Color.MAGENTA);
+            g.fillOval(bullet2[x].x, bullet2[x].y, bullet2[x].width, bullet2[x].height);
+        }
 
         g.setColor(Color.RED);
         g.fillRect(tank1.x, tank1.y, tank1.width, tank1.height);
@@ -158,8 +162,8 @@ public class TankFighters extends JComponent implements ActionListener {
         g.fillRect(0, 600, WIDTH, 50);
         g.setColor(Color.BLACK);
         g.setFont(scoreboardFont);
-        g.drawString("" + player1Score, WIDTH/2 - 50, 625);
-        g.drawString("" + player2Score, WIDTH/2 + 50, 625);
+        g.drawString("" + player1Score, WIDTH / 2 - 50, 625);
+        g.drawString("" + player2Score, WIDTH / 2 + 50, 625);
         // GAME DRAWING ENDS HERE
     }
 
@@ -167,7 +171,17 @@ public class TankFighters extends JComponent implements ActionListener {
     // This is run before the game loop begins!
     public void preSetup() {
         // Any of your pre setup before the loop starts should go here\
+        bullet1[0] = new Rectangle(65, HEIGHT / 2 - 6, 10, 10);
+        bullet1[1] = new Rectangle(65, HEIGHT / 2 - 6, 10, 10);
+        bullet1[2] = new Rectangle(65, HEIGHT / 2 - 6, 10, 10);
+        bullet1[3] = new Rectangle(65, HEIGHT / 2 - 6, 10, 10);
+        bullet1[4] = new Rectangle(65, HEIGHT / 2 - 6, 10, 10);
 
+        bullet2[0] = new Rectangle(WIDTH - 50, HEIGHT / 2 - 6, 10, 10);
+        bullet2[1] = new Rectangle(WIDTH - 50, HEIGHT / 2 - 6, 10, 10);
+        bullet2[2] = new Rectangle(WIDTH - 50, HEIGHT / 2 - 6, 10, 10);
+        bullet2[3] = new Rectangle(WIDTH - 50, HEIGHT / 2 - 6, 10, 10);
+        bullet2[4] = new Rectangle(WIDTH - 50, HEIGHT / 2 - 6, 10, 10);
     }
 
     // The main game loop
@@ -228,32 +242,34 @@ public class TankFighters extends JComponent implements ActionListener {
             bullet2Down = false;
             bullet2Right = false;
             bullet2Left = false;
-        } else if (bulletSpeed2 == 0){
+        } else if (bulletSpeed2 == 0) {
             tankSpeed2 = 3;
         }
+        for (int i = 0; i < bullet1.length; i++) {
+            if (bullet1Up) {
+                bullet1[i].y -= tankSpeed1;
+            } else if (bullet1Down) {
+                bullet1[i].y += tankSpeed1;
+            }
 
-        if (bullet1Up) {
-            bullet1.y -= tankSpeed1;
-        } else if (bullet1Down) {
-            bullet1.y += tankSpeed1;
+            if (bullet1Right) {
+                bullet1[i].x += tankSpeed1;
+            } else if (bullet1Left) {
+                bullet1[i].x -= tankSpeed1;
+            }
         }
+        for (int x = 0; x < bullet2.length; x++) {
+            if (bullet2Up) {
+                bullet2[x].y -= tankSpeed2;
+            } else if (bullet1Down) {
+                bullet2[x].y += tankSpeed2;
+            }
 
-        if (bullet1Right) {
-            bullet1.x += tankSpeed1;
-        } else if (bullet1Left) {
-            bullet1.x -= tankSpeed1;
-        }
-
-        if (bullet2Up) {
-            bullet2.y -= tankSpeed2;
-        } else if (bullet1Down) {
-            bullet2.y += tankSpeed2;
-        }
-
-        if (bullet2Right) {
-            bullet2.x += tankSpeed2;
-        } else if (bullet2Left) {
-            bullet2.x -= tankSpeed2;
+            if (bullet2Right) {
+                bullet2[x].x += tankSpeed2;
+            } else if (bullet2Left) {
+                bullet2[x].x -= tankSpeed2;
+            }
         }
     }
 
@@ -308,139 +324,134 @@ public class TankFighters extends JComponent implements ActionListener {
                 tank2.y = wall1.y + 300;
             }
         }
-
-        if (bullet1.intersects(border2) || bullet1.intersects(border4)) {
-            bullet1Angle = (180 + bullet1Angle * -1) % 360;
-        }
-        if (bullet1.intersects(border1) || bullet1.intersects(border3)) {
-            bullet1Angle = bullet1Angle * -1;
-        }
-        if (bullet1.intersects(wall1)) {
-            if ((bullet1.x + 10) >= wall1.x && (bullet1.x + 10) <= (wall1.x + 6)) {
-                bullet1Angle = (180 + bullet1Angle * -1) % 360;
-            } else if (bullet1.x <= wall1.x + 100 && bullet1.x >= wall1.x + 94) {
+        for (int i = 0; i < bullet1.length; i++) {
+            if (bullet1[i].intersects(border2) || bullet1[i].intersects(border4)) {
                 bullet1Angle = (180 + bullet1Angle * -1) % 360;
             }
-            if ((bullet1.y + 10) >= wall1.y && (bullet1.y + 10) <= (wall1.y + 6)) {
-                bullet1Angle = bullet1Angle * -1;
-            } else if (bullet1.y <= wall1.y + 300 && bullet1.y >= wall1.y + 294) {
+            if (bullet1[i].intersects(border1) || bullet1[i].intersects(border3)) {
                 bullet1Angle = bullet1Angle * -1;
             }
+            if (bullet1[i].intersects(wall1)) {
+                if ((bullet1[i].x + 10) >= wall1.x && (bullet1[i].x + 10) <= (wall1.x + 6)) {
+                    bullet1Angle = (180 + bullet1Angle * -1) % 360;
+                } else if (bullet1[i].x <= wall1.x + 100 && bullet1[i].x >= wall1.x + 94) {
+                    bullet1Angle = (180 + bullet1Angle * -1) % 360;
+                }
+                if ((bullet1[i].y + 10) >= wall1.y && (bullet1[i].y + 10) <= (wall1.y + 6)) {
+                    bullet1Angle = bullet1Angle * -1;
+                } else if (bullet1[i].y <= wall1.y + 300 && bullet1[i].y >= wall1.y + 294) {
+                    bullet1Angle = bullet1Angle * -1;
+                }
+            }
         }
-
-        if (bullet2.intersects(border2) || bullet2.intersects(border4)) {
-            bullet2Angle = (180 + bullet2Angle * -1) % 360;
-        }
-        if (bullet2.intersects(border1) || bullet2.intersects(border3)) {
-            bullet2Angle = bullet2Angle * -1;
-        }
-
-        if (bullet2.intersects(wall1)) {
-            if ((bullet2.x + 10) >= wall1.x && (bullet2.x + 10) <= (wall1.x + 6)) {
-                bullet2Angle = (180 + bullet2Angle * -1) % 360;
-            } else if (bullet2.x <= wall1.x + 100 && bullet2.x >= wall1.x + 94) {
+        for (int x = 0; x < bullet2.length; x++) {
+            if (bullet2[x].intersects(border2) || bullet2[x].intersects(border4)) {
                 bullet2Angle = (180 + bullet2Angle * -1) % 360;
             }
-            if ((bullet2.y + 10) >= wall1.y && (bullet2.y + 10) <= (wall1.y + 6)) {
+            if (bullet2[x].intersects(border1) || bullet2[x].intersects(border3)) {
                 bullet2Angle = bullet2Angle * -1;
-            } else if (bullet2.y <= wall1.y + 300 && bullet2.y >= wall1.y + 294) {
-                bullet2Angle = bullet2Angle * -1;
+            }
+
+            if (bullet2[x].intersects(wall1)) {
+                if ((bullet2[x].x + 10) >= wall1.x && (bullet2[x].x + 10) <= (wall1.x + 6)) {
+                    bullet2Angle = (180 + bullet2Angle * -1) % 360;
+                } else if (bullet2[x].x <= wall1.x + 100 && bullet2[x].x >= wall1.x + 94) {
+                    bullet2Angle = (180 + bullet2Angle * -1) % 360;
+                }
+                if ((bullet2[x].y + 10) >= wall1.y && (bullet2[x].y + 10) <= (wall1.y + 6)) {
+                    bullet2Angle = bullet2Angle * -1;
+                } else if (bullet2[x].y <= wall1.y + 300 && bullet2[x].y >= wall1.y + 294) {
+                    bullet2Angle = bullet2Angle * -1;
+                }
             }
         }
     }
 
     private void bulletLogic() {
-        if (bulletSpeed1 > 0 || bulletSpeed1 < 0) {
-            shotsFired = true;
-            tank1RotateBarrelL = false;
-            tank1RotateBarrelR = false;
-        }
-        if (tank1RotateBarrelL) {
-            tank1BarrelPosition -= 3;
-            bullet1Angle -= 3;
-        } else if (tank1RotateBarrelR) {
-            tank1BarrelPosition += 3;
-            bullet1Angle += 3;
-        }
+        for (int i = 0; i < bullet1.length; i++) {
+            if (bulletSpeed1 > 0 || bulletSpeed1 < 0) {
+                shotsFired = true;
+            }
+            if (tank1RotateBarrelL) {
+                tank1BarrelPosition -= 3;
+                bullet1Angle -= 3;
+            } else if (tank1RotateBarrelR) {
+                tank1BarrelPosition += 3;
+                bullet1Angle += 3;
+            }
 
-        double newAngle = Math.toRadians(bullet1Angle);
-        double tank1BulletX = bulletSpeed1 * Math.cos(newAngle);
-        double tank1BulletY = bulletSpeed1 * Math.sin(newAngle);
+            double newAngle = Math.toRadians(bullet1Angle);
+            double tank1BulletX = bulletSpeed1 * Math.cos(newAngle);
+            double tank1BulletY = bulletSpeed1 * Math.sin(newAngle);
 
-        if (tank1Shoot && bulletSpeed1 == 0) {
-            bulletSpeed1 = 6;
-            timeFired = System.currentTimeMillis(); // the time it shot
-        }
-        if (shotsFired) {
-            bullet1.x = bullet1.x + (int) tank1BulletX;
-            bullet1.y = bullet1.y + (int) tank1BulletY;
-        }
+            if (tank1Shoot && bulletSpeed1 == 0) {
+                bulletSpeed1 = 6;
+                timeFired = System.currentTimeMillis(); // the time it shot
+            }
+            if (shotsFired) {
+                bullet1[i].x = bullet1[i].x + (int) tank1BulletX;
+                bullet1[i].y = bullet1[i].y + (int) tank1BulletY;
+            }
 
-        // timer should stop
-        if (System.currentTimeMillis() > timeFired + delay) {
-            shotsFired = false;
-            bulletSpeed1 = 0;
-            tank1BarrelPosition = bullet1Angle;
+            // timer should stop
+            if (System.currentTimeMillis() > timeFired + delay) {
+                shotsFired = false;
+                bulletSpeed1 = 0;
+            }
+            if (bulletSpeed1 == 0) {
+                bullet1[i].x = tank1.x + 15;
+                bullet1[i].y = tank1.y + 7;
+            }
         }
-        if (bulletSpeed1 == 0) {
-            bullet1.x = tank1.x + 15;
-            bullet1.y = tank1.y + 7;
-        }
+        for (int x = 0; x < bullet2.length; x++) {
+            if (bulletSpeed2 > 0 || bulletSpeed2 < 0) {
+                shotsFired = true;
+            }
+            if (tank2RotateBarrelL) {
+                tank2BarrelPosition -= 3;
+                bullet2Angle -= 3;
+            } else if (tank2RotateBarrelR) {
+                tank2BarrelPosition += 3;
+                bullet2Angle += 3;
+            }
 
-        // timer should stop
-        if (System.currentTimeMillis() > timeFired + delay) {
-            shotsFired = false;
-            bulletSpeed1 = 0;
-        }
-        if (bulletSpeed1 == 0) {
-            bullet1.x = 65;
-            bullet1.y = HEIGHT / 2 - 6;
-        }
+            double newAngle2 = Math.toRadians(bullet2Angle);
+            double tank2BulletX = bulletSpeed2 * Math.cos(newAngle2);
+            double tank2BulletY = bulletSpeed2 * Math.sin(newAngle2);
+            if (tank2Shoot && bulletSpeed2 == 0) {
+                bulletSpeed2 = -6;
+                timeFired = System.currentTimeMillis(); // the time it shot
+            }
+            if (shotsFired) {
+                bullet2[x].x = bullet2[x].x + (int) tank2BulletX;
+                bullet2[x].y = bullet2[x].y + (int) tank2BulletY;
+            }
+            // timer should stop
+            if (System.currentTimeMillis() > timeFired + delay) {
+                shotsFired = false;
+                bulletSpeed2 = 0;
+                tank2BarrelPosition = 180 + bullet2Angle;
+            }
 
-        if (bulletSpeed2 > 0 || bulletSpeed2 < 0) {
-            shotsFired = true;
-            tank2RotateBarrelL = false;
-            tank2RotateBarrelR = false;
-        }
-        if (tank2RotateBarrelL) {
-            tank2BarrelPosition -= 3;
-            bullet2Angle -= 3;
-        } else if (tank2RotateBarrelR) {
-            tank2BarrelPosition += 3;
-            bullet2Angle += 3;
-        }
-
-        double newAngle2 = Math.toRadians(bullet2Angle);
-        double tank2BulletX = bulletSpeed2 * Math.cos(newAngle2);
-        double tank2BulletY = bulletSpeed2 * Math.sin(newAngle2);
-        if (tank2Shoot && bulletSpeed2 == 0) {
-            bulletSpeed2 = -6;
-            timeFired = System.currentTimeMillis(); // the time it shot
-        }
-        if (shotsFired) {
-            bullet2.x = bullet2.x + (int) tank2BulletX;
-            bullet2.y = bullet2.y + (int) tank2BulletY;
-        }
-        // timer should stop
-        if (System.currentTimeMillis() > timeFired + delay) {
-            shotsFired = false;
-            bulletSpeed2 = 0;
-            tank2BarrelPosition = 180 + bullet2Angle;
-        }
-
-        if (bulletSpeed2 == 0) {
-            bullet2.x = tank2.x;
-            bullet2.y = tank2.y + 7;
+            if (bulletSpeed2 == 0) {
+                bullet2[x].x = tank2.x;
+                bullet2[x].y = tank2.y + 7;
+            }
         }
     }
 
     private void scoreTally() {
-        if(!(tank1.intersects(tank2))){
-        if(bullet1.intersects(tank2)){
-            player1Score++;
-        }
-        if(bullet2.intersects(tank1))
-            player2Score++;
+        if (!(tank1.intersects(tank2))) {
+            for (int i = 0; i < bullet1.length; i++) {
+                if (bullet1[i].intersects(tank2)) {
+                    player1Score++;
+                }
+            }
+            for (int x = 0; x < bullet2.length; x++) {
+                if (bullet2[x].intersects(tank1)) {
+                    player2Score++;
+                }
+            }
         }
     }
 
