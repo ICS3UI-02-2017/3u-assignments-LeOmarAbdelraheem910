@@ -146,6 +146,8 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
         jButton185 = new javax.swing.JButton();
         jButton186 = new javax.swing.JButton();
         jButton187 = new javax.swing.JButton();
+        jButton124 = new javax.swing.JButton();
+        jButton125 = new javax.swing.JButton();
 
         jButton4.setText("H");
         jButton4.setPreferredSize(new java.awt.Dimension(50, 50));
@@ -589,7 +591,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton59.setText("H");
+        jButton59.setText("Ce");
         jButton59.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton59.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -615,7 +617,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton60.setText("H");
+        jButton60.setText("Pu");
         jButton60.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton60.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -631,7 +633,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton70.setText("H");
+        jButton70.setText("Te");
         jButton70.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton70.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -639,7 +641,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton71.setText("H");
+        jButton71.setText("I");
         jButton71.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton71.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -647,7 +649,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton72.setText("H");
+        jButton72.setText("Al");
         jButton72.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton72.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -655,7 +657,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton73.setText("H");
+        jButton73.setText("P");
         jButton73.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton73.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -663,7 +665,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton74.setText("H");
+        jButton74.setText("Cl");
         jButton74.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton74.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -671,7 +673,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton75.setText("H");
+        jButton75.setText("Ne");
         jButton75.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton75.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -679,7 +681,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton76.setText("H");
+        jButton76.setText("F");
         jButton76.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton76.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -695,7 +697,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton78.setText("H");
+        jButton78.setText("O");
         jButton78.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton78.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -703,7 +705,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton79.setText("H");
+        jButton79.setText("N");
         jButton79.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton79.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -711,7 +713,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton80.setText("H");
+        jButton80.setText("C");
         jButton80.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton80.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -719,7 +721,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton92.setText("H");
+        jButton92.setText("Xe");
         jButton92.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton92.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -727,7 +729,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton93.setText("H");
+        jButton93.setText("Ga");
         jButton93.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton93.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -735,7 +737,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton94.setText("H");
+        jButton94.setText("Ge");
         jButton94.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton94.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -743,7 +745,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton95.setText("H");
+        jButton95.setText("As");
         jButton95.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton95.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -751,7 +753,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton96.setText("H");
+        jButton96.setText("Se");
         jButton96.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton96.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -759,7 +761,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton97.setText("H");
+        jButton97.setText("Br");
         jButton97.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton97.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -767,7 +769,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton98.setText("H");
+        jButton98.setText("Kr");
         jButton98.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton98.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -775,7 +777,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton99.setText("H");
+        jButton99.setText("Si");
         jButton99.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton99.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -783,7 +785,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton100.setText("H");
+        jButton100.setText("S");
         jButton100.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton100.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -791,7 +793,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton101.setText("H");
+        jButton101.setText("Ar");
         jButton101.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton101.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -799,7 +801,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton102.setText("H");
+        jButton102.setText("Pa");
         jButton102.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton102.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -807,7 +809,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton103.setText("H");
+        jButton103.setText("Np");
         jButton103.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton103.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -815,7 +817,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton104.setText("H");
+        jButton104.setText("Th");
         jButton104.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton104.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -823,7 +825,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton105.setText("H");
+        jButton105.setText("Pr");
         jButton105.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton105.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -831,7 +833,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton106.setText("H");
+        jButton106.setText("Nd");
         jButton106.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton106.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -847,7 +849,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton108.setText("H");
+        jButton108.setText("Am");
         jButton108.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton108.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -863,7 +865,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton110.setText("H");
+        jButton110.setText("Cm");
         jButton110.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton110.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -887,7 +889,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton113.setText("H");
+        jButton113.setText("Bk");
         jButton113.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton113.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -903,7 +905,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton115.setText("H");
+        jButton115.setText("Cf");
         jButton115.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton115.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -919,7 +921,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton117.setText("H");
+        jButton117.setText("Es");
         jButton117.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton117.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -935,7 +937,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton119.setText("H");
+        jButton119.setText("Fm");
         jButton119.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton119.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -959,7 +961,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton122.setText("H");
+        jButton122.setText("Md");
         jButton122.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton122.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -967,7 +969,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton123.setText("H");
+        jButton123.setText("No");
         jButton123.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton123.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -975,7 +977,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton137.setText("H");
+        jButton137.setText("U");
         jButton137.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton137.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -983,7 +985,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton172.setText("H");
+        jButton172.setText("Tl");
         jButton172.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton172.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -991,7 +993,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton173.setText("H");
+        jButton173.setText("In");
         jButton173.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton173.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -999,7 +1001,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton174.setText("H");
+        jButton174.setText("Fv");
         jButton174.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton174.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1007,7 +1009,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton175.setText("H");
+        jButton175.setText("Mc");
         jButton175.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton175.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1015,7 +1017,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton176.setText("H");
+        jButton176.setText("Lv");
         jButton176.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton176.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1023,7 +1025,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton177.setText("H");
+        jButton177.setText("Ts");
         jButton177.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton177.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1031,7 +1033,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton178.setText("H");
+        jButton178.setText("Og");
         jButton178.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton178.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1039,7 +1041,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton179.setText("H");
+        jButton179.setText("Pb");
         jButton179.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton179.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1047,7 +1049,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton180.setText("H");
+        jButton180.setText("Bi");
         jButton180.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton180.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1055,7 +1057,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton181.setText("H");
+        jButton181.setText("Po");
         jButton181.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton181.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1063,7 +1065,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton182.setText("H");
+        jButton182.setText("At");
         jButton182.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton182.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1071,7 +1073,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton183.setText("H");
+        jButton183.setText("Rn");
         jButton183.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton183.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1079,7 +1081,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton184.setText("H");
+        jButton184.setText("Sn");
         jButton184.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton184.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1087,7 +1089,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton185.setText("H");
+        jButton185.setText("Sb");
         jButton185.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton185.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1095,7 +1097,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton186.setText("H");
+        jButton186.setText("Nh");
         jButton186.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton186.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1103,11 +1105,27 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jButton187.setText("H");
+        jButton187.setText("B");
         jButton187.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton187.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton187ActionPerformed(evt);
+            }
+        });
+
+        jButton124.setText("H");
+        jButton124.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton124.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton124ActionPerformed(evt);
+            }
+        });
+
+        jButton125.setText("Lr");
+        jButton125.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton125.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton125ActionPerformed(evt);
             }
         });
 
@@ -1347,8 +1365,14 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
                                         .addComponent(jButton120, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton121, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton123, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton121, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton124, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton123, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton125, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -1491,7 +1515,8 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
                     .addComponent(jButton116, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton118, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton120, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton121, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton121, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton124, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton104, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1506,7 +1531,8 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
                     .addComponent(jButton117, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton119, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton122, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton123, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton123, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton125, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
@@ -1993,6 +2019,14 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton187ActionPerformed
 
+    private void jButton124ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton124ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton124ActionPerformed
+
+    private void jButton125ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton125ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton125ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2056,6 +2090,8 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     private javax.swing.JButton jButton121;
     private javax.swing.JButton jButton122;
     private javax.swing.JButton jButton123;
+    private javax.swing.JButton jButton124;
+    private javax.swing.JButton jButton125;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton137;
     private javax.swing.JButton jButton14;
