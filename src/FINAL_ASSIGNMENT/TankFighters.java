@@ -32,7 +32,7 @@ public class TankFighters extends JComponent implements ActionListener {
     // sets the framerate and delay for our game
     // this calculates the number of milliseconds per frame
     // you just need to select an approproate framerate
-    int desiredFPS = 60;
+    int desiredFPS = 120;
     int desiredTime = Math.round((1000 / desiredFPS));
     // timer used to run the game loop
     // this is what keeps our time running smoothly :)
@@ -131,12 +131,11 @@ public class TankFighters extends JComponent implements ActionListener {
         // GAME DRAWING GOES HERE
         AffineTransform old = g2d.getTransform();
 
-            g.setColor(Color.GREEN);
-            g.fillOval(bullet1.x, bullet1.y, bullet1.width, bullet1.height);
-        
-            g.setColor(Color.MAGENTA);
-            g.fillOval(bullet2.x, bullet2.y, bullet2.width, bullet2.height);
-        
+        g.setColor(Color.GREEN);
+        g.fillOval(bullet1.x, bullet1.y, bullet1.width, bullet1.height);
+
+        g.setColor(Color.MAGENTA);
+        g.fillOval(bullet2.x, bullet2.y, bullet2.width, bullet2.height);
 
         g.setColor(Color.RED);
         g.fillRect(tank1.x, tank1.y, tank1.width, tank1.height);
@@ -158,7 +157,7 @@ public class TankFighters extends JComponent implements ActionListener {
         g.fillRect(border3.x, border3.y, border3.width, border3.height);
         g.fillRect(border4.x, border4.y, border4.width, border4.height);
         for (int i = 0; i < walls.length; i++) {
-        g.fillRect(walls[i].x, walls[i].y, walls[i].width, walls[i].height);
+            g.fillRect(walls[i].x, walls[i].y, walls[i].width, walls[i].height);
         }
 
         g.fillRect(0, 600, WIDTH, 50);
@@ -173,51 +172,51 @@ public class TankFighters extends JComponent implements ActionListener {
     // This is run before the game loop begins!
     public void preSetup() {
         // Any of your pre setup before the loop starts should go here
-        
-        walls[0] = new Rectangle(75, 75, 487, 5);
-        walls[1] = new Rectangle(562, 75, 75, 5);
-        walls[2] = new Rectangle(637, 75, 488, 5);
-        walls[3] = new Rectangle(75, 75, 5, 100);
-        walls[4] = new Rectangle(75, 250, 5, 100);
-        walls[5] = new Rectangle(75, 425, 5, 100);
-        walls[6] = new Rectangle(75, 525, 192, 5);
-        walls[7] = new Rectangle(125, 470, 87, 5);
-        walls[8] = new Rectangle(262, 425, 5, 100);
-        walls[9] = new Rectangle(262, 425, 300, 5);
-        walls[10] = new Rectangle(562, 425, 5, 50);
-        walls[11] = new Rectangle(562, 475, 75, 5);
-        walls[12] = new Rectangle(637, 425, 5, 55);
-        walls[13] = new Rectangle(637, 425, 300, 5);
-        walls[14] = new Rectangle(937, 425, 5, 100);
-        walls[15] = new Rectangle(937, 525, 193, 5);
-        walls[16] = new Rectangle(987, 470, 88, 5);
-        walls[17] = new Rectangle(1125, 425, 5, 100);
-        walls[18] = new Rectangle(1125, 250, 5, 100);
-        walls[19] = new Rectangle(1125, 75, 5, 100);
-        walls[20] = new Rectangle(412, 550, 5, 50);
-        walls[21] = new Rectangle(787, 550, 5, 50);
-        walls[22] = new Rectangle(562, 550, 5, 50);
-        walls[23] = new Rectangle(637, 550, 5, 50);
-        walls[24] = new Rectangle(562, 250, 5, 100);
-        walls[25] = new Rectangle(637, 250, 5, 100);
-        walls[26] = new Rectangle(562, 75, 5, 100);
-        walls[27] = new Rectangle(637, 75, 5, 100);
-        walls[28] = new Rectangle(150, 150, 5, 50);
-        walls[29] = new Rectangle(150, 150, 337, 5);
-        walls[30] = new Rectangle(1050, 150, 5, 50);
-        walls[31] = new Rectangle(713, 150, 337, 5);
-        walls[32] = new Rectangle(462, 250, 100, 5);
-        walls[33] = new Rectangle(462, 350, 105, 5);
-        walls[34] = new Rectangle(637, 250, 100, 5);
-        walls[35] = new Rectangle(637, 350, 100, 5);
-        walls[36] = new Rectangle(150, 250, 5, 100);
-        walls[37] = new Rectangle(150, 250, 100, 5);
-        walls[38] = new Rectangle(200, 300, 5, 50);
-        walls[39] = new Rectangle(200, 300, 50, 5);
-        walls[40] = new Rectangle(1050, 250, 5, 100);
-        walls[41] = new Rectangle(1000, 300, 5, 50);
-        walls[42] = new Rectangle(950, 250, 100, 5);
-        walls[43] = new Rectangle(950, 300, 50, 5);
+
+        walls[0] = new Rectangle(75, 75, 487, 7);
+        walls[1] = new Rectangle(562, 75, 75, 7);
+        walls[2] = new Rectangle(637, 75, 488, 7);
+        walls[3] = new Rectangle(75, 75, 7, 100);
+        walls[4] = new Rectangle(75, 250, 7, 100);
+        walls[5] = new Rectangle(75, 425, 7, 100);
+        walls[6] = new Rectangle(75, 525, 192, 7);
+        walls[7] = new Rectangle(125, 470, 87, 7);
+        walls[8] = new Rectangle(262, 425, 7, 100);
+        walls[9] = new Rectangle(262, 425, 300, 7);
+        walls[10] = new Rectangle(562, 425, 7, 50);
+        walls[11] = new Rectangle(562, 475, 75, 7);
+        walls[12] = new Rectangle(637, 425, 7, 55);
+        walls[13] = new Rectangle(637, 425, 300, 7);
+        walls[14] = new Rectangle(937, 425, 7, 100);
+        walls[15] = new Rectangle(937, 525, 193, 7);
+        walls[16] = new Rectangle(987, 470, 88, 7);
+        walls[17] = new Rectangle(1125, 425, 7, 100);
+        walls[18] = new Rectangle(1125, 250, 7, 100);
+        walls[19] = new Rectangle(1125, 75, 7, 100);
+        walls[20] = new Rectangle(412, 550, 7, 50);
+        walls[21] = new Rectangle(787, 550, 7, 50);
+        walls[22] = new Rectangle(562, 550, 7, 50);
+        walls[23] = new Rectangle(637, 550, 7, 50);
+        walls[24] = new Rectangle(562, 250, 7, 100);
+        walls[25] = new Rectangle(637, 250, 7, 100);
+        walls[26] = new Rectangle(562, 75, 7, 100);
+        walls[27] = new Rectangle(637, 75, 7, 100);
+        walls[28] = new Rectangle(150, 150, 7, 50);
+        walls[29] = new Rectangle(150, 150, 337, 7);
+        walls[30] = new Rectangle(1050, 150, 7, 50);
+        walls[31] = new Rectangle(713, 150, 337, 7);
+        walls[32] = new Rectangle(462, 250, 100, 7);
+        walls[33] = new Rectangle(462, 350, 105, 7);
+        walls[34] = new Rectangle(637, 250, 100, 7);
+        walls[35] = new Rectangle(637, 350, 100, 7);
+        walls[36] = new Rectangle(150, 250, 7, 100);
+        walls[37] = new Rectangle(150, 250, 100, 7);
+        walls[38] = new Rectangle(200, 300, 7, 50); //this is the wall
+        walls[39] = new Rectangle(200, 300, 50, 7);
+        walls[40] = new Rectangle(1050, 250, 7, 100);
+        walls[41] = new Rectangle(1000, 300, 7, 50);
+        walls[42] = new Rectangle(950, 250, 100, 7);
+        walls[43] = new Rectangle(950, 300, 50, 7);
     }
 
     // The main game loop
@@ -265,7 +264,7 @@ public class TankFighters extends JComponent implements ActionListener {
             bullet1Left = false;
 
         } else if (bulletSpeed1 == 0) {
-            tankSpeed1 = 3;
+            tankSpeed1 = 4;
         }
 
         if (bulletSpeed2 > 0 || bulletSpeed2 < 0) {
@@ -279,195 +278,215 @@ public class TankFighters extends JComponent implements ActionListener {
             bullet2Right = false;
             bullet2Left = false;
         } else if (bulletSpeed2 == 0) {
-            tankSpeed2 = 3;
+            tankSpeed2 = 4;
         }
-            if (bullet1Up) {
-                bullet1.y -= tankSpeed1;
-            } else if (bullet1Down) {
-                bullet1.y += tankSpeed1;
-            }
+        if (bullet1Up) {
+            bullet1.y -= tankSpeed1;
+        } else if (bullet1Down) {
+            bullet1.y += tankSpeed1;
+        }
 
-            if (bullet1Right) {
-                bullet1.x += tankSpeed1;
-            } else if (bullet1Left) {
-                bullet1.x -= tankSpeed1;
-            }
-        
-            if (bullet2Up) {
-                bullet2.y -= tankSpeed2;
-            } else if (bullet1Down) {
-                bullet2.y += tankSpeed2;
-            }
+        if (bullet1Right) {
+            bullet1.x += tankSpeed1;
+        } else if (bullet1Left) {
+            bullet1.x -= tankSpeed1;
+        }
 
-            if (bullet2Right) {
-                bullet2.x += tankSpeed2;
-            } else if (bullet2Left) {
-                bullet2.x -= tankSpeed2;
-            }
-        
+        if (bullet2Up) {
+            bullet2.y -= tankSpeed2;
+        } else if (bullet1Down) {
+            bullet2.y += tankSpeed2;
+        }
+
+        if (bullet2Right) {
+            bullet2.x += tankSpeed2;
+        } else if (bullet2Left) {
+            bullet2.x -= tankSpeed2;
+        }
+
     }
 
     private void detectACollision() {
         if (tank1.intersects(border1)) {
-            tank1.y += 3;
+            tank1.y = border1.y + 10;
         }
         if (tank1.intersects(border2)) {
-            tank1.x += 3;
+            tank1.x = border2.x + 10;
         }
         if (tank1.intersects(border3)) {
-            tank1.y -= 3;
+            tank1.y = border3.y - 25;
         }
         if (tank1.intersects(border4)) {
-            tank1.x -= 3;
-        }
-        if (tank1.intersects(wall1)) {
-            if ((tank1.x + 25) >= wall1.x && (tank1.x + 25) <= (wall1.x + 3)) {
-                tank1.x = wall1.x - 25;
-            } else if (tank1.x <= wall1.x + 100 && tank1.x >= wall1.x + 97) {
-                tank1.x = wall1.x + 100;
-            }
-            if ((tank1.y + 25) >= wall1.y && (tank1.y + 25) <= (wall1.y + 3)) {
-                tank1.y = wall1.y - 25;
-            } else if (tank1.y <= wall1.y + 300 && tank1.y >= wall1.y + 297) {
-                tank1.y = wall1.y + 300;
-            }
+            tank1.x = border4.x - 25;
         }
 
         if (tank2.intersects(border1)) {
-            tank2.y += 3;
+            tank2.y = border1.y + 10;
         }
         if (tank2.intersects(border2)) {
-            tank2.x += 3;
+            tank2.x = border2.x + 10;
         }
         if (tank2.intersects(border3)) {
-            tank2.y -= 3;
+            tank2.y = border3.y - 25;
         }
         if (tank2.intersects(border4)) {
-            tank2.x -= 3;
+            tank2.x = border4.x - 25;
 
         }
-        if (tank2.intersects(wall1)) {
-            if ((tank2.x + 25) >= wall1.x && (tank2.x + 25) <= (wall1.x + 3)) {
-                tank2.x = wall1.x - 25;
-            } else if (tank2.x <= wall1.x + 100 && tank2.x >= wall1.x + 97) {
-                tank2.x = wall1.x + 100;
-            }
-            if ((tank2.y + 25) >= wall1.y && (tank2.y + 25) <= (wall1.y + 3)) {
-                tank2.y = wall1.y - 25;
-            } else if (tank2.y <= wall1.y + 300 && tank2.y >= wall1.y + 297) {
-                tank2.y = wall1.y + 300;
-            }
-        }
-            if (bullet1.intersects(border2) || bullet1.intersects(border4)) {
-                bullet1Angle = (180 + bullet1Angle * -1) % 360;
-            }
-            if (bullet1.intersects(border1) || bullet1.intersects(border3)) {
-                bullet1Angle = bullet1Angle * -1;
-            }
-            if (bullet1.intersects(wall1)) {
-                if ((bullet1.x + 10) >= wall1.x && (bullet1.x + 10) <= (wall1.x + 6)) {
-                    bullet1Angle = (180 + bullet1Angle * -1) % 360;
-                } else if (bullet1.x <= wall1.x + 100 && bullet1.x >= wall1.x + 94) {
-                    bullet1Angle = (180 + bullet1Angle * -1) % 360;
-                }
-                if ((bullet1.y + 10) >= wall1.y && (bullet1.y + 10) <= (wall1.y + 6)) {
-                    bullet1Angle = bullet1Angle * -1;
-                } else if (bullet1.y <= wall1.y + 300 && bullet1.y >= wall1.y + 294) {
-                    bullet1Angle = bullet1Angle * -1;
-                }
-            
-        }
-            if (bullet2.intersects(border2) || bullet2.intersects(border4)) {
-                bullet2Angle = (180 + bullet2Angle * -1) % 360;
-            }
-            if (bullet2.intersects(border1) || bullet2.intersects(border3)) {
-                bullet2Angle = bullet2Angle * -1;
-            }
 
-            if (bullet2.intersects(wall1)) {
-                if ((bullet2.x + 10) >= wall1.x && (bullet2.x + 10) <= (wall1.x + 6)) {
-                    bullet2Angle = (180 + bullet2Angle * -1) % 360;
-                } else if (bullet2.x <= wall1.x + 100 && bullet2.x >= wall1.x + 94) {
+        if (bullet1.intersects(border2) || bullet1.intersects(border4)) {
+            bullet1Angle = (180 + bullet1Angle * -1) % 360;
+        }
+        if (bullet1.intersects(border1) || bullet1.intersects(border3)) {
+            bullet1Angle = bullet1Angle * -1;
+        }
+
+        if (bullet2.intersects(border2) || bullet2.intersects(border4)) {
+            bullet2Angle = (180 + bullet2Angle * -1) % 360;
+        }
+        if (bullet2.intersects(border1) || bullet2.intersects(border3)) {
+            bullet2Angle = bullet2Angle * -1;
+        }
+
+        for (int i = 0; i < walls.length; i++) {
+            if (tank1.intersects(walls[i])) {
+                if (tank1.x + 25 > walls[i].x && tank1.x + 25 < walls[i].x + 5) {
+                    tank1.x = walls[i].x - 25;
+                }
+                if (tank1.x < walls[i].x + walls[i].width && tank1.x > walls[i].x + walls[i].width - 5) {
+                    tank1.x = walls[i].x + walls[i].width;
+                }
+                if (tank1.y + 25 > walls[i].y && tank1.y + 25 < walls[i].y + 5) {
+                    tank1.y = walls[i].y - 25;
+                }
+                if (tank1.y < walls[i].y + walls[i].height && tank1.y > walls[i].y + walls[i].height - 5) {
+                    tank1.y = walls[i].y + walls[i].height;
+                }
+            }
+        }
+
+        for (int i = 0; i < walls.length; i++) {
+            if (tank2.intersects(walls[i])) {
+                if (tank2.x + 25 > walls[i].x && tank2.x + 25 < walls[i].x + 5) {
+                    tank2.x = walls[i].x - 25;
+                }
+                if (tank2.x < walls[i].x + walls[i].width && tank2.x > walls[i].x + walls[i].width - 5) {
+                    tank2.x = walls[i].x + walls[i].width;
+                }
+                if (tank2.y + 25 > walls[i].y && tank2.y + 25 < walls[i].y + 5) {
+                    tank2.y = walls[i].y - 25;
+                }
+                if (tank2.y < walls[i].y + walls[i].height && tank2.y > walls[i].y + walls[i].height - 5) {
+                    tank2.y = walls[i].y + walls[i].height;
+                }
+            }
+        }
+
+        for (int i = 0; i < walls.length; i++) {
+            if (bullet1.intersects(walls[i])) {
+                if (bullet1.x + 10 > walls[i].x && bullet1.x + 10 < walls[i].x + 6) {
+                    bullet1Angle = (180 + bullet1Angle * -1) % 360;
+                }
+                if (bullet1.x < walls[i].x + walls[i].width && bullet1.x > walls[i].x + walls[i].width - 6) {
+                    bullet1Angle = (180 + bullet1Angle * -1) % 360;
+                }
+                if (bullet1.y + 10 > walls[i].y && bullet1.y + 10 < walls[i].y + 6) {
+                    bullet1Angle = bullet1Angle * -1;
+                }
+                if (bullet1.y < walls[i].y + walls[i].height && bullet1.y > walls[i].y + walls[i].height - 6) {
+                    bullet1Angle = bullet1Angle * -1;
+                }
+            }
+        }
+
+        for (int i = 0; i < walls.length; i++) {
+            if (bullet2.intersects(walls[i])) {
+                if (bullet2.x + 10 > walls[i].x && bullet2.x + 10 < walls[i].x + 6) {
                     bullet2Angle = (180 + bullet2Angle * -1) % 360;
                 }
-                if ((bullet2.y + 10) >= wall1.y && (bullet2.y + 10) <= (wall1.y + 6)) {
-                    bullet2Angle = bullet2Angle * -1;
-                } else if (bullet2.y <= wall1.y + 300 && bullet2.y >= wall1.y + 294) {
+                if (bullet2.x < walls[i].x + walls[i].width && bullet2.x > walls[i].x + walls[i].width - 6) {
+                    bullet2Angle = (180 + bullet2Angle * -1) % 360;
+                }
+                if (bullet2.y + 10 > walls[i].y && bullet2.y + 10 < walls[i].y + 6) {
                     bullet2Angle = bullet2Angle * -1;
                 }
-            
+                if (bullet2.y < walls[i].y + walls[i].height && bullet2.y > walls[i].y + walls[i].height - 6) {
+                    bullet2Angle = bullet2Angle * -1;
+                }
+            }
         }
     }
 
     private void bulletLogic() {
-            if (bulletSpeed1 > 0 || bulletSpeed1 < 0) {
-                shotsFired = true;
-            }
-            if (tank1RotateBarrelL) {
-                tank1BarrelPosition -= 3;
-                bullet1Angle -= 3;
-            } else if (tank1RotateBarrelR) {
-                tank1BarrelPosition += 3;
-                bullet1Angle += 3;
-            }
+        if (bulletSpeed1 > 0 || bulletSpeed1 < 0) {
+            shotsFired = true;
+        }
+        if (tank1RotateBarrelL) {
+            tank1BarrelPosition -= 3;
+            bullet1Angle -= 3;
+        } else if (tank1RotateBarrelR) {
+            tank1BarrelPosition += 3;
+            bullet1Angle += 3;
+        }
 
-            double newAngle = Math.toRadians(bullet1Angle);
-            double tank1BulletX = bulletSpeed1 * Math.cos(newAngle);
-            double tank1BulletY = bulletSpeed1 * Math.sin(newAngle);
+        double newAngle = Math.toRadians(bullet1Angle);
+        double tank1BulletX = bulletSpeed1 * Math.cos(newAngle);
+        double tank1BulletY = bulletSpeed1 * Math.sin(newAngle);
 
-            if (tank1Shoot && bulletSpeed1 == 0) {
-                bulletSpeed1 = 6;
-                timeFired1 = System.currentTimeMillis(); // the time it shot
-            }
-            if (shotsFired) {
-                bullet1.x = bullet1.x + (int) tank1BulletX;
-                bullet1.y = bullet1.y + (int) tank1BulletY;
-            }
+        if (tank1Shoot && bulletSpeed1 == 0) {
+            bulletSpeed1 = 2;
+            timeFired1 = System.currentTimeMillis(); // the time it shot
+        }
+        if (shotsFired) {
+            bullet1.x = bullet1.x + (int) tank1BulletX;
+            bullet1.y = bullet1.y + (int) tank1BulletY;
+            tank1BarrelPosition = bullet1Angle;
+        }
 
-            // timer should stop
-            if (System.currentTimeMillis() > timeFired1 + delay) {
-                shotsFired = false;
-                bulletSpeed1 = 0;
-            }
-            if (bulletSpeed1 == 0) {
-                bullet1.x = tank1.x + 15;
-                bullet1.y = tank1.y + 7;
-            }
-        
-            if (bulletSpeed2 > 0 || bulletSpeed2 < 0) {
-                shotsFired = true;
-            }
-            if (tank2RotateBarrelL) {
-                tank2BarrelPosition -= 3;
-                bullet2Angle -= 3;
-            } else if (tank2RotateBarrelR) {
-                tank2BarrelPosition += 3;
-                bullet2Angle += 3;
-            }
+        // timer should stop
+        if (System.currentTimeMillis() > timeFired1 + delay) {
+            shotsFired = false;
+            bulletSpeed1 = 0;
+        }
+        if (bulletSpeed1 == 0) {
+            bullet1.x = tank1.x + 15;
+            bullet1.y = tank1.y + 7;
+        }
 
-            double newAngle2 = Math.toRadians(bullet2Angle);
-            double tank2BulletX = bulletSpeed2 * Math.cos(newAngle2);
-            double tank2BulletY = bulletSpeed2 * Math.sin(newAngle2);
-            if (tank2Shoot && bulletSpeed2 == 0) {
-                bulletSpeed2 = -6;
-                timeFired2 = System.currentTimeMillis(); // the time it shot
-            }
-            if (shotsFired) {
-                bullet2.x = bullet2.x + (int) tank2BulletX;
-                bullet2.y = bullet2.y + (int) tank2BulletY;
-            }
-            // timer should stop
-            if (System.currentTimeMillis() > timeFired2 + delay) {
-                shotsFired = false;
-                bulletSpeed2 = 0;
-                tank2BarrelPosition = 180 + bullet2Angle;
-            }
+        if (bulletSpeed2 > 0 || bulletSpeed2 < 0) {
+            shotsFired = true;
+        }
+        if (tank2RotateBarrelL) {
+            tank2BarrelPosition -= 3;
+            bullet2Angle -= 3;
+        } else if (tank2RotateBarrelR) {
+            tank2BarrelPosition += 3;
+            bullet2Angle += 3;
+        }
 
-            if (bulletSpeed2 == 0) {
-                bullet2.x = tank2.x;
-                bullet2.y = tank2.y + 7;
-            }
-        
+        double newAngle2 = Math.toRadians(bullet2Angle);
+        double tank2BulletX = bulletSpeed2 * Math.cos(newAngle2);
+        double tank2BulletY = bulletSpeed2 * Math.sin(newAngle2);
+        if (tank2Shoot && bulletSpeed2 == 0) {
+            bulletSpeed2 = -5;
+            timeFired2 = System.currentTimeMillis(); // the time it shot
+        }
+        if (shotsFired) {
+            bullet2.x = bullet2.x + (int) tank2BulletX;
+            bullet2.y = bullet2.y + (int) tank2BulletY;
+            tank2BarrelPosition = 180 + bullet2Angle;
+        }
+        // timer should stop
+        if (System.currentTimeMillis() > timeFired2 + delay) {
+            shotsFired = false;
+            bulletSpeed2 = 0;
+        }
+
+        if (bulletSpeed2 == 0) {
+            bullet2.x = tank2.x;
+            bullet2.y = tank2.y + 7;
+        }
+
     }
 
     private void scoreTally() {
