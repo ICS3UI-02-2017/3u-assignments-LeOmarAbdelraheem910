@@ -137,6 +137,7 @@ public class TankFighters extends JComponent implements ActionListener {
         g.setColor(Color.MAGENTA);
         g.fillOval(bullet2.x, bullet2.y, bullet2.width, bullet2.height);
 
+
         g.setColor(Color.RED);
         g.fillRect(tank1.x, tank1.y, tank1.width, tank1.height);
         g.setColor(Color.BLUE);
@@ -384,19 +385,18 @@ public class TankFighters extends JComponent implements ActionListener {
 
         for (int i = 0; i < walls.length; i++) {
             if (bullet1.intersects(walls[i])) {
-                if (bullet1.x + 10 > walls[i].x && bullet1.x + 10 < walls[i].x + 6) {
+                if (bullet1.x + 10 >= walls[i].x && bullet1.x + 10 <= walls[i].x + 5) {
+                    bullet1Angle = (180 + bullet1Angle * -1) % 360;
+                } if (bullet1.x <= walls[i].x + 7 && bullet1.x >= walls[i].x + 2) {
                     bullet1Angle = (180 + bullet1Angle * -1) % 360;
                 }
-                if (bullet1.x < walls[i].x + walls[i].width && bullet1.x > walls[i].x + walls[i].width - 6) {
-                    bullet1Angle = (180 + bullet1Angle * -1) % 360;
-                }
-                if (bullet1.y + 10 > walls[i].y && bullet1.y + 10 < walls[i].y + 6) {
+                if (bullet1.y + 10 >= walls[i].y && bullet1.y + 10 <= walls[i].y + 5) {
                     bullet1Angle = bullet1Angle * -1;
-                }
-                if (bullet1.y < walls[i].y + walls[i].height && bullet1.y > walls[i].y + walls[i].height - 6) {
+                } if (bullet1.y <= walls[i].y + 7 && bullet1.y >= walls[i].y + 2) {
                     bullet1Angle = bullet1Angle * -1;
                 }
             }
+
         }
 
         for (int i = 0; i < walls.length; i++) {
@@ -434,7 +434,7 @@ public class TankFighters extends JComponent implements ActionListener {
         double tank1BulletY = bulletSpeed1 * Math.sin(newAngle);
 
         if (tank1Shoot && bulletSpeed1 == 0) {
-            bulletSpeed1 = 2;
+            bulletSpeed1 = 5;
             timeFired1 = System.currentTimeMillis(); // the time it shot
         }
         if (shotsFired) {
