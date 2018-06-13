@@ -4,8 +4,18 @@
  */
 package FINAL_ASSIGNMENT;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
+import sun.audio.AudioPlayer;
+import sun.audio.AudioStream;
 
 /**
  *
@@ -209,10 +219,11 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
         jLabel44 = new javax.swing.JLabel();
         jSlider1 = new javax.swing.JSlider();
         jTextField3 = new javax.swing.JTextField();
-        jButton13 = new javax.swing.JButton();
         jLabel45 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
+        jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
 
         jButton4.setText("H");
         jButton4.setPreferredSize(new java.awt.Dimension(50, 50));
@@ -291,9 +302,11 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
         });
 
         jTextField1.setEditable(false);
+        jTextField1.setBackground(new java.awt.Color(0, 221, 30));
         jTextField1.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("57 -->71");
+        jTextField1.setToolTipText("The Lanthanide Series ranges from element 57 to 71.");
         jTextField1.setPreferredSize(new java.awt.Dimension(50, 50));
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -302,9 +315,11 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
         });
 
         jTextField2.setEditable(false);
+        jTextField2.setBackground(new java.awt.Color(240, 37, 176));
         jTextField2.setFont(new java.awt.Font("Berlin Sans FB", 0, 12)); // NOI18N
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField2.setText("89-->103");
+        jTextField2.setToolTipText("The Actinide Series ranges from element 89 to 103.");
         jTextField2.setPreferredSize(new java.awt.Dimension(50, 50));
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -358,10 +373,11 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
 
         Hydrogen.setBackground(new java.awt.Color(0, 224, 202));
         Hydrogen.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+
         Hydrogen.setText("H");
         Hydrogen.setToolTipText("1\n  Hydrogen");
         Hydrogen.setBorderPainted(false);
-        Hydrogen.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Hydrogen.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Hydrogen.setPreferredSize(new java.awt.Dimension(50, 50));
         Hydrogen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1267,7 +1283,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
         Carbon.setText("C");
         Carbon.setToolTipText("6 Carbon");
         Carbon.setBorderPainted(false);
-        Carbon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Carbon.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Carbon.setPreferredSize(new java.awt.Dimension(50, 50));
         Carbon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1280,7 +1296,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
         Nitrogen.setText("N");
         Nitrogen.setToolTipText("7 Nitrogen");
         Nitrogen.setBorderPainted(false);
-        Nitrogen.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Nitrogen.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Nitrogen.setPreferredSize(new java.awt.Dimension(50, 50));
         Nitrogen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1293,7 +1309,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
         Oxygen.setText("O");
         Oxygen.setToolTipText("8 Oxygen");
         Oxygen.setBorderPainted(false);
-        Oxygen.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Oxygen.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Oxygen.setPreferredSize(new java.awt.Dimension(50, 50));
         Oxygen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1306,7 +1322,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
         Phosphorus.setText("P");
         Phosphorus.setToolTipText("15 Phosphorus");
         Phosphorus.setBorderPainted(false);
-        Phosphorus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Phosphorus.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Phosphorus.setPreferredSize(new java.awt.Dimension(50, 50));
         Phosphorus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1319,7 +1335,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
         Sulfur.setText("S");
         Sulfur.setToolTipText("16 Sulfur");
         Sulfur.setBorderPainted(false);
-        Sulfur.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Sulfur.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Sulfur.setPreferredSize(new java.awt.Dimension(50, 50));
         Sulfur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1332,7 +1348,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
         Selenium.setText("Se");
         Selenium.setToolTipText("34 Selenium");
         Selenium.setBorderPainted(false);
-        Selenium.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Selenium.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Selenium.setPreferredSize(new java.awt.Dimension(50, 50));
         Selenium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1573,92 +1589,281 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel1.setText("1");
+        jLabel1.setToolTipText("Period 1");
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel2.setText("2");
+        jLabel2.setToolTipText("Period 2");
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel3.setText("3");
+        jLabel3.setToolTipText("Period 3");
+        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel4.setText("4");
+        jLabel4.setToolTipText("Period 4");
+        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel5.setText("5");
+        jLabel5.setToolTipText("Period 5");
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel6.setText("6");
+        jLabel6.setToolTipText("Period 6");
+        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel7.setText("7");
+        jLabel7.setToolTipText("Period 7");
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel8.setText("1");
+        jLabel8.setToolTipText("Group 1 (Alkali Metals)");
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
 
         jLabel9.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("IA");
+        jLabel9.setToolTipText("Group IA (Alkali Metals)");
+        jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
 
         jLabel10.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel10.setText("2");
+        jLabel10.setToolTipText("Group 2 (Alkaline Earth Metals)");
+        jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
 
         jLabel11.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("IIA");
+        jLabel11.setToolTipText("Group IIA (Alkaline Earth Metals)");
+        jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
+        });
 
         jLabel12.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel12.setText("3");
+        jLabel12.setToolTipText("Group 3");
+        jLabel12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel12MouseClicked(evt);
+            }
+        });
 
         jLabel13.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("IIIB");
+        jLabel13.setToolTipText("Group IIIB");
+        jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel13MouseClicked(evt);
+            }
+        });
 
         jLabel14.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel14.setText("4");
+        jLabel14.setToolTipText("Group 4");
+        jLabel14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel14MouseClicked(evt);
+            }
+        });
 
         jLabel15.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("IVB");
+        jLabel15.setToolTipText("Group IVB");
+        jLabel15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel15MouseClicked(evt);
+            }
+        });
 
         jLabel16.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel16.setText("5");
+        jLabel16.setToolTipText("Group 5");
+        jLabel16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel16MouseClicked(evt);
+            }
+        });
 
         jLabel17.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel17.setText("VB");
+        jLabel17.setToolTipText("Group VB");
+        jLabel17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel17MouseClicked(evt);
+            }
+        });
 
         jLabel18.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel18.setText("6");
+        jLabel18.setToolTipText("Group 6");
+        jLabel18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel18MouseClicked(evt);
+            }
+        });
 
         jLabel19.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setText("VIB");
+        jLabel19.setToolTipText("Group VIB");
+        jLabel19.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel19MouseClicked(evt);
+            }
+        });
 
         jLabel20.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel20.setText("7");
+        jLabel20.setToolTipText("Group 7");
+        jLabel20.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel20MouseClicked(evt);
+            }
+        });
 
         jLabel21.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setText("VIIB");
+        jLabel21.setToolTipText("Group VIIB");
+        jLabel21.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel21MouseClicked(evt);
+            }
+        });
 
         jLabel22.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel22.setText("8");
+        jLabel22.setToolTipText("Group 8");
+        jLabel22.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel22MouseClicked(evt);
+            }
+        });
 
         jLabel23.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel23.setText("9");
+        jLabel23.setToolTipText("Group 9");
+        jLabel23.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel23.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel23MouseClicked(evt);
+            }
+        });
 
         jLabel24.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel24.setText("10");
+        jLabel24.setToolTipText("Group 10");
+        jLabel24.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel24.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel24MouseClicked(evt);
+            }
+        });
 
         jLabel25.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel25.setText("11");
+        jLabel25.setToolTipText("Group 11");
+        jLabel25.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel25.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel25MouseClicked(evt);
+            }
+        });
 
         jLabel26.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel26.setText("12");
+        jLabel26.setToolTipText("Group 12");
+        jLabel26.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel26.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel26MouseClicked(evt);
+            }
+        });
 
         jLabel27.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel27.setText("VIIIB");
+        jLabel27.setToolTipText("Group VIIIB");
+        jLabel27.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel27.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel27MouseClicked(evt);
+            }
+        });
 
         jLabel28.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1667,60 +1872,160 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
         jLabel29.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel29.setText("<--");
+        jLabel29.setToolTipText("");
 
         jLabel30.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel30.setText("IB");
+        jLabel30.setToolTipText("Group IB");
+        jLabel30.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel30.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel30MouseClicked(evt);
+            }
+        });
 
         jLabel31.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel31.setText("IIB");
+        jLabel31.setToolTipText("Group IIB");
+        jLabel31.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel31.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel31MouseClicked(evt);
+            }
+        });
 
         jLabel32.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel32.setText("13");
+        jLabel32.setToolTipText("Group 13 (Boron Group)");
+        jLabel32.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel32.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel32MouseClicked(evt);
+            }
+        });
 
         jLabel33.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel33.setText("IIB");
+        jLabel33.setText("IIIA");
+        jLabel33.setToolTipText("Group IIIA (Boron Group)");
+        jLabel33.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel33.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel33MouseClicked(evt);
+            }
+        });
 
         jLabel34.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel34.setText("14");
+        jLabel34.setToolTipText("Group 14 (Carbon Group)");
+        jLabel34.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel34.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel34MouseClicked(evt);
+            }
+        });
 
         jLabel35.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel35.setText("IIB");
+        jLabel35.setText("IVA");
+        jLabel35.setToolTipText("Group IVA (Carbon Group)");
+        jLabel35.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel35.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel35MouseClicked(evt);
+            }
+        });
 
         jLabel36.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel36.setText("15");
+        jLabel36.setToolTipText("Group 15 (Pnicogens)");
+        jLabel36.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel36.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel36MouseClicked(evt);
+            }
+        });
 
         jLabel37.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel37.setText("IIB");
+        jLabel37.setText("VA");
+        jLabel37.setToolTipText("Group VA (Pnicogens)");
+        jLabel37.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel37.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel37MouseClicked(evt);
+            }
+        });
 
         jLabel38.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel38.setText("16");
+        jLabel38.setToolTipText("Group 16 (Chalcogens)");
+        jLabel38.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel38.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel38MouseClicked(evt);
+            }
+        });
 
         jLabel39.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel39.setText("IIB");
+        jLabel39.setText("VIA");
+        jLabel39.setToolTipText("Group VIA (Chalcogens)");
+        jLabel39.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel39.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel39MouseClicked(evt);
+            }
+        });
 
         jLabel40.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel40.setText("17");
+        jLabel40.setToolTipText("Group 17 (Halogens)");
+        jLabel40.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel40.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel40MouseClicked(evt);
+            }
+        });
 
         jLabel41.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel41.setText("IIB");
+        jLabel41.setText("VIIA");
+        jLabel41.setToolTipText("Group VIIA (Halogens)");
+        jLabel41.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel41.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel41MouseClicked(evt);
+            }
+        });
 
         jLabel42.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel42.setText("IIB");
+        jLabel42.setText("VIIIA");
+        jLabel42.setToolTipText("Group VIIIA (Noble Gases)");
+        jLabel42.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel42.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel42MouseClicked(evt);
+            }
+        });
 
         jLabel43.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
         jLabel43.setText("18");
+        jLabel43.setToolTipText("Group 18 (Noble Gases)");
+        jLabel43.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel43.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel43MouseClicked(evt);
+            }
+        });
 
         jButton1.setBackground(new java.awt.Color(255, 0, 0));
         jButton1.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
         jButton1.setText("Alkali Metals");
+        jButton1.setToolTipText("");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -1811,27 +2116,61 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
 
         jLabel44.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 36)); // NOI18N
         jLabel44.setText("The Periodic Table of the Elements");
+        jLabel44.setToolTipText("Exactly what it is. :\")");
+        jLabel44.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel44.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel44MouseClicked(evt);
+            }
+        });
+
+        jSlider1.setMaximum(6000);
+        jSlider1.setToolTipText("Termperature Gauge");
+        jSlider1.setValue(273);
+        jSlider1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSlider1StateChanged(evt);
+            }
+        });
 
         jTextField3.setFont(new java.awt.Font("Berlin Sans FB", 0, 11)); // NOI18N
+        jTextField3.setToolTipText("What temperature is it? (K)");
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField3ActionPerformed(evt);
             }
         });
 
-        jButton13.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        jButton13.setText("Click Here to Play Relaxing Music!");
-
         jLabel45.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
         jLabel45.setText("C --> Solid");
+        jLabel45.setToolTipText("Black text indicates a solid substance.");
 
         jLabel46.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
         jLabel46.setForeground(new java.awt.Color(0, 0, 204));
         jLabel46.setText("C --> Liquid");
+        jLabel46.setToolTipText("Blue text indicates a liquid substance.");
 
         jLabel47.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
         jLabel47.setForeground(new java.awt.Color(102, 0, 0));
         jLabel47.setText("C --> Gas");
+        jLabel47.setToolTipText("Red text indicates a gaseous substance.");
+
+        jButton13.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
+        jButton13.setText("Click here to play relaxing music!");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+
+        jButton14.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
+        jButton14.setText("Temp. Converter");
+        jButton14.setToolTipText("Because this is useful :\")");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1921,274 +2260,280 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
                                     .addComponent(Ytterbium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(Lutetium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(27, 27, 27)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel35)
-                                        .addComponent(jLabel34))
-                                    .addGap(42, 42, 42)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel37)
-                                        .addComponent(jLabel36))
-                                    .addGap(33, 33, 33)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel39)
-                                        .addComponent(jLabel38))
-                                    .addGap(35, 35, 35)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel41)
-                                        .addComponent(jLabel40))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(26, 26, 26)
-                                            .addComponent(Helium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(40, 40, 40)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel42)
-                                                .addComponent(jLabel43)))))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(Rutherfordium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Dubnium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Seaborgium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Bohrium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Hassium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Meitnerium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Darmstadtium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Roentgenium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Copernicium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(Nihonium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Flerovium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(Hafnium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Tantalum, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Tungsten, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Rhenium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Osmium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Iridium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Platinum, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Gold, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Mercury, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(Zicronium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Niobium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(Molybdenum, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Technetium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Ruthenium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Rhodium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Palladium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Silver, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Cadmium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(Indium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(Tin, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(Thallium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(Lead, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(Titanium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addGap(10, 10, 10)
-                                                    .addComponent(jLabel15))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addGap(21, 21, 21)
-                                                    .addComponent(jLabel14)))
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                        .addGroup(layout.createSequentialGroup()
-                                                            .addGap(21, 21, 21)
-                                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                                .addComponent(jLabel17)
-                                                                .addGroup(layout.createSequentialGroup()
-                                                                    .addComponent(jLabel16)
-                                                                    .addGap(13, 13, 13)))
-                                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                .addGroup(layout.createSequentialGroup()
-                                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                                    .addComponent(jLabel19)
-                                                                    .addGap(29, 29, 29))
-                                                                .addGroup(layout.createSequentialGroup()
-                                                                    .addGap(42, 42, 42)
-                                                                    .addComponent(jLabel18)
-                                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                .addComponent(jLabel21)
-                                                                .addGroup(layout.createSequentialGroup()
-                                                                    .addGap(12, 12, 12)
-                                                                    .addComponent(jLabel20))))
-                                                        .addGroup(layout.createSequentialGroup()
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                            .addComponent(Vanadium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                            .addComponent(Chromium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                            .addComponent(Manganese, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                        .addGroup(layout.createSequentialGroup()
-                                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                .addGroup(layout.createSequentialGroup()
-                                                                    .addGap(30, 30, 30)
-                                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                                        .addComponent(jLabel30)
-                                                                        .addGroup(layout.createSequentialGroup()
-                                                                            .addComponent(jLabel22)
-                                                                            .addGap(49, 49, 49)
-                                                                            .addComponent(jLabel23)
-                                                                            .addGap(46, 46, 46)
-                                                                            .addComponent(jLabel24)
-                                                                            .addGap(45, 45, 45)
-                                                                            .addComponent(jLabel25)))
-                                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                                    .addComponent(jLabel26))
-                                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                                    .addGap(31, 31, 31)
-                                                                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                            .addGap(27, 27, 27))
-                                                        .addGroup(layout.createSequentialGroup()
-                                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                .addGroup(layout.createSequentialGroup()
-                                                                    .addGap(7, 7, 7)
-                                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                        .addGroup(layout.createSequentialGroup()
-                                                                            .addComponent(Iron, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                            .addGap(6, 6, 6))
-                                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                                            .addComponent(jLabel29)
-                                                                            .addGap(18, 18, 18)))
-                                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                        .addComponent(Cobalt, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addComponent(jLabel27, javax.swing.GroupLayout.Alignment.TRAILING))
-                                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                        .addGroup(layout.createSequentialGroup()
-                                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                            .addComponent(Nickel, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                            .addComponent(Copper, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                            .addComponent(Zinc, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                        .addGroup(layout.createSequentialGroup()
-                                                                            .addGap(23, 23, 23)
-                                                                            .addComponent(jLabel28)
-                                                                            .addGap(98, 98, 98)
-                                                                            .addComponent(jLabel31))))
-                                                                .addGroup(layout.createSequentialGroup()
-                                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                    .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                            .addGap(6, 6, 6)))
-                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                        .addGroup(layout.createSequentialGroup()
-                                                            .addComponent(Gallium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                            .addComponent(Germanium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGroup(layout.createSequentialGroup()
-                                                            .addComponent(Aluminium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                            .addComponent(Silicon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                            .addComponent(Boron, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                            .addComponent(Carbon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGroup(layout.createSequentialGroup()
-                                                            .addGap(13, 13, 13)
-                                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(Rutherfordium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Dubnium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Seaborgium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Bohrium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Hassium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Meitnerium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Darmstadtium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Roentgenium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Copernicium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(Nihonium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Flerovium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(Hafnium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Tantalum, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Tungsten, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Rhenium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Osmium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Iridium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Platinum, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Gold, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Mercury, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(Zicronium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Niobium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(Molybdenum, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Technetium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Ruthenium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Rhodium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Palladium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Silver, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Cadmium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(Indium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(Tin, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(Thallium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(Lead, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(Titanium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
+                                                .addComponent(jLabel15))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(21, 21, 21)
+                                                .addComponent(jLabel14)))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGap(21, 21, 21)
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                            .addComponent(jLabel17)
+                                                            .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(jLabel16)
+                                                                .addGap(13, 13, 13)))
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addGroup(layout.createSequentialGroup()
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                .addComponent(jLabel19)
+                                                                .addGap(29, 29, 29))
+                                                            .addGroup(layout.createSequentialGroup()
+                                                                .addGap(42, 42, 42)
+                                                                .addComponent(jLabel18)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addComponent(jLabel21)
+                                                            .addGroup(layout.createSequentialGroup()
+                                                                .addGap(12, 12, 12)
+                                                                .addComponent(jLabel20))))
+                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                        .addGap(140, 140, 140)
+                                                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(Vanadium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(Chromium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(Manganese, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addGroup(layout.createSequentialGroup()
+                                                                .addGap(7, 7, 7)
+                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                    .addGroup(layout.createSequentialGroup()
+                                                                        .addComponent(Iron, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addGap(6, 6, 6))
+                                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                                        .addComponent(jLabel29)
+                                                                        .addGap(18, 18, 18)))
+                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                    .addComponent(Cobalt, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                    .addComponent(jLabel27, javax.swing.GroupLayout.Alignment.TRAILING))
+                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                    .addGroup(layout.createSequentialGroup()
+                                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                        .addComponent(Nickel, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                        .addComponent(Copper, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                        .addComponent(Zinc, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                    .addGroup(layout.createSequentialGroup()
+                                                                        .addGap(23, 23, 23)
+                                                                        .addComponent(jLabel28)
+                                                                        .addGap(98, 98, 98)
+                                                                        .addComponent(jLabel31))))
+                                                            .addGroup(layout.createSequentialGroup()
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                    .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                        .addGap(6, 6, 6))
+                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                        .addGap(30, 30, 30)
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                            .addComponent(jLabel30)
+                                                            .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(jLabel22)
+                                                                .addGap(49, 49, 49)
+                                                                .addComponent(jLabel23)
+                                                                .addGap(46, 46, 46)
+                                                                .addComponent(jLabel24)
+                                                                .addGap(45, 45, 45)
+                                                                .addComponent(jLabel25)))
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jLabel26)
+                                                        .addGap(27, 27, 27)))
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(Gallium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(Germanium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(Aluminium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(Silicon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                        .addComponent(Boron, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(Carbon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGap(13, 13, 13)
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(jLabel33)
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(jLabel35))
+                                                            .addGroup(layout.createSequentialGroup()
                                                                 .addComponent(jLabel32)
-                                                                .addComponent(jLabel33)))))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addGap(6, 6, 6)
-                                                    .addComponent(jLabel44)))))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(Phosphorus, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Sulfur, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Chlorine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Argon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(Arsenic, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Selenium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Bromine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Krypton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(Bismuth, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Polonium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Astatine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Radon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(Antimony, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Tellurium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Iodine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Xenon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                    .addComponent(Nitrogen, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Oxygen, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Fluorine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Neon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(6, 6, 6)
-                                            .addComponent(Moscovium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Livermorium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Tennessine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Oganesson, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                .addComponent(jLabel34)
+                                                                .addGap(26, 26, 26))))))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(6, 6, 6)
+                                                .addComponent(jLabel44)))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(Phosphorus, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Sulfur, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Chlorine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Argon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(Arsenic, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Selenium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Bromine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Krypton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(Bismuth, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Polonium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Astatine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Radon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(Antimony, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Tellurium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Iodine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Xenon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addComponent(Nitrogen, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Oxygen, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Fluorine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Neon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(Moscovium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Livermorium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Tennessine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Oganesson, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel43)
+                                        .addGap(23, 23, 23))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(13, 13, 13)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel37)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGap(10, 10, 10)
+                                                        .addComponent(jLabel39)
+                                                        .addGap(30, 30, 30)
+                                                        .addComponent(jLabel41)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                        .addComponent(jLabel38)
+                                                        .addGap(48, 48, 48)
+                                                        .addComponent(jLabel40)
+                                                        .addGap(27, 27, 27)))
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel42)
+                                                    .addComponent(Helium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(jLabel36)))))))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(Hydrogen, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -2338,25 +2683,11 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jLabel34)
-                                            .addComponent(jLabel32))
+                                        .addComponent(jLabel32)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(jLabel35)
                                             .addComponent(jLabel33)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel36)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel37))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel38)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel39))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel40)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel41))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel44)
                                         .addGap(64, 64, 64)
@@ -2369,7 +2700,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(Helium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -2390,8 +2721,10 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
                                             .addComponent(Argon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(63, 63, 63))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jButton13)
+                                            .addComponent(jButton14))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                 .addComponent(jLabel16)
@@ -2458,6 +2791,13 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
                                     .addComponent(Tennessine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Oganesson, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel40)
+                                    .addComponent(jLabel38)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel36)
+                                        .addComponent(jLabel34)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
@@ -2465,7 +2805,13 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel46)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel47)))
+                                        .addComponent(jLabel47))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jLabel41)
+                                            .addComponent(jLabel39)
+                                            .addComponent(jLabel37))
+                                        .addGap(42, 42, 42)))
                                 .addGap(9, 9, 9)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel14)
@@ -2558,8 +2904,28 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     private void LithiumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LithiumActionPerformed
         // TODO add your handling code here:
         TestWindow window = new TestWindow();
+        window.setIcon("lithium02.png");
         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        window.setAtomicNumber("3");
+        window.setAverageAtomicMass("6.9412");
         window.setElementName("Lithium");
+        window.setSeries("Alkali");
+        window.setState("Solid");
+        window.setMeltingPoint("453.69 K");
+        window.setBoilingPoint("1615 K");
+        window.setElectronegativity("0.98");
+        window.setElectronAffinity("59.6 kJ/mol");
+        window.setValenceElectrons("1");
+        window.setIonization("520.2 kJ/mol");
+        window.setRadius("167 pm");
+        window.setHardness("Unknown");
+        window.setModulus("11 GPa");
+        window.setDensity("535 kg/m^3");
+        window.setConductivity("85 W/mK");
+        window.setHeat("3570 J/kgK");
+        window.setAbundance("6.0 x 10^-7%");
+        window.setDiscovered("1817");
+        window.setElectronArrangement("[He]2s^1");
         window.setVisible(true);
     }//GEN-LAST:event_LithiumActionPerformed
 
@@ -2568,7 +2934,30 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void ActiniumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActiniumActionPerformed
-        // TODO add your handling code here:
+        TestWindow window = new TestWindow();
+        window.setIcon("s9s.png");
+        window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        window.setAtomicNumber("89");
+        window.setAverageAtomicMass("(227) amu");
+        window.setElementName("Actinium");
+        window.setSeries("Actinoid");
+        window.setState("Solid");
+        window.setMeltingPoint("1323 K");
+        window.setBoilingPoint("3473 K");
+        window.setElectronegativity("1.1");
+        window.setElectronAffinity("Unknown");
+        window.setValenceElectrons("3");
+        window.setIonization("499 kJ/mol");
+        window.setRadius("Unknown");
+        window.setHardness("Unknown");
+        window.setModulus("Unknown");
+        window.setDensity("10070 kg/m^3");
+        window.setConductivity("12 W/mK");
+        window.setHeat("120 J/kgK");
+        window.setAbundance("0%");
+        window.setDiscovered("1899");
+        window.setElectronArrangement("[Rn] 7s^2 6d^1");
+        window.setVisible(true);
     }//GEN-LAST:event_ActiniumActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
@@ -2576,15 +2965,84 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void BerylliumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BerylliumActionPerformed
-        // TODO add your handling code here:
+        TestWindow window = new TestWindow();
+        window.setIcon("berylliumrock_0.png");
+        window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        window.setAtomicNumber("4");
+        window.setAverageAtomicMass("9.01218 amu");
+        window.setElementName("Beryllium");
+        window.setSeries("Alkaline");
+        window.setState("Solid");
+        window.setMeltingPoint("1560 K");
+        window.setBoilingPoint("2743 K");
+        window.setElectronegativity("1.57");
+        window.setElectronAffinity("0 kJ/mol");
+        window.setValenceElectrons("2");
+        window.setIonization("899.5 kJ/mol");
+        window.setRadius("112 pm");
+        window.setHardness("600 MPa");
+        window.setModulus("130 GPa");
+        window.setDensity("1848 kg/m^3");
+        window.setConductivity("190 W/mK");
+        window.setHeat("1820 J/kgK");
+        window.setAbundance("1.00 x 10^-7%");
+        window.setDiscovered("1795");
+        window.setElectronArrangement("[He] 2s^2");
+        window.setVisible(true);
     }//GEN-LAST:event_BerylliumActionPerformed
 
     private void LanthanumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LanthanumActionPerformed
-        // TODO add your handling code here:
+        TestWindow window = new TestWindow();
+        window.setIcon("lanthanum-metal.png");
+        window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        window.setAtomicNumber("57");
+        window.setAverageAtomicMass("139.906 amu");
+        window.setElementName("Lanthanum");
+        window.setSeries("Lanthanoid");
+        window.setState("Solid");
+        window.setMeltingPoint("1193 K");
+        window.setBoilingPoint("3737 K");
+        window.setElectronegativity("1.10");
+        window.setElectronAffinity("48 kJ/mol");
+        window.setValenceElectrons("3");
+        window.setIonization("538.1 kJ/mol");
+        window.setRadius("Unknown");
+        window.setHardness("363 MPa");
+        window.setModulus("28 GPa");
+        window.setDensity("6146 kg/m^3");
+        window.setConductivity("13 W/mK");
+        window.setHeat("195 J/kgK");
+        window.setAbundance("2.0 x 10^-7%");
+        window.setDiscovered("1839");
+        window.setElectronArrangement("[Xe] 6s^2 5d^1");
+        window.setVisible(true);
     }//GEN-LAST:event_LanthanumActionPerformed
 
     private void ScandiumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ScandiumActionPerformed
-        // TODO add your handling code here:
+        TestWindow window = new TestWindow();
+        window.setIcon("Scandium-Metals-Lump.png");
+        window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        window.setAtomicNumber("21");
+        window.setAverageAtomicMass("44.9559 amu");
+        window.setElementName("Scandium");
+        window.setSeries("Transition");
+        window.setState("Solid");
+        window.setMeltingPoint("1814 K");
+        window.setBoilingPoint("3103K");
+        window.setElectronegativity("1.36");
+        window.setElectronAffinity("18.1 kJ/mol");
+        window.setValenceElectrons("3");
+        window.setIonization("633.1 kJ/mol");
+        window.setRadius("184 pm");
+        window.setHardness("750 MPa");
+        window.setModulus("57 GPa");
+        window.setDensity("2985 kg/m^3");
+        window.setConductivity("16 W/mK");
+        window.setHeat("567 J/kgK");
+        window.setAbundance("3.0 x 10^-6%");
+        window.setDiscovered("1879");
+        window.setElectronArrangement("[Ar] 4s^2 3d^1");
+        window.setVisible(true);
     }//GEN-LAST:event_ScandiumActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -2596,18 +3054,66 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void AluminiumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AluminiumActionPerformed
-        // TODO add your handling code here:
+        TestWindow window = new TestWindow();
+        window.setIcon("aluminum.png");
+        window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        window.setAtomicNumber("13");
+        window.setAverageAtomicMass("26.9815 amu");
+        window.setElementName("Aluminum");
+        window.setSeries("Boron");
+        window.setState("Solid");
+        window.setMeltingPoint("933.47 K");
+        window.setBoilingPoint("2792 K");
+        window.setElectronegativity("1.61");
+        window.setElectronAffinity("42.5 kJ/mol");
+        window.setValenceElectrons("3");
+        window.setIonization("577.5 kJ/mol");
+        window.setRadius("118 pm");
+        window.setHardness("245 MPa");
+        window.setModulus("76 GPa");
+        window.setDensity("2700 kg/m^3");
+        window.setConductivity("235 W/mK");
+        window.setHeat("904 J/kgK");
+        window.setAbundance("0.0050%");
+        window.setDiscovered("1825");
+        window.setElectronArrangement("[Ne] 3s^2 3p^1");
+        window.setVisible(true);
     }//GEN-LAST:event_AluminiumActionPerformed
 
     private void FluorineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FluorineActionPerformed
-        // TODO add your handling code here:
+        TestWindow window = new TestWindow();
+        window.setIcon("images.png");
+        window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        window.setAtomicNumber("9");
+        window.setAverageAtomicMass("18.9984 amu");
+        window.setElementName("Fluorine");
+        window.setSeries("Halogen");
+        window.setState("Gas");
+        window.setMeltingPoint("53.3 K");
+        window.setBoilingPoint("85.03 K");
+        window.setElectronegativity("3.98");
+        window.setElectronAffinity("328 kJ/mol");
+        window.setValenceElectrons("7");
+        window.setIonization("1681.0 kJ/mol");
+        window.setRadius("42 pm");
+        window.setHardness("Unknown");
+        window.setModulus("Unknown");
+        window.setDensity("1.696 kg/m^3");
+        window.setConductivity("0.0277 W/mK");
+        window.setHeat("824 J/kgK");
+        window.setAbundance("0.000040%");
+        window.setDiscovered("1886");
+        window.setElectronArrangement("[He] 2s^2 2p^5");
+        window.setVisible(true);
     }//GEN-LAST:event_FluorineActionPerformed
 
     private void HeliumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeliumActionPerformed
-        // TODO add your handling code here:
         TestWindow window = new TestWindow();
+        window.setIcon("s-l300.png");
         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        window.setAtomicNumber("2");
         window.setElementName("Helium");
+        window.setAverageAtomicMass("4.00260 amu");
         window.setSeries("Noble Gas");
         window.setState("Gas");
         window.setMeltingPoint("0 K");
@@ -2629,32 +3135,192 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     }//GEN-LAST:event_HeliumActionPerformed
 
     private void BoronActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoronActionPerformed
-        // TODO add your handling code here:
+        TestWindow window = new TestWindow();
+        window.setIcon("1397634002611.png");
+        window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        window.setAtomicNumber("5");
+        window.setAverageAtomicMass("10.8117 amu");
+        window.setElementName("Boron");
+        window.setSeries("Boron");
+        window.setState("Solid");
+        window.setMeltingPoint("2348 K");
+        window.setBoilingPoint("4273 K");
+        window.setElectronegativity("2.04");
+        window.setElectronAffinity("26.7 kJ/mol");
+        window.setValenceElectrons("3");
+        window.setIonization("800.6 kJ/mol");
+        window.setRadius("87 pm");
+        window.setHardness("Unknown");
+        window.setModulus("320 GPa");
+        window.setDensity("2460 kg/m^3");
+        window.setConductivity("27 W/mK");
+        window.setHeat("1030 J/kgK");
+        window.setAbundance("1.00 x 10^-7%");
+        window.setDiscovered("1808");
+        window.setElectronArrangement("[He] 2s^2 2p^1");
+        window.setVisible(true);
     }//GEN-LAST:event_BoronActionPerformed
 
     private void HydrogenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HydrogenActionPerformed
-        //Create a popup window that will appear to provide further information on the element
-        
+        TestWindow window = new TestWindow();
+        window.setIcon("hydrogen-e1519831224940.png");
+        window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        window.setAtomicNumber("1");
+        window.setAverageAtomicMass("1.00795 amu");
+        window.setElementName("Hydrogen");
+        window.setSeries("N/A");
+        window.setState("Gas");
+        window.setMeltingPoint("14.01 K");
+        window.setBoilingPoint("20.28 K");
+        window.setElectronegativity("2.20");
+        window.setElectronAffinity("72.8 kJ/mol");
+        window.setValenceElectrons("1");
+        window.setIonization("1312.0 kJ/mol");
+        window.setRadius("53 pm");
+        window.setHardness("Unknown");
+        window.setModulus("Unknown");
+        window.setDensity("0.0899 kg/m^3");
+        window.setConductivity("0.1805 W/mK");
+        window.setHeat("14300 J/kgK");
+        window.setAbundance("75%");
+        window.setDiscovered("1766");
+        window.setElectronArrangement("1s^1");
+        window.setVisible(true);
     }//GEN-LAST:event_HydrogenActionPerformed
 
     private void SodiumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SodiumActionPerformed
-        // TODO add your handling code here:
+        TestWindow window = new TestWindow();
+        window.setIcon("Sodium-Your-Secret-Weapon.png");
+        window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        window.setAtomicNumber("11");
+        window.setAverageAtomicMass("22.9898 amu");
+        window.setElementName("Sodium");
+        window.setSeries("Alkali");
+        window.setState("Sodium");
+        window.setMeltingPoint("370.87 K");
+        window.setBoilingPoint("1156 K");
+        window.setElectronegativity("0.93");
+        window.setElectronAffinity("52.8 kJ/mol");
+        window.setValenceElectrons("1");
+        window.setIonization("495.8 kJ/mol");
+        window.setRadius("190 pm");
+        window.setHardness("0.69 MPa");
+        window.setModulus("6.3 GPa");
+        window.setDensity("968 kg/m^3");
+        window.setConductivity("140 W/mK");
+        window.setHeat("1230 J/kgK");
+        window.setAbundance("0.0020%");
+        window.setDiscovered("1807");
+        window.setElectronArrangement("[Ne] 3s^1");
+        window.setVisible(true);
     }//GEN-LAST:event_SodiumActionPerformed
 
     private void PotassiumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PotassiumActionPerformed
-        // TODO add your handling code here:
+        TestWindow window = new TestWindow();
+        window.setIcon("Potassium.png");
+        window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        window.setAtomicNumber("19");
+        window.setAverageAtomicMass("39.0983 amu");
+        window.setElementName("Potassium");
+        window.setSeries("Alkali");
+        window.setState("Solid");
+        window.setMeltingPoint("336.53 K");
+        window.setBoilingPoint("1032 K");
+        window.setElectronegativity("0.82");
+        window.setElectronAffinity("48.4 kJ/mol");
+        window.setValenceElectrons("1");
+        window.setIonization("418.8 kJ/mol");
+        window.setRadius("243 pm");
+        window.setHardness("0.363 MPa");
+        window.setModulus("3.1 GPa");
+        window.setDensity("856 kg/m^3");
+        window.setConductivity("100 W/mK");
+        window.setHeat("757 J/kgK");
+        window.setAbundance("0.00030%");
+        window.setDiscovered("1807");
+        window.setElectronArrangement("[Ar] 4s^1");
+        window.setVisible(true);
     }//GEN-LAST:event_PotassiumActionPerformed
 
     private void RubidiumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RubidiumActionPerformed
-        // TODO add your handling code here:
+        TestWindow window = new TestWindow();
+        window.setIcon("0b564091b51fa2e195c16c4d5ce1eb05-989x786x11.png");
+        window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        window.setAtomicNumber("37");
+        window.setAverageAtomicMass("85.4678 amu");
+        window.setElementName("Rubidium");
+        window.setSeries("Alkali");
+        window.setState("Solid");
+        window.setMeltingPoint("312.46 K");
+        window.setBoilingPoint("961 K");
+        window.setElectronegativity("0.82");
+        window.setElectronAffinity("46.9 kJ/mol");
+        window.setValenceElectrons("1");
+        window.setIonization("403.0 kJ/mol");
+        window.setRadius("265 pm");
+        window.setHardness("0.216 MPa");
+        window.setModulus("2.5 GPa");
+        window.setDensity("1532 kg/m^3");
+        window.setConductivity("58 W/mK");
+        window.setHeat("364 J/kgK");
+        window.setAbundance("1.00 x 10^-6%");
+        window.setDiscovered("1861");
+        window.setElectronArrangement("[Kr] 5s^1");
+        window.setVisible(true);
     }//GEN-LAST:event_RubidiumActionPerformed
 
     private void CesiumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CesiumActionPerformed
-        // TODO add your handling code here:
+        TestWindow window = new TestWindow();
+        window.setIcon("cesium-3-1.png");
+        window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        window.setAtomicNumber("55");
+        window.setAverageAtomicMass("132.905 amu");
+        window.setElementName("Cesium");
+        window.setSeries("Alkali");
+        window.setState("Solid");
+        window.setMeltingPoint("301.59 K");
+        window.setBoilingPoint("944 K");
+        window.setElectronegativity("0.79");
+        window.setElectronAffinity("45.5 kJ/mol");
+        window.setValenceElectrons("1");
+        window.setIonization("375.7 kJ/mol");
+        window.setRadius("298 pm");
+        window.setHardness("0.14 MPa");
+        window.setModulus("1.6 GPa");
+        window.setDensity("1879 kg/m^3");
+        window.setConductivity("36 W/mK");
+        window.setHeat("242 J/kgK");
+        window.setAbundance("8.0 x 10^-8%");
+        window.setDiscovered("1860");
+        window.setElectronArrangement("[Xe] 6s^1");
+        window.setVisible(true);
     }//GEN-LAST:event_CesiumActionPerformed
 
     private void FranciumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FranciumActionPerformed
-        // TODO add your handling code here:
+        TestWindow window = new TestWindow();
+        window.setIcon("Francium.png");
+        window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        window.setAtomicNumber("87");
+        window.setAverageAtomicMass("(223) amu");
+        window.setElementName("Francium");
+        window.setSeries("Alkali");
+        window.setState("Solid");
+        window.setMeltingPoint("300 K");
+        window.setBoilingPoint("950 K");
+        window.setElectronegativity("0.7");
+        window.setElectronAffinity("Unknown");
+        window.setValenceElectrons("1");
+        window.setIonization("380 kJ/mol");
+        window.setRadius("Unknown");
+        window.setHardness("Unknown");
+        window.setModulus("Unknown");
+        window.setDensity("Unknown");
+        window.setConductivity("Unknown");
+        window.setHeat("Unknown");
+        window.setAbundance("0%");
+        window.setDiscovered("1939");
+        window.setElectronArrangement("[Rn] 7s^1");
+        window.setVisible(true);
     }//GEN-LAST:event_FranciumActionPerformed
 
     private void MagnesiumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MagnesiumActionPerformed
@@ -3070,48 +3736,611 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     }//GEN-LAST:event_OganessonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Alkali_metal"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Alkali_earth_metal"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Transition_metal"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Lanthanide"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }    }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Actinide"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }    }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Base_metal"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }    }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Metalloid"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }    }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Nonmetal"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }    }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton10ActionPerformed
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Halogen"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }    }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton12ActionPerformed
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Noble_gas"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
+        String jTextField3String = jTextField3.getText();
+        jSlider1.setValue(Integer.parseInt(jTextField3String));
     }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Period_1_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Period_2_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Period_3_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Period_4_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Period_5_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Period_6_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Period_7_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Alkali_metal"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Alkali_metal"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Alkaline_earth_metal"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel10MouseClicked
+
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Alkali_earth_metal"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel11MouseClicked
+
+    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Group_3_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel12MouseClicked
+
+    private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Group_3_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel13MouseClicked
+
+    private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Group_4_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel14MouseClicked
+
+    private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Group_4_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel15MouseClicked
+
+    private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Group_5_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel16MouseClicked
+
+    private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Group_5_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel17MouseClicked
+
+    private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Group_6_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel18MouseClicked
+
+    private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Group_6_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel19MouseClicked
+
+    private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Group_7_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel20MouseClicked
+
+    private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Group_7_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel21MouseClicked
+
+    private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Group_8_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel22MouseClicked
+
+    private void jLabel23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel23MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Group_9_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel23MouseClicked
+
+    private void jLabel27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel27MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Group_9_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel27MouseClicked
+
+    private void jLabel24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel24MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Group_10_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel24MouseClicked
+
+    private void jLabel25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel25MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Group_11_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel25MouseClicked
+
+    private void jLabel30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel30MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Group_11_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel30MouseClicked
+
+    private void jLabel26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel26MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Group_12_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel26MouseClicked
+
+    private void jLabel31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel31MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Group_12_element"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel31MouseClicked
+
+    private void jLabel32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel32MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Boron_group"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel32MouseClicked
+
+    private void jLabel33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel33MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Boron_group"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel33MouseClicked
+
+    private void jLabel34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel34MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Carbon_group"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel34MouseClicked
+
+    private void jLabel35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel35MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Carbon_group"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel35MouseClicked
+
+    private void jLabel36MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel36MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Pnictogen"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel36MouseClicked
+
+    private void jLabel37MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel37MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Pnictogen"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel37MouseClicked
+
+    private void jLabel38MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel38MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Chalcogen"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel38MouseClicked
+
+    private void jLabel39MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel39MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Chalcogen"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel39MouseClicked
+
+    private void jLabel40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel40MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Halogen"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel40MouseClicked
+
+    private void jLabel41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel41MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Halogen"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel41MouseClicked
+
+    private void jLabel43MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel43MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Noble_gas"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel43MouseClicked
+
+    private void jLabel42MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel42MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Noble_gas"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel42MouseClicked
+
+    private void jLabel44MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel44MouseClicked
+        try {
+            try {
+                java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Periodic_table"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
+        }     }//GEN-LAST:event_jLabel44MouseClicked
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        InputStream music;
+        try {
+            //Be able to locate and play and audio files.
+            music = new FileInputStream(new File("Calm Piano Music - Distant Sunset.wav"));
+            AudioStream audio = new AudioStream(music);
+            AudioPlayer.player.start(audio);
+        } catch (Exception e) {
+            //Print out an error message if the file cannot be found/played.
+            System.out.println("Music file cannot be played!");
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
+        jTextField3.setText(Integer.toString(jSlider1.getValue()));
+        if (jSlider1.getValue() < 14.01) {
+            Hydrogen.setForeground(new java.awt.Color(0, 0, 0));
+        } if (jSlider1.getValue() >= 14.01 && jSlider1.getValue() < 20.28) {
+            Hydrogen.setForeground(new java.awt.Color(0, 0, 204));
+        } if (jSlider1.getValue() >= 20.28) {
+            Hydrogen.setForeground(new java.awt.Color(102, 0, 0));
+        }
+    }//GEN-LAST:event_jSlider1StateChanged
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        
+    }//GEN-LAST:event_jButton14ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3271,6 +4500,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
