@@ -4001,6 +4001,7 @@
           <Font name="Berlin Sans FB Demi" size="14" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Click here to play relaxing music!"/>
+        <Property name="toolTipText" type="java.lang.String" value="Do it. Chemistry is stressful!"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton13ActionPerformed"/>

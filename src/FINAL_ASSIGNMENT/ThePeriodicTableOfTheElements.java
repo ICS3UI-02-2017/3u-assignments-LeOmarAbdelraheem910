@@ -2157,6 +2157,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
 
         jButton13.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
         jButton13.setText("Click here to play relaxing music!");
+        jButton13.setToolTipText("Do it. Chemistry is stressful!");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton13ActionPerformed(evt);
@@ -2903,7 +2904,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
 
     private void LithiumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LithiumActionPerformed
         // TODO add your handling code here:
-        TestWindow window = new TestWindow();
+        ElementPropertiesWindow window = new ElementPropertiesWindow();
         window.setIcon("lithium02.png");
         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         window.setAtomicNumber("3");
@@ -2934,7 +2935,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void ActiniumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActiniumActionPerformed
-        TestWindow window = new TestWindow();
+        ElementPropertiesWindow window = new ElementPropertiesWindow();
         window.setIcon("s9s.png");
         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         window.setAtomicNumber("89");
@@ -2965,7 +2966,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void BerylliumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BerylliumActionPerformed
-        TestWindow window = new TestWindow();
+        ElementPropertiesWindow window = new ElementPropertiesWindow();
         window.setIcon("berylliumrock_0.png");
         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         window.setAtomicNumber("4");
@@ -2992,7 +2993,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     }//GEN-LAST:event_BerylliumActionPerformed
 
     private void LanthanumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LanthanumActionPerformed
-        TestWindow window = new TestWindow();
+        ElementPropertiesWindow window = new ElementPropertiesWindow();
         window.setIcon("lanthanum-metal.png");
         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         window.setAtomicNumber("57");
@@ -3019,7 +3020,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     }//GEN-LAST:event_LanthanumActionPerformed
 
     private void ScandiumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ScandiumActionPerformed
-        TestWindow window = new TestWindow();
+        ElementPropertiesWindow window = new ElementPropertiesWindow();
         window.setIcon("Scandium-Metals-Lump.png");
         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         window.setAtomicNumber("21");
@@ -3054,7 +3055,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void AluminiumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AluminiumActionPerformed
-        TestWindow window = new TestWindow();
+        ElementPropertiesWindow window = new ElementPropertiesWindow();
         window.setIcon("aluminum.png");
         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         window.setAtomicNumber("13");
@@ -3081,7 +3082,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     }//GEN-LAST:event_AluminiumActionPerformed
 
     private void FluorineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FluorineActionPerformed
-        TestWindow window = new TestWindow();
+        ElementPropertiesWindow window = new ElementPropertiesWindow();
         window.setIcon("images.png");
         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         window.setAtomicNumber("9");
@@ -3108,7 +3109,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     }//GEN-LAST:event_FluorineActionPerformed
 
     private void HeliumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeliumActionPerformed
-        TestWindow window = new TestWindow();
+        ElementPropertiesWindow window = new ElementPropertiesWindow();
         window.setIcon("s-l300.png");
         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         window.setAtomicNumber("2");
@@ -3135,7 +3136,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     }//GEN-LAST:event_HeliumActionPerformed
 
     private void BoronActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoronActionPerformed
-        TestWindow window = new TestWindow();
+        ElementPropertiesWindow window = new ElementPropertiesWindow();
         window.setIcon("1397634002611.png");
         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         window.setAtomicNumber("5");
@@ -3162,7 +3163,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     }//GEN-LAST:event_BoronActionPerformed
 
     private void HydrogenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HydrogenActionPerformed
-        TestWindow window = new TestWindow();
+        ElementPropertiesWindow window = new ElementPropertiesWindow();
         window.setIcon("hydrogen-e1519831224940.png");
         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         window.setAtomicNumber("1");
@@ -3189,7 +3190,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     }//GEN-LAST:event_HydrogenActionPerformed
 
     private void SodiumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SodiumActionPerformed
-        TestWindow window = new TestWindow();
+        ElementPropertiesWindow window = new ElementPropertiesWindow();
         window.setIcon("Sodium-Your-Secret-Weapon.png");
         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         window.setAtomicNumber("11");
@@ -3216,7 +3217,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     }//GEN-LAST:event_SodiumActionPerformed
 
     private void PotassiumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PotassiumActionPerformed
-        TestWindow window = new TestWindow();
+        ElementPropertiesWindow window = new ElementPropertiesWindow();
         window.setIcon("Potassium.png");
         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         window.setAtomicNumber("19");
@@ -3243,7 +3244,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     }//GEN-LAST:event_PotassiumActionPerformed
 
     private void RubidiumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RubidiumActionPerformed
-        TestWindow window = new TestWindow();
+        ElementPropertiesWindow window = new ElementPropertiesWindow();
         window.setIcon("0b564091b51fa2e195c16c4d5ce1eb05-989x786x11.png");
         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         window.setAtomicNumber("37");
@@ -3270,7 +3271,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     }//GEN-LAST:event_RubidiumActionPerformed
 
     private void CesiumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CesiumActionPerformed
-        TestWindow window = new TestWindow();
+        ElementPropertiesWindow window = new ElementPropertiesWindow();
         window.setIcon("cesium-3-1.png");
         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         window.setAtomicNumber("55");
@@ -3297,7 +3298,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     }//GEN-LAST:event_CesiumActionPerformed
 
     private void FranciumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FranciumActionPerformed
-        TestWindow window = new TestWindow();
+        ElementPropertiesWindow window = new ElementPropertiesWindow();
         window.setIcon("Francium.png");
         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         window.setAtomicNumber("87");
@@ -4339,7 +4340,9 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     }//GEN-LAST:event_jSlider1StateChanged
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        
+        TemperatureConverter temp = new TemperatureConverter();
+        temp.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        temp.setVisible(true);
     }//GEN-LAST:event_jButton14ActionPerformed
 
     /**

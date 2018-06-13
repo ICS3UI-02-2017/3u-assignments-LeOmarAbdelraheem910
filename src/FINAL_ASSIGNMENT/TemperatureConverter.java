@@ -164,7 +164,7 @@ public class TemperatureConverter extends javax.swing.JFrame {
     }//GEN-LAST:event_kelvinTextFieldActionPerformed
 
     private void kelvinToFahrenheitCelsiusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kelvinToFahrenheitCelsiusActionPerformed
-        String degreesKelvinString = degreesFahrenheitTextField.getText();
+        String degreesKelvinString = kelvinTextField.getText();
 
         double degreesKelvin = Double.parseDouble(degreesKelvinString);
 
@@ -178,7 +178,7 @@ public class TemperatureConverter extends javax.swing.JFrame {
 
         //perform a conversion calculation from Kelvin to Fahrenheit
         
-        double degreesFahrenheit = degreesKelvin * (9/5) - 459.67;
+        double degreesFahrenheit = (degreesKelvin * 9/5 - 459.67);
         
         degreesFahrenheit = Math.round(degreesFahrenheit * 100);
 
@@ -198,7 +198,33 @@ public class TemperatureConverter extends javax.swing.JFrame {
     }//GEN-LAST:event_degreesCelsiusTextFieldActionPerformed
 
     private void celsiusToFahrenheitKelvinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_celsiusToFahrenheitKelvinActionPerformed
-        // TODO add your handling code here:
+        String degreesCelsiusString = degreesCelsiusTextField.getText();
+
+        double degreesCelsius = Double.parseDouble(degreesCelsiusString);
+
+        //perform a conversion calculation from Celsius to Kelvin.
+        
+        double degreesKelvin = degreesCelsius + 273;
+        
+        degreesCelsius = Math.round(degreesCelsius * 100);
+
+        degreesCelsius = degreesCelsius / 100;
+
+        //perform a conversion calculation from Celsius to Fahrenheit
+        
+        double degreesFahrenheit = degreesCelsius * 1.8 + 32;
+        
+        degreesFahrenheit = Math.round(degreesFahrenheit * 100);
+
+        degreesFahrenheit = degreesFahrenheit / 100;
+        
+        //The end result will be a display of the corresponding Kelvin and Fahrenheit temperatures.
+        String KelvinText = Double.toString(degreesKelvin);
+
+        String degreesFahrenheitText = Double.toString(degreesFahrenheit);
+        
+        kelvinTextField.setText(KelvinText);
+        degreesFahrenheitTextField.setText(degreesFahrenheitText);
     }//GEN-LAST:event_celsiusToFahrenheitKelvinActionPerformed
 
     private void degreesFahrenheitTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_degreesFahrenheitTextFieldActionPerformed
@@ -206,7 +232,33 @@ public class TemperatureConverter extends javax.swing.JFrame {
     }//GEN-LAST:event_degreesFahrenheitTextFieldActionPerformed
 
     private void fahrenheitToCelsiusKelvinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fahrenheitToCelsiusKelvinActionPerformed
-        // TODO add your handling code here:
+ String degreesFahrenheitString = degreesFahrenheitTextField.getText();
+
+        double degreesFahrenheit = Double.parseDouble(degreesFahrenheitString);
+
+        //perform a conversion calculation from Fahrenheit to Kelvin.
+        
+        double degreesKelvin = (degreesFahrenheit + 459.67) * 5/9;
+        
+        degreesKelvin = Math.round(degreesKelvin * 100);
+
+        degreesKelvin = degreesKelvin / 100;
+
+        //perform a conversion calculation from Fahrenheit to Celsius
+        
+        double degreesCelsius = (degreesFahrenheit - 32) * 5 / 9;
+        
+        degreesCelsius = Math.round(degreesCelsius * 100);
+
+        degreesCelsius = degreesCelsius / 100;
+        
+        //The end result will be a display of the corresponding Celsius and Kelvin temperatures.
+        String KelvinText = Double.toString(degreesKelvin);
+
+        String degreesCelsiusText = Double.toString(degreesCelsius);
+        
+        kelvinTextField.setText(KelvinText);
+        degreesCelsiusTextField.setText(degreesCelsiusText);
     }//GEN-LAST:event_fahrenheitToCelsiusKelvinActionPerformed
 
     /**
