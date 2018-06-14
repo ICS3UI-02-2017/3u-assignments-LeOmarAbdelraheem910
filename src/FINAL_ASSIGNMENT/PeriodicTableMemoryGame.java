@@ -5,17 +5,25 @@
  */
 package FINAL_ASSIGNMENT;
 
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.Timer;
+
 /**
  *
  * @author Omar
  */
-public class PeriodicTableMemoryGame extends javax.swing.JFrame {
+public class PeriodicTableMemoryGame extends javax.swing.JFrame implements ActionListener {
+
+    Timer gameTimer;
 
     /**
      * Creates new form PeriodicTableMemoryGame
      */
     public PeriodicTableMemoryGame() {
         initComponents();
+        gameTimer = new Timer(1000, this);
     }
 
     /**
@@ -147,14 +155,16 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame {
         Chlorine = new javax.swing.JTextField();
         Sulfur = new javax.swing.JTextField();
         Argon = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        elementNameHere = new javax.swing.JTextField();
+        timer = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        startChallenge = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
+        jlabelidk = new javax.swing.JLabel();
+        score = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
@@ -191,7 +201,6 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame {
         Hydrogen.setEditable(false);
         Hydrogen.setBackground(new java.awt.Color(0, 0, 0));
         Hydrogen.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Hydrogen.setForeground(new java.awt.Color(255, 255, 255));
         Hydrogen.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Hydrogen.setText("H");
         Hydrogen.setToolTipText("");
@@ -1840,10 +1849,15 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame {
             }
         });
 
-        jTextField3.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        elementNameHere.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        elementNameHere.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                elementNameHereActionPerformed(evt);
+            }
+        });
 
-        jLabel1.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        jLabel1.setText("0");
+        timer.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        timer.setText("300");
 
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
         jLabel2.setText("Hint! :");
@@ -1857,11 +1871,22 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
         jLabel5.setText("Time Remaining:");
 
-        jButton1.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        jButton1.setText("Start Challenge");
+        startChallenge.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        startChallenge.setText("Start Challenge");
+        startChallenge.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                startChallengeActionPerformed(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
         jLabel6.setText("Enter an element name:");
+
+        jlabelidk.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 18)); // NOI18N
+        jlabelidk.setText("Score:");
+
+        score.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 18)); // NOI18N
+        score.setText("0");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1964,9 +1989,12 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame {
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(Silicon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel6)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(startChallenge)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(jLabel6)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(elementNameHere, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                                 .addGap(122, 122, 122)
                                                 .addComponent(Boron, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2031,9 +2059,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame {
                                 .addGap(218, 218, 218)
                                 .addComponent(jLabel5)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel1)
-                                .addGap(41, 41, 41)
-                                .addComponent(jButton1)
+                                .addComponent(timer)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(Helium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
@@ -2156,8 +2182,15 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame {
                         .addGap(128, 128, 128)))
                 .addContainerGap(35, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(185, 185, 185)
-                .addComponent(jLabel4)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(185, 185, 185)
+                        .addComponent(jLabel4))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(494, 494, 494)
+                        .addComponent(jlabelidk)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(score)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -2184,12 +2217,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame {
                             .addComponent(Phosphorus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Chlorine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Sulfur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Argon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(119, 119, 119)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Polonium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Astatine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Radon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(Argon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -2201,14 +2229,13 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(14, 14, 14)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel1)
+                                    .addComponent(timer)
                                     .addComponent(jLabel5)
-                                    .addComponent(jButton1))
+                                    .addComponent(startChallenge))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(elementNameHere, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel6))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -2276,7 +2303,10 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame {
                             .addComponent(Lead, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Bismuth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Hafnium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Osmium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Osmium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Polonium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Astatine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Radon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2331,7 +2361,11 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame {
                             .addComponent(Mendelevium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Nobelium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Lawrencium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlabelidk)
+                    .addComponent(score))
+                .addContainerGap())
         );
 
         pack();
@@ -2817,6 +2851,32 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_IodineActionPerformed
 
+    private void startChallengeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startChallengeActionPerformed
+        // TODO add your handling code here:
+        gameTimer.start();
+        //Hydrogen.setForeground(Color.BLACK);
+
+
+    }//GEN-LAST:event_startChallengeActionPerformed
+
+    private void elementNameHereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_elementNameHereActionPerformed
+        // TODO add your handling code here:
+        if (gameTimer.isRunning()) {
+            String elementNameHereTextField = elementNameHere.getText();
+            elementNameHereTextField = elementNameHereTextField.toLowerCase();
+
+            if (elementNameHereTextField.matches("hydrogen")) {
+                if (!(Hydrogen.getForeground() == Color.WHITE)) {
+                    Hydrogen.setForeground(Color.WHITE);
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 100;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+        }
+    }//GEN-LAST:event_elementNameHereActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2851,7 +2911,6 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame {
             }
         });
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Actinium;
     private javax.swing.JTextField Aluminium;
@@ -2971,8 +3030,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame {
     private javax.swing.JTextField Yttrium;
     private javax.swing.JTextField Ziconium;
     private javax.swing.JTextField Zinc;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField elementNameHere;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -2980,6 +3038,20 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JLabel jlabelidk;
+    private javax.swing.JLabel score;
+    private javax.swing.JButton startChallenge;
+    private javax.swing.JLabel timer;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        String timerText = timer.getText();
+        int time = Integer.parseInt(timerText);
+        time -= 1;
+        timer.setText(Integer.toString(time));
+        if (time <= 0) {
+            gameTimer.stop();
+        }
+    }
 }
