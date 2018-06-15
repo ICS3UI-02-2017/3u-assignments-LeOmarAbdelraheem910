@@ -8,7 +8,12 @@ package FINAL_ASSIGNMENT;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import javax.swing.Timer;
+import sun.audio.AudioPlayer;
+import sun.audio.AudioStream;
 
 /**
  *
@@ -165,6 +170,9 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         jLabel6 = new javax.swing.JLabel();
         jlabelidk = new javax.swing.JLabel();
         score = new javax.swing.JLabel();
+        aHint = new javax.swing.JLabel();
+        aTip = new javax.swing.JLabel();
+        abortChallenge = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
@@ -176,7 +184,6 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         jTextField1.setForeground(new java.awt.Color(255, 255, 255));
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("57 -->71");
-        jTextField1.setToolTipText("");
         jTextField1.setPreferredSize(new java.awt.Dimension(50, 50));
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,11 +193,10 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
 
         jTextField2.setEditable(false);
         jTextField2.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField2.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jTextField2.setFont(new java.awt.Font("Berlin Sans FB", 0, 12)); // NOI18N
         jTextField2.setForeground(new java.awt.Color(255, 255, 255));
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField2.setText("89-->103");
-        jTextField2.setToolTipText("");
         jTextField2.setPreferredSize(new java.awt.Dimension(50, 50));
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,7 +209,6 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Hydrogen.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
         Hydrogen.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Hydrogen.setText("H");
-        Hydrogen.setToolTipText("");
         Hydrogen.setPreferredSize(new java.awt.Dimension(50, 50));
         Hydrogen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,10 +219,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Lithium.setEditable(false);
         Lithium.setBackground(new java.awt.Color(0, 0, 0));
         Lithium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Lithium.setForeground(new java.awt.Color(255, 255, 255));
         Lithium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Lithium.setText("Li");
-        Lithium.setToolTipText("");
         Lithium.setPreferredSize(new java.awt.Dimension(50, 50));
         Lithium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,10 +231,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Sodium.setEditable(false);
         Sodium.setBackground(new java.awt.Color(0, 0, 0));
         Sodium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Sodium.setForeground(new java.awt.Color(255, 255, 255));
         Sodium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Sodium.setText("Na");
-        Sodium.setToolTipText("");
         Sodium.setPreferredSize(new java.awt.Dimension(50, 50));
         Sodium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -242,10 +243,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Potassium.setEditable(false);
         Potassium.setBackground(new java.awt.Color(0, 0, 0));
         Potassium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Potassium.setForeground(new java.awt.Color(255, 255, 255));
         Potassium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Potassium.setText("K");
-        Potassium.setToolTipText("");
         Potassium.setPreferredSize(new java.awt.Dimension(50, 50));
         Potassium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -256,10 +255,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Rubidium.setEditable(false);
         Rubidium.setBackground(new java.awt.Color(0, 0, 0));
         Rubidium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Rubidium.setForeground(new java.awt.Color(255, 255, 255));
         Rubidium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Rubidium.setText("Rb");
-        Rubidium.setToolTipText("");
         Rubidium.setPreferredSize(new java.awt.Dimension(50, 50));
         Rubidium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -270,10 +267,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Cesium.setEditable(false);
         Cesium.setBackground(new java.awt.Color(0, 0, 0));
         Cesium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Cesium.setForeground(new java.awt.Color(255, 255, 255));
         Cesium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Cesium.setText("Cs");
-        Cesium.setToolTipText("");
         Cesium.setPreferredSize(new java.awt.Dimension(50, 50));
         Cesium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -284,10 +279,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Francium.setEditable(false);
         Francium.setBackground(new java.awt.Color(0, 0, 0));
         Francium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Francium.setForeground(new java.awt.Color(255, 255, 255));
         Francium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Francium.setText("Fr");
-        Francium.setToolTipText("");
         Francium.setPreferredSize(new java.awt.Dimension(50, 50));
         Francium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -298,10 +291,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Radium.setEditable(false);
         Radium.setBackground(new java.awt.Color(0, 0, 0));
         Radium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Radium.setForeground(new java.awt.Color(255, 255, 255));
         Radium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Radium.setText("Ra");
-        Radium.setToolTipText("");
         Radium.setPreferredSize(new java.awt.Dimension(50, 50));
         Radium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -312,10 +303,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Barium.setEditable(false);
         Barium.setBackground(new java.awt.Color(0, 0, 0));
         Barium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Barium.setForeground(new java.awt.Color(255, 255, 255));
         Barium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Barium.setText("Ba");
-        Barium.setToolTipText("");
         Barium.setPreferredSize(new java.awt.Dimension(50, 50));
         Barium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -326,10 +315,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Strontium.setEditable(false);
         Strontium.setBackground(new java.awt.Color(0, 0, 0));
         Strontium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Strontium.setForeground(new java.awt.Color(255, 255, 255));
         Strontium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Strontium.setText("Sr");
-        Strontium.setToolTipText("");
         Strontium.setPreferredSize(new java.awt.Dimension(50, 50));
         Strontium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -340,10 +327,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Calcium.setEditable(false);
         Calcium.setBackground(new java.awt.Color(0, 0, 0));
         Calcium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Calcium.setForeground(new java.awt.Color(255, 255, 255));
         Calcium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Calcium.setText("Ca");
-        Calcium.setToolTipText("");
         Calcium.setPreferredSize(new java.awt.Dimension(50, 50));
         Calcium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -354,10 +339,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Magnesium.setEditable(false);
         Magnesium.setBackground(new java.awt.Color(0, 0, 0));
         Magnesium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Magnesium.setForeground(new java.awt.Color(255, 255, 255));
         Magnesium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Magnesium.setText("Mg");
-        Magnesium.setToolTipText("");
         Magnesium.setPreferredSize(new java.awt.Dimension(50, 50));
         Magnesium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -368,10 +351,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Beryllium.setEditable(false);
         Beryllium.setBackground(new java.awt.Color(0, 0, 0));
         Beryllium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Beryllium.setForeground(new java.awt.Color(255, 255, 255));
         Beryllium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Beryllium.setText("Be");
-        Beryllium.setToolTipText("");
         Beryllium.setPreferredSize(new java.awt.Dimension(50, 50));
         Beryllium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -382,10 +363,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Scandium.setEditable(false);
         Scandium.setBackground(new java.awt.Color(0, 0, 0));
         Scandium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Scandium.setForeground(new java.awt.Color(255, 255, 255));
         Scandium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Scandium.setText("Sc");
-        Scandium.setToolTipText("");
         Scandium.setPreferredSize(new java.awt.Dimension(50, 50));
         Scandium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -396,10 +375,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Yttrium.setEditable(false);
         Yttrium.setBackground(new java.awt.Color(0, 0, 0));
         Yttrium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Yttrium.setForeground(new java.awt.Color(255, 255, 255));
         Yttrium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Yttrium.setText("Y");
-        Yttrium.setToolTipText("");
         Yttrium.setPreferredSize(new java.awt.Dimension(50, 50));
         Yttrium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -410,10 +387,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Vanadium.setEditable(false);
         Vanadium.setBackground(new java.awt.Color(0, 0, 0));
         Vanadium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Vanadium.setForeground(new java.awt.Color(255, 255, 255));
         Vanadium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Vanadium.setText("V");
-        Vanadium.setToolTipText("");
         Vanadium.setPreferredSize(new java.awt.Dimension(50, 50));
         Vanadium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -424,10 +399,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Niobium.setEditable(false);
         Niobium.setBackground(new java.awt.Color(0, 0, 0));
         Niobium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Niobium.setForeground(new java.awt.Color(255, 255, 255));
         Niobium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Niobium.setText("Nb");
-        Niobium.setToolTipText("");
         Niobium.setPreferredSize(new java.awt.Dimension(50, 50));
         Niobium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -438,10 +411,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Tantalum.setEditable(false);
         Tantalum.setBackground(new java.awt.Color(0, 0, 0));
         Tantalum.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Tantalum.setForeground(new java.awt.Color(255, 255, 255));
         Tantalum.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Tantalum.setText("Ta");
-        Tantalum.setToolTipText("");
         Tantalum.setPreferredSize(new java.awt.Dimension(50, 50));
         Tantalum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -452,10 +423,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Dubnium.setEditable(false);
         Dubnium.setBackground(new java.awt.Color(0, 0, 0));
         Dubnium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Dubnium.setForeground(new java.awt.Color(255, 255, 255));
         Dubnium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Dubnium.setText("Db");
-        Dubnium.setToolTipText("");
         Dubnium.setPreferredSize(new java.awt.Dimension(50, 50));
         Dubnium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -466,10 +435,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Chromium.setEditable(false);
         Chromium.setBackground(new java.awt.Color(0, 0, 0));
         Chromium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Chromium.setForeground(new java.awt.Color(255, 255, 255));
         Chromium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Chromium.setText("Cr");
-        Chromium.setToolTipText("");
         Chromium.setPreferredSize(new java.awt.Dimension(50, 50));
         Chromium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -480,10 +447,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Manganese.setEditable(false);
         Manganese.setBackground(new java.awt.Color(0, 0, 0));
         Manganese.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Manganese.setForeground(new java.awt.Color(255, 255, 255));
         Manganese.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Manganese.setText("Mn");
-        Manganese.setToolTipText("");
         Manganese.setPreferredSize(new java.awt.Dimension(50, 50));
         Manganese.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -494,10 +459,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Cobalt.setEditable(false);
         Cobalt.setBackground(new java.awt.Color(0, 0, 0));
         Cobalt.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Cobalt.setForeground(new java.awt.Color(255, 255, 255));
         Cobalt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Cobalt.setText("Co");
-        Cobalt.setToolTipText("");
         Cobalt.setPreferredSize(new java.awt.Dimension(50, 50));
         Cobalt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -508,10 +471,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Molybdenum.setEditable(false);
         Molybdenum.setBackground(new java.awt.Color(0, 0, 0));
         Molybdenum.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Molybdenum.setForeground(new java.awt.Color(255, 255, 255));
         Molybdenum.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Molybdenum.setText("Mo");
-        Molybdenum.setToolTipText("");
         Molybdenum.setPreferredSize(new java.awt.Dimension(50, 50));
         Molybdenum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -522,10 +483,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Technetium.setEditable(false);
         Technetium.setBackground(new java.awt.Color(0, 0, 0));
         Technetium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Technetium.setForeground(new java.awt.Color(255, 255, 255));
         Technetium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Technetium.setText("Tc");
-        Technetium.setToolTipText("");
         Technetium.setPreferredSize(new java.awt.Dimension(50, 50));
         Technetium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -536,10 +495,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Rhodium.setEditable(false);
         Rhodium.setBackground(new java.awt.Color(0, 0, 0));
         Rhodium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Rhodium.setForeground(new java.awt.Color(255, 255, 255));
         Rhodium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Rhodium.setText("Rh");
-        Rhodium.setToolTipText("");
         Rhodium.setPreferredSize(new java.awt.Dimension(50, 50));
         Rhodium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -550,10 +507,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Tungsten.setEditable(false);
         Tungsten.setBackground(new java.awt.Color(0, 0, 0));
         Tungsten.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Tungsten.setForeground(new java.awt.Color(255, 255, 255));
         Tungsten.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Tungsten.setText("W");
-        Tungsten.setToolTipText("");
         Tungsten.setPreferredSize(new java.awt.Dimension(50, 50));
         Tungsten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -564,10 +519,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Rhenium.setEditable(false);
         Rhenium.setBackground(new java.awt.Color(0, 0, 0));
         Rhenium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Rhenium.setForeground(new java.awt.Color(255, 255, 255));
         Rhenium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Rhenium.setText("Re");
-        Rhenium.setToolTipText("");
         Rhenium.setPreferredSize(new java.awt.Dimension(50, 50));
         Rhenium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -578,10 +531,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Iridium.setEditable(false);
         Iridium.setBackground(new java.awt.Color(0, 0, 0));
         Iridium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Iridium.setForeground(new java.awt.Color(255, 255, 255));
         Iridium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Iridium.setText("Ir");
-        Iridium.setToolTipText("");
         Iridium.setPreferredSize(new java.awt.Dimension(50, 50));
         Iridium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -592,10 +543,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Seaborgium.setEditable(false);
         Seaborgium.setBackground(new java.awt.Color(0, 0, 0));
         Seaborgium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Seaborgium.setForeground(new java.awt.Color(255, 255, 255));
         Seaborgium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Seaborgium.setText("Sg");
-        Seaborgium.setToolTipText("");
         Seaborgium.setPreferredSize(new java.awt.Dimension(50, 50));
         Seaborgium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -606,10 +555,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Borhium.setEditable(false);
         Borhium.setBackground(new java.awt.Color(0, 0, 0));
         Borhium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Borhium.setForeground(new java.awt.Color(255, 255, 255));
         Borhium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Borhium.setText("Bh");
-        Borhium.setToolTipText("");
         Borhium.setPreferredSize(new java.awt.Dimension(50, 50));
         Borhium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -620,10 +567,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Meitnerium.setEditable(false);
         Meitnerium.setBackground(new java.awt.Color(0, 0, 0));
         Meitnerium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Meitnerium.setForeground(new java.awt.Color(255, 255, 255));
         Meitnerium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Meitnerium.setText("Mt");
-        Meitnerium.setToolTipText("");
         Meitnerium.setPreferredSize(new java.awt.Dimension(50, 50));
         Meitnerium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -634,10 +579,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Darmstadtium.setEditable(false);
         Darmstadtium.setBackground(new java.awt.Color(0, 0, 0));
         Darmstadtium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Darmstadtium.setForeground(new java.awt.Color(255, 255, 255));
         Darmstadtium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Darmstadtium.setText("Ds");
-        Darmstadtium.setToolTipText("");
         Darmstadtium.setPreferredSize(new java.awt.Dimension(50, 50));
         Darmstadtium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -648,10 +591,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Platnium.setEditable(false);
         Platnium.setBackground(new java.awt.Color(0, 0, 0));
         Platnium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Platnium.setForeground(new java.awt.Color(255, 255, 255));
         Platnium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Platnium.setText("Pt");
-        Platnium.setToolTipText("");
         Platnium.setPreferredSize(new java.awt.Dimension(50, 50));
         Platnium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -662,10 +603,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Palladium.setEditable(false);
         Palladium.setBackground(new java.awt.Color(0, 0, 0));
         Palladium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Palladium.setForeground(new java.awt.Color(255, 255, 255));
         Palladium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Palladium.setText("Pd");
-        Palladium.setToolTipText("");
         Palladium.setPreferredSize(new java.awt.Dimension(50, 50));
         Palladium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -676,10 +615,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Nickel.setEditable(false);
         Nickel.setBackground(new java.awt.Color(0, 0, 0));
         Nickel.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Nickel.setForeground(new java.awt.Color(255, 255, 255));
         Nickel.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Nickel.setText("Ni");
-        Nickel.setToolTipText("");
         Nickel.setPreferredSize(new java.awt.Dimension(50, 50));
         Nickel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -690,10 +627,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Titanium.setEditable(false);
         Titanium.setBackground(new java.awt.Color(0, 0, 0));
         Titanium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Titanium.setForeground(new java.awt.Color(255, 255, 255));
         Titanium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Titanium.setText("Ti");
-        Titanium.setToolTipText("");
         Titanium.setPreferredSize(new java.awt.Dimension(50, 50));
         Titanium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -704,10 +639,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Iron.setEditable(false);
         Iron.setBackground(new java.awt.Color(0, 0, 0));
         Iron.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Iron.setForeground(new java.awt.Color(255, 255, 255));
         Iron.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Iron.setText("Fe");
-        Iron.setToolTipText("");
         Iron.setPreferredSize(new java.awt.Dimension(50, 50));
         Iron.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -718,10 +651,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Ziconium.setEditable(false);
         Ziconium.setBackground(new java.awt.Color(0, 0, 0));
         Ziconium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Ziconium.setForeground(new java.awt.Color(255, 255, 255));
         Ziconium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Ziconium.setText("Zr");
-        Ziconium.setToolTipText("");
         Ziconium.setPreferredSize(new java.awt.Dimension(50, 50));
         Ziconium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -732,10 +663,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Hafnium.setEditable(false);
         Hafnium.setBackground(new java.awt.Color(0, 0, 0));
         Hafnium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Hafnium.setForeground(new java.awt.Color(255, 255, 255));
         Hafnium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Hafnium.setText("Hf");
-        Hafnium.setToolTipText("");
         Hafnium.setPreferredSize(new java.awt.Dimension(50, 50));
         Hafnium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -746,10 +675,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Rutherfordium.setEditable(false);
         Rutherfordium.setBackground(new java.awt.Color(0, 0, 0));
         Rutherfordium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Rutherfordium.setForeground(new java.awt.Color(255, 255, 255));
         Rutherfordium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Rutherfordium.setText("Rf");
-        Rutherfordium.setToolTipText("");
         Rutherfordium.setPreferredSize(new java.awt.Dimension(50, 50));
         Rutherfordium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -760,10 +687,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Ruthenium.setEditable(false);
         Ruthenium.setBackground(new java.awt.Color(0, 0, 0));
         Ruthenium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Ruthenium.setForeground(new java.awt.Color(255, 255, 255));
         Ruthenium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Ruthenium.setText("Ru");
-        Ruthenium.setToolTipText("");
         Ruthenium.setPreferredSize(new java.awt.Dimension(50, 50));
         Ruthenium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -774,10 +699,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Osmium.setEditable(false);
         Osmium.setBackground(new java.awt.Color(0, 0, 0));
         Osmium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Osmium.setForeground(new java.awt.Color(255, 255, 255));
         Osmium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Osmium.setText("Os");
-        Osmium.setToolTipText("");
         Osmium.setPreferredSize(new java.awt.Dimension(50, 50));
         Osmium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -788,10 +711,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Hassium.setEditable(false);
         Hassium.setBackground(new java.awt.Color(0, 0, 0));
         Hassium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Hassium.setForeground(new java.awt.Color(255, 255, 255));
         Hassium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Hassium.setText("Hs");
-        Hassium.setToolTipText("");
         Hassium.setPreferredSize(new java.awt.Dimension(50, 50));
         Hassium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -802,10 +723,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Copper.setEditable(false);
         Copper.setBackground(new java.awt.Color(0, 0, 0));
         Copper.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Copper.setForeground(new java.awt.Color(255, 255, 255));
         Copper.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Copper.setText("Cu");
-        Copper.setToolTipText("");
         Copper.setPreferredSize(new java.awt.Dimension(50, 50));
         Copper.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -816,10 +735,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Silver.setEditable(false);
         Silver.setBackground(new java.awt.Color(0, 0, 0));
         Silver.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Silver.setForeground(new java.awt.Color(255, 255, 255));
         Silver.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Silver.setText("Ag");
-        Silver.setToolTipText("");
         Silver.setPreferredSize(new java.awt.Dimension(50, 50));
         Silver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -830,10 +747,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Gold.setEditable(false);
         Gold.setBackground(new java.awt.Color(0, 0, 0));
         Gold.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Gold.setForeground(new java.awt.Color(255, 255, 255));
         Gold.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Gold.setText("Au");
-        Gold.setToolTipText("");
         Gold.setPreferredSize(new java.awt.Dimension(50, 50));
         Gold.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -844,10 +759,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Roentgenium.setEditable(false);
         Roentgenium.setBackground(new java.awt.Color(0, 0, 0));
         Roentgenium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Roentgenium.setForeground(new java.awt.Color(255, 255, 255));
         Roentgenium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Roentgenium.setText("Rg");
-        Roentgenium.setToolTipText("");
         Roentgenium.setPreferredSize(new java.awt.Dimension(50, 50));
         Roentgenium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -858,10 +771,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Zinc.setEditable(false);
         Zinc.setBackground(new java.awt.Color(0, 0, 0));
         Zinc.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Zinc.setForeground(new java.awt.Color(255, 255, 255));
         Zinc.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Zinc.setText("Zn");
-        Zinc.setToolTipText("");
         Zinc.setPreferredSize(new java.awt.Dimension(50, 50));
         Zinc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -872,10 +783,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Cadmium.setEditable(false);
         Cadmium.setBackground(new java.awt.Color(0, 0, 0));
         Cadmium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Cadmium.setForeground(new java.awt.Color(255, 255, 255));
         Cadmium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Cadmium.setText("Cd");
-        Cadmium.setToolTipText("");
         Cadmium.setPreferredSize(new java.awt.Dimension(50, 50));
         Cadmium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -886,10 +795,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Mercury.setEditable(false);
         Mercury.setBackground(new java.awt.Color(0, 0, 0));
         Mercury.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Mercury.setForeground(new java.awt.Color(255, 255, 255));
         Mercury.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Mercury.setText("Hg");
-        Mercury.setToolTipText("");
         Mercury.setPreferredSize(new java.awt.Dimension(50, 50));
         Mercury.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -900,10 +807,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Copermicium.setEditable(false);
         Copermicium.setBackground(new java.awt.Color(0, 0, 0));
         Copermicium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Copermicium.setForeground(new java.awt.Color(255, 255, 255));
         Copermicium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Copermicium.setText("Cn");
-        Copermicium.setToolTipText("");
         Copermicium.setPreferredSize(new java.awt.Dimension(50, 50));
         Copermicium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -914,10 +819,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Galium.setEditable(false);
         Galium.setBackground(new java.awt.Color(0, 0, 0));
         Galium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Galium.setForeground(new java.awt.Color(255, 255, 255));
         Galium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Galium.setText("Ga");
-        Galium.setToolTipText("");
         Galium.setPreferredSize(new java.awt.Dimension(50, 50));
         Galium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -928,10 +831,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Germanium.setEditable(false);
         Germanium.setBackground(new java.awt.Color(0, 0, 0));
         Germanium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Germanium.setForeground(new java.awt.Color(255, 255, 255));
         Germanium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Germanium.setText("Ge");
-        Germanium.setToolTipText("");
         Germanium.setPreferredSize(new java.awt.Dimension(50, 50));
         Germanium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -942,10 +843,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Indium.setEditable(false);
         Indium.setBackground(new java.awt.Color(0, 0, 0));
         Indium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Indium.setForeground(new java.awt.Color(255, 255, 255));
         Indium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Indium.setText("In");
-        Indium.setToolTipText("");
         Indium.setPreferredSize(new java.awt.Dimension(50, 50));
         Indium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -956,10 +855,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Tin.setEditable(false);
         Tin.setBackground(new java.awt.Color(0, 0, 0));
         Tin.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Tin.setForeground(new java.awt.Color(255, 255, 255));
         Tin.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Tin.setText("Sn");
-        Tin.setToolTipText("");
         Tin.setPreferredSize(new java.awt.Dimension(50, 50));
         Tin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -970,10 +867,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Thallium.setEditable(false);
         Thallium.setBackground(new java.awt.Color(0, 0, 0));
         Thallium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Thallium.setForeground(new java.awt.Color(255, 255, 255));
         Thallium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Thallium.setText("Tl");
-        Thallium.setToolTipText("");
         Thallium.setPreferredSize(new java.awt.Dimension(50, 50));
         Thallium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -984,10 +879,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Lead.setEditable(false);
         Lead.setBackground(new java.awt.Color(0, 0, 0));
         Lead.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Lead.setForeground(new java.awt.Color(255, 255, 255));
         Lead.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Lead.setText("Pb");
-        Lead.setToolTipText("");
         Lead.setPreferredSize(new java.awt.Dimension(50, 50));
         Lead.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -998,10 +891,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Nihonium.setEditable(false);
         Nihonium.setBackground(new java.awt.Color(0, 0, 0));
         Nihonium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Nihonium.setForeground(new java.awt.Color(255, 255, 255));
         Nihonium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Nihonium.setText("Nh");
-        Nihonium.setToolTipText("");
         Nihonium.setPreferredSize(new java.awt.Dimension(50, 50));
         Nihonium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1012,10 +903,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Flerovium.setEditable(false);
         Flerovium.setBackground(new java.awt.Color(0, 0, 0));
         Flerovium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Flerovium.setForeground(new java.awt.Color(255, 255, 255));
         Flerovium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Flerovium.setText("Fv");
-        Flerovium.setToolTipText("");
         Flerovium.setPreferredSize(new java.awt.Dimension(50, 50));
         Flerovium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1026,10 +915,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Moscovium.setEditable(false);
         Moscovium.setBackground(new java.awt.Color(0, 0, 0));
         Moscovium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Moscovium.setForeground(new java.awt.Color(255, 255, 255));
         Moscovium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Moscovium.setText("Mc");
-        Moscovium.setToolTipText("");
         Moscovium.setPreferredSize(new java.awt.Dimension(50, 50));
         Moscovium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1040,10 +927,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Livermorium.setEditable(false);
         Livermorium.setBackground(new java.awt.Color(0, 0, 0));
         Livermorium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Livermorium.setForeground(new java.awt.Color(255, 255, 255));
         Livermorium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Livermorium.setText("Lv");
-        Livermorium.setToolTipText("");
         Livermorium.setPreferredSize(new java.awt.Dimension(50, 50));
         Livermorium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1054,10 +939,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Bismuth.setEditable(false);
         Bismuth.setBackground(new java.awt.Color(0, 0, 0));
         Bismuth.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Bismuth.setForeground(new java.awt.Color(255, 255, 255));
         Bismuth.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Bismuth.setText("Bi");
-        Bismuth.setToolTipText("");
         Bismuth.setPreferredSize(new java.awt.Dimension(50, 50));
         Bismuth.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1068,10 +951,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Polonium.setEditable(false);
         Polonium.setBackground(new java.awt.Color(0, 0, 0));
         Polonium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Polonium.setForeground(new java.awt.Color(255, 255, 255));
         Polonium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Polonium.setText("Po");
-        Polonium.setToolTipText("");
         Polonium.setPreferredSize(new java.awt.Dimension(50, 50));
         Polonium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1082,10 +963,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Antimony.setEditable(false);
         Antimony.setBackground(new java.awt.Color(0, 0, 0));
         Antimony.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Antimony.setForeground(new java.awt.Color(255, 255, 255));
         Antimony.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Antimony.setText("Sb");
-        Antimony.setToolTipText("");
         Antimony.setPreferredSize(new java.awt.Dimension(50, 50));
         Antimony.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1096,10 +975,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Tellurium.setEditable(false);
         Tellurium.setBackground(new java.awt.Color(0, 0, 0));
         Tellurium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Tellurium.setForeground(new java.awt.Color(255, 255, 255));
         Tellurium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Tellurium.setText("Te");
-        Tellurium.setToolTipText("");
         Tellurium.setPreferredSize(new java.awt.Dimension(50, 50));
         Tellurium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1110,10 +987,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Iodine.setEditable(false);
         Iodine.setBackground(new java.awt.Color(0, 0, 0));
         Iodine.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Iodine.setForeground(new java.awt.Color(255, 255, 255));
         Iodine.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Iodine.setText("I");
-        Iodine.setToolTipText("");
         Iodine.setPreferredSize(new java.awt.Dimension(50, 50));
         Iodine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1124,10 +999,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Astatine.setEditable(false);
         Astatine.setBackground(new java.awt.Color(0, 0, 0));
         Astatine.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Astatine.setForeground(new java.awt.Color(255, 255, 255));
         Astatine.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Astatine.setText("At");
-        Astatine.setToolTipText("");
         Astatine.setPreferredSize(new java.awt.Dimension(50, 50));
         Astatine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1138,10 +1011,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Tennessine.setEditable(false);
         Tennessine.setBackground(new java.awt.Color(0, 0, 0));
         Tennessine.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Tennessine.setForeground(new java.awt.Color(255, 255, 255));
         Tennessine.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Tennessine.setText("Ts");
-        Tennessine.setToolTipText("");
         Tennessine.setPreferredSize(new java.awt.Dimension(50, 50));
         Tennessine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1152,10 +1023,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Xenon.setEditable(false);
         Xenon.setBackground(new java.awt.Color(0, 0, 0));
         Xenon.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Xenon.setForeground(new java.awt.Color(255, 255, 255));
         Xenon.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Xenon.setText("Xe");
-        Xenon.setToolTipText("");
         Xenon.setPreferredSize(new java.awt.Dimension(50, 50));
         Xenon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1166,10 +1035,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Radon.setEditable(false);
         Radon.setBackground(new java.awt.Color(0, 0, 0));
         Radon.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Radon.setForeground(new java.awt.Color(255, 255, 255));
         Radon.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Radon.setText("Rn");
-        Radon.setToolTipText("");
         Radon.setPreferredSize(new java.awt.Dimension(50, 50));
         Radon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1180,10 +1047,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Oganesson.setEditable(false);
         Oganesson.setBackground(new java.awt.Color(0, 0, 0));
         Oganesson.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Oganesson.setForeground(new java.awt.Color(255, 255, 255));
         Oganesson.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Oganesson.setText("Og");
-        Oganesson.setToolTipText("");
         Oganesson.setPreferredSize(new java.awt.Dimension(50, 50));
         Oganesson.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1194,10 +1059,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Fluorine.setEditable(false);
         Fluorine.setBackground(new java.awt.Color(0, 0, 0));
         Fluorine.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Fluorine.setForeground(new java.awt.Color(255, 255, 255));
         Fluorine.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Fluorine.setText("F");
-        Fluorine.setToolTipText("");
         Fluorine.setPreferredSize(new java.awt.Dimension(50, 50));
         Fluorine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1208,10 +1071,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Neon.setEditable(false);
         Neon.setBackground(new java.awt.Color(0, 0, 0));
         Neon.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Neon.setForeground(new java.awt.Color(255, 255, 255));
         Neon.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Neon.setText("Ne");
-        Neon.setToolTipText("");
         Neon.setPreferredSize(new java.awt.Dimension(50, 50));
         Neon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1222,10 +1083,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Helium.setEditable(false);
         Helium.setBackground(new java.awt.Color(0, 0, 0));
         Helium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Helium.setForeground(new java.awt.Color(255, 255, 255));
         Helium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Helium.setText("He");
-        Helium.setToolTipText("");
         Helium.setPreferredSize(new java.awt.Dimension(50, 50));
         Helium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1236,10 +1095,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Oxygen.setEditable(false);
         Oxygen.setBackground(new java.awt.Color(0, 0, 0));
         Oxygen.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Oxygen.setForeground(new java.awt.Color(255, 255, 255));
         Oxygen.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Oxygen.setText("O");
-        Oxygen.setToolTipText("");
         Oxygen.setPreferredSize(new java.awt.Dimension(50, 50));
         Oxygen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1250,10 +1107,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Nitrogen.setEditable(false);
         Nitrogen.setBackground(new java.awt.Color(0, 0, 0));
         Nitrogen.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Nitrogen.setForeground(new java.awt.Color(255, 255, 255));
         Nitrogen.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Nitrogen.setText("N");
-        Nitrogen.setToolTipText("");
         Nitrogen.setPreferredSize(new java.awt.Dimension(50, 50));
         Nitrogen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1264,10 +1119,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Silicon.setEditable(false);
         Silicon.setBackground(new java.awt.Color(0, 0, 0));
         Silicon.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Silicon.setForeground(new java.awt.Color(255, 255, 255));
         Silicon.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Silicon.setText("Si");
-        Silicon.setToolTipText("");
         Silicon.setPreferredSize(new java.awt.Dimension(50, 50));
         Silicon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1278,10 +1131,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Carbon.setEditable(false);
         Carbon.setBackground(new java.awt.Color(0, 0, 0));
         Carbon.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Carbon.setForeground(new java.awt.Color(255, 255, 255));
         Carbon.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Carbon.setText("C");
-        Carbon.setToolTipText("");
         Carbon.setPreferredSize(new java.awt.Dimension(50, 50));
         Carbon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1292,10 +1143,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Aluminium.setEditable(false);
         Aluminium.setBackground(new java.awt.Color(0, 0, 0));
         Aluminium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Aluminium.setForeground(new java.awt.Color(255, 255, 255));
         Aluminium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Aluminium.setText("Al");
-        Aluminium.setToolTipText("");
         Aluminium.setPreferredSize(new java.awt.Dimension(50, 50));
         Aluminium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1306,10 +1155,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Boron.setEditable(false);
         Boron.setBackground(new java.awt.Color(0, 0, 0));
         Boron.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Boron.setForeground(new java.awt.Color(255, 255, 255));
         Boron.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Boron.setText("B");
-        Boron.setToolTipText("");
         Boron.setPreferredSize(new java.awt.Dimension(50, 50));
         Boron.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1320,10 +1167,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Lanthanum.setEditable(false);
         Lanthanum.setBackground(new java.awt.Color(0, 0, 0));
         Lanthanum.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Lanthanum.setForeground(new java.awt.Color(255, 255, 255));
         Lanthanum.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Lanthanum.setText("La");
-        Lanthanum.setToolTipText("");
         Lanthanum.setPreferredSize(new java.awt.Dimension(50, 50));
         Lanthanum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1334,10 +1179,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Cerium.setEditable(false);
         Cerium.setBackground(new java.awt.Color(0, 0, 0));
         Cerium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Cerium.setForeground(new java.awt.Color(255, 255, 255));
         Cerium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Cerium.setText("Ce");
-        Cerium.setToolTipText("");
         Cerium.setPreferredSize(new java.awt.Dimension(50, 50));
         Cerium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1348,10 +1191,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Praseodymium.setEditable(false);
         Praseodymium.setBackground(new java.awt.Color(0, 0, 0));
         Praseodymium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Praseodymium.setForeground(new java.awt.Color(255, 255, 255));
         Praseodymium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Praseodymium.setText("Pr");
-        Praseodymium.setToolTipText("");
         Praseodymium.setPreferredSize(new java.awt.Dimension(50, 50));
         Praseodymium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1362,10 +1203,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Neodymium.setEditable(false);
         Neodymium.setBackground(new java.awt.Color(0, 0, 0));
         Neodymium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Neodymium.setForeground(new java.awt.Color(255, 255, 255));
         Neodymium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Neodymium.setText("Nd");
-        Neodymium.setToolTipText("");
         Neodymium.setPreferredSize(new java.awt.Dimension(50, 50));
         Neodymium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1376,10 +1215,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Promethium.setEditable(false);
         Promethium.setBackground(new java.awt.Color(0, 0, 0));
         Promethium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Promethium.setForeground(new java.awt.Color(255, 255, 255));
         Promethium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Promethium.setText("Pm");
-        Promethium.setToolTipText("");
         Promethium.setPreferredSize(new java.awt.Dimension(50, 50));
         Promethium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1390,10 +1227,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Samarium.setEditable(false);
         Samarium.setBackground(new java.awt.Color(0, 0, 0));
         Samarium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Samarium.setForeground(new java.awt.Color(255, 255, 255));
         Samarium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Samarium.setText("Sm");
-        Samarium.setToolTipText("");
         Samarium.setPreferredSize(new java.awt.Dimension(50, 50));
         Samarium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1404,10 +1239,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Europium.setEditable(false);
         Europium.setBackground(new java.awt.Color(0, 0, 0));
         Europium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Europium.setForeground(new java.awt.Color(255, 255, 255));
         Europium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Europium.setText("Eu");
-        Europium.setToolTipText("");
         Europium.setPreferredSize(new java.awt.Dimension(50, 50));
         Europium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1418,10 +1251,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Gadolinium.setEditable(false);
         Gadolinium.setBackground(new java.awt.Color(0, 0, 0));
         Gadolinium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Gadolinium.setForeground(new java.awt.Color(255, 255, 255));
         Gadolinium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Gadolinium.setText("Gd");
-        Gadolinium.setToolTipText("");
         Gadolinium.setPreferredSize(new java.awt.Dimension(50, 50));
         Gadolinium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1432,10 +1263,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Terbium.setEditable(false);
         Terbium.setBackground(new java.awt.Color(0, 0, 0));
         Terbium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Terbium.setForeground(new java.awt.Color(255, 255, 255));
         Terbium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Terbium.setText("Tb");
-        Terbium.setToolTipText("");
         Terbium.setPreferredSize(new java.awt.Dimension(50, 50));
         Terbium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1446,10 +1275,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Dysprosium.setEditable(false);
         Dysprosium.setBackground(new java.awt.Color(0, 0, 0));
         Dysprosium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Dysprosium.setForeground(new java.awt.Color(255, 255, 255));
         Dysprosium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Dysprosium.setText("Dy");
-        Dysprosium.setToolTipText("");
         Dysprosium.setPreferredSize(new java.awt.Dimension(50, 50));
         Dysprosium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1460,10 +1287,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Holmium.setEditable(false);
         Holmium.setBackground(new java.awt.Color(0, 0, 0));
         Holmium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Holmium.setForeground(new java.awt.Color(255, 255, 255));
         Holmium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Holmium.setText("Ho");
-        Holmium.setToolTipText("");
         Holmium.setPreferredSize(new java.awt.Dimension(50, 50));
         Holmium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1474,10 +1299,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Erbium.setEditable(false);
         Erbium.setBackground(new java.awt.Color(0, 0, 0));
         Erbium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Erbium.setForeground(new java.awt.Color(255, 255, 255));
         Erbium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Erbium.setText("Er");
-        Erbium.setToolTipText("");
         Erbium.setPreferredSize(new java.awt.Dimension(50, 50));
         Erbium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1488,10 +1311,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Thullium.setEditable(false);
         Thullium.setBackground(new java.awt.Color(0, 0, 0));
         Thullium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Thullium.setForeground(new java.awt.Color(255, 255, 255));
         Thullium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Thullium.setText("Tm");
-        Thullium.setToolTipText("");
         Thullium.setPreferredSize(new java.awt.Dimension(50, 50));
         Thullium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1502,10 +1323,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Ytterbium.setEditable(false);
         Ytterbium.setBackground(new java.awt.Color(0, 0, 0));
         Ytterbium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Ytterbium.setForeground(new java.awt.Color(255, 255, 255));
         Ytterbium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Ytterbium.setText("Yb");
-        Ytterbium.setToolTipText("");
         Ytterbium.setPreferredSize(new java.awt.Dimension(50, 50));
         Ytterbium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1516,10 +1335,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Lutetium.setEditable(false);
         Lutetium.setBackground(new java.awt.Color(0, 0, 0));
         Lutetium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Lutetium.setForeground(new java.awt.Color(255, 255, 255));
         Lutetium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Lutetium.setText("Lu");
-        Lutetium.setToolTipText("");
         Lutetium.setPreferredSize(new java.awt.Dimension(50, 50));
         Lutetium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1530,10 +1347,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Actinium.setEditable(false);
         Actinium.setBackground(new java.awt.Color(0, 0, 0));
         Actinium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Actinium.setForeground(new java.awt.Color(255, 255, 255));
         Actinium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Actinium.setText("Ac");
-        Actinium.setToolTipText("");
         Actinium.setPreferredSize(new java.awt.Dimension(50, 50));
         Actinium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1544,10 +1359,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Thorium.setEditable(false);
         Thorium.setBackground(new java.awt.Color(0, 0, 0));
         Thorium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Thorium.setForeground(new java.awt.Color(255, 255, 255));
         Thorium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Thorium.setText("Th");
-        Thorium.setToolTipText("");
         Thorium.setPreferredSize(new java.awt.Dimension(50, 50));
         Thorium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1558,10 +1371,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Protactinium.setEditable(false);
         Protactinium.setBackground(new java.awt.Color(0, 0, 0));
         Protactinium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Protactinium.setForeground(new java.awt.Color(255, 255, 255));
         Protactinium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Protactinium.setText("Pa");
-        Protactinium.setToolTipText("");
         Protactinium.setPreferredSize(new java.awt.Dimension(50, 50));
         Protactinium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1572,10 +1383,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Uranium.setEditable(false);
         Uranium.setBackground(new java.awt.Color(0, 0, 0));
         Uranium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Uranium.setForeground(new java.awt.Color(255, 255, 255));
         Uranium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Uranium.setText("U");
-        Uranium.setToolTipText("");
         Uranium.setPreferredSize(new java.awt.Dimension(50, 50));
         Uranium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1586,10 +1395,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Neptunium.setEditable(false);
         Neptunium.setBackground(new java.awt.Color(0, 0, 0));
         Neptunium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Neptunium.setForeground(new java.awt.Color(255, 255, 255));
         Neptunium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Neptunium.setText("Np");
-        Neptunium.setToolTipText("");
         Neptunium.setPreferredSize(new java.awt.Dimension(50, 50));
         Neptunium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1600,10 +1407,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Plutonium.setEditable(false);
         Plutonium.setBackground(new java.awt.Color(0, 0, 0));
         Plutonium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Plutonium.setForeground(new java.awt.Color(255, 255, 255));
         Plutonium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Plutonium.setText("Pu");
-        Plutonium.setToolTipText("");
         Plutonium.setPreferredSize(new java.awt.Dimension(50, 50));
         Plutonium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1614,10 +1419,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Americium.setEditable(false);
         Americium.setBackground(new java.awt.Color(0, 0, 0));
         Americium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Americium.setForeground(new java.awt.Color(255, 255, 255));
         Americium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Americium.setText("Am");
-        Americium.setToolTipText("");
         Americium.setPreferredSize(new java.awt.Dimension(50, 50));
         Americium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1628,10 +1431,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Curium.setEditable(false);
         Curium.setBackground(new java.awt.Color(0, 0, 0));
         Curium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Curium.setForeground(new java.awt.Color(255, 255, 255));
         Curium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Curium.setText("Cm");
-        Curium.setToolTipText("");
         Curium.setPreferredSize(new java.awt.Dimension(50, 50));
         Curium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1642,10 +1443,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Berkelium.setEditable(false);
         Berkelium.setBackground(new java.awt.Color(0, 0, 0));
         Berkelium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Berkelium.setForeground(new java.awt.Color(255, 255, 255));
         Berkelium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Berkelium.setText("Bk");
-        Berkelium.setToolTipText("");
         Berkelium.setPreferredSize(new java.awt.Dimension(50, 50));
         Berkelium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1656,10 +1455,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Californium.setEditable(false);
         Californium.setBackground(new java.awt.Color(0, 0, 0));
         Californium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Californium.setForeground(new java.awt.Color(255, 255, 255));
         Californium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Californium.setText("Cf");
-        Californium.setToolTipText("");
         Californium.setPreferredSize(new java.awt.Dimension(50, 50));
         Californium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1670,10 +1467,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Einsteinium.setEditable(false);
         Einsteinium.setBackground(new java.awt.Color(0, 0, 0));
         Einsteinium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Einsteinium.setForeground(new java.awt.Color(255, 255, 255));
         Einsteinium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Einsteinium.setText("Es");
-        Einsteinium.setToolTipText("");
         Einsteinium.setPreferredSize(new java.awt.Dimension(50, 50));
         Einsteinium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1684,10 +1479,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Fermium.setEditable(false);
         Fermium.setBackground(new java.awt.Color(0, 0, 0));
         Fermium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Fermium.setForeground(new java.awt.Color(255, 255, 255));
         Fermium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Fermium.setText("Fm");
-        Fermium.setToolTipText("");
         Fermium.setPreferredSize(new java.awt.Dimension(50, 50));
         Fermium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1698,10 +1491,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Mendelevium.setEditable(false);
         Mendelevium.setBackground(new java.awt.Color(0, 0, 0));
         Mendelevium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Mendelevium.setForeground(new java.awt.Color(255, 255, 255));
         Mendelevium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Mendelevium.setText("Md");
-        Mendelevium.setToolTipText("");
         Mendelevium.setPreferredSize(new java.awt.Dimension(50, 50));
         Mendelevium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1712,10 +1503,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Nobelium.setEditable(false);
         Nobelium.setBackground(new java.awt.Color(0, 0, 0));
         Nobelium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Nobelium.setForeground(new java.awt.Color(255, 255, 255));
         Nobelium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Nobelium.setText("No");
-        Nobelium.setToolTipText("");
         Nobelium.setPreferredSize(new java.awt.Dimension(50, 50));
         Nobelium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1726,10 +1515,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Lawrencium.setEditable(false);
         Lawrencium.setBackground(new java.awt.Color(0, 0, 0));
         Lawrencium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Lawrencium.setForeground(new java.awt.Color(255, 255, 255));
         Lawrencium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Lawrencium.setText("Lr");
-        Lawrencium.setToolTipText("");
         Lawrencium.setPreferredSize(new java.awt.Dimension(50, 50));
         Lawrencium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1740,10 +1527,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Arsenic.setEditable(false);
         Arsenic.setBackground(new java.awt.Color(0, 0, 0));
         Arsenic.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Arsenic.setForeground(new java.awt.Color(255, 255, 255));
         Arsenic.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Arsenic.setText("As");
-        Arsenic.setToolTipText("");
         Arsenic.setPreferredSize(new java.awt.Dimension(50, 50));
         Arsenic.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1754,10 +1539,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Selenium.setEditable(false);
         Selenium.setBackground(new java.awt.Color(0, 0, 0));
         Selenium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Selenium.setForeground(new java.awt.Color(255, 255, 255));
         Selenium.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Selenium.setText("Se");
-        Selenium.setToolTipText("");
         Selenium.setPreferredSize(new java.awt.Dimension(50, 50));
         Selenium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1768,10 +1551,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Bromine.setEditable(false);
         Bromine.setBackground(new java.awt.Color(0, 0, 0));
         Bromine.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Bromine.setForeground(new java.awt.Color(255, 255, 255));
         Bromine.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Bromine.setText("Br");
-        Bromine.setToolTipText("");
         Bromine.setPreferredSize(new java.awt.Dimension(50, 50));
         Bromine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1782,10 +1563,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Krypton.setEditable(false);
         Krypton.setBackground(new java.awt.Color(0, 0, 0));
         Krypton.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Krypton.setForeground(new java.awt.Color(255, 255, 255));
         Krypton.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Krypton.setText("Kr");
-        Krypton.setToolTipText("");
         Krypton.setPreferredSize(new java.awt.Dimension(50, 50));
         Krypton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1796,10 +1575,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Phosphorus.setEditable(false);
         Phosphorus.setBackground(new java.awt.Color(0, 0, 0));
         Phosphorus.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Phosphorus.setForeground(new java.awt.Color(255, 255, 255));
         Phosphorus.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Phosphorus.setText("P");
-        Phosphorus.setToolTipText("");
         Phosphorus.setPreferredSize(new java.awt.Dimension(50, 50));
         Phosphorus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1810,10 +1587,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Chlorine.setEditable(false);
         Chlorine.setBackground(new java.awt.Color(0, 0, 0));
         Chlorine.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Chlorine.setForeground(new java.awt.Color(255, 255, 255));
         Chlorine.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Chlorine.setText("Cl");
-        Chlorine.setToolTipText("");
         Chlorine.setPreferredSize(new java.awt.Dimension(50, 50));
         Chlorine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1824,10 +1599,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Sulfur.setEditable(false);
         Sulfur.setBackground(new java.awt.Color(0, 0, 0));
         Sulfur.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Sulfur.setForeground(new java.awt.Color(255, 255, 255));
         Sulfur.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Sulfur.setText("S");
-        Sulfur.setToolTipText("");
         Sulfur.setPreferredSize(new java.awt.Dimension(50, 50));
         Sulfur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1838,10 +1611,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         Argon.setEditable(false);
         Argon.setBackground(new java.awt.Color(0, 0, 0));
         Argon.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Argon.setForeground(new java.awt.Color(255, 255, 255));
         Argon.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Argon.setText("Ar");
-        Argon.setToolTipText("");
         Argon.setPreferredSize(new java.awt.Dimension(50, 50));
         Argon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1850,6 +1621,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         });
 
         elementNameHere.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        elementNameHere.setToolTipText("You don't have much time! Write the elements in!");
         elementNameHere.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 elementNameHereActionPerformed(evt);
@@ -1857,10 +1629,11 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         });
 
         timer.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        timer.setText("300");
+        timer.setText("420");
 
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
         jLabel2.setText("Hint! :");
+        jLabel2.setToolTipText("Perhaps you need a little push to get yourself going. Here's a hint!");
 
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
         jLabel3.setText(" ");
@@ -1870,9 +1643,11 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
 
         jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
         jLabel5.setText("Time Remaining:");
+        jLabel5.setToolTipText("Hurry up! Time is ticking!!!");
 
         startChallenge.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
         startChallenge.setText("Start Challenge");
+        startChallenge.setToolTipText("Are you ready for the ultimate challenge?");
         startChallenge.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 startChallengeActionPerformed(evt);
@@ -1888,484 +1663,492 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         score.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 18)); // NOI18N
         score.setText("0");
 
+        aHint.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        aHint.setText(" ");
+
+        aTip.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        aTip.setText("                                                                          ");
+
+        abortChallenge.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        abortChallenge.setText("Abort Challenge!");
+        abortChallenge.setToolTipText("Do you give up? Skip the remaining time here!");
+        abortChallenge.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                abortChallengeActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Lithium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Beryllium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(Hydrogen, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Sodium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Magnesium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addGap(134, 134, 134)
-                                        .addComponent(Dubnium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Seaborgium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(Borhium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(Hassium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(Meitnerium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(Darmstadtium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(Roentgenium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(Copermicium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(Nihonium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(Flerovium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(Technetium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(Ruthenium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(Rhodium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(Palladium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(Silver, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(Cadmium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(70, 70, 70)
-                                                .addComponent(Titanium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(Vanadium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(79, 79, 79)
-                                                .addComponent(jLabel2)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jLabel3)))
-                                        .addGap(6, 6, 6)
-                                        .addComponent(Chromium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Manganese, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Iron, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Cobalt, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Nickel, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Copper, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Zinc, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(Indium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(Tin, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(Galium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(Germanium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(Aluminium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(Silicon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(startChallenge)
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(jLabel6)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(elementNameHere, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                .addGap(122, 122, 122)
-                                                .addComponent(Boron, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(Carbon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(70, 70, 70)
-                                            .addComponent(Polonium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Astatine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Radon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(6, 6, 6)
-                                            .addComponent(Antimony, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Tellurium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Iodine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Xenon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(Arsenic, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Selenium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Bromine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(Krypton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                        .addGroup(layout.createSequentialGroup()
-                                                            .addComponent(Phosphorus, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                            .addComponent(Sulfur, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                            .addComponent(Chlorine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGroup(layout.createSequentialGroup()
-                                                            .addComponent(Nitrogen, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                            .addComponent(Oxygen, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                            .addComponent(Fluorine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(Neon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(Argon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Moscovium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Livermorium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Tennessine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Oganesson, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(218, 218, 218)
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(timer)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Helium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Potassium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Rubidium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Cesium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Francium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Radium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Rutherfordium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Barium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Strontium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Calcium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(Scandium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Yttrium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Ziconium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(Niobium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Molybdenum, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(576, 576, 576))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Hafnium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Tantalum, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Tungsten, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Rhenium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Osmium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Iridium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Platnium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Gold, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Mercury, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Thallium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Lead, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Bismuth, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Lanthanum, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Cerium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Praseodymium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Neodymium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Promethium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Samarium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Europium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Gadolinium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Terbium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Dysprosium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Holmium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Erbium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Thullium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Ytterbium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Lutetium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Actinium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Thorium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Protactinium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Uranium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Neptunium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Plutonium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Americium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Curium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Berkelium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Californium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Einsteinium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Fermium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Mendelevium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Nobelium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Lawrencium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(128, 128, 128)))
-                .addContainerGap(35, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(185, 185, 185)
                         .addComponent(jLabel4))
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(Rubidium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Strontium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Yttrium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Ziconium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Niobium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Molybdenum, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Technetium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Ruthenium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Rhodium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Palladium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Silver, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Cadmium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Indium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Tin, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Antimony, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Tellurium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Iodine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Xenon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(Cesium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Barium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Hafnium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Tantalum, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Tungsten, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Rhenium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Osmium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Iridium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Platnium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Gold, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Mercury, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Thallium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Lead, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Bismuth, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Polonium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Astatine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Radon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(Francium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Radium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Rutherfordium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Dubnium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Seaborgium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Borhium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Hassium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Meitnerium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Darmstadtium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Roentgenium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Copermicium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Nihonium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Flerovium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Moscovium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Livermorium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Tennessine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Oganesson, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(79, 79, 79)
+                        .addComponent(Lanthanum, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Cerium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Praseodymium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Neodymium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Promethium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Samarium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Europium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Gadolinium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Terbium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Dysprosium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Holmium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Erbium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Thullium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Ytterbium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Lutetium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(79, 79, 79)
+                        .addComponent(Actinium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Thorium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Protactinium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Uranium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Neptunium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Plutonium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Americium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Curium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Berkelium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Californium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Einsteinium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Fermium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Mendelevium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Nobelium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Lawrencium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(494, 494, 494)
                         .addComponent(jlabelidk)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(score)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(6, 6, 6)
+                        .addComponent(score))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Potassium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(Calcium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(Scandium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(Titanium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(Vanadium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(Chromium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(Manganese, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(Iron, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(Cobalt, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(Nickel, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(Copper, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(Zinc, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Aluminium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Galium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Boron, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(6, 6, 6)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(Germanium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Arsenic, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Selenium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Bromine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Krypton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(Silicon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Phosphorus, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Sulfur, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Chlorine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Argon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(Carbon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Nitrogen, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Oxygen, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Fluorine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Neon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(Lithium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Beryllium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(Hydrogen, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(Sodium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(6, 6, 6)
+                                        .addComponent(Magnesium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addGap(69, 69, 69)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(jLabel6)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(elementNameHere, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(aTip, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addGap(68, 68, 68)
+                                                .addComponent(jLabel3))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel2)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(aHint, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(211, 211, 211)
+                                        .addComponent(jLabel5)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(timer)
+                                        .addGap(25, 25, 25)
+                                        .addComponent(startChallenge)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(abortChallenge)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(Helium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                .addGap(35, 35, 35))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addComponent(jLabel4)
-                .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(Helium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Fluorine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Neon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Oxygen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Nitrogen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Carbon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boron, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Silicon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Aluminium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Phosphorus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Chlorine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Sulfur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Argon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
+                        .addGap(121, 121, 121)
+                        .addComponent(jLabel3)
+                        .addGap(31, 31, 31))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addGap(28, 28, 28)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Hydrogen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(Hydrogen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addComponent(startChallenge)
+                                                .addComponent(abortChallenge))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(4, 4, 4)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel5)
+                                                    .addComponent(timer))))
+                                        .addGap(18, 18, 18)
+                                        .addComponent(aTip)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(Lithium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Beryllium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(14, 14, 14)
+                                    .addComponent(Beryllium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel6)
+                                    .addComponent(elementNameHere, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(Helium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(timer)
-                                    .addComponent(jLabel5)
-                                    .addComponent(startChallenge))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(elementNameHere, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel6))))
+                                    .addComponent(Boron, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Carbon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Nitrogen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Oxygen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Fluorine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Neon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(Sodium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Magnesium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(Potassium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Calcium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Scandium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Vanadium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Chromium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Manganese, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Cobalt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Nickel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Copper, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Zinc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Galium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Germanium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Arsenic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Selenium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Bromine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Krypton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Titanium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Iron, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(Rubidium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Strontium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Yttrium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Niobium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Molybdenum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Technetium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Rhodium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Palladium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Silver, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Cadmium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Ziconium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Ruthenium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(Indium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(Tin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(Antimony, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(Tellurium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(Iodine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(Xenon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel3))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Cesium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Barium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Tantalum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Tungsten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Rhenium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Iridium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Platnium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Gold, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Mercury, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Thallium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Lead, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Bismuth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Hafnium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Osmium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Polonium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Astatine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Radon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Francium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Radium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Dubnium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Seaborgium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Borhium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Meitnerium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Darmstadtium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Roentgenium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Copermicium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Nihonium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Flerovium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Moscovium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Livermorium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Tennessine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Oganesson, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Rutherfordium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Hassium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Lanthanum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Cerium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Praseodymium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Neodymium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Promethium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Samarium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Europium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Gadolinium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Terbium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Dysprosium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Holmium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Erbium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Thullium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Ytterbium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Lutetium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Actinium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Thorium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Protactinium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Uranium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Neptunium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Plutonium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Americium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Curium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Berkelium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Californium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Einsteinium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Fermium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Mendelevium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Nobelium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Lawrencium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Sodium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(Magnesium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel2)
+                                .addComponent(aHint)
+                                .addComponent(Aluminium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Silicon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Phosphorus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Sulfur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Chlorine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Argon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(6, 6, 6)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Potassium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Calcium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Scandium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Titanium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Vanadium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Chromium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Manganese, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Iron, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cobalt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Nickel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Copper, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(Zinc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Galium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Germanium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Arsenic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Selenium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Bromine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Krypton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(6, 6, 6)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Rubidium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Strontium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Yttrium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Ziconium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Niobium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Molybdenum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Technetium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Ruthenium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Rhodium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Palladium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Silver, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cadmium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Indium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Antimony, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tellurium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Iodine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Xenon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(6, 6, 6)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Cesium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Barium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Hafnium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tantalum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tungsten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Rhenium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Osmium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Iridium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Platnium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Gold, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Mercury, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Thallium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Lead, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Bismuth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Polonium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Astatine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Radon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(6, 6, 6)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Francium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Radium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Rutherfordium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Dubnium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Seaborgium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Borhium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Hassium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Meitnerium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Darmstadtium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Roentgenium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Copermicium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Nihonium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Flerovium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Moscovium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Livermorium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tennessine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Oganesson, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Lanthanum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cerium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Praseodymium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Neodymium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Promethium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Samarium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Europium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Gadolinium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Terbium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Dysprosium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Holmium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Erbium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Thullium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Ytterbium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Lutetium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(6, 6, 6)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Actinium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Thorium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Protactinium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Uranium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Neptunium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Plutonium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Americium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Curium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Berkelium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Californium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Einsteinium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Fermium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Mendelevium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Nobelium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Lawrencium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jlabelidk)
-                    .addComponent(score))
-                .addContainerGap())
+                    .addComponent(score)))
         );
 
         pack();
@@ -2854,8 +2637,6 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
     private void startChallengeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startChallengeActionPerformed
         // TODO add your handling code here:
         gameTimer.start();
-        //Hydrogen.setForeground(Color.BLACK);
-
 
     }//GEN-LAST:event_startChallengeActionPerformed
 
@@ -2868,14 +2649,1225 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
             if (elementNameHereTextField.matches("hydrogen")) {
                 if (!(Hydrogen.getForeground() == Color.WHITE)) {
                     Hydrogen.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
                     String scoreText = score.getText();
                     int userScore = Integer.parseInt(scoreText);
                     userScore += 100;
                     score.setText(Integer.toString(userScore));
                 }
             }
+            if (elementNameHereTextField.matches("helium")) {
+                if (!(Helium.getForeground() == Color.WHITE)) {
+                    Helium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 100;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("lithium")) {
+                if (!(Lithium.getForeground() == Color.WHITE)) {
+                    Lithium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 100;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("beryllium")) {
+                if (!(Beryllium.getForeground() == Color.WHITE)) {
+                    Beryllium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 100;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("boron")) {
+                if (!(Boron.getForeground() == Color.WHITE)) {
+                    Boron.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 100;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("carbon")) {
+                if (!(Carbon.getForeground() == Color.WHITE)) {
+                    Carbon.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 100;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("nitrogen")) {
+                if (!(Nitrogen.getForeground() == Color.WHITE)) {
+                    Nitrogen.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 100;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("oxygen")) {
+                if (!(Oxygen.getForeground() == Color.WHITE)) {
+                    Oxygen.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 100;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("fluorine")) {
+                if (!(Fluorine.getForeground() == Color.WHITE)) {
+                    Fluorine.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 100;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("neon")) {
+                if (!(Neon.getForeground() == Color.WHITE)) {
+                    Neon.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 100;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("neon")) {
+                if (!(Neon.getForeground() == Color.WHITE)) {
+                    Neon.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 100;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("sodium")) {
+                if (!(Sodium.getForeground() == Color.WHITE)) {
+                    Sodium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("magnesium")) {
+                if (!(Magnesium.getForeground() == Color.WHITE)) {
+                    Magnesium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("aluminum") || elementNameHereTextField.matches("aluminium")) {
+                if (!(Aluminium.getForeground() == Color.WHITE)) {
+                    Aluminium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("silicon")) {
+                if (!(Silicon.getForeground() == Color.WHITE)) {
+                    Silicon.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("phosphorus")) {
+                if (!(Phosphorus.getForeground() == Color.WHITE)) {
+                    Phosphorus.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("sulfur") || elementNameHereTextField.matches("sulphur")) {
+                if (!(Sulfur.getForeground() == Color.WHITE)) {
+                    Sulfur.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("chlorine")) {
+                if (!(Chlorine.getForeground() == Color.WHITE)) {
+                    Chlorine.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("argon")) {
+                if (!(Argon.getForeground() == Color.WHITE)) {
+                    Argon.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("potassium")) {
+                if (!(Potassium.getForeground() == Color.WHITE)) {
+                    Potassium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("calcium")) {
+                if (!(Calcium.getForeground() == Color.WHITE)) {
+                    Calcium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("scandium")) {
+                if (!(Scandium.getForeground() == Color.WHITE)) {
+                    Scandium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("titanium")) {
+                if (!(Titanium.getForeground() == Color.WHITE)) {
+                    Titanium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("vanadium")) {
+                if (!(Vanadium.getForeground() == Color.WHITE)) {
+                    Vanadium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("chromium")) {
+                if (!(Chromium.getForeground() == Color.WHITE)) {
+                    Chromium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("manganese")) {
+                if (!(Manganese.getForeground() == Color.WHITE)) {
+                    Manganese.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("iron")) {
+                if (!(Iron.getForeground() == Color.WHITE)) {
+                    Iron.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("cobalt")) {
+                if (!(Cobalt.getForeground() == Color.WHITE)) {
+                    Cobalt.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("nickel")) {
+                if (!(Nickel.getForeground() == Color.WHITE)) {
+                    Nickel.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("copper")) {
+                if (!(Copper.getForeground() == Color.WHITE)) {
+                    Copper.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("zinc")) {
+                if (!(Zinc.getForeground() == Color.WHITE)) {
+                    Zinc.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("gallium")) {
+                if (!(Galium.getForeground() == Color.WHITE)) {
+                    Galium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("germanium")) {
+                if (!(Germanium.getForeground() == Color.WHITE)) {
+                    Germanium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("arsenic")) {
+                if (!(Arsenic.getForeground() == Color.WHITE)) {
+                    Arsenic.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("selenium")) {
+                if (!(Selenium.getForeground() == Color.WHITE)) {
+                    Selenium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("bromine")) {
+                if (!(Bromine.getForeground() == Color.WHITE)) {
+                    Bromine.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("krypton")) {
+                if (!(Krypton.getForeground() == Color.WHITE)) {
+                    Krypton.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 250;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("rubidium")) {
+                if (!(Rubidium.getForeground() == Color.WHITE)) {
+                    Rubidium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("strontium")) {
+                if (!(Strontium.getForeground() == Color.WHITE)) {
+                    Strontium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("yttrium")) {
+                if (!(Yttrium.getForeground() == Color.WHITE)) {
+                    Yttrium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("zirconium")) {
+                if (!(Ziconium.getForeground() == Color.WHITE)) {
+                    Ziconium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("niobium")) {
+                if (!(Niobium.getForeground() == Color.WHITE)) {
+                    Niobium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("molybdenum")) {
+                if (!(Molybdenum.getForeground() == Color.WHITE)) {
+                    Molybdenum.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("technetium")) {
+                if (!(Technetium.getForeground() == Color.WHITE)) {
+                    Technetium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("ruthenium")) {
+                if (!(Ruthenium.getForeground() == Color.WHITE)) {
+                    Ruthenium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("rhodium")) {
+                if (!(Rhodium.getForeground() == Color.WHITE)) {
+                    Rhodium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("palladium")) {
+                if (!(Palladium.getForeground() == Color.WHITE)) {
+                    Palladium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("silver")) {
+                if (!(Silver.getForeground() == Color.WHITE)) {
+                    Silver.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("cadmium")) {
+                if (!(Cadmium.getForeground() == Color.WHITE)) {
+                    Cadmium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("indium")) {
+                if (!(Indium.getForeground() == Color.WHITE)) {
+                    Indium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("tin")) {
+                if (!(Tin.getForeground() == Color.WHITE)) {
+                    Tin.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("antimony")) {
+                if (!(Antimony.getForeground() == Color.WHITE)) {
+                    Antimony.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("tellurium")) {
+                if (!(Tellurium.getForeground() == Color.WHITE)) {
+                    Tellurium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("iodine")) {
+                if (!(Iodine.getForeground() == Color.WHITE)) {
+                    Iodine.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("xenon")) {
+                if (!(Xenon.getForeground() == Color.WHITE)) {
+                    Xenon.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("cesium")) {
+                if (!(Cesium.getForeground() == Color.WHITE)) {
+                    Cesium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 1000;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("barium")) {
+                if (!(Barium.getForeground() == Color.WHITE)) {
+                    Barium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 1000;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("hafnium")) {
+                if (!(Hafnium.getForeground() == Color.WHITE)) {
+                    Hafnium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 1000;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("tantalum")) {
+                if (!(Tantalum.getForeground() == Color.WHITE)) {
+                    Tantalum.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 1000;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("tungsten")) {
+                if (!(Tungsten.getForeground() == Color.WHITE)) {
+                    Tungsten.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 1000;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("rhenium")) {
+                if (!(Rhenium.getForeground() == Color.WHITE)) {
+                    Rhenium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 1000;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("osmium")) {
+                if (!(Osmium.getForeground() == Color.WHITE)) {
+                    Osmium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 1000;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("iridium")) {
+                if (!(Iridium.getForeground() == Color.WHITE)) {
+                    Iridium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 1000;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("platinum")) {
+                if (!(Platnium.getForeground() == Color.WHITE)) {
+                    Platnium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 1000;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("gold")) {
+                if (!(Gold.getForeground() == Color.WHITE)) {
+                    Gold.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 1000;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("mercury")) {
+                if (!(Mercury.getForeground() == Color.WHITE)) {
+                    Mercury.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 1000;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("thallium")) {
+                if (!(Thallium.getForeground() == Color.WHITE)) {
+                    Thallium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 1000;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("lead")) {
+                if (!(Lead.getForeground() == Color.WHITE)) {
+                    Lead.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 1000;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("bismuth")) {
+                if (!(Bismuth.getForeground() == Color.WHITE)) {
+                    Bismuth.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 1000;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("polonium")) {
+                if (!(Polonium.getForeground() == Color.WHITE)) {
+                    Polonium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 1000;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("astatine")) {
+                if (!(Astatine.getForeground() == Color.WHITE)) {
+                    Astatine.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 1000;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("radon")) {
+                if (!(Radon.getForeground() == Color.WHITE)) {
+                    Radon.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 1000;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("francium")) {
+                if (!(Francium.getForeground() == Color.WHITE)) {
+                    Francium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2000;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("radium")) {
+                if (!(Radium.getForeground() == Color.WHITE)) {
+                    Radium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2000;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("rutherfordium")) {
+                if (!(Rutherfordium.getForeground() == Color.WHITE)) {
+                    Rutherfordium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("dubnium")) {
+                if (!(Dubnium.getForeground() == Color.WHITE)) {
+                    Dubnium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("seaborgium")) {
+                if (!(Seaborgium.getForeground() == Color.WHITE)) {
+                    Seaborgium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("bohrium")) {
+                if (!(Borhium.getForeground() == Color.WHITE)) {
+                    Borhium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("hassium")) {
+                if (!(Hassium.getForeground() == Color.WHITE)) {
+                    Hassium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("meitnerium")) {
+                if (!(Meitnerium.getForeground() == Color.WHITE)) {
+                    Meitnerium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("darmstadtium")) {
+                if (!(Darmstadtium.getForeground() == Color.WHITE)) {
+                    Darmstadtium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("roentgenium")) {
+                if (!(Roentgenium.getForeground() == Color.WHITE)) {
+                    Roentgenium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("copernicium")) {
+                if (!(Copermicium.getForeground() == Color.WHITE)) {
+                    Copermicium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("nihonium")) {
+                if (!(Nihonium.getForeground() == Color.WHITE)) {
+                    Nihonium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("flerovium")) {
+                if (!(Flerovium.getForeground() == Color.WHITE)) {
+                    Flerovium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("moscovium")) {
+                if (!(Moscovium.getForeground() == Color.WHITE)) {
+                    Moscovium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("livermorium")) {
+                if (!(Livermorium.getForeground() == Color.WHITE)) {
+                    Livermorium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("tennessine")) {
+                if (!(Tennessine.getForeground() == Color.WHITE)) {
+                    Tennessine.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("oganesson")) {
+                if (!(Oganesson.getForeground() == Color.WHITE)) {
+                    Oganesson.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("lanthanum")) {
+                if (!(Lanthanum.getForeground() == Color.WHITE)) {
+                    Lanthanum.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("cerium")) {
+                if (!(Cerium.getForeground() == Color.WHITE)) {
+                    Cerium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("praseodymium")) {
+                if (!(Praseodymium.getForeground() == Color.WHITE)) {
+                    Praseodymium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("neodymium")) {
+                if (!(Neodymium.getForeground() == Color.WHITE)) {
+                    Neodymium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("promethium")) {
+                if (!(Promethium.getForeground() == Color.WHITE)) {
+                    Promethium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("samarium")) {
+                if (!(Samarium.getForeground() == Color.WHITE)) {
+                    Samarium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("europium")) {
+                if (!(Europium.getForeground() == Color.WHITE)) {
+                    Europium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("gadolinium")) {
+                if (!(Gadolinium.getForeground() == Color.WHITE)) {
+                    Gadolinium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("terbium")) {
+                if (!(Terbium.getForeground() == Color.WHITE)) {
+                    Terbium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("dysprosium")) {
+                if (!(Dysprosium.getForeground() == Color.WHITE)) {
+                    Dysprosium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("holmium")) {
+                if (!(Holmium.getForeground() == Color.WHITE)) {
+                    Holmium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("erbium")) {
+                if (!(Erbium.getForeground() == Color.WHITE)) {
+                    Erbium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("thulium")) {
+                if (!(Thullium.getForeground() == Color.WHITE)) {
+                    Thullium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("ytterbium")) {
+                if (!(Ytterbium.getForeground() == Color.WHITE)) {
+                    Ytterbium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("lutetium")) {
+                if (!(Lutetium.getForeground() == Color.WHITE)) {
+                    Lutetium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("actinium")) {
+                if (!(Actinium.getForeground() == Color.WHITE)) {
+                    Actinium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("thorium")) {
+                if (!(Thorium.getForeground() == Color.WHITE)) {
+                    Thorium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("protactinium")) {
+                if (!(Protactinium.getForeground() == Color.WHITE)) {
+                    Protactinium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("uranium")) {
+                if (!(Uranium.getForeground() == Color.WHITE)) {
+                    Uranium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("neptunium")) {
+                if (!(Neptunium.getForeground() == Color.WHITE)) {
+                    Neptunium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("plutonium")) {
+                if (!(Plutonium.getForeground() == Color.WHITE)) {
+                    Plutonium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("americium")) {
+                if (!(Americium.getForeground() == Color.WHITE)) {
+                    Americium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("curium")) {
+                if (!(Curium.getForeground() == Color.WHITE)) {
+                    Curium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("berkelium")) {
+                if (!(Berkelium.getForeground() == Color.WHITE)) {
+                    Berkelium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("californium")) {
+                if (!(Californium.getForeground() == Color.WHITE)) {
+                    Californium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("einsteinium")) {
+                if (!(Einsteinium.getForeground() == Color.WHITE)) {
+                    Einsteinium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("fermium")) {
+                if (!(Fermium.getForeground() == Color.WHITE)) {
+                    Fermium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("mendelevium")) {
+                if (!(Mendelevium.getForeground() == Color.WHITE)) {
+                    Mendelevium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("nobelium")) {
+                if (!(Nobelium.getForeground() == Color.WHITE)) {
+                    Nobelium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+            if (elementNameHereTextField.matches("lawrencium")) {
+                if (!(Lawrencium.getForeground() == Color.WHITE)) {
+                    Lawrencium.setForeground(Color.WHITE);
+                    elementNameHere.setText("");
+                    String scoreText = score.getText();
+                    int userScore = Integer.parseInt(scoreText);
+                    userScore += 2500;
+                    score.setText(Integer.toString(userScore));
+                }
+            }
+
+            if (elementNameHereTextField.matches("veronica maryanne eleches")) {
+                String scoreText = score.getText();
+                int userScore = Integer.parseInt(scoreText);
+                if (!(userScore == 22112017)) {
+                    userScore += 22112017;
+                    score.setText(Integer.toString(userScore));
+                    String timerText = timer.getText();
+                    int time = Integer.parseInt(timerText);
+                    time = 1;
+                    timer.setText(Integer.toString(time));
+                }
+            }
+
+            if (score.getText().matches("15000")) {
+                String timerText = timer.getText();
+                int time = Integer.parseInt(timerText);
+                time = 1;
+                timer.setText(Integer.toString(time));
+            }
         }
     }//GEN-LAST:event_elementNameHereActionPerformed
+
+    private void abortChallengeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abortChallengeActionPerformed
+        // TODO add your handling code here:
+        if (gameTimer.isRunning()) {
+            String timerText = timer.getText();
+            int time = Integer.parseInt(timerText);
+            time = 1;
+            timer.setText(Integer.toString(time));
+        }
+    }//GEN-LAST:event_abortChallengeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3030,6 +4022,9 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
     private javax.swing.JTextField Yttrium;
     private javax.swing.JTextField Ziconium;
     private javax.swing.JTextField Zinc;
+    private javax.swing.JLabel aHint;
+    private javax.swing.JLabel aTip;
+    private javax.swing.JButton abortChallenge;
     private javax.swing.JTextField elementNameHere;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -3050,6 +4045,110 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         int time = Integer.parseInt(timerText);
         time -= 1;
         timer.setText(Integer.toString(time));
+
+        if (time == 20 || time == 40 || time == 60 || time == 80 || time == 100
+                || time == 120 || time == 140 || time == 160 || time == 180 || time == 200
+                || time == 220 || time == 240 || time == 260 || time == 280 || time == 300
+                || time == 320 || time == 340 || time == 360 || time == 380 || time == 400) {
+            String[] hints = {"Try going through the alphablet for element names!", "HOFBrINCL",
+                "Some elements are named after famous chemists!",
+                "America and a states in the south are element names.",
+                "The three heaviest elements starting with C's!", "Kryptonite",
+                "Some elements used in warheads and power plants.", "One is used in surgeries and another to treat cancer!",
+                "Two elements are named after two far off planets in the solar system.", "You're going to be salty soon!",
+                "Two words: Google Chrome.", "One element is named after the sea!", "Valuable metals!", "If under pressure, this element creates diamonds",
+                "__________ poisoning.", "It stains your hands orange when you use it.", "Used in World War One as a chemical gas weapon.",
+                "It used to be used in thermometers and dental amalgams", "A very conductive metal.", "One element sounds like the word 'stadium'.",
+                "There is a trace amount of this gas in our atmosphere", "A poison starting with the lettre A.", "The three magnetic metals.",
+                "The only element that starts with a 'V'.", "Sounds like 'Cadbury'", "Tin foil", "Anti____", "Indy cars", "An element named after Germany!",
+                "Vladimir Putin would be proud!", "An element named after Europe", "Tech________ nology", "Almost sounds like 'Dungsten' hahahaha.",
+                "An element that sounds like copper, but has a larger atomic radius.", "There are particles of this in sand!", "It's in bananas!",
+                "EXTREMELY REACTIVE ALKALI METAL", "An element that is could have been named after 'Babe Ruth'.", "Think of the smell of rotten eggs.",
+                "It sounds like 'roadium'", "It sounds like it was named after Saruman.", "'Whole'mium",
+                "Two similar sounding elements that start with a Y.", "It could have been named after a liver.", "One was named after California??",
+                "Named after Thor perhaps?", "_______-ion batteries", "Literally it sounds like a garden made this name up! Ha! Herbs...",
+                "This can make groundwater hard.", "This basic metal metls in your hand.", "It sounds like Halfmium",
+                "There are only two elements starting with the letter Z.", "__________ foil", "It startes witn 'act'.", "This one sounds like 'paladins'.",
+                "This element is a true bro.", "It's put in our water for the health of our teeth!", "The two main gases in our atmosphere!", "Think H2O.", "5 cents"};
+            int randNum = (int) (Math.random() * (60 - 0 + 1)) + 0;
+            aHint.setText(hints[randNum]);
+        }
+        if (time == 419) {
+            aTip.setText("You've got 7 minutes on the clock. Let's go go go!!!");
+            InputStream music;
+            try {
+                //Be able to locate and play and audio files.
+                music = new FileInputStream(new File("Kahoot! - 20 Second Countdown 2_3 Extended.wav"));
+                AudioStream audio = new AudioStream(music);
+                AudioPlayer.player.start(audio);
+            } catch (Exception e) {
+                //Print out an error message if the file cannot be found/played.
+                System.out.println("Music file cannot be played!");
+                e.printStackTrace();
+            }
+        } else if (time == 300) {
+            aTip.setText("Well, it's been a bit since we started. How are you doing?");
+        } else if (time == 240) {
+            aTip.setText("Don't worry! You've still got time! Four minutes is a lot... right?");
+        } else if (time == 230) {
+            if (!(time == 0)) {
+                InputStream music;
+                try {
+                    //Be able to locate and play and audio files.
+                    music = new FileInputStream(new File("Kahoot! - 20 Second Countdown 3_3 Extended.wav"));
+                    AudioStream audio = new AudioStream(music);
+                    AudioPlayer.player.start(audio);
+                } catch (Exception e) {
+                    //Print out an error message if the file cannot be found/played.
+                    System.out.println("Music file cannot be played!");
+                    e.printStackTrace();
+                }
+            }
+        } else if (time == 180) {
+            aTip.setText("Three minutes! So, how many do you have so far?");
+        } else if (time == 120) {
+            aTip.setText("Oh, where did the time go? You have two minutes!!!");
+        } else if (time == 60) {
+            aTip.setText("I like stressing people out. I don't think you have even half of them yet, what a shame...");
+        } else if (time == 53) {
+            InputStream music;
+            try {
+                //Be able to locate and play and audio files.
+                music = new FileInputStream(new File("Kahoot! - 20 Second Countdown 1_3 Extended.wav"));
+                AudioStream audio = new AudioStream(music);
+                AudioPlayer.player.start(audio);
+            } catch (Exception e) {
+                //Print out an error message if the file cannot be found/played.
+                System.out.println("Music file cannot be played!");
+                e.printStackTrace();
+            }
+        } else if (time == 30) {
+            aTip.setText("Uh oh... thirty seconds left! And I thought your chemistry knowledge was extensive!");
+        } else if (time == 10) {
+            aTip.setText("10, 9, 8, 7, 6, 5, 4, 3, 2, 1, AND TIMES UP!");
+        } else if (time == 0) {
+            String scoreText = score.getText();
+            int userScore = Integer.parseInt(scoreText);
+            if (userScore == 0) {
+                aTip.setText("Your score is: " + userScore + ". Do you even have a heartbeat?");
+            } else if (userScore > 0 && userScore <= 1000) {
+                aTip.setText("Your score is: " + userScore + ". I reckon you need a lot more practice!");
+            } else if (userScore > 1000 && userScore <= 5000) {
+                aTip.setText("Your score is: " + userScore + ". I mean, you've got the basics of chemistry down!");
+            } else if (userScore > 5000 && userScore <= 25000) {
+                aTip.setText("Your score is: " + userScore + ". Wow, you have the hang of this! Nice work!");
+            } else if (userScore > 25000 && userScore <= 50000) {
+                aTip.setText("Your score is: " + userScore + ". Stop it. You'll probably ace your chemistry classes!");
+            } else if (userScore > 50000 && userScore <= 100000) {
+                aTip.setText("Your score is: " + userScore + ". How on Earth are you so good at this?!");
+            } else if (userScore > 100000 && userScore < 150000) {
+                aTip.setText("Your score is: " + userScore + ". Here's your chemistry degree. Now stop showing off!");
+            } else if (userScore == 150000) {
+                aTip.setText("Your score is: " + userScore + ". A perfect score. The chemistry gods have been pleased.");
+            } else if (userScore >= 22112017) {
+                aTip.setText("Your score is: " + userScore + ". You found the secret key word! I love you Veronica! <3");
+            }
+        }
         if (time <= 0) {
             gameTimer.stop();
         }

@@ -164,7 +164,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
         Radon = new javax.swing.JButton();
         Oganesson = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        period2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -1597,13 +1597,13 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        jLabel2.setText("2");
-        jLabel2.setToolTipText("Period 2");
-        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+        period2.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        period2.setText("2");
+        period2.setToolTipText("Period 2");
+        period2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        period2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
+                period2MouseClicked(evt);
             }
         });
 
@@ -2182,7 +2182,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(period2, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -2641,7 +2641,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Lithium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Beryllium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
+                            .addComponent(period2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Sodium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3863,7 +3863,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
         }     }//GEN-LAST:event_jLabel1MouseClicked
 
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+    private void period2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_period2MouseClicked
         try {
             try {
                 java.awt.Desktop.getDesktop().browse(new URI("https://en.wikipedia.org/wiki/Period_2_element"));
@@ -3872,7 +3872,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
             }
         } catch (IOException ex) {
             Logger.getLogger(ThePeriodicTableOfTheElements.class.getName()).log(Level.SEVERE, null, ex);
-        }     }//GEN-LAST:event_jLabel2MouseClicked
+        }     }//GEN-LAST:event_period2MouseClicked
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         try {
@@ -4523,7 +4523,6 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -4563,6 +4562,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JLabel period2;
     private java.awt.PopupMenu popupMenu1;
     private java.awt.TextArea textArea1;
     // End of variables declaration//GEN-END:variables
