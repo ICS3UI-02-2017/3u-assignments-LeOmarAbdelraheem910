@@ -21,13 +21,22 @@ import sun.audio.AudioStream;
  */
 public class PeriodicTableMemoryGame extends javax.swing.JFrame implements ActionListener {
 
+    //Game Variables:
+    //Initialize a game timer that will be used to run the game.
     Timer gameTimer;
 
+    //Create variables for the reading and playing of music. These will also allow the music to be stopped later.
+    InputStream music;
+    AudioStream audio;
+
+    //End of Game Variables.
     /**
      * Creates new form PeriodicTableMemoryGame
      */
     public PeriodicTableMemoryGame() {
         initComponents();
+
+        //Set the length of the game timer or how long it will run with each loop.
         gameTimer = new Timer(1000, this);
     }
 
@@ -175,6 +184,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         abortChallenge = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("The Periodic Table Memory Game!");
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
@@ -1630,6 +1640,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
 
         timer.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
         timer.setText("420");
+        timer.setToolTipText("");
 
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
         jLabel2.setText("Hint! :");
@@ -1637,6 +1648,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
 
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
         jLabel3.setText(" ");
+        jLabel3.setToolTipText("");
 
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 36)); // NOI18N
         jLabel4.setText("The Periodic Table Memory Challenge!");
@@ -1656,6 +1668,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
 
         jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
         jLabel6.setText("Enter an element name:");
+        jLabel6.setToolTipText("");
 
         jlabelidk.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 18)); // NOI18N
         jlabelidk.setText("Score:");
@@ -2635,27 +2648,37 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
     }//GEN-LAST:event_IodineActionPerformed
 
     private void startChallengeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startChallengeActionPerformed
-        // TODO add your handling code here:
+        //Start the game timer when the "Start Challenge" button is pressed. --> This effectively starts the game!
         gameTimer.start();
 
     }//GEN-LAST:event_startChallengeActionPerformed
 
+    //This method deals with the logic of the game and how it will be running. 
     private void elementNameHereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_elementNameHereActionPerformed
-        // TODO add your handling code here:
+
+        //If the game timer is running,
         if (gameTimer.isRunning()) {
+            //Start of element guessing logic.
+            //take the text entered into the textbox and make it all lowercase!
             String elementNameHereTextField = elementNameHere.getText();
             elementNameHereTextField = elementNameHereTextField.toLowerCase();
 
+            //If the element name is correct,
             if (elementNameHereTextField.matches("hydrogen")) {
+                //as long as the text colour isn't white (this prevents the word from being entered multiple times and a point exploit to be used):
                 if (!(Hydrogen.getForeground() == Color.WHITE)) {
+                    //change the text colour to white and clear the textbox.
                     Hydrogen.setForeground(Color.WHITE);
                     elementNameHere.setText("");
+                    //Additionally, change the player's score. In this case, add 100 points and continue playing.
                     String scoreText = score.getText();
                     int userScore = Integer.parseInt(scoreText);
                     userScore += 100;
                     score.setText(Integer.toString(userScore));
                 }
             }
+            //The rest of the code for the other 117 elements remains the same.
+
             if (elementNameHereTextField.matches("helium")) {
                 if (!(Helium.getForeground() == Color.WHITE)) {
                     Helium.setForeground(Color.WHITE);
@@ -2666,6 +2689,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("lithium")) {
                 if (!(Lithium.getForeground() == Color.WHITE)) {
                     Lithium.setForeground(Color.WHITE);
@@ -2676,6 +2700,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("beryllium")) {
                 if (!(Beryllium.getForeground() == Color.WHITE)) {
                     Beryllium.setForeground(Color.WHITE);
@@ -2686,6 +2711,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("boron")) {
                 if (!(Boron.getForeground() == Color.WHITE)) {
                     Boron.setForeground(Color.WHITE);
@@ -2696,6 +2722,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("carbon")) {
                 if (!(Carbon.getForeground() == Color.WHITE)) {
                     Carbon.setForeground(Color.WHITE);
@@ -2706,6 +2733,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("nitrogen")) {
                 if (!(Nitrogen.getForeground() == Color.WHITE)) {
                     Nitrogen.setForeground(Color.WHITE);
@@ -2716,6 +2744,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("oxygen")) {
                 if (!(Oxygen.getForeground() == Color.WHITE)) {
                     Oxygen.setForeground(Color.WHITE);
@@ -2726,6 +2755,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("fluorine")) {
                 if (!(Fluorine.getForeground() == Color.WHITE)) {
                     Fluorine.setForeground(Color.WHITE);
@@ -2736,6 +2766,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("neon")) {
                 if (!(Neon.getForeground() == Color.WHITE)) {
                     Neon.setForeground(Color.WHITE);
@@ -2746,6 +2777,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("neon")) {
                 if (!(Neon.getForeground() == Color.WHITE)) {
                     Neon.setForeground(Color.WHITE);
@@ -2756,6 +2788,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("sodium")) {
                 if (!(Sodium.getForeground() == Color.WHITE)) {
                     Sodium.setForeground(Color.WHITE);
@@ -2766,6 +2799,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("magnesium")) {
                 if (!(Magnesium.getForeground() == Color.WHITE)) {
                     Magnesium.setForeground(Color.WHITE);
@@ -2776,6 +2810,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
+            //Doing a favour for those who spell aluminum/aluminium differently.
             if (elementNameHereTextField.matches("aluminum") || elementNameHereTextField.matches("aluminium")) {
                 if (!(Aluminium.getForeground() == Color.WHITE)) {
                     Aluminium.setForeground(Color.WHITE);
@@ -2786,6 +2822,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("silicon")) {
                 if (!(Silicon.getForeground() == Color.WHITE)) {
                     Silicon.setForeground(Color.WHITE);
@@ -2796,6 +2833,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("phosphorus")) {
                 if (!(Phosphorus.getForeground() == Color.WHITE)) {
                     Phosphorus.setForeground(Color.WHITE);
@@ -2806,6 +2844,8 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
+            //Being nice to those who spell sulfur/sulphur in different ways.
             if (elementNameHereTextField.matches("sulfur") || elementNameHereTextField.matches("sulphur")) {
                 if (!(Sulfur.getForeground() == Color.WHITE)) {
                     Sulfur.setForeground(Color.WHITE);
@@ -2816,6 +2856,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("chlorine")) {
                 if (!(Chlorine.getForeground() == Color.WHITE)) {
                     Chlorine.setForeground(Color.WHITE);
@@ -2826,6 +2867,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("argon")) {
                 if (!(Argon.getForeground() == Color.WHITE)) {
                     Argon.setForeground(Color.WHITE);
@@ -2836,6 +2878,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("potassium")) {
                 if (!(Potassium.getForeground() == Color.WHITE)) {
                     Potassium.setForeground(Color.WHITE);
@@ -2846,6 +2889,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("calcium")) {
                 if (!(Calcium.getForeground() == Color.WHITE)) {
                     Calcium.setForeground(Color.WHITE);
@@ -2856,6 +2900,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("scandium")) {
                 if (!(Scandium.getForeground() == Color.WHITE)) {
                     Scandium.setForeground(Color.WHITE);
@@ -2866,6 +2911,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("titanium")) {
                 if (!(Titanium.getForeground() == Color.WHITE)) {
                     Titanium.setForeground(Color.WHITE);
@@ -2876,6 +2922,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("vanadium")) {
                 if (!(Vanadium.getForeground() == Color.WHITE)) {
                     Vanadium.setForeground(Color.WHITE);
@@ -2886,6 +2933,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("chromium")) {
                 if (!(Chromium.getForeground() == Color.WHITE)) {
                     Chromium.setForeground(Color.WHITE);
@@ -2896,6 +2944,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("manganese")) {
                 if (!(Manganese.getForeground() == Color.WHITE)) {
                     Manganese.setForeground(Color.WHITE);
@@ -2906,6 +2955,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("iron")) {
                 if (!(Iron.getForeground() == Color.WHITE)) {
                     Iron.setForeground(Color.WHITE);
@@ -2916,6 +2966,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("cobalt")) {
                 if (!(Cobalt.getForeground() == Color.WHITE)) {
                     Cobalt.setForeground(Color.WHITE);
@@ -2926,6 +2977,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("nickel")) {
                 if (!(Nickel.getForeground() == Color.WHITE)) {
                     Nickel.setForeground(Color.WHITE);
@@ -2936,6 +2988,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("copper")) {
                 if (!(Copper.getForeground() == Color.WHITE)) {
                     Copper.setForeground(Color.WHITE);
@@ -2946,6 +2999,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("zinc")) {
                 if (!(Zinc.getForeground() == Color.WHITE)) {
                     Zinc.setForeground(Color.WHITE);
@@ -2956,6 +3010,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("gallium")) {
                 if (!(Galium.getForeground() == Color.WHITE)) {
                     Galium.setForeground(Color.WHITE);
@@ -2966,6 +3021,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("germanium")) {
                 if (!(Germanium.getForeground() == Color.WHITE)) {
                     Germanium.setForeground(Color.WHITE);
@@ -2976,6 +3032,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("arsenic")) {
                 if (!(Arsenic.getForeground() == Color.WHITE)) {
                     Arsenic.setForeground(Color.WHITE);
@@ -2986,6 +3043,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("selenium")) {
                 if (!(Selenium.getForeground() == Color.WHITE)) {
                     Selenium.setForeground(Color.WHITE);
@@ -2996,6 +3054,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("bromine")) {
                 if (!(Bromine.getForeground() == Color.WHITE)) {
                     Bromine.setForeground(Color.WHITE);
@@ -3006,6 +3065,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("krypton")) {
                 if (!(Krypton.getForeground() == Color.WHITE)) {
                     Krypton.setForeground(Color.WHITE);
@@ -3016,6 +3076,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("rubidium")) {
                 if (!(Rubidium.getForeground() == Color.WHITE)) {
                     Rubidium.setForeground(Color.WHITE);
@@ -3026,6 +3087,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("strontium")) {
                 if (!(Strontium.getForeground() == Color.WHITE)) {
                     Strontium.setForeground(Color.WHITE);
@@ -3036,6 +3098,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("yttrium")) {
                 if (!(Yttrium.getForeground() == Color.WHITE)) {
                     Yttrium.setForeground(Color.WHITE);
@@ -3046,6 +3109,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("zirconium")) {
                 if (!(Ziconium.getForeground() == Color.WHITE)) {
                     Ziconium.setForeground(Color.WHITE);
@@ -3056,6 +3120,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("niobium")) {
                 if (!(Niobium.getForeground() == Color.WHITE)) {
                     Niobium.setForeground(Color.WHITE);
@@ -3066,6 +3131,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("molybdenum")) {
                 if (!(Molybdenum.getForeground() == Color.WHITE)) {
                     Molybdenum.setForeground(Color.WHITE);
@@ -3076,6 +3142,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("technetium")) {
                 if (!(Technetium.getForeground() == Color.WHITE)) {
                     Technetium.setForeground(Color.WHITE);
@@ -3086,6 +3153,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("ruthenium")) {
                 if (!(Ruthenium.getForeground() == Color.WHITE)) {
                     Ruthenium.setForeground(Color.WHITE);
@@ -3096,6 +3164,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("rhodium")) {
                 if (!(Rhodium.getForeground() == Color.WHITE)) {
                     Rhodium.setForeground(Color.WHITE);
@@ -3106,6 +3175,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("palladium")) {
                 if (!(Palladium.getForeground() == Color.WHITE)) {
                     Palladium.setForeground(Color.WHITE);
@@ -3116,6 +3186,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("silver")) {
                 if (!(Silver.getForeground() == Color.WHITE)) {
                     Silver.setForeground(Color.WHITE);
@@ -3126,6 +3197,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("cadmium")) {
                 if (!(Cadmium.getForeground() == Color.WHITE)) {
                     Cadmium.setForeground(Color.WHITE);
@@ -3136,6 +3208,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("indium")) {
                 if (!(Indium.getForeground() == Color.WHITE)) {
                     Indium.setForeground(Color.WHITE);
@@ -3146,6 +3219,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("tin")) {
                 if (!(Tin.getForeground() == Color.WHITE)) {
                     Tin.setForeground(Color.WHITE);
@@ -3156,6 +3230,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("antimony")) {
                 if (!(Antimony.getForeground() == Color.WHITE)) {
                     Antimony.setForeground(Color.WHITE);
@@ -3166,6 +3241,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("tellurium")) {
                 if (!(Tellurium.getForeground() == Color.WHITE)) {
                     Tellurium.setForeground(Color.WHITE);
@@ -3176,6 +3252,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("iodine")) {
                 if (!(Iodine.getForeground() == Color.WHITE)) {
                     Iodine.setForeground(Color.WHITE);
@@ -3186,6 +3263,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("xenon")) {
                 if (!(Xenon.getForeground() == Color.WHITE)) {
                     Xenon.setForeground(Color.WHITE);
@@ -3196,6 +3274,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("cesium")) {
                 if (!(Cesium.getForeground() == Color.WHITE)) {
                     Cesium.setForeground(Color.WHITE);
@@ -3206,6 +3285,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("barium")) {
                 if (!(Barium.getForeground() == Color.WHITE)) {
                     Barium.setForeground(Color.WHITE);
@@ -3216,6 +3296,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("hafnium")) {
                 if (!(Hafnium.getForeground() == Color.WHITE)) {
                     Hafnium.setForeground(Color.WHITE);
@@ -3226,6 +3307,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("tantalum")) {
                 if (!(Tantalum.getForeground() == Color.WHITE)) {
                     Tantalum.setForeground(Color.WHITE);
@@ -3236,6 +3318,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("tungsten")) {
                 if (!(Tungsten.getForeground() == Color.WHITE)) {
                     Tungsten.setForeground(Color.WHITE);
@@ -3246,6 +3329,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("rhenium")) {
                 if (!(Rhenium.getForeground() == Color.WHITE)) {
                     Rhenium.setForeground(Color.WHITE);
@@ -3256,6 +3340,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("osmium")) {
                 if (!(Osmium.getForeground() == Color.WHITE)) {
                     Osmium.setForeground(Color.WHITE);
@@ -3266,6 +3351,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("iridium")) {
                 if (!(Iridium.getForeground() == Color.WHITE)) {
                     Iridium.setForeground(Color.WHITE);
@@ -3276,6 +3362,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("platinum")) {
                 if (!(Platnium.getForeground() == Color.WHITE)) {
                     Platnium.setForeground(Color.WHITE);
@@ -3286,6 +3373,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("gold")) {
                 if (!(Gold.getForeground() == Color.WHITE)) {
                     Gold.setForeground(Color.WHITE);
@@ -3296,6 +3384,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("mercury")) {
                 if (!(Mercury.getForeground() == Color.WHITE)) {
                     Mercury.setForeground(Color.WHITE);
@@ -3306,6 +3395,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("thallium")) {
                 if (!(Thallium.getForeground() == Color.WHITE)) {
                     Thallium.setForeground(Color.WHITE);
@@ -3316,6 +3406,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("lead")) {
                 if (!(Lead.getForeground() == Color.WHITE)) {
                     Lead.setForeground(Color.WHITE);
@@ -3326,6 +3417,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("bismuth")) {
                 if (!(Bismuth.getForeground() == Color.WHITE)) {
                     Bismuth.setForeground(Color.WHITE);
@@ -3336,6 +3428,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("polonium")) {
                 if (!(Polonium.getForeground() == Color.WHITE)) {
                     Polonium.setForeground(Color.WHITE);
@@ -3346,6 +3439,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("astatine")) {
                 if (!(Astatine.getForeground() == Color.WHITE)) {
                     Astatine.setForeground(Color.WHITE);
@@ -3356,6 +3450,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("radon")) {
                 if (!(Radon.getForeground() == Color.WHITE)) {
                     Radon.setForeground(Color.WHITE);
@@ -3366,6 +3461,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("francium")) {
                 if (!(Francium.getForeground() == Color.WHITE)) {
                     Francium.setForeground(Color.WHITE);
@@ -3376,6 +3472,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("radium")) {
                 if (!(Radium.getForeground() == Color.WHITE)) {
                     Radium.setForeground(Color.WHITE);
@@ -3386,6 +3483,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("rutherfordium")) {
                 if (!(Rutherfordium.getForeground() == Color.WHITE)) {
                     Rutherfordium.setForeground(Color.WHITE);
@@ -3396,6 +3494,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("dubnium")) {
                 if (!(Dubnium.getForeground() == Color.WHITE)) {
                     Dubnium.setForeground(Color.WHITE);
@@ -3406,6 +3505,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("seaborgium")) {
                 if (!(Seaborgium.getForeground() == Color.WHITE)) {
                     Seaborgium.setForeground(Color.WHITE);
@@ -3416,6 +3516,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("bohrium")) {
                 if (!(Borhium.getForeground() == Color.WHITE)) {
                     Borhium.setForeground(Color.WHITE);
@@ -3426,6 +3527,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("hassium")) {
                 if (!(Hassium.getForeground() == Color.WHITE)) {
                     Hassium.setForeground(Color.WHITE);
@@ -3436,6 +3538,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("meitnerium")) {
                 if (!(Meitnerium.getForeground() == Color.WHITE)) {
                     Meitnerium.setForeground(Color.WHITE);
@@ -3446,6 +3549,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("darmstadtium")) {
                 if (!(Darmstadtium.getForeground() == Color.WHITE)) {
                     Darmstadtium.setForeground(Color.WHITE);
@@ -3456,6 +3560,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("roentgenium")) {
                 if (!(Roentgenium.getForeground() == Color.WHITE)) {
                     Roentgenium.setForeground(Color.WHITE);
@@ -3466,6 +3571,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("copernicium")) {
                 if (!(Copermicium.getForeground() == Color.WHITE)) {
                     Copermicium.setForeground(Color.WHITE);
@@ -3476,6 +3582,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("nihonium")) {
                 if (!(Nihonium.getForeground() == Color.WHITE)) {
                     Nihonium.setForeground(Color.WHITE);
@@ -3486,6 +3593,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("flerovium")) {
                 if (!(Flerovium.getForeground() == Color.WHITE)) {
                     Flerovium.setForeground(Color.WHITE);
@@ -3496,6 +3604,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("moscovium")) {
                 if (!(Moscovium.getForeground() == Color.WHITE)) {
                     Moscovium.setForeground(Color.WHITE);
@@ -3506,6 +3615,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("livermorium")) {
                 if (!(Livermorium.getForeground() == Color.WHITE)) {
                     Livermorium.setForeground(Color.WHITE);
@@ -3516,6 +3626,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("tennessine")) {
                 if (!(Tennessine.getForeground() == Color.WHITE)) {
                     Tennessine.setForeground(Color.WHITE);
@@ -3526,6 +3637,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("oganesson")) {
                 if (!(Oganesson.getForeground() == Color.WHITE)) {
                     Oganesson.setForeground(Color.WHITE);
@@ -3536,6 +3648,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("lanthanum")) {
                 if (!(Lanthanum.getForeground() == Color.WHITE)) {
                     Lanthanum.setForeground(Color.WHITE);
@@ -3546,6 +3659,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("cerium")) {
                 if (!(Cerium.getForeground() == Color.WHITE)) {
                     Cerium.setForeground(Color.WHITE);
@@ -3556,6 +3670,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("praseodymium")) {
                 if (!(Praseodymium.getForeground() == Color.WHITE)) {
                     Praseodymium.setForeground(Color.WHITE);
@@ -3566,6 +3681,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("neodymium")) {
                 if (!(Neodymium.getForeground() == Color.WHITE)) {
                     Neodymium.setForeground(Color.WHITE);
@@ -3576,6 +3692,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("promethium")) {
                 if (!(Promethium.getForeground() == Color.WHITE)) {
                     Promethium.setForeground(Color.WHITE);
@@ -3586,6 +3703,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("samarium")) {
                 if (!(Samarium.getForeground() == Color.WHITE)) {
                     Samarium.setForeground(Color.WHITE);
@@ -3596,6 +3714,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("europium")) {
                 if (!(Europium.getForeground() == Color.WHITE)) {
                     Europium.setForeground(Color.WHITE);
@@ -3606,6 +3725,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("gadolinium")) {
                 if (!(Gadolinium.getForeground() == Color.WHITE)) {
                     Gadolinium.setForeground(Color.WHITE);
@@ -3616,6 +3736,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("terbium")) {
                 if (!(Terbium.getForeground() == Color.WHITE)) {
                     Terbium.setForeground(Color.WHITE);
@@ -3626,6 +3747,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("dysprosium")) {
                 if (!(Dysprosium.getForeground() == Color.WHITE)) {
                     Dysprosium.setForeground(Color.WHITE);
@@ -3636,6 +3758,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("holmium")) {
                 if (!(Holmium.getForeground() == Color.WHITE)) {
                     Holmium.setForeground(Color.WHITE);
@@ -3646,6 +3769,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("erbium")) {
                 if (!(Erbium.getForeground() == Color.WHITE)) {
                     Erbium.setForeground(Color.WHITE);
@@ -3656,6 +3780,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("thulium")) {
                 if (!(Thullium.getForeground() == Color.WHITE)) {
                     Thullium.setForeground(Color.WHITE);
@@ -3666,6 +3791,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("ytterbium")) {
                 if (!(Ytterbium.getForeground() == Color.WHITE)) {
                     Ytterbium.setForeground(Color.WHITE);
@@ -3676,6 +3802,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("lutetium")) {
                 if (!(Lutetium.getForeground() == Color.WHITE)) {
                     Lutetium.setForeground(Color.WHITE);
@@ -3686,6 +3813,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("actinium")) {
                 if (!(Actinium.getForeground() == Color.WHITE)) {
                     Actinium.setForeground(Color.WHITE);
@@ -3696,6 +3824,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("thorium")) {
                 if (!(Thorium.getForeground() == Color.WHITE)) {
                     Thorium.setForeground(Color.WHITE);
@@ -3706,6 +3835,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("protactinium")) {
                 if (!(Protactinium.getForeground() == Color.WHITE)) {
                     Protactinium.setForeground(Color.WHITE);
@@ -3716,6 +3846,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("uranium")) {
                 if (!(Uranium.getForeground() == Color.WHITE)) {
                     Uranium.setForeground(Color.WHITE);
@@ -3726,6 +3857,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("neptunium")) {
                 if (!(Neptunium.getForeground() == Color.WHITE)) {
                     Neptunium.setForeground(Color.WHITE);
@@ -3736,6 +3868,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("plutonium")) {
                 if (!(Plutonium.getForeground() == Color.WHITE)) {
                     Plutonium.setForeground(Color.WHITE);
@@ -3746,6 +3879,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("americium")) {
                 if (!(Americium.getForeground() == Color.WHITE)) {
                     Americium.setForeground(Color.WHITE);
@@ -3756,6 +3890,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("curium")) {
                 if (!(Curium.getForeground() == Color.WHITE)) {
                     Curium.setForeground(Color.WHITE);
@@ -3766,6 +3901,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("berkelium")) {
                 if (!(Berkelium.getForeground() == Color.WHITE)) {
                     Berkelium.setForeground(Color.WHITE);
@@ -3776,6 +3912,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("californium")) {
                 if (!(Californium.getForeground() == Color.WHITE)) {
                     Californium.setForeground(Color.WHITE);
@@ -3786,6 +3923,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("einsteinium")) {
                 if (!(Einsteinium.getForeground() == Color.WHITE)) {
                     Einsteinium.setForeground(Color.WHITE);
@@ -3796,6 +3934,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("fermium")) {
                 if (!(Fermium.getForeground() == Color.WHITE)) {
                     Fermium.setForeground(Color.WHITE);
@@ -3806,6 +3945,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("mendelevium")) {
                 if (!(Mendelevium.getForeground() == Color.WHITE)) {
                     Mendelevium.setForeground(Color.WHITE);
@@ -3816,6 +3956,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("nobelium")) {
                 if (!(Nobelium.getForeground() == Color.WHITE)) {
                     Nobelium.setForeground(Color.WHITE);
@@ -3826,6 +3967,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                     score.setText(Integer.toString(userScore));
                 }
             }
+
             if (elementNameHereTextField.matches("lawrencium")) {
                 if (!(Lawrencium.getForeground() == Color.WHITE)) {
                     Lawrencium.setForeground(Color.WHITE);
@@ -3837,12 +3979,17 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                 }
             }
 
+            //End of element guessing logic.
+            //THIS IS A SECRET CODE. IF YOU NOW THIS CODE, YOU CAN AUTOMATICALLY BYPASS THE GAME ENTIRELY AND SCORE AN INSANE AMOUNT OF POINTS!
+            //If the text entered is my girlfriend's full name:
             if (elementNameHereTextField.matches("veronica maryanne eleches")) {
+                //add 22112017 to the score.
                 String scoreText = score.getText();
                 int userScore = Integer.parseInt(scoreText);
-                if (!(userScore == 22112017)) {
+                if (!(userScore >= 22112017)) {
                     userScore += 22112017;
                     score.setText(Integer.toString(userScore));
+                    //Take a string of the timer, manipulate it to equal 1 second, all in order to end the timer immediately.
                     String timerText = timer.getText();
                     int time = Integer.parseInt(timerText);
                     time = 1;
@@ -3850,7 +3997,9 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                 }
             }
 
-            if (score.getText().matches("15000")) {
+            //If a perfect score is achieved,
+            if (score.getText().matches("150000")) {
+                //Immediately end the timer and subsequently the game.
                 String timerText = timer.getText();
                 int time = Integer.parseInt(timerText);
                 time = 1;
@@ -3860,8 +4009,9 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
     }//GEN-LAST:event_elementNameHereActionPerformed
 
     private void abortChallengeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abortChallengeActionPerformed
-        // TODO add your handling code here:
+        //If the game timer is running and the user wants to terminate the session:
         if (gameTimer.isRunning()) {
+            //Immediately end the timer.
             String timerText = timer.getText();
             int time = Integer.parseInt(timerText);
             time = 1;
@@ -4039,17 +4189,24 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
     private javax.swing.JLabel timer;
     // End of variables declaration//GEN-END:variables
 
+    //This is the code that deals with the game timer loop. For every second that passes, this code is excuted again.
     @Override
     public void actionPerformed(ActionEvent ae) {
+        //This is what allows the game timer to run. The timer is set to 420 seconds or 7 minutes to begin. Everyone second that passes causes this loop
+        //to take a string of the timer, convert it to an integer, decrease it by one, and set that integer as the new time in seconds.
         String timerText = timer.getText();
         int time = Integer.parseInt(timerText);
         time -= 1;
         timer.setText(Integer.toString(time));
 
+        //For every 20 seconds that passes:
         if (time == 20 || time == 40 || time == 60 || time == 80 || time == 100
                 || time == 120 || time == 140 || time == 160 || time == 180 || time == 200
                 || time == 220 || time == 240 || time == 260 || time == 280 || time == 300
                 || time == 320 || time == 340 || time == 360 || time == 380 || time == 400) {
+
+            //generate a new hint from this list of 90 of them.
+            //This is a string array that allows players to see hints that can help them out with their guessing of the elements!
             String[] hints = {"Try going through the alphablet for element names!", "HOFBrINCL",
                 "Some elements are named after famous chemists!",
                 "America and a states in the south are element names.",
@@ -4061,96 +4218,276 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                 "It used to be used in thermometers and dental amalgams", "A very conductive metal.", "One element sounds like the word 'stadium'.",
                 "There is a trace amount of this gas in our atmosphere", "A poison starting with the lettre A.", "The three magnetic metals.",
                 "The only element that starts with a 'V'.", "Sounds like 'Cadbury'", "Tin foil", "Anti____", "Indy cars", "An element named after Germany!",
-                "Vladimir Putin would be proud!", "An element named after Europe", "Tech________ nology", "Almost sounds like 'Dungsten' hahahaha.",
-                "An element that sounds like copper, but has a larger atomic radius.", "There are particles of this in sand!", "It's in bananas!",
+                "Vladimir Putin would be proud!", "An element named after Europe", "A  t e c h y  element", "Almost sounds like 'Dungsten' hahahaha.",
+                "A larger element that sounds like copper.", "There are particles of this in glass!", "It's in bananas!",
                 "EXTREMELY REACTIVE ALKALI METAL", "An element that is could have been named after 'Babe Ruth'.", "Think of the smell of rotten eggs.",
                 "It sounds like 'roadium'", "It sounds like it was named after Saruman.", "'Whole'mium",
                 "Two similar sounding elements that start with a Y.", "It could have been named after a liver.", "One was named after California??",
                 "Named after Thor perhaps?", "_______-ion batteries", "Literally it sounds like a garden made this name up! Ha! Herbs...",
                 "This can make groundwater hard.", "This basic metal metls in your hand.", "It sounds like Halfmium",
-                "There are only two elements starting with the letter Z.", "__________ foil", "It startes witn 'act'.", "This one sounds like 'paladins'.",
-                "This element is a true bro.", "It's put in our water for the health of our teeth!", "The two main gases in our atmosphere!", "Think H2O.", "5 cents"};
-            int randNum = (int) (Math.random() * (60 - 0 + 1)) + 0;
+                "There are only two elements starting with the letter Z.", "__________ foil", "It starts witn 'act'.", "This one sounds like 'paladins'.",
+                "This element is a true bro.", "It's put in our water for the health of our teeth!", "The two main gases in our atmosphere!", "Think H2O.",
+                "5 cents", "It sounds like 'Promethius'", "There are two elements that start with the sound 'neo'.", "An element that starts with 'Rub'",
+                "Mercedes uses this gas in its headlights!", "A glow in the dark element that is pretty rad.", "English dubs.", "This element literally sounds like a potion name.",
+                "Someone f e r m -ented this element.", "The cur___ to the disease!", "This element loves to *praise* people!", "This element starts the same way that 'dsylexia' starts.",
+                "The  m a n  liest of elements.", "This element *hass* something to hide!", "Most elements end with 'ium' or 'mium'!", "The element was used in coloured light fixtures.",
+                "Jewlery prospers from some of these element!", "These element is very  i r i  tated.", "Moly-denim", "It rhymes with 'lesson'.",
+                "NYET or m e i t? Who knows my comrades?", "Thul of a boat? Or was it hull?", "Berkel? Merkel? No Merkel is too recent.", "Some elements end in 'um' or 'ine'",
+                "We're 'Roen' together down the stream!", "The Sanctuary of *Selenity*", "Bearium", "Strongtium", "Mi Hoy Minoy!!!!", "Boron sounds like boring. This game is boringggg..."};
+
+            //Every 20 seconds, a new random number is chosen. This random number allows a random hint to be displayed to the player, instead of a predicitable, periodic cycle.
+            //This means that new hints should appear every so often and create a unique gameplay experience everytime. The same can occur multiple times in a row. This is an intended feature. 
+            int randNum = (int) (Math.random() * (88 - 0 + 1)) + 0;
             aHint.setText(hints[randNum]);
         }
+
+        //If the timer begins,
         if (time == 419) {
+
+            //play the game music and display a time related tip.
             aTip.setText("You've got 7 minutes on the clock. Let's go go go!!!");
-            InputStream music;
             try {
                 //Be able to locate and play and audio files.
                 music = new FileInputStream(new File("Kahoot! - 20 Second Countdown 2_3 Extended.wav"));
-                AudioStream audio = new AudioStream(music);
+                audio = new AudioStream(music);
                 AudioPlayer.player.start(audio);
             } catch (Exception e) {
                 //Print out an error message if the file cannot be found/played.
                 System.out.println("Music file cannot be played!");
                 e.printStackTrace();
             }
+
+            //Another time related tip at 5 minutes.
         } else if (time == 300) {
             aTip.setText("Well, it's been a bit since we started. How are you doing?");
+
+            //Another time related tip at 4 minutes.
         } else if (time == 240) {
             aTip.setText("Don't worry! You've still got time! Four minutes is a lot... right?");
+
+            //Play the second game music file.
         } else if (time == 230) {
-            if (!(time == 0)) {
-                InputStream music;
-                try {
-                    //Be able to locate and play and audio files.
-                    music = new FileInputStream(new File("Kahoot! - 20 Second Countdown 3_3 Extended.wav"));
-                    AudioStream audio = new AudioStream(music);
-                    AudioPlayer.player.start(audio);
-                } catch (Exception e) {
-                    //Print out an error message if the file cannot be found/played.
-                    System.out.println("Music file cannot be played!");
-                    e.printStackTrace();
-                }
+            try {
+                //Be able to locate and play and audio files.
+                music = new FileInputStream(new File("Kahoot! - 20 Second Countdown 3_3 Extended.wav"));
+                audio = new AudioStream(music);
+                AudioPlayer.player.start(audio);
+            } catch (Exception e) {
+                //Print out an error message if the file cannot be found/played.
+                System.out.println("Music file cannot be played!");
+                e.printStackTrace();
             }
+
+            //Another time related tip at 3 minutes.
         } else if (time == 180) {
             aTip.setText("Three minutes! So, how many do you have so far?");
+
+            //Another time related tip at 2 minutes.
         } else if (time == 120) {
             aTip.setText("Oh, where did the time go? You have two minutes!!!");
+
+            //Another time related tip at 1 minutes.    
         } else if (time == 60) {
             aTip.setText("I like stressing people out. I don't think you have even half of them yet, what a shame...");
+
+            //Play the last game music file.
         } else if (time == 53) {
-            InputStream music;
             try {
                 //Be able to locate and play and audio files.
                 music = new FileInputStream(new File("Kahoot! - 20 Second Countdown 1_3 Extended.wav"));
-                AudioStream audio = new AudioStream(music);
+                audio = new AudioStream(music);
                 AudioPlayer.player.start(audio);
             } catch (Exception e) {
                 //Print out an error message if the file cannot be found/played.
                 System.out.println("Music file cannot be played!");
                 e.printStackTrace();
             }
+
+            //Another time related tip at 30 seconds.
         } else if (time == 30) {
             aTip.setText("Uh oh... thirty seconds left! And I thought your chemistry knowledge was extensive!");
+
+            //Another time related tip at 10 seconds.
         } else if (time == 10) {
             aTip.setText("10, 9, 8, 7, 6, 5, 4, 3, 2, 1, AND TIMES UP!");
+
+            //When the timer has stopped:
         } else if (time == 0) {
+            //Stop the game music.
+            AudioPlayer.player.stop(audio);
+
             String scoreText = score.getText();
             int userScore = Integer.parseInt(scoreText);
+
+            //Display the user's score and a congratulatory message! (At 0 points)
             if (userScore == 0) {
                 aTip.setText("Your score is: " + userScore + ". Do you even have a heartbeat?");
+
+                //(At 1-1000 points)
             } else if (userScore > 0 && userScore <= 1000) {
                 aTip.setText("Your score is: " + userScore + ". I reckon you need a lot more practice!");
+
+                //(At 1001-5000 points)
             } else if (userScore > 1000 && userScore <= 5000) {
                 aTip.setText("Your score is: " + userScore + ". I mean, you've got the basics of chemistry down!");
+
+                //(At 5001-25000 points)
             } else if (userScore > 5000 && userScore <= 25000) {
                 aTip.setText("Your score is: " + userScore + ". Wow, you have the hang of this! Nice work!");
+
+                //(At 25001-50000 points)
             } else if (userScore > 25000 && userScore <= 50000) {
                 aTip.setText("Your score is: " + userScore + ". Stop it. You'll probably ace your chemistry classes!");
+
+                //(At 50001-100000 points)
             } else if (userScore > 50000 && userScore <= 100000) {
                 aTip.setText("Your score is: " + userScore + ". How on Earth are you so good at this?!");
+
+                //(At 100001-149999 points)
             } else if (userScore > 100000 && userScore < 150000) {
                 aTip.setText("Your score is: " + userScore + ". Here's your chemistry degree. Now stop showing off!");
+
+                //If a perfect score is achieved:
             } else if (userScore == 150000) {
                 aTip.setText("Your score is: " + userScore + ". A perfect score. The chemistry gods have been pleased.");
+
+                //If the secret code is entered!:
             } else if (userScore >= 22112017) {
-                aTip.setText("Your score is: " + userScore + ". You found the secret key word! I love you Veronica! <3");
+                aTip.setText("Your score is: " + userScore + ". You found the secret key word! I love you Veronica! <3 :')");
             }
         }
+
+        //If the game timer hits zero or is below zero for some reason,
         if (time <= 0) {
+            //Stop the game timer, reset the timer, score, hint box, text box, and all of the element boxes in order to allow a reset for the game.
             gameTimer.stop();
+
+            timer.setText("420");
+
+            score.setText("0");
+
+            aHint.setText("");
+
+            elementNameHere.setText("");
+
+            Actinium.setForeground(Color.BLACK);
+            Aluminium.setForeground(Color.BLACK);
+            Americium.setForeground(Color.BLACK);
+            Antimony.setForeground(Color.BLACK);
+            Argon.setForeground(Color.BLACK);
+            Arsenic.setForeground(Color.BLACK);
+            Astatine.setForeground(Color.BLACK);
+            Barium.setForeground(Color.BLACK);
+            Berkelium.setForeground(Color.BLACK);
+            Beryllium.setForeground(Color.BLACK);
+            Bismuth.setForeground(Color.BLACK);
+            Borhium.setForeground(Color.BLACK);
+            Boron.setForeground(Color.BLACK);
+            Bromine.setForeground(Color.BLACK);
+            Cadmium.setForeground(Color.BLACK);
+            Calcium.setForeground(Color.BLACK);
+            Californium.setForeground(Color.BLACK);
+            Carbon.setForeground(Color.BLACK);
+            Cerium.setForeground(Color.BLACK);
+            Cesium.setForeground(Color.BLACK);
+            Chlorine.setForeground(Color.BLACK);
+            Chromium.setForeground(Color.BLACK);
+            Cobalt.setForeground(Color.BLACK);
+            Copermicium.setForeground(Color.BLACK);
+            Copper.setForeground(Color.BLACK);
+            Curium.setForeground(Color.BLACK);
+            Darmstadtium.setForeground(Color.BLACK);
+            Dubnium.setForeground(Color.BLACK);
+            Dysprosium.setForeground(Color.BLACK);
+            Einsteinium.setForeground(Color.BLACK);
+            Erbium.setForeground(Color.BLACK);
+            Europium.setForeground(Color.BLACK);
+            Fermium.setForeground(Color.BLACK);
+            Flerovium.setForeground(Color.BLACK);
+            Fluorine.setForeground(Color.BLACK);
+            Francium.setForeground(Color.BLACK);
+            Gadolinium.setForeground(Color.BLACK);
+            Galium.setForeground(Color.BLACK);
+            Germanium.setForeground(Color.BLACK);
+            Gold.setForeground(Color.BLACK);
+            Hafnium.setForeground(Color.BLACK);
+            Hassium.setForeground(Color.BLACK);
+            Helium.setForeground(Color.BLACK);
+            Holmium.setForeground(Color.BLACK);
+            Hydrogen.setForeground(Color.BLACK);
+            Indium.setForeground(Color.BLACK);
+            Iodine.setForeground(Color.BLACK);
+            Iridium.setForeground(Color.BLACK);
+            Iron.setForeground(Color.BLACK);
+            Krypton.setForeground(Color.BLACK);
+            Lanthanum.setForeground(Color.BLACK);
+            Lawrencium.setForeground(Color.BLACK);
+            Lead.setForeground(Color.BLACK);
+            Lithium.setForeground(Color.BLACK);
+            Livermorium.setForeground(Color.BLACK);
+            Lutetium.setForeground(Color.BLACK);
+            Magnesium.setForeground(Color.BLACK);
+            Manganese.setForeground(Color.BLACK);
+            Meitnerium.setForeground(Color.BLACK);
+            Mendelevium.setForeground(Color.BLACK);
+            Mercury.setForeground(Color.BLACK);
+            Molybdenum.setForeground(Color.BLACK);
+            Moscovium.setForeground(Color.BLACK);
+            Neodymium.setForeground(Color.BLACK);
+            Neon.setForeground(Color.BLACK);
+            Neptunium.setForeground(Color.BLACK);
+            Nickel.setForeground(Color.BLACK);
+            Nihonium.setForeground(Color.BLACK);
+            Niobium.setForeground(Color.BLACK);
+            Nitrogen.setForeground(Color.BLACK);
+            Nobelium.setForeground(Color.BLACK);
+            Oganesson.setForeground(Color.BLACK);
+            Osmium.setForeground(Color.BLACK);
+            Oxygen.setForeground(Color.BLACK);
+            Palladium.setForeground(Color.BLACK);
+            Phosphorus.setForeground(Color.BLACK);
+            Platnium.setForeground(Color.BLACK);
+            Plutonium.setForeground(Color.BLACK);
+            Polonium.setForeground(Color.BLACK);
+            Potassium.setForeground(Color.BLACK);
+            Praseodymium.setForeground(Color.BLACK);
+            Promethium.setForeground(Color.BLACK);
+            Protactinium.setForeground(Color.BLACK);
+            Radium.setForeground(Color.BLACK);
+            Radon.setForeground(Color.BLACK);
+            Rhenium.setForeground(Color.BLACK);
+            Rhodium.setForeground(Color.BLACK);
+            Roentgenium.setForeground(Color.BLACK);
+            Rubidium.setForeground(Color.BLACK);
+            Ruthenium.setForeground(Color.BLACK);
+            Rutherfordium.setForeground(Color.BLACK);
+            Samarium.setForeground(Color.BLACK);
+            Scandium.setForeground(Color.BLACK);
+            Seaborgium.setForeground(Color.BLACK);
+            Selenium.setForeground(Color.BLACK);
+            Silicon.setForeground(Color.BLACK);
+            Silver.setForeground(Color.BLACK);
+            Sodium.setForeground(Color.BLACK);
+            Strontium.setForeground(Color.BLACK);
+            Sulfur.setForeground(Color.BLACK);
+            Tantalum.setForeground(Color.BLACK);
+            Technetium.setForeground(Color.BLACK);
+            Tellurium.setForeground(Color.BLACK);
+            Tennessine.setForeground(Color.BLACK);
+            Terbium.setForeground(Color.BLACK);
+            Thallium.setForeground(Color.BLACK);
+            Thorium.setForeground(Color.BLACK);
+            Thullium.setForeground(Color.BLACK);
+            Tin.setForeground(Color.BLACK);
+            Titanium.setForeground(Color.BLACK);
+            Tungsten.setForeground(Color.BLACK);
+            Uranium.setForeground(Color.BLACK);
+            Vanadium.setForeground(Color.BLACK);
+            Xenon.setForeground(Color.BLACK);
+            Ytterbium.setForeground(Color.BLACK);
+            Yttrium.setForeground(Color.BLACK);
+            Ziconium.setForeground(Color.BLACK);
+            Zinc.setForeground(Color.BLACK);
         }
     }
 }
