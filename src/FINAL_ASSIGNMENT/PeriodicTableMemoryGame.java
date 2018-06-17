@@ -8,6 +8,7 @@ package FINAL_ASSIGNMENT;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -187,6 +188,11 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         setTitle("The Periodic Table Memory Game!");
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
+            }
+        });
 
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(0, 0, 0));
@@ -1640,7 +1646,6 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
 
         timer.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
         timer.setText("420");
-        timer.setToolTipText("");
 
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
         jLabel2.setText("Hint! :");
@@ -1668,7 +1673,6 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
 
         jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
         jLabel6.setText("Enter an element name:");
-        jLabel6.setToolTipText("");
 
         jlabelidk.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 18)); // NOI18N
         jlabelidk.setText("Score:");
@@ -4019,6 +4023,11 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
         }
     }//GEN-LAST:event_abortChallengeActionPerformed
 
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+        //If the game window is closed, all audio from the window is terminated.
+        AudioPlayer.player.stop(audio);
+    }//GEN-LAST:event_formWindowClosed
+
     /**
      * @param args the command line arguments
      */
@@ -4209,7 +4218,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
             //This is a string array that allows players to see hints that can help them out with their guessing of the elements!
             String[] hints = {"Try going through the alphablet for element names!", "HOFBrINCL",
                 "Some elements are named after famous chemists!",
-                "America and a states in the south are element names.",
+                "America and a state in the south are element names.",
                 "The three heaviest elements starting with C's!", "Kryptonite",
                 "Some elements used in warheads and power plants.", "One is used in surgeries and another to treat cancer!",
                 "Two elements are named after two far off planets in the solar system.", "You're going to be salty soon!",
@@ -4231,7 +4240,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
                 "Mercedes uses this gas in its headlights!", "A glow in the dark element that is pretty rad.", "English dubs.", "This element literally sounds like a potion name.",
                 "Someone f e r m -ented this element.", "The cur___ to the disease!", "This element loves to *praise* people!", "This element starts the same way that 'dsylexia' starts.",
                 "The  m a n  liest of elements.", "This element *hass* something to hide!", "Most elements end with 'ium' or 'mium'!", "The element was used in coloured light fixtures.",
-                "Jewlery prospers from some of these element!", "These element is very  i r i  tated.", "Moly-denim", "It rhymes with 'lesson'.",
+                "Jewlery prospers from some of these elements!", "These element is very  i r i  tated.", "Moly-denim", "It rhymes with 'lesson'.",
                 "NYET or m e i t? Who knows my comrades?", "Thul of a boat? Or was it hull?", "Berkel? Merkel? No Merkel is too recent.", "Some elements end in 'um' or 'ine'",
                 "We're 'Roen' together down the stream!", "The Sanctuary of *Selenity*", "Bearium", "Strongtium", "Mi Hoy Minoy!!!!", "Boron sounds like boring. This game is boringggg..."};
 

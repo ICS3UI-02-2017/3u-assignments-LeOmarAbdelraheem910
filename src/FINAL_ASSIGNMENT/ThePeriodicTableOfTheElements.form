@@ -60,7 +60,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="24" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="period3" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="period1" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -105,61 +105,65 @@
                               </Group>
                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="Protactinium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Uranium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Neptunium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Plutonium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Americium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Curium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Berkelium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Californium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Einsteinium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Fermium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Mendelevium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Nobelium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Lawrencium" min="-2" pref="58" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="Protactinium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Uranium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Neptunium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Plutonium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Americium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Curium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Berkelium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Californium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Einsteinium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Fermium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Mendelevium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Nobelium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Lawrencium" min="-2" pref="58" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="Praseodymium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Neodymium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Promethium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Samarium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Europium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Gadolinium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Terbium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Dysprosium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Holmium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Erbium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Thulium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Ytterbium" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Lutetium" min="-2" pref="58" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="Praseodymium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Neodymium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Promethium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Samarium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Europium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Gadolinium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Terbium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Dysprosium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Holmium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Erbium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Thulium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Ytterbium" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Lutetium" min="-2" pref="58" max="-2" attributes="0"/>
-                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="stopMusic" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -509,6 +513,7 @@
                                               </Group>
                                           </Group>
                                       </Group>
+                                      <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -577,7 +582,7 @@
                               <Component id="Thorium" min="-2" pref="58" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace type="unrelated" pref="7" max="32767" attributes="0"/>
                       <Component id="textArea1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -834,41 +839,50 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="28" pref="28" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="Praseodymium" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="Neodymium" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="Promethium" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="Samarium" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="Europium" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="Gadolinium" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="Terbium" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="Dysprosium" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="28" pref="28" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                      <Component id="Praseodymium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Neodymium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Promethium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Samarium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Europium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Gadolinium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Terbium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Dysprosium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                      <Component id="Erbium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Holmium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Thulium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Ytterbium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Lutetium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="Protactinium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Uranium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Neptunium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Plutonium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Americium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Curium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Berkelium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Californium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Einsteinium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Fermium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Mendelevium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Nobelium" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Lawrencium" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                              <Component id="Erbium" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="Holmium" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="Thulium" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="Ytterbium" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="Lutetium" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="stopMusic" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                           </Group>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="Protactinium" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Uranium" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Neptunium" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Plutonium" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Americium" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Curium" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Berkelium" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Californium" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Einsteinium" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Fermium" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Mendelevium" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Nobelium" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Lawrencium" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
@@ -3969,7 +3983,7 @@
     <Component class="javax.swing.JSlider" name="temperatureInKelvin">
       <Properties>
         <Property name="maximum" type="int" value="6000"/>
-        <Property name="toolTipText" type="java.lang.String" value="Termperature Gauge"/>
+        <Property name="toolTipText" type="java.lang.String" value="Termperature Gauge --&gt; Enter no higher than 6000 K into the textbox to the left."/>
         <Property name="value" type="int" value="273"/>
       </Properties>
       <Events>
@@ -4087,6 +4101,18 @@
         </Property>
         <Property name="text" type="java.lang.String" value="States:"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="stopMusic">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Berlin Sans FB Demi" size="14" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Stop all music!"/>
+        <Property name="toolTipText" type="java.lang.String" value="You can stop the relaxing music if you so wish to. :&quot;("/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="stopMusicActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
