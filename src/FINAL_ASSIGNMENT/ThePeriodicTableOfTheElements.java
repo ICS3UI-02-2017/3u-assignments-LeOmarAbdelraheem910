@@ -3109,7 +3109,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame {
 
     private void AluminiumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AluminiumActionPerformed
         ElementPropertiesWindow window = new ElementPropertiesWindow();
-        window.setIcon("Aluminum.png");
+        window.setIcon("Aluminium.png");
         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         window.setAtomicNumber("13");
         window.setAverageAtomicMass("26.9815 amu");
