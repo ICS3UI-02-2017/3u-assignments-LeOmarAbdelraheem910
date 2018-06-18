@@ -285,7 +285,7 @@ public class AboutPage extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
         jLabel10.setText("Dedicatory Message:");
 
-        anEndearingPicture.setIcon(new javax.swing.ImageIcon("C:\\Users\\Omar\\Documents\\NetBeansProjects\\3U Assignments\\3U Assignments\\smiles.png")); // NOI18N
+        anEndearingPicture.setIcon(new javax.swing.ImageIcon("H:\\NetBeansProjects\\3u-assignments-LeOmarAbdelraheem910\\smiles.png")); // NOI18N
 
         jLabel11.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 18)); // NOI18N
         jLabel11.setText("Veronica Eleches, I love you sooooooooooooooooooooooooooooo much!");
