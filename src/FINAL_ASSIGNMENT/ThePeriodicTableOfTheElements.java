@@ -58,193 +58,194 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
         jButton4 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
         popupMenu1 = new java.awt.PopupMenu();
-        Lithium = new javax.swing.JButton();
-        Actinium = new javax.swing.JButton();
-        Beryllium = new javax.swing.JButton();
-        Lanthanum = new javax.swing.JButton();
-        Scandium = new javax.swing.JButton();
-        lanthanideSeriesRange = new javax.swing.JTextField();
-        actinideSeriesRange = new javax.swing.JTextField();
-        Aluminium = new javax.swing.JButton();
-        Fluorine = new javax.swing.JButton();
-        Helium = new javax.swing.JButton();
-        Boron = new javax.swing.JButton();
-        Hydrogen = new javax.swing.JButton();
         textArea1 = new java.awt.TextArea();
-        Sodium = new javax.swing.JButton();
-        Potassium = new javax.swing.JButton();
-        Rubidium = new javax.swing.JButton();
-        Cesium = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         Francium = new javax.swing.JButton();
-        Magnesium = new javax.swing.JButton();
-        Calcium = new javax.swing.JButton();
-        Strontium = new javax.swing.JButton();
-        Barium = new javax.swing.JButton();
-        Radium = new javax.swing.JButton();
-        Yttrium = new javax.swing.JButton();
-        Titanium = new javax.swing.JButton();
-        Molybdenum = new javax.swing.JButton();
-        Technetium = new javax.swing.JButton();
-        Ruthenium = new javax.swing.JButton();
-        Rhodium = new javax.swing.JButton();
-        Palladium = new javax.swing.JButton();
-        Silver = new javax.swing.JButton();
-        Copper = new javax.swing.JButton();
-        Zinc = new javax.swing.JButton();
-        Tungsten = new javax.swing.JButton();
-        Tantalum = new javax.swing.JButton();
-        Iridium = new javax.swing.JButton();
-        Osmium = new javax.swing.JButton();
-        Rhenium = new javax.swing.JButton();
-        Rutherfordium = new javax.swing.JButton();
-        Hafnium = new javax.swing.JButton();
-        Dubnium = new javax.swing.JButton();
-        Seaborgium = new javax.swing.JButton();
-        Bohrium = new javax.swing.JButton();
-        Hassium = new javax.swing.JButton();
-        Meitnerium = new javax.swing.JButton();
-        Darmstadtium = new javax.swing.JButton();
-        Roentgenium = new javax.swing.JButton();
-        Mercury = new javax.swing.JButton();
-        Copernicium = new javax.swing.JButton();
-        Cadmium = new javax.swing.JButton();
-        Gold = new javax.swing.JButton();
-        Platinum = new javax.swing.JButton();
-        Nickel = new javax.swing.JButton();
-        Cobalt = new javax.swing.JButton();
-        Iron = new javax.swing.JButton();
+        Sodium = new javax.swing.JButton();
         Manganese = new javax.swing.JButton();
-        Chromium = new javax.swing.JButton();
-        Vanadium = new javax.swing.JButton();
-        Niobium = new javax.swing.JButton();
-        Zicronium = new javax.swing.JButton();
-        Cerium = new javax.swing.JButton();
-        Praseodymium = new javax.swing.JButton();
-        Neodymium = new javax.swing.JButton();
-        Promethium = new javax.swing.JButton();
-        Samarium = new javax.swing.JButton();
-        Europium = new javax.swing.JButton();
-        Gadolinium = new javax.swing.JButton();
-        Terbium = new javax.swing.JButton();
-        Dysprosium = new javax.swing.JButton();
-        Holmium = new javax.swing.JButton();
-        Erbium = new javax.swing.JButton();
-        Thulium = new javax.swing.JButton();
-        Ytterbium = new javax.swing.JButton();
-        Lutetium = new javax.swing.JButton();
-        Thorium = new javax.swing.JButton();
-        Protactinium = new javax.swing.JButton();
-        Uranium = new javax.swing.JButton();
-        Neptunium = new javax.swing.JButton();
-        Plutonium = new javax.swing.JButton();
-        Americium = new javax.swing.JButton();
-        Curium = new javax.swing.JButton();
-        Berkelium = new javax.swing.JButton();
-        Californium = new javax.swing.JButton();
-        Einsteinium = new javax.swing.JButton();
-        Fermium = new javax.swing.JButton();
-        Mendelevium = new javax.swing.JButton();
-        Nobelium = new javax.swing.JButton();
-        Lawrencium = new javax.swing.JButton();
-        Silicon = new javax.swing.JButton();
-        Germanium = new javax.swing.JButton();
-        Arsenic = new javax.swing.JButton();
-        Antimony = new javax.swing.JButton();
-        Tellurium = new javax.swing.JButton();
-        Polonium = new javax.swing.JButton();
-        Carbon = new javax.swing.JButton();
-        Nitrogen = new javax.swing.JButton();
-        Oxygen = new javax.swing.JButton();
-        Phosphorus = new javax.swing.JButton();
-        Sulfur = new javax.swing.JButton();
-        Selenium = new javax.swing.JButton();
-        Gallium = new javax.swing.JButton();
-        Indium = new javax.swing.JButton();
-        Tin = new javax.swing.JButton();
-        Bismuth = new javax.swing.JButton();
-        Livermorium = new javax.swing.JButton();
-        Moscovium = new javax.swing.JButton();
-        Lead = new javax.swing.JButton();
-        Flerovium = new javax.swing.JButton();
-        Nihonium = new javax.swing.JButton();
-        Thallium = new javax.swing.JButton();
-        Chlorine = new javax.swing.JButton();
-        Bromine = new javax.swing.JButton();
-        Iodine = new javax.swing.JButton();
-        Astatine = new javax.swing.JButton();
-        Tennessine = new javax.swing.JButton();
-        Neon = new javax.swing.JButton();
+        Actinium = new javax.swing.JButton();
         Argon = new javax.swing.JButton();
-        Krypton = new javax.swing.JButton();
-        Xenon = new javax.swing.JButton();
-        Radon = new javax.swing.JButton();
-        Oganesson = new javax.swing.JButton();
-        period1 = new javax.swing.JLabel();
-        period2 = new javax.swing.JLabel();
-        period3 = new javax.swing.JLabel();
-        period4 = new javax.swing.JLabel();
-        period5 = new javax.swing.JLabel();
-        period6 = new javax.swing.JLabel();
-        period7 = new javax.swing.JLabel();
-        group1 = new javax.swing.JLabel();
-        groupIA = new javax.swing.JLabel();
-        group2 = new javax.swing.JLabel();
-        groupIIA = new javax.swing.JLabel();
-        group3 = new javax.swing.JLabel();
-        groupIIIB = new javax.swing.JLabel();
-        group4 = new javax.swing.JLabel();
-        groupIVB = new javax.swing.JLabel();
-        group5 = new javax.swing.JLabel();
-        groupVB = new javax.swing.JLabel();
-        group6 = new javax.swing.JLabel();
-        groupVIB = new javax.swing.JLabel();
-        group7 = new javax.swing.JLabel();
-        groupVIIB = new javax.swing.JLabel();
-        group8 = new javax.swing.JLabel();
-        group9 = new javax.swing.JLabel();
-        group10 = new javax.swing.JLabel();
-        group11 = new javax.swing.JLabel();
-        group12 = new javax.swing.JLabel();
-        groupVIIIB = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        groupIB = new javax.swing.JLabel();
-        groupIIB = new javax.swing.JLabel();
-        group13 = new javax.swing.JLabel();
-        groupIIIA = new javax.swing.JLabel();
-        group14 = new javax.swing.JLabel();
-        groupIVA = new javax.swing.JLabel();
-        group15 = new javax.swing.JLabel();
-        groupVA = new javax.swing.JLabel();
+        Thorium = new javax.swing.JButton();
+        Americium = new javax.swing.JButton();
+        Scandium = new javax.swing.JButton();
         group16 = new javax.swing.JLabel();
-        groupVIA = new javax.swing.JLabel();
-        group17 = new javax.swing.JLabel();
-        groupVIIA = new javax.swing.JLabel();
-        groupVIIIA = new javax.swing.JLabel();
-        group18 = new javax.swing.JLabel();
-        alkaliMetals = new javax.swing.JButton();
-        alkalineEarthMetals = new javax.swing.JButton();
-        transitionMetals = new javax.swing.JButton();
-        lanthanideSeries = new javax.swing.JButton();
+        groupIIB = new javax.swing.JLabel();
         actinideSeries = new javax.swing.JButton();
-        basicMetals = new javax.swing.JButton();
-        metalloids = new javax.swing.JButton();
-        nonmetals = new javax.swing.JButton();
-        halogens = new javax.swing.JButton();
-        nobleGases = new javax.swing.JButton();
-        thePeriodicTableOfElements = new javax.swing.JLabel();
-        temperatureInKelvin = new javax.swing.JSlider();
-        tempInKelvinTextField = new javax.swing.JTextField();
-        jLabel45 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
-        playRelaxingMusic = new javax.swing.JButton();
-        tempConverter = new javax.swing.JButton();
-        memoryGame = new javax.swing.JButton();
-        about = new javax.swing.JButton();
-        jLabel48 = new javax.swing.JLabel();
-        jLabel49 = new javax.swing.JLabel();
+        Calcium = new javax.swing.JButton();
+        period4 = new javax.swing.JLabel();
+        Xenon = new javax.swing.JButton();
+        Ruthenium = new javax.swing.JButton();
+        Erbium = new javax.swing.JButton();
+        group3 = new javax.swing.JLabel();
+        Cerium = new javax.swing.JButton();
+        Lead = new javax.swing.JButton();
+        Antimony = new javax.swing.JButton();
         stopMusic = new javax.swing.JButton();
+        period3 = new javax.swing.JLabel();
+        group2 = new javax.swing.JLabel();
+        Dubnium = new javax.swing.JButton();
+        Iron = new javax.swing.JButton();
+        Cesium = new javax.swing.JButton();
+        period6 = new javax.swing.JLabel();
+        Thulium = new javax.swing.JButton();
+        Lithium = new javax.swing.JButton();
+        group10 = new javax.swing.JLabel();
+        Yttrium = new javax.swing.JButton();
+        tempInKelvinTextField = new javax.swing.JTextField();
+        metalloids = new javax.swing.JButton();
+        Thallium = new javax.swing.JButton();
+        temperatureInKelvin = new javax.swing.JSlider();
+        Nobelium = new javax.swing.JButton();
+        Einsteinium = new javax.swing.JButton();
+        Terbium = new javax.swing.JButton();
+        jLabel47 = new javax.swing.JLabel();
+        Roentgenium = new javax.swing.JButton();
+        Rhodium = new javax.swing.JButton();
+        Radon = new javax.swing.JButton();
+        groupVIB = new javax.swing.JLabel();
+        group11 = new javax.swing.JLabel();
+        Lutetium = new javax.swing.JButton();
+        group5 = new javax.swing.JLabel();
+        Copper = new javax.swing.JButton();
+        jLabel46 = new javax.swing.JLabel();
+        period5 = new javax.swing.JLabel();
+        Chromium = new javax.swing.JButton();
+        Silicon = new javax.swing.JButton();
+        groupIIIB = new javax.swing.JLabel();
+        Samarium = new javax.swing.JButton();
+        Indium = new javax.swing.JButton();
+        Phosphorus = new javax.swing.JButton();
+        Gallium = new javax.swing.JButton();
+        groupIVB = new javax.swing.JLabel();
+        Carbon = new javax.swing.JButton();
+        Gold = new javax.swing.JButton();
+        Seaborgium = new javax.swing.JButton();
+        group14 = new javax.swing.JLabel();
+        Aluminium = new javax.swing.JButton();
+        Lawrencium = new javax.swing.JButton();
+        Nihonium = new javax.swing.JButton();
+        Tennessine = new javax.swing.JButton();
+        Praseodymium = new javax.swing.JButton();
+        lanthanideSeriesRange = new javax.swing.JTextField();
+        Technetium = new javax.swing.JButton();
+        Zicronium = new javax.swing.JButton();
+        jLabel45 = new javax.swing.JLabel();
+        Silver = new javax.swing.JButton();
+        group7 = new javax.swing.JLabel();
+        Nitrogen = new javax.swing.JButton();
+        actinideSeriesRange = new javax.swing.JTextField();
+        Ytterbium = new javax.swing.JButton();
+        nobleGases = new javax.swing.JButton();
+        Magnesium = new javax.swing.JButton();
+        Gadolinium = new javax.swing.JButton();
+        Curium = new javax.swing.JButton();
+        thePeriodicTableOfElements = new javax.swing.JLabel();
+        Bohrium = new javax.swing.JButton();
+        Barium = new javax.swing.JButton();
+        Chlorine = new javax.swing.JButton();
+        groupIIA = new javax.swing.JLabel();
+        Cobalt = new javax.swing.JButton();
+        group15 = new javax.swing.JLabel();
+        Mendelevium = new javax.swing.JButton();
+        Plutonium = new javax.swing.JButton();
+        Flerovium = new javax.swing.JButton();
+        Tin = new javax.swing.JButton();
+        Holmium = new javax.swing.JButton();
+        groupVIIB = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        Cadmium = new javax.swing.JButton();
+        Boron = new javax.swing.JButton();
+        Promethium = new javax.swing.JButton();
+        Rutherfordium = new javax.swing.JButton();
+        Potassium = new javax.swing.JButton();
+        Lanthanum = new javax.swing.JButton();
+        Hassium = new javax.swing.JButton();
+        playRelaxingMusic = new javax.swing.JButton();
+        memoryGame = new javax.swing.JButton();
+        jLabel28 = new javax.swing.JLabel();
+        Oxygen = new javax.swing.JButton();
+        Fluorine = new javax.swing.JButton();
+        Copernicium = new javax.swing.JButton();
+        Tungsten = new javax.swing.JButton();
+        period2 = new javax.swing.JLabel();
+        Radium = new javax.swing.JButton();
+        Iodine = new javax.swing.JButton();
+        Hydrogen = new javax.swing.JButton();
+        Fermium = new javax.swing.JButton();
+        group17 = new javax.swing.JLabel();
+        Moscovium = new javax.swing.JButton();
+        Selenium = new javax.swing.JButton();
+        Iridium = new javax.swing.JButton();
+        Dysprosium = new javax.swing.JButton();
+        group1 = new javax.swing.JLabel();
+        Vanadium = new javax.swing.JButton();
+        about = new javax.swing.JButton();
+        Bromine = new javax.swing.JButton();
+        Platinum = new javax.swing.JButton();
+        Titanium = new javax.swing.JButton();
+        Rhenium = new javax.swing.JButton();
+        Californium = new javax.swing.JButton();
+        Beryllium = new javax.swing.JButton();
+        Osmium = new javax.swing.JButton();
+        groupVA = new javax.swing.JLabel();
+        period1 = new javax.swing.JLabel();
+        Astatine = new javax.swing.JButton();
+        groupIB = new javax.swing.JLabel();
+        groupVB = new javax.swing.JLabel();
+        basicMetals = new javax.swing.JButton();
+        groupIVA = new javax.swing.JLabel();
+        groupVIIA = new javax.swing.JLabel();
+        Sulfur = new javax.swing.JButton();
+        Berkelium = new javax.swing.JButton();
+        halogens = new javax.swing.JButton();
+        Polonium = new javax.swing.JButton();
+        Darmstadtium = new javax.swing.JButton();
+        group8 = new javax.swing.JLabel();
+        Europium = new javax.swing.JButton();
+        alkalineEarthMetals = new javax.swing.JButton();
+        jLabel49 = new javax.swing.JLabel();
+        Arsenic = new javax.swing.JButton();
+        Niobium = new javax.swing.JButton();
+        group13 = new javax.swing.JLabel();
+        group18 = new javax.swing.JLabel();
+        Meitnerium = new javax.swing.JButton();
+        group4 = new javax.swing.JLabel();
+        Nickel = new javax.swing.JButton();
+        Mercury = new javax.swing.JButton();
+        groupVIA = new javax.swing.JLabel();
+        groupVIIIB = new javax.swing.JLabel();
+        Helium = new javax.swing.JButton();
+        Uranium = new javax.swing.JButton();
+        tempConverter = new javax.swing.JButton();
+        group9 = new javax.swing.JLabel();
+        groupIA = new javax.swing.JLabel();
+        Neodymium = new javax.swing.JButton();
+        Protactinium = new javax.swing.JButton();
+        Neptunium = new javax.swing.JButton();
+        jLabel48 = new javax.swing.JLabel();
+        nonmetals = new javax.swing.JButton();
+        Livermorium = new javax.swing.JButton();
+        Hafnium = new javax.swing.JButton();
+        Oganesson = new javax.swing.JButton();
+        alkaliMetals = new javax.swing.JButton();
+        groupIIIA = new javax.swing.JLabel();
+        Zinc = new javax.swing.JButton();
+        Bismuth = new javax.swing.JButton();
+        Tantalum = new javax.swing.JButton();
+        group6 = new javax.swing.JLabel();
+        period7 = new javax.swing.JLabel();
+        Germanium = new javax.swing.JButton();
+        group12 = new javax.swing.JLabel();
+        Palladium = new javax.swing.JButton();
+        transitionMetals = new javax.swing.JButton();
+        Tellurium = new javax.swing.JButton();
+        Molybdenum = new javax.swing.JButton();
+        Krypton = new javax.swing.JButton();
+        lanthanideSeries = new javax.swing.JButton();
+        Neon = new javax.swing.JButton();
+        Strontium = new javax.swing.JButton();
+        groupVIIIA = new javax.swing.JLabel();
+        Rubidium = new javax.swing.JButton();
 
         jButton4.setText("H");
         jButton4.setPreferredSize(new java.awt.Dimension(50, 50));
@@ -268,14 +269,40 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
         setTitle("The Periodic Table Of The Elements");
         setBackground(new java.awt.Color(255, 0, 102));
 
-        Lithium.setBackground(new java.awt.Color(255, 0, 0));
-        Lithium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Lithium.setText("Li");
-        Lithium.setToolTipText("3 Lithium");
-        Lithium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Lithium.addActionListener(new java.awt.event.ActionListener() {
+        textArea1.setVisible(false);
+
+        jPanel1.setBackground(new java.awt.Color(153, 255, 153));
+
+        Francium.setBackground(new java.awt.Color(255, 0, 0));
+        Francium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Francium.setText("Fr");
+        Francium.setToolTipText("87 Francium");
+        Francium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Francium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LithiumActionPerformed(evt);
+                FranciumActionPerformed(evt);
+            }
+        });
+
+        Sodium.setBackground(new java.awt.Color(255, 0, 0));
+        Sodium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Sodium.setText("Na");
+        Sodium.setToolTipText("11 Sodium");
+        Sodium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Sodium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SodiumActionPerformed(evt);
+            }
+        });
+
+        Manganese.setBackground(new java.awt.Color(240, 243, 14));
+        Manganese.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Manganese.setText("Mn");
+        Manganese.setToolTipText("25 Manganese");
+        Manganese.setPreferredSize(new java.awt.Dimension(50, 50));
+        Manganese.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ManganeseActionPerformed(evt);
             }
         });
 
@@ -290,25 +317,36 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
             }
         });
 
-        Beryllium.setBackground(new java.awt.Color(240, 114, 5));
-        Beryllium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Beryllium.setText("Be");
-        Beryllium.setToolTipText("4 Beryllium");
-        Beryllium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Beryllium.addActionListener(new java.awt.event.ActionListener() {
+        Argon.setBackground(new java.awt.Color(126, 0, 255));
+        Argon.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Argon.setText("Ar");
+        Argon.setToolTipText("18 Argon");
+        Argon.setPreferredSize(new java.awt.Dimension(50, 50));
+        Argon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BerylliumActionPerformed(evt);
+                ArgonActionPerformed(evt);
             }
         });
 
-        Lanthanum.setBackground(new java.awt.Color(0, 221, 30));
-        Lanthanum.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Lanthanum.setText("La");
-        Lanthanum.setToolTipText("57 Lanthanum");
-        Lanthanum.setPreferredSize(new java.awt.Dimension(50, 50));
-        Lanthanum.addActionListener(new java.awt.event.ActionListener() {
+        Thorium.setBackground(new java.awt.Color(240, 37, 176));
+        Thorium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Thorium.setText("Th");
+        Thorium.setToolTipText("90 Thorium");
+        Thorium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Thorium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LanthanumActionPerformed(evt);
+                ThoriumActionPerformed(evt);
+            }
+        });
+
+        Americium.setBackground(new java.awt.Color(240, 37, 176));
+        Americium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Americium.setText("Am");
+        Americium.setToolTipText("95 Americium");
+        Americium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Americium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AmericiumActionPerformed(evt);
             }
         });
 
@@ -320,6 +358,614 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
         Scandium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ScandiumActionPerformed(evt);
+            }
+        });
+
+        group16.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        group16.setText("16");
+        group16.setToolTipText("Group 16 (Chalcogens)");
+        group16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        group16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                group16MouseClicked(evt);
+            }
+        });
+
+        groupIIB.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        groupIIB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        groupIIB.setText("IIB");
+        groupIIB.setToolTipText("Group IIB");
+        groupIIB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        groupIIB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                groupIIBMouseClicked(evt);
+            }
+        });
+
+        actinideSeries.setBackground(new java.awt.Color(240, 37, 176));
+        actinideSeries.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        actinideSeries.setText("Actinide Series");
+        actinideSeries.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                actinideSeriesActionPerformed(evt);
+            }
+        });
+
+        Calcium.setBackground(new java.awt.Color(240, 114, 5));
+        Calcium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Calcium.setText("Ca");
+        Calcium.setToolTipText("20 Calcium");
+        Calcium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Calcium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CalciumActionPerformed(evt);
+            }
+        });
+
+        period4.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        period4.setText("4");
+        period4.setToolTipText("Period 4");
+        period4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        period4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                period4MouseClicked(evt);
+            }
+        });
+
+        Xenon.setBackground(new java.awt.Color(126, 0, 255));
+        Xenon.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Xenon.setText("Xe");
+        Xenon.setToolTipText("54 Xenon");
+        Xenon.setPreferredSize(new java.awt.Dimension(50, 50));
+        Xenon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                XenonActionPerformed(evt);
+            }
+        });
+
+        Ruthenium.setBackground(new java.awt.Color(240, 243, 14));
+        Ruthenium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Ruthenium.setText("Ru");
+        Ruthenium.setToolTipText("44 Ruthenium");
+        Ruthenium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Ruthenium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RutheniumActionPerformed(evt);
+            }
+        });
+
+        Erbium.setBackground(new java.awt.Color(0, 221, 30));
+        Erbium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Erbium.setText("Er");
+        Erbium.setToolTipText("68 Erbium");
+        Erbium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Erbium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ErbiumActionPerformed(evt);
+            }
+        });
+
+        group3.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        group3.setText("3");
+        group3.setToolTipText("Group 3");
+        group3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        group3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                group3MouseClicked(evt);
+            }
+        });
+
+        Cerium.setBackground(new java.awt.Color(0, 221, 30));
+        Cerium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Cerium.setText("Ce");
+        Cerium.setToolTipText("58 Cerium");
+        Cerium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Cerium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CeriumActionPerformed(evt);
+            }
+        });
+
+        Lead.setBackground(new java.awt.Color(240, 115, 154));
+        Lead.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Lead.setText("Pb");
+        Lead.setToolTipText("82 Lead");
+        Lead.setPreferredSize(new java.awt.Dimension(50, 50));
+        Lead.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LeadActionPerformed(evt);
+            }
+        });
+
+        Antimony.setBackground(new java.awt.Color(0, 102, 0));
+        Antimony.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Antimony.setText("Sb");
+        Antimony.setToolTipText("51 Antimony");
+        Antimony.setPreferredSize(new java.awt.Dimension(50, 50));
+        Antimony.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AntimonyActionPerformed(evt);
+            }
+        });
+
+        stopMusic.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        stopMusic.setText("Stop all music!");
+        stopMusic.setToolTipText("You can stop the relaxing music if you so wish to. :\"(");
+        stopMusic.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                stopMusicActionPerformed(evt);
+            }
+        });
+
+        period3.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        period3.setText("3");
+        period3.setToolTipText("Period 3");
+        period3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        period3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                period3MouseClicked(evt);
+            }
+        });
+
+        group2.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        group2.setText("2");
+        group2.setToolTipText("Group 2 (Alkaline Earth Metals)");
+        group2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        group2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                group2MouseClicked(evt);
+            }
+        });
+
+        Dubnium.setBackground(new java.awt.Color(240, 243, 14));
+        Dubnium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Dubnium.setText("Db");
+        Dubnium.setToolTipText("105 Dubnium");
+        Dubnium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Dubnium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DubniumActionPerformed(evt);
+            }
+        });
+
+        Iron.setBackground(new java.awt.Color(240, 243, 14));
+        Iron.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Iron.setText("Fe");
+        Iron.setToolTipText("26 Iron");
+        Iron.setPreferredSize(new java.awt.Dimension(50, 50));
+        Iron.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IronActionPerformed(evt);
+            }
+        });
+
+        Cesium.setBackground(new java.awt.Color(255, 0, 0));
+        Cesium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Cesium.setText("Cs");
+        Cesium.setToolTipText("55 Cesium");
+        Cesium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Cesium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CesiumActionPerformed(evt);
+            }
+        });
+
+        period6.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        period6.setText("6");
+        period6.setToolTipText("Period 6");
+        period6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        period6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                period6MouseClicked(evt);
+            }
+        });
+
+        Thulium.setBackground(new java.awt.Color(0, 221, 30));
+        Thulium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Thulium.setText("Tm");
+        Thulium.setToolTipText("69 Thulium");
+        Thulium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Thulium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ThuliumActionPerformed(evt);
+            }
+        });
+
+        Lithium.setBackground(new java.awt.Color(255, 0, 0));
+        Lithium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Lithium.setText("Li");
+        Lithium.setToolTipText("3 Lithium");
+        Lithium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Lithium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LithiumActionPerformed(evt);
+            }
+        });
+
+        group10.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        group10.setText("10");
+        group10.setToolTipText("Group 10");
+        group10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        group10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                group10MouseClicked(evt);
+            }
+        });
+
+        Yttrium.setBackground(new java.awt.Color(240, 243, 14));
+        Yttrium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Yttrium.setText("Y");
+        Yttrium.setToolTipText("39 Yttrium");
+        Yttrium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Yttrium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                YttriumActionPerformed(evt);
+            }
+        });
+
+        tempInKelvinTextField.setFont(new java.awt.Font("Berlin Sans FB", 0, 11)); // NOI18N
+        tempInKelvinTextField.setToolTipText("What temperature is it? (K)");
+        tempInKelvinTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tempInKelvinTextFieldActionPerformed(evt);
+            }
+        });
+
+        metalloids.setBackground(new java.awt.Color(0, 102, 0));
+        metalloids.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        metalloids.setText("Metalloids");
+        metalloids.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                metalloidsActionPerformed(evt);
+            }
+        });
+
+        Thallium.setBackground(new java.awt.Color(240, 115, 154));
+        Thallium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Thallium.setText("Tl");
+        Thallium.setToolTipText("81 Thallium");
+        Thallium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Thallium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ThalliumActionPerformed(evt);
+            }
+        });
+
+        temperatureInKelvin.setMaximum(6000);
+        temperatureInKelvin.setToolTipText("Termperature Gauge --> Enter no higher than 6000 K into the textbox to the left.");
+        temperatureInKelvin.setValue(273);
+        temperatureInKelvin.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                temperatureInKelvinStateChanged(evt);
+            }
+        });
+
+        Nobelium.setBackground(new java.awt.Color(240, 37, 176));
+        Nobelium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Nobelium.setText("No");
+        Nobelium.setToolTipText("102 Nobelium ");
+        Nobelium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Nobelium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NobeliumActionPerformed(evt);
+            }
+        });
+
+        Einsteinium.setBackground(new java.awt.Color(240, 37, 176));
+        Einsteinium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Einsteinium.setText("Es");
+        Einsteinium.setToolTipText("99 Einsteinium");
+        Einsteinium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Einsteinium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EinsteiniumActionPerformed(evt);
+            }
+        });
+
+        Terbium.setBackground(new java.awt.Color(0, 221, 30));
+        Terbium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Terbium.setText("Tb");
+        Terbium.setToolTipText("65 Terbium");
+        Terbium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Terbium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TerbiumActionPerformed(evt);
+            }
+        });
+
+        jLabel47.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        jLabel47.setForeground(new java.awt.Color(102, 0, 0));
+        jLabel47.setText("C --> Gas");
+        jLabel47.setToolTipText("Red text indicates a gaseous substance.");
+
+        Roentgenium.setBackground(new java.awt.Color(240, 243, 14));
+        Roentgenium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Roentgenium.setText("Rg");
+        Roentgenium.setToolTipText("111 Roentgenium");
+        Roentgenium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Roentgenium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RoentgeniumActionPerformed(evt);
+            }
+        });
+
+        Rhodium.setBackground(new java.awt.Color(240, 243, 14));
+        Rhodium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Rhodium.setText("Rh");
+        Rhodium.setToolTipText("45 Rhodium");
+        Rhodium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Rhodium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RhodiumActionPerformed(evt);
+            }
+        });
+
+        Radon.setBackground(new java.awt.Color(126, 0, 255));
+        Radon.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Radon.setText("Rn");
+        Radon.setToolTipText("86 Radon");
+        Radon.setPreferredSize(new java.awt.Dimension(50, 50));
+        Radon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RadonActionPerformed(evt);
+            }
+        });
+
+        groupVIB.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        groupVIB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        groupVIB.setText("VIB");
+        groupVIB.setToolTipText("Group VIB");
+        groupVIB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        groupVIB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                groupVIBMouseClicked(evt);
+            }
+        });
+
+        group11.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        group11.setText("11");
+        group11.setToolTipText("Group 11");
+        group11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        group11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                group11MouseClicked(evt);
+            }
+        });
+
+        Lutetium.setBackground(new java.awt.Color(0, 221, 30));
+        Lutetium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Lutetium.setText("Lu");
+        Lutetium.setToolTipText("71 Lutetium");
+        Lutetium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Lutetium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LutetiumActionPerformed(evt);
+            }
+        });
+
+        group5.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        group5.setText("5");
+        group5.setToolTipText("Group 5");
+        group5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        group5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                group5MouseClicked(evt);
+            }
+        });
+
+        Copper.setBackground(new java.awt.Color(240, 243, 14));
+        Copper.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Copper.setText("Cu");
+        Copper.setToolTipText("29 Copper");
+        Copper.setPreferredSize(new java.awt.Dimension(50, 50));
+        Copper.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CopperActionPerformed(evt);
+            }
+        });
+
+        jLabel46.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        jLabel46.setForeground(new java.awt.Color(0, 0, 204));
+        jLabel46.setText("C --> Liquid");
+        jLabel46.setToolTipText("Blue text indicates a liquid substance.");
+
+        period5.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        period5.setText("5");
+        period5.setToolTipText("Period 5");
+        period5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        period5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                period5MouseClicked(evt);
+            }
+        });
+
+        Chromium.setBackground(new java.awt.Color(240, 243, 14));
+        Chromium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Chromium.setText("Cr");
+        Chromium.setToolTipText("24 Chromium");
+        Chromium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Chromium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChromiumActionPerformed(evt);
+            }
+        });
+
+        Silicon.setBackground(new java.awt.Color(0, 102, 0));
+        Silicon.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Silicon.setText("Si");
+        Silicon.setToolTipText("14 Silicon");
+        Silicon.setPreferredSize(new java.awt.Dimension(50, 50));
+        Silicon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SiliconActionPerformed(evt);
+            }
+        });
+
+        groupIIIB.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        groupIIIB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        groupIIIB.setText("IIIB");
+        groupIIIB.setToolTipText("Group IIIB");
+        groupIIIB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        groupIIIB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                groupIIIBMouseClicked(evt);
+            }
+        });
+
+        Samarium.setBackground(new java.awt.Color(0, 221, 30));
+        Samarium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Samarium.setText("Sm");
+        Samarium.setToolTipText("62 Samarium");
+        Samarium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Samarium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SamariumActionPerformed(evt);
+            }
+        });
+
+        Indium.setBackground(new java.awt.Color(240, 115, 154));
+        Indium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Indium.setText("In");
+        Indium.setToolTipText("49 Indium");
+        Indium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Indium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IndiumActionPerformed(evt);
+            }
+        });
+
+        Phosphorus.setBackground(new java.awt.Color(0, 224, 202));
+        Phosphorus.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Phosphorus.setText("P");
+        Phosphorus.setToolTipText("15 Phosphorus");
+        Phosphorus.setBorderPainted(false);
+        Phosphorus.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Phosphorus.setPreferredSize(new java.awt.Dimension(50, 50));
+        Phosphorus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PhosphorusActionPerformed(evt);
+            }
+        });
+
+        Gallium.setBackground(new java.awt.Color(240, 115, 154));
+        Gallium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Gallium.setText("Ga");
+        Gallium.setToolTipText("31 Gallium");
+        Gallium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Gallium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GalliumActionPerformed(evt);
+            }
+        });
+
+        groupIVB.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        groupIVB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        groupIVB.setText("IVB");
+        groupIVB.setToolTipText("Group IVB");
+        groupIVB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        groupIVB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                groupIVBMouseClicked(evt);
+            }
+        });
+
+        Carbon.setBackground(new java.awt.Color(0, 224, 202));
+        Carbon.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Carbon.setText("C");
+        Carbon.setToolTipText("6 Carbon");
+        Carbon.setBorderPainted(false);
+        Carbon.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Carbon.setPreferredSize(new java.awt.Dimension(50, 50));
+        Carbon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CarbonActionPerformed(evt);
+            }
+        });
+
+        Gold.setBackground(new java.awt.Color(240, 243, 14));
+        Gold.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Gold.setText("Au");
+        Gold.setToolTipText("79 Gold");
+        Gold.setPreferredSize(new java.awt.Dimension(50, 50));
+        Gold.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GoldActionPerformed(evt);
+            }
+        });
+
+        Seaborgium.setBackground(new java.awt.Color(240, 243, 14));
+        Seaborgium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Seaborgium.setText("Sg");
+        Seaborgium.setToolTipText("106 Seaborgium");
+        Seaborgium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Seaborgium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SeaborgiumActionPerformed(evt);
+            }
+        });
+
+        group14.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        group14.setText("14");
+        group14.setToolTipText("Group 14 (Carbon Group)");
+        group14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        group14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                group14MouseClicked(evt);
+            }
+        });
+
+        Aluminium.setBackground(new java.awt.Color(240, 115, 154));
+        Aluminium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Aluminium.setText("Al");
+        Aluminium.setToolTipText("13 Aluminium or Aluminum");
+        Aluminium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Aluminium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AluminiumActionPerformed(evt);
+            }
+        });
+
+        Lawrencium.setBackground(new java.awt.Color(240, 37, 176));
+        Lawrencium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Lawrencium.setText("Lr");
+        Lawrencium.setToolTipText("103 Lawrencium");
+        Lawrencium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Lawrencium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LawrenciumActionPerformed(evt);
+            }
+        });
+
+        Nihonium.setBackground(new java.awt.Color(240, 115, 154));
+        Nihonium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Nihonium.setText("Nh");
+        Nihonium.setToolTipText("113 Nihonium");
+        Nihonium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Nihonium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NihoniumActionPerformed(evt);
+            }
+        });
+
+        Tennessine.setBackground(new java.awt.Color(51, 153, 255));
+        Tennessine.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Tennessine.setText("Ts");
+        Tennessine.setToolTipText("117 Tennessine");
+        Tennessine.setPreferredSize(new java.awt.Dimension(50, 50));
+        Tennessine.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TennessineActionPerformed(evt);
+            }
+        });
+
+        Praseodymium.setBackground(new java.awt.Color(0, 221, 30));
+        Praseodymium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Praseodymium.setText("Pr");
+        Praseodymium.setToolTipText("59 Praseodymium");
+        Praseodymium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Praseodymium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PraseodymiumActionPerformed(evt);
             }
         });
 
@@ -336,6 +982,66 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
             }
         });
 
+        Technetium.setBackground(new java.awt.Color(240, 243, 14));
+        Technetium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Technetium.setText("Tc");
+        Technetium.setToolTipText("43 Technetium");
+        Technetium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Technetium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TechnetiumActionPerformed(evt);
+            }
+        });
+
+        Zicronium.setBackground(new java.awt.Color(240, 243, 14));
+        Zicronium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Zicronium.setText("Zr");
+        Zicronium.setToolTipText("40 Zirconium");
+        Zicronium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Zicronium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ZicroniumActionPerformed(evt);
+            }
+        });
+
+        jLabel45.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        jLabel45.setText("C --> Solid");
+        jLabel45.setToolTipText("Black text indicates a solid substance.");
+
+        Silver.setBackground(new java.awt.Color(240, 243, 14));
+        Silver.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Silver.setText("Ag");
+        Silver.setToolTipText("47 Silver");
+        Silver.setPreferredSize(new java.awt.Dimension(50, 50));
+        Silver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SilverActionPerformed(evt);
+            }
+        });
+
+        group7.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        group7.setText("7");
+        group7.setToolTipText("Group 7");
+        group7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        group7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                group7MouseClicked(evt);
+            }
+        });
+
+        Nitrogen.setBackground(new java.awt.Color(0, 224, 202));
+        Nitrogen.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Nitrogen.setText("N");
+        Nitrogen.setToolTipText("7 Nitrogen");
+        Nitrogen.setBorderPainted(false);
+        Nitrogen.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Nitrogen.setPreferredSize(new java.awt.Dimension(50, 50));
+        Nitrogen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NitrogenActionPerformed(evt);
+            }
+        });
+
         actinideSeriesRange.setEditable(false);
         actinideSeriesRange.setBackground(new java.awt.Color(240, 37, 176));
         actinideSeriesRange.setFont(new java.awt.Font("Berlin Sans FB", 0, 12)); // NOI18N
@@ -349,14 +1055,313 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
             }
         });
 
-        Aluminium.setBackground(new java.awt.Color(240, 115, 154));
-        Aluminium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Aluminium.setText("Al");
-        Aluminium.setToolTipText("13 Aluminium or Aluminum");
-        Aluminium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Aluminium.addActionListener(new java.awt.event.ActionListener() {
+        Ytterbium.setBackground(new java.awt.Color(0, 221, 30));
+        Ytterbium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Ytterbium.setText("Yb");
+        Ytterbium.setToolTipText("70 Ytterbium");
+        Ytterbium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Ytterbium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AluminiumActionPerformed(evt);
+                YtterbiumActionPerformed(evt);
+            }
+        });
+
+        nobleGases.setBackground(new java.awt.Color(126, 0, 255));
+        nobleGases.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        nobleGases.setText("Noble Gases");
+        nobleGases.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nobleGasesActionPerformed(evt);
+            }
+        });
+
+        Magnesium.setBackground(new java.awt.Color(240, 114, 5));
+        Magnesium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Magnesium.setText("Mg");
+        Magnesium.setToolTipText("12 Magnesium");
+        Magnesium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Magnesium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MagnesiumActionPerformed(evt);
+            }
+        });
+
+        Gadolinium.setBackground(new java.awt.Color(0, 221, 30));
+        Gadolinium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Gadolinium.setText("Gd");
+        Gadolinium.setToolTipText("64 Gadolinium");
+        Gadolinium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Gadolinium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GadoliniumActionPerformed(evt);
+            }
+        });
+
+        Curium.setBackground(new java.awt.Color(240, 37, 176));
+        Curium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Curium.setText("Cm");
+        Curium.setToolTipText("96 Curium");
+        Curium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Curium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CuriumActionPerformed(evt);
+            }
+        });
+
+        thePeriodicTableOfElements.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 36)); // NOI18N
+        thePeriodicTableOfElements.setText("The Periodic Table of the Elements");
+        thePeriodicTableOfElements.setToolTipText("Exactly what it is. :\")");
+        thePeriodicTableOfElements.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        thePeriodicTableOfElements.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                thePeriodicTableOfElementsMouseClicked(evt);
+            }
+        });
+
+        Bohrium.setBackground(new java.awt.Color(240, 243, 14));
+        Bohrium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Bohrium.setText("Bh");
+        Bohrium.setToolTipText("107 Bohrium");
+        Bohrium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Bohrium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BohriumActionPerformed(evt);
+            }
+        });
+
+        Barium.setBackground(new java.awt.Color(240, 114, 5));
+        Barium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Barium.setText("Ba");
+        Barium.setToolTipText("56 Barium");
+        Barium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Barium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BariumActionPerformed(evt);
+            }
+        });
+
+        Chlorine.setBackground(new java.awt.Color(51, 153, 255));
+        Chlorine.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Chlorine.setText("Cl");
+        Chlorine.setToolTipText("17 Chlorine");
+        Chlorine.setPreferredSize(new java.awt.Dimension(50, 50));
+        Chlorine.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChlorineActionPerformed(evt);
+            }
+        });
+
+        groupIIA.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        groupIIA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        groupIIA.setText("IIA");
+        groupIIA.setToolTipText("Group IIA (Alkaline Earth Metals)");
+        groupIIA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        groupIIA.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                groupIIAMouseClicked(evt);
+            }
+        });
+
+        Cobalt.setBackground(new java.awt.Color(240, 243, 14));
+        Cobalt.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Cobalt.setText("Co");
+        Cobalt.setToolTipText("27 Cobalt");
+        Cobalt.setPreferredSize(new java.awt.Dimension(50, 50));
+        Cobalt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CobaltActionPerformed(evt);
+            }
+        });
+
+        group15.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        group15.setText("15");
+        group15.setToolTipText("Group 15 (Pnicogens)");
+        group15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        group15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                group15MouseClicked(evt);
+            }
+        });
+
+        Mendelevium.setBackground(new java.awt.Color(240, 37, 176));
+        Mendelevium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Mendelevium.setText("Md");
+        Mendelevium.setToolTipText("101 Mendelevium");
+        Mendelevium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Mendelevium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MendeleviumActionPerformed(evt);
+            }
+        });
+
+        Plutonium.setBackground(new java.awt.Color(240, 37, 176));
+        Plutonium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Plutonium.setText("Pu");
+        Plutonium.setToolTipText("94 Plutonium");
+        Plutonium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Plutonium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PlutoniumActionPerformed(evt);
+            }
+        });
+
+        Flerovium.setBackground(new java.awt.Color(240, 115, 154));
+        Flerovium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Flerovium.setText("Fv");
+        Flerovium.setToolTipText("114 Flerovium");
+        Flerovium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Flerovium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FleroviumActionPerformed(evt);
+            }
+        });
+
+        Tin.setBackground(new java.awt.Color(240, 115, 154));
+        Tin.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Tin.setText("Sn");
+        Tin.setToolTipText("50 Tin");
+        Tin.setPreferredSize(new java.awt.Dimension(50, 50));
+        Tin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TinActionPerformed(evt);
+            }
+        });
+
+        Holmium.setBackground(new java.awt.Color(0, 221, 30));
+        Holmium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Holmium.setText("Ho");
+        Holmium.setToolTipText("67 Holmium");
+        Holmium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Holmium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HolmiumActionPerformed(evt);
+            }
+        });
+
+        groupVIIB.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        groupVIIB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        groupVIIB.setText("VIIB");
+        groupVIIB.setToolTipText("Group VIIB");
+        groupVIIB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        groupVIIB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                groupVIIBMouseClicked(evt);
+            }
+        });
+
+        jLabel29.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel29.setText("<--");
+
+        Cadmium.setBackground(new java.awt.Color(240, 243, 14));
+        Cadmium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Cadmium.setText("Cd");
+        Cadmium.setToolTipText("48 Cadmium");
+        Cadmium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Cadmium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CadmiumActionPerformed(evt);
+            }
+        });
+
+        Boron.setBackground(new java.awt.Color(0, 102, 0));
+        Boron.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Boron.setText("B");
+        Boron.setToolTipText("5 Boron");
+        Boron.setPreferredSize(new java.awt.Dimension(50, 50));
+        Boron.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BoronActionPerformed(evt);
+            }
+        });
+
+        Promethium.setBackground(new java.awt.Color(0, 221, 30));
+        Promethium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Promethium.setText("Pm");
+        Promethium.setToolTipText("61 Promethium");
+        Promethium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Promethium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PromethiumActionPerformed(evt);
+            }
+        });
+
+        Rutherfordium.setBackground(new java.awt.Color(240, 243, 14));
+        Rutherfordium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Rutherfordium.setText("Rf");
+        Rutherfordium.setToolTipText("104 Rutherfordium");
+        Rutherfordium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Rutherfordium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RutherfordiumActionPerformed(evt);
+            }
+        });
+
+        Potassium.setBackground(new java.awt.Color(255, 0, 0));
+        Potassium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Potassium.setText("K");
+        Potassium.setToolTipText("19 Potassium");
+        Potassium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Potassium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PotassiumActionPerformed(evt);
+            }
+        });
+
+        Lanthanum.setBackground(new java.awt.Color(0, 221, 30));
+        Lanthanum.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Lanthanum.setText("La");
+        Lanthanum.setToolTipText("57 Lanthanum");
+        Lanthanum.setPreferredSize(new java.awt.Dimension(50, 50));
+        Lanthanum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LanthanumActionPerformed(evt);
+            }
+        });
+
+        Hassium.setBackground(new java.awt.Color(240, 243, 14));
+        Hassium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Hassium.setText("Hs");
+        Hassium.setToolTipText("108 Hassium");
+        Hassium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Hassium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HassiumActionPerformed(evt);
+            }
+        });
+
+        playRelaxingMusic.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
+        playRelaxingMusic.setText("Click here to play relaxing music!");
+        playRelaxingMusic.setToolTipText("Do it. Chemistry is stressful!");
+        playRelaxingMusic.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                playRelaxingMusicActionPerformed(evt);
+            }
+        });
+
+        memoryGame.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        memoryGame.setText("The Periodic Table Memory Game");
+        memoryGame.setToolTipText("Test how well your know the names of the elements!");
+        memoryGame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                memoryGameActionPerformed(evt);
+            }
+        });
+
+        jLabel28.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel28.setText("-->");
+
+        Oxygen.setBackground(new java.awt.Color(0, 224, 202));
+        Oxygen.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Oxygen.setText("O");
+        Oxygen.setToolTipText("8 Oxygen");
+        Oxygen.setBorderPainted(false);
+        Oxygen.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Oxygen.setPreferredSize(new java.awt.Dimension(50, 50));
+        Oxygen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OxygenActionPerformed(evt);
             }
         });
 
@@ -371,25 +1376,57 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
             }
         });
 
-        Helium.setBackground(new java.awt.Color(126, 0, 255));
-        Helium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Helium.setText("He");
-        Helium.setToolTipText("2 Helium");
-        Helium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Helium.addActionListener(new java.awt.event.ActionListener() {
+        Copernicium.setBackground(new java.awt.Color(240, 243, 14));
+        Copernicium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Copernicium.setText("Cn");
+        Copernicium.setToolTipText("112 Copernicium");
+        Copernicium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Copernicium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HeliumActionPerformed(evt);
+                CoperniciumActionPerformed(evt);
             }
         });
 
-        Boron.setBackground(new java.awt.Color(0, 102, 0));
-        Boron.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Boron.setText("B");
-        Boron.setToolTipText("5 Boron");
-        Boron.setPreferredSize(new java.awt.Dimension(50, 50));
-        Boron.addActionListener(new java.awt.event.ActionListener() {
+        Tungsten.setBackground(new java.awt.Color(240, 243, 14));
+        Tungsten.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Tungsten.setText("W");
+        Tungsten.setToolTipText("74 Tungsten");
+        Tungsten.setPreferredSize(new java.awt.Dimension(50, 50));
+        Tungsten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BoronActionPerformed(evt);
+                TungstenActionPerformed(evt);
+            }
+        });
+
+        period2.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        period2.setText("2");
+        period2.setToolTipText("Period 2");
+        period2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        period2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                period2MouseClicked(evt);
+            }
+        });
+
+        Radium.setBackground(new java.awt.Color(240, 114, 5));
+        Radium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Radium.setText("Ra");
+        Radium.setToolTipText("88 Radium");
+        Radium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Radium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RadiumActionPerformed(evt);
+            }
+        });
+
+        Iodine.setBackground(new java.awt.Color(51, 153, 255));
+        Iodine.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Iodine.setText("I");
+        Iodine.setToolTipText("53 Iodine");
+        Iodine.setPreferredSize(new java.awt.Dimension(50, 50));
+        Iodine.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IodineActionPerformed(evt);
             }
         });
 
@@ -407,789 +1444,6 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
             }
         });
 
-        textArea1.setVisible(false);
-
-        Sodium.setBackground(new java.awt.Color(255, 0, 0));
-        Sodium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Sodium.setText("Na");
-        Sodium.setToolTipText("11 Sodium");
-        Sodium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Sodium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SodiumActionPerformed(evt);
-            }
-        });
-
-        Potassium.setBackground(new java.awt.Color(255, 0, 0));
-        Potassium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Potassium.setText("K");
-        Potassium.setToolTipText("19 Potassium");
-        Potassium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Potassium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PotassiumActionPerformed(evt);
-            }
-        });
-
-        Rubidium.setBackground(new java.awt.Color(255, 0, 0));
-        Rubidium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Rubidium.setText("Rb");
-        Rubidium.setToolTipText("37 Rubidium");
-        Rubidium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Rubidium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RubidiumActionPerformed(evt);
-            }
-        });
-
-        Cesium.setBackground(new java.awt.Color(255, 0, 0));
-        Cesium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Cesium.setText("Cs");
-        Cesium.setToolTipText("55 Cesium");
-        Cesium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Cesium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CesiumActionPerformed(evt);
-            }
-        });
-
-        Francium.setBackground(new java.awt.Color(255, 0, 0));
-        Francium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Francium.setText("Fr");
-        Francium.setToolTipText("87 Francium");
-        Francium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Francium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FranciumActionPerformed(evt);
-            }
-        });
-
-        Magnesium.setBackground(new java.awt.Color(240, 114, 5));
-        Magnesium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Magnesium.setText("Mg");
-        Magnesium.setToolTipText("12 Magnesium");
-        Magnesium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Magnesium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MagnesiumActionPerformed(evt);
-            }
-        });
-
-        Calcium.setBackground(new java.awt.Color(240, 114, 5));
-        Calcium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Calcium.setText("Ca");
-        Calcium.setToolTipText("20 Calcium");
-        Calcium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Calcium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CalciumActionPerformed(evt);
-            }
-        });
-
-        Strontium.setBackground(new java.awt.Color(240, 114, 5));
-        Strontium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Strontium.setText("Sr");
-        Strontium.setToolTipText("38 Strontium");
-        Strontium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Strontium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                StrontiumActionPerformed(evt);
-            }
-        });
-
-        Barium.setBackground(new java.awt.Color(240, 114, 5));
-        Barium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Barium.setText("Ba");
-        Barium.setToolTipText("56 Barium");
-        Barium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Barium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BariumActionPerformed(evt);
-            }
-        });
-
-        Radium.setBackground(new java.awt.Color(240, 114, 5));
-        Radium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Radium.setText("Ra");
-        Radium.setToolTipText("88 Radium");
-        Radium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Radium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RadiumActionPerformed(evt);
-            }
-        });
-
-        Yttrium.setBackground(new java.awt.Color(240, 243, 14));
-        Yttrium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Yttrium.setText("Y");
-        Yttrium.setToolTipText("39 Yttrium");
-        Yttrium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Yttrium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                YttriumActionPerformed(evt);
-            }
-        });
-
-        Titanium.setBackground(new java.awt.Color(240, 243, 14));
-        Titanium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Titanium.setText("Ti");
-        Titanium.setToolTipText("22 Titanium");
-        Titanium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Titanium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TitaniumActionPerformed(evt);
-            }
-        });
-
-        Molybdenum.setBackground(new java.awt.Color(240, 243, 14));
-        Molybdenum.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Molybdenum.setText("Mo");
-        Molybdenum.setToolTipText("42 Molybdenum");
-        Molybdenum.setPreferredSize(new java.awt.Dimension(50, 50));
-        Molybdenum.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MolybdenumActionPerformed(evt);
-            }
-        });
-
-        Technetium.setBackground(new java.awt.Color(240, 243, 14));
-        Technetium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Technetium.setText("Tc");
-        Technetium.setToolTipText("43 Technetium");
-        Technetium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Technetium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TechnetiumActionPerformed(evt);
-            }
-        });
-
-        Ruthenium.setBackground(new java.awt.Color(240, 243, 14));
-        Ruthenium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Ruthenium.setText("Ru");
-        Ruthenium.setToolTipText("44 Ruthenium");
-        Ruthenium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Ruthenium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RutheniumActionPerformed(evt);
-            }
-        });
-
-        Rhodium.setBackground(new java.awt.Color(240, 243, 14));
-        Rhodium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Rhodium.setText("Rh");
-        Rhodium.setToolTipText("45 Rhodium");
-        Rhodium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Rhodium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RhodiumActionPerformed(evt);
-            }
-        });
-
-        Palladium.setBackground(new java.awt.Color(240, 243, 14));
-        Palladium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Palladium.setText("Pd");
-        Palladium.setToolTipText("46 Palladium");
-        Palladium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Palladium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PalladiumActionPerformed(evt);
-            }
-        });
-
-        Silver.setBackground(new java.awt.Color(240, 243, 14));
-        Silver.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Silver.setText("Ag");
-        Silver.setToolTipText("47 Silver");
-        Silver.setPreferredSize(new java.awt.Dimension(50, 50));
-        Silver.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SilverActionPerformed(evt);
-            }
-        });
-
-        Copper.setBackground(new java.awt.Color(240, 243, 14));
-        Copper.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Copper.setText("Cu");
-        Copper.setToolTipText("29 Copper");
-        Copper.setPreferredSize(new java.awt.Dimension(50, 50));
-        Copper.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CopperActionPerformed(evt);
-            }
-        });
-
-        Zinc.setBackground(new java.awt.Color(240, 243, 14));
-        Zinc.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Zinc.setText("Zn");
-        Zinc.setToolTipText("30 Zinc");
-        Zinc.setPreferredSize(new java.awt.Dimension(50, 50));
-        Zinc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ZincActionPerformed(evt);
-            }
-        });
-
-        Tungsten.setBackground(new java.awt.Color(240, 243, 14));
-        Tungsten.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Tungsten.setText("W");
-        Tungsten.setToolTipText("74 Tungsten");
-        Tungsten.setPreferredSize(new java.awt.Dimension(50, 50));
-        Tungsten.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TungstenActionPerformed(evt);
-            }
-        });
-
-        Tantalum.setBackground(new java.awt.Color(240, 243, 14));
-        Tantalum.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Tantalum.setText("Ta");
-        Tantalum.setToolTipText("73 Tantalum");
-        Tantalum.setPreferredSize(new java.awt.Dimension(50, 50));
-        Tantalum.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TantalumActionPerformed(evt);
-            }
-        });
-
-        Iridium.setBackground(new java.awt.Color(240, 243, 14));
-        Iridium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Iridium.setText("Ir");
-        Iridium.setToolTipText("77 Iridium");
-        Iridium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Iridium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IridiumActionPerformed(evt);
-            }
-        });
-
-        Osmium.setBackground(new java.awt.Color(240, 243, 14));
-        Osmium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Osmium.setText("Os");
-        Osmium.setToolTipText("76 Osmium");
-        Osmium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Osmium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OsmiumActionPerformed(evt);
-            }
-        });
-
-        Rhenium.setBackground(new java.awt.Color(240, 243, 14));
-        Rhenium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Rhenium.setText("Re");
-        Rhenium.setToolTipText("75 Rhenium");
-        Rhenium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Rhenium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RheniumActionPerformed(evt);
-            }
-        });
-
-        Rutherfordium.setBackground(new java.awt.Color(240, 243, 14));
-        Rutherfordium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Rutherfordium.setText("Rf");
-        Rutherfordium.setToolTipText("104 Rutherfordium");
-        Rutherfordium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Rutherfordium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RutherfordiumActionPerformed(evt);
-            }
-        });
-
-        Hafnium.setBackground(new java.awt.Color(240, 243, 14));
-        Hafnium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Hafnium.setText("Hf");
-        Hafnium.setToolTipText("72 Halfnium");
-        Hafnium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Hafnium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HafniumActionPerformed(evt);
-            }
-        });
-
-        Dubnium.setBackground(new java.awt.Color(240, 243, 14));
-        Dubnium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Dubnium.setText("Db");
-        Dubnium.setToolTipText("105 Dubnium");
-        Dubnium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Dubnium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DubniumActionPerformed(evt);
-            }
-        });
-
-        Seaborgium.setBackground(new java.awt.Color(240, 243, 14));
-        Seaborgium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Seaborgium.setText("Sg");
-        Seaborgium.setToolTipText("106 Seaborgium");
-        Seaborgium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Seaborgium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SeaborgiumActionPerformed(evt);
-            }
-        });
-
-        Bohrium.setBackground(new java.awt.Color(240, 243, 14));
-        Bohrium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Bohrium.setText("Bh");
-        Bohrium.setToolTipText("107 Bohrium");
-        Bohrium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Bohrium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BohriumActionPerformed(evt);
-            }
-        });
-
-        Hassium.setBackground(new java.awt.Color(240, 243, 14));
-        Hassium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Hassium.setText("Hs");
-        Hassium.setToolTipText("108 Hassium");
-        Hassium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Hassium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HassiumActionPerformed(evt);
-            }
-        });
-
-        Meitnerium.setBackground(new java.awt.Color(240, 243, 14));
-        Meitnerium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Meitnerium.setText("Mt");
-        Meitnerium.setToolTipText("109 Meitnerium");
-        Meitnerium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Meitnerium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MeitneriumActionPerformed(evt);
-            }
-        });
-
-        Darmstadtium.setBackground(new java.awt.Color(240, 243, 14));
-        Darmstadtium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Darmstadtium.setText("Ds");
-        Darmstadtium.setToolTipText("110 Darmstadtium");
-        Darmstadtium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Darmstadtium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DarmstadtiumActionPerformed(evt);
-            }
-        });
-
-        Roentgenium.setBackground(new java.awt.Color(240, 243, 14));
-        Roentgenium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Roentgenium.setText("Rg");
-        Roentgenium.setToolTipText("111 Roentgenium");
-        Roentgenium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Roentgenium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RoentgeniumActionPerformed(evt);
-            }
-        });
-
-        Mercury.setBackground(new java.awt.Color(240, 243, 14));
-        Mercury.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Mercury.setText("Hg");
-        Mercury.setToolTipText("80 Mercury");
-        Mercury.setPreferredSize(new java.awt.Dimension(50, 50));
-        Mercury.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MercuryActionPerformed(evt);
-            }
-        });
-
-        Copernicium.setBackground(new java.awt.Color(240, 243, 14));
-        Copernicium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Copernicium.setText("Cn");
-        Copernicium.setToolTipText("112 Copernicium");
-        Copernicium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Copernicium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CoperniciumActionPerformed(evt);
-            }
-        });
-
-        Cadmium.setBackground(new java.awt.Color(240, 243, 14));
-        Cadmium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Cadmium.setText("Cd");
-        Cadmium.setToolTipText("48 Cadmium");
-        Cadmium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Cadmium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CadmiumActionPerformed(evt);
-            }
-        });
-
-        Gold.setBackground(new java.awt.Color(240, 243, 14));
-        Gold.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Gold.setText("Au");
-        Gold.setToolTipText("79 Gold");
-        Gold.setPreferredSize(new java.awt.Dimension(50, 50));
-        Gold.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GoldActionPerformed(evt);
-            }
-        });
-
-        Platinum.setBackground(new java.awt.Color(240, 243, 14));
-        Platinum.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Platinum.setText("Pt");
-        Platinum.setToolTipText("78 Platinum");
-        Platinum.setPreferredSize(new java.awt.Dimension(50, 50));
-        Platinum.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PlatinumActionPerformed(evt);
-            }
-        });
-
-        Nickel.setBackground(new java.awt.Color(240, 243, 14));
-        Nickel.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Nickel.setText("Ni");
-        Nickel.setToolTipText("28 Nickel");
-        Nickel.setPreferredSize(new java.awt.Dimension(50, 50));
-        Nickel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NickelActionPerformed(evt);
-            }
-        });
-
-        Cobalt.setBackground(new java.awt.Color(240, 243, 14));
-        Cobalt.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Cobalt.setText("Co");
-        Cobalt.setToolTipText("27 Cobalt");
-        Cobalt.setPreferredSize(new java.awt.Dimension(50, 50));
-        Cobalt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CobaltActionPerformed(evt);
-            }
-        });
-
-        Iron.setBackground(new java.awt.Color(240, 243, 14));
-        Iron.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Iron.setText("Fe");
-        Iron.setToolTipText("26 Iron");
-        Iron.setPreferredSize(new java.awt.Dimension(50, 50));
-        Iron.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IronActionPerformed(evt);
-            }
-        });
-
-        Manganese.setBackground(new java.awt.Color(240, 243, 14));
-        Manganese.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Manganese.setText("Mn");
-        Manganese.setToolTipText("25 Manganese");
-        Manganese.setPreferredSize(new java.awt.Dimension(50, 50));
-        Manganese.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ManganeseActionPerformed(evt);
-            }
-        });
-
-        Chromium.setBackground(new java.awt.Color(240, 243, 14));
-        Chromium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Chromium.setText("Cr");
-        Chromium.setToolTipText("24 Chromium");
-        Chromium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Chromium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ChromiumActionPerformed(evt);
-            }
-        });
-
-        Vanadium.setBackground(new java.awt.Color(240, 243, 14));
-        Vanadium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Vanadium.setText("V");
-        Vanadium.setToolTipText("23 Vanadium");
-        Vanadium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Vanadium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VanadiumActionPerformed(evt);
-            }
-        });
-
-        Niobium.setBackground(new java.awt.Color(240, 243, 14));
-        Niobium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Niobium.setText("Nb");
-        Niobium.setToolTipText("41 Niobium");
-        Niobium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Niobium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NiobiumActionPerformed(evt);
-            }
-        });
-
-        Zicronium.setBackground(new java.awt.Color(240, 243, 14));
-        Zicronium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Zicronium.setText("Zr");
-        Zicronium.setToolTipText("40 Zirconium");
-        Zicronium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Zicronium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ZicroniumActionPerformed(evt);
-            }
-        });
-
-        Cerium.setBackground(new java.awt.Color(0, 221, 30));
-        Cerium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Cerium.setText("Ce");
-        Cerium.setToolTipText("58 Cerium");
-        Cerium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Cerium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CeriumActionPerformed(evt);
-            }
-        });
-
-        Praseodymium.setBackground(new java.awt.Color(0, 221, 30));
-        Praseodymium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Praseodymium.setText("Pr");
-        Praseodymium.setToolTipText("59 Praseodymium");
-        Praseodymium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Praseodymium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PraseodymiumActionPerformed(evt);
-            }
-        });
-
-        Neodymium.setBackground(new java.awt.Color(0, 221, 30));
-        Neodymium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Neodymium.setText("Nd");
-        Neodymium.setToolTipText("60 Neodymium");
-        Neodymium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Neodymium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NeodymiumActionPerformed(evt);
-            }
-        });
-
-        Promethium.setBackground(new java.awt.Color(0, 221, 30));
-        Promethium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Promethium.setText("Pm");
-        Promethium.setToolTipText("61 Promethium");
-        Promethium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Promethium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PromethiumActionPerformed(evt);
-            }
-        });
-
-        Samarium.setBackground(new java.awt.Color(0, 221, 30));
-        Samarium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Samarium.setText("Sm");
-        Samarium.setToolTipText("62 Samarium");
-        Samarium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Samarium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SamariumActionPerformed(evt);
-            }
-        });
-
-        Europium.setBackground(new java.awt.Color(0, 221, 30));
-        Europium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Europium.setText("Eu");
-        Europium.setToolTipText("63 Europium");
-        Europium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Europium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EuropiumActionPerformed(evt);
-            }
-        });
-
-        Gadolinium.setBackground(new java.awt.Color(0, 221, 30));
-        Gadolinium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Gadolinium.setText("Gd");
-        Gadolinium.setToolTipText("64 Gadolinium");
-        Gadolinium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Gadolinium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GadoliniumActionPerformed(evt);
-            }
-        });
-
-        Terbium.setBackground(new java.awt.Color(0, 221, 30));
-        Terbium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Terbium.setText("Tb");
-        Terbium.setToolTipText("65 Terbium");
-        Terbium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Terbium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TerbiumActionPerformed(evt);
-            }
-        });
-
-        Dysprosium.setBackground(new java.awt.Color(0, 221, 30));
-        Dysprosium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Dysprosium.setText("Dy");
-        Dysprosium.setToolTipText("66 Dysprosium");
-        Dysprosium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Dysprosium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DysprosiumActionPerformed(evt);
-            }
-        });
-
-        Holmium.setBackground(new java.awt.Color(0, 221, 30));
-        Holmium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Holmium.setText("Ho");
-        Holmium.setToolTipText("67 Holmium");
-        Holmium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Holmium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HolmiumActionPerformed(evt);
-            }
-        });
-
-        Erbium.setBackground(new java.awt.Color(0, 221, 30));
-        Erbium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Erbium.setText("Er");
-        Erbium.setToolTipText("68 Erbium");
-        Erbium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Erbium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ErbiumActionPerformed(evt);
-            }
-        });
-
-        Thulium.setBackground(new java.awt.Color(0, 221, 30));
-        Thulium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Thulium.setText("Tm");
-        Thulium.setToolTipText("69 Thulium");
-        Thulium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Thulium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ThuliumActionPerformed(evt);
-            }
-        });
-
-        Ytterbium.setBackground(new java.awt.Color(0, 221, 30));
-        Ytterbium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Ytterbium.setText("Yb");
-        Ytterbium.setToolTipText("70 Ytterbium");
-        Ytterbium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Ytterbium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                YtterbiumActionPerformed(evt);
-            }
-        });
-
-        Lutetium.setBackground(new java.awt.Color(0, 221, 30));
-        Lutetium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Lutetium.setText("Lu");
-        Lutetium.setToolTipText("71 Lutetium");
-        Lutetium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Lutetium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LutetiumActionPerformed(evt);
-            }
-        });
-
-        Thorium.setBackground(new java.awt.Color(240, 37, 176));
-        Thorium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Thorium.setText("Th");
-        Thorium.setToolTipText("90 Thorium");
-        Thorium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Thorium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ThoriumActionPerformed(evt);
-            }
-        });
-
-        Protactinium.setBackground(new java.awt.Color(240, 37, 176));
-        Protactinium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Protactinium.setText("Pa");
-        Protactinium.setToolTipText("91 Protactinium");
-        Protactinium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Protactinium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ProtactiniumActionPerformed(evt);
-            }
-        });
-
-        Uranium.setBackground(new java.awt.Color(240, 37, 176));
-        Uranium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Uranium.setText("U");
-        Uranium.setToolTipText("92 Uranium");
-        Uranium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Uranium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                UraniumActionPerformed(evt);
-            }
-        });
-
-        Neptunium.setBackground(new java.awt.Color(240, 37, 176));
-        Neptunium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Neptunium.setText("Np");
-        Neptunium.setToolTipText("93 Neptunium");
-        Neptunium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Neptunium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NeptuniumActionPerformed(evt);
-            }
-        });
-
-        Plutonium.setBackground(new java.awt.Color(240, 37, 176));
-        Plutonium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Plutonium.setText("Pu");
-        Plutonium.setToolTipText("94 Plutonium");
-        Plutonium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Plutonium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PlutoniumActionPerformed(evt);
-            }
-        });
-
-        Americium.setBackground(new java.awt.Color(240, 37, 176));
-        Americium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Americium.setText("Am");
-        Americium.setToolTipText("95 Americium");
-        Americium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Americium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AmericiumActionPerformed(evt);
-            }
-        });
-
-        Curium.setBackground(new java.awt.Color(240, 37, 176));
-        Curium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Curium.setText("Cm");
-        Curium.setToolTipText("96 Curium");
-        Curium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Curium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CuriumActionPerformed(evt);
-            }
-        });
-
-        Berkelium.setBackground(new java.awt.Color(240, 37, 176));
-        Berkelium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Berkelium.setText("Bk");
-        Berkelium.setToolTipText("97 Berkelium");
-        Berkelium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Berkelium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BerkeliumActionPerformed(evt);
-            }
-        });
-
-        Californium.setBackground(new java.awt.Color(240, 37, 176));
-        Californium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Californium.setText("Cf");
-        Californium.setToolTipText("98 Californium");
-        Californium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Californium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CaliforniumActionPerformed(evt);
-            }
-        });
-
-        Einsteinium.setBackground(new java.awt.Color(240, 37, 176));
-        Einsteinium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Einsteinium.setText("Es");
-        Einsteinium.setToolTipText("99 Einsteinium");
-        Einsteinium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Einsteinium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EinsteiniumActionPerformed(evt);
-            }
-        });
-
         Fermium.setBackground(new java.awt.Color(240, 37, 176));
         Fermium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
         Fermium.setText("Fm");
@@ -1201,167 +1455,24 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
             }
         });
 
-        Mendelevium.setBackground(new java.awt.Color(240, 37, 176));
-        Mendelevium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Mendelevium.setText("Md");
-        Mendelevium.setToolTipText("101 Mendelevium");
-        Mendelevium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Mendelevium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MendeleviumActionPerformed(evt);
+        group17.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        group17.setText("17");
+        group17.setToolTipText("Group 17 (Halogens)");
+        group17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        group17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                group17MouseClicked(evt);
             }
         });
 
-        Nobelium.setBackground(new java.awt.Color(240, 37, 176));
-        Nobelium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Nobelium.setText("No");
-        Nobelium.setToolTipText("102 Nobelium ");
-        Nobelium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Nobelium.addActionListener(new java.awt.event.ActionListener() {
+        Moscovium.setBackground(new java.awt.Color(240, 115, 154));
+        Moscovium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Moscovium.setText("Mc");
+        Moscovium.setToolTipText("115 Moscovium");
+        Moscovium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Moscovium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NobeliumActionPerformed(evt);
-            }
-        });
-
-        Lawrencium.setBackground(new java.awt.Color(240, 37, 176));
-        Lawrencium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Lawrencium.setText("Lr");
-        Lawrencium.setToolTipText("103 Lawrencium");
-        Lawrencium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Lawrencium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LawrenciumActionPerformed(evt);
-            }
-        });
-
-        Silicon.setBackground(new java.awt.Color(0, 102, 0));
-        Silicon.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Silicon.setText("Si");
-        Silicon.setToolTipText("14 Silicon");
-        Silicon.setPreferredSize(new java.awt.Dimension(50, 50));
-        Silicon.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SiliconActionPerformed(evt);
-            }
-        });
-
-        Germanium.setBackground(new java.awt.Color(0, 102, 0));
-        Germanium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Germanium.setText("Ge");
-        Germanium.setToolTipText("32 Germanium");
-        Germanium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Germanium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GermaniumActionPerformed(evt);
-            }
-        });
-
-        Arsenic.setBackground(new java.awt.Color(0, 102, 0));
-        Arsenic.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Arsenic.setText("As");
-        Arsenic.setToolTipText("33 Arsenic");
-        Arsenic.setPreferredSize(new java.awt.Dimension(50, 50));
-        Arsenic.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ArsenicActionPerformed(evt);
-            }
-        });
-
-        Antimony.setBackground(new java.awt.Color(0, 102, 0));
-        Antimony.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Antimony.setText("Sb");
-        Antimony.setToolTipText("51 Antimony");
-        Antimony.setPreferredSize(new java.awt.Dimension(50, 50));
-        Antimony.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AntimonyActionPerformed(evt);
-            }
-        });
-
-        Tellurium.setBackground(new java.awt.Color(0, 102, 0));
-        Tellurium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Tellurium.setText("Te");
-        Tellurium.setToolTipText("52 Tellurium");
-        Tellurium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Tellurium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TelluriumActionPerformed(evt);
-            }
-        });
-
-        Polonium.setBackground(new java.awt.Color(0, 102, 0));
-        Polonium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Polonium.setText("Po");
-        Polonium.setToolTipText("84 Polonium");
-        Polonium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Polonium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PoloniumActionPerformed(evt);
-            }
-        });
-
-        Carbon.setBackground(new java.awt.Color(0, 224, 202));
-        Carbon.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Carbon.setText("C");
-        Carbon.setToolTipText("6 Carbon");
-        Carbon.setBorderPainted(false);
-        Carbon.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        Carbon.setPreferredSize(new java.awt.Dimension(50, 50));
-        Carbon.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CarbonActionPerformed(evt);
-            }
-        });
-
-        Nitrogen.setBackground(new java.awt.Color(0, 224, 202));
-        Nitrogen.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Nitrogen.setText("N");
-        Nitrogen.setToolTipText("7 Nitrogen");
-        Nitrogen.setBorderPainted(false);
-        Nitrogen.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        Nitrogen.setPreferredSize(new java.awt.Dimension(50, 50));
-        Nitrogen.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NitrogenActionPerformed(evt);
-            }
-        });
-
-        Oxygen.setBackground(new java.awt.Color(0, 224, 202));
-        Oxygen.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Oxygen.setText("O");
-        Oxygen.setToolTipText("8 Oxygen");
-        Oxygen.setBorderPainted(false);
-        Oxygen.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        Oxygen.setPreferredSize(new java.awt.Dimension(50, 50));
-        Oxygen.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OxygenActionPerformed(evt);
-            }
-        });
-
-        Phosphorus.setBackground(new java.awt.Color(0, 224, 202));
-        Phosphorus.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Phosphorus.setText("P");
-        Phosphorus.setToolTipText("15 Phosphorus");
-        Phosphorus.setBorderPainted(false);
-        Phosphorus.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        Phosphorus.setPreferredSize(new java.awt.Dimension(50, 50));
-        Phosphorus.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PhosphorusActionPerformed(evt);
-            }
-        });
-
-        Sulfur.setBackground(new java.awt.Color(0, 224, 202));
-        Sulfur.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Sulfur.setText("S");
-        Sulfur.setToolTipText("16 Sulfur or Sulphur");
-        Sulfur.setBorderPainted(false);
-        Sulfur.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        Sulfur.setPreferredSize(new java.awt.Dimension(50, 50));
-        Sulfur.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SulfurActionPerformed(evt);
+                MoscoviumActionPerformed(evt);
             }
         });
 
@@ -1378,124 +1489,55 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
             }
         });
 
-        Gallium.setBackground(new java.awt.Color(240, 115, 154));
-        Gallium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Gallium.setText("Ga");
-        Gallium.setToolTipText("31 Gallium");
-        Gallium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Gallium.addActionListener(new java.awt.event.ActionListener() {
+        Iridium.setBackground(new java.awt.Color(240, 243, 14));
+        Iridium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Iridium.setText("Ir");
+        Iridium.setToolTipText("77 Iridium");
+        Iridium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Iridium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GalliumActionPerformed(evt);
+                IridiumActionPerformed(evt);
             }
         });
 
-        Indium.setBackground(new java.awt.Color(240, 115, 154));
-        Indium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Indium.setText("In");
-        Indium.setToolTipText("49 Indium");
-        Indium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Indium.addActionListener(new java.awt.event.ActionListener() {
+        Dysprosium.setBackground(new java.awt.Color(0, 221, 30));
+        Dysprosium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Dysprosium.setText("Dy");
+        Dysprosium.setToolTipText("66 Dysprosium");
+        Dysprosium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Dysprosium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IndiumActionPerformed(evt);
+                DysprosiumActionPerformed(evt);
             }
         });
 
-        Tin.setBackground(new java.awt.Color(240, 115, 154));
-        Tin.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Tin.setText("Sn");
-        Tin.setToolTipText("50 Tin");
-        Tin.setPreferredSize(new java.awt.Dimension(50, 50));
-        Tin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TinActionPerformed(evt);
+        group1.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        group1.setText("1");
+        group1.setToolTipText("Group 1 (Alkali Metals)");
+        group1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        group1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                group1MouseClicked(evt);
             }
         });
 
-        Bismuth.setBackground(new java.awt.Color(240, 115, 154));
-        Bismuth.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Bismuth.setText("Bi");
-        Bismuth.setToolTipText("83 Bismuth");
-        Bismuth.setPreferredSize(new java.awt.Dimension(50, 50));
-        Bismuth.addActionListener(new java.awt.event.ActionListener() {
+        Vanadium.setBackground(new java.awt.Color(240, 243, 14));
+        Vanadium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Vanadium.setText("V");
+        Vanadium.setToolTipText("23 Vanadium");
+        Vanadium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Vanadium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BismuthActionPerformed(evt);
+                VanadiumActionPerformed(evt);
             }
         });
 
-        Livermorium.setBackground(new java.awt.Color(240, 115, 154));
-        Livermorium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Livermorium.setText("Lv");
-        Livermorium.setToolTipText("116 Livermorium");
-        Livermorium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Livermorium.addActionListener(new java.awt.event.ActionListener() {
+        about.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        about.setText("About the Table");
+        about.setToolTipText("Instructions on how to use the table and credits.");
+        about.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LivermoriumActionPerformed(evt);
-            }
-        });
-
-        Moscovium.setBackground(new java.awt.Color(240, 115, 154));
-        Moscovium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Moscovium.setText("Mc");
-        Moscovium.setToolTipText("115 Moscovium");
-        Moscovium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Moscovium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MoscoviumActionPerformed(evt);
-            }
-        });
-
-        Lead.setBackground(new java.awt.Color(240, 115, 154));
-        Lead.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Lead.setText("Pb");
-        Lead.setToolTipText("82 Lead");
-        Lead.setPreferredSize(new java.awt.Dimension(50, 50));
-        Lead.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LeadActionPerformed(evt);
-            }
-        });
-
-        Flerovium.setBackground(new java.awt.Color(240, 115, 154));
-        Flerovium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Flerovium.setText("Fv");
-        Flerovium.setToolTipText("114 Flerovium");
-        Flerovium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Flerovium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FleroviumActionPerformed(evt);
-            }
-        });
-
-        Nihonium.setBackground(new java.awt.Color(240, 115, 154));
-        Nihonium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Nihonium.setText("Nh");
-        Nihonium.setToolTipText("113 Nihonium");
-        Nihonium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Nihonium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NihoniumActionPerformed(evt);
-            }
-        });
-
-        Thallium.setBackground(new java.awt.Color(240, 115, 154));
-        Thallium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Thallium.setText("Tl");
-        Thallium.setToolTipText("81 Thallium");
-        Thallium.setPreferredSize(new java.awt.Dimension(50, 50));
-        Thallium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ThalliumActionPerformed(evt);
-            }
-        });
-
-        Chlorine.setBackground(new java.awt.Color(51, 153, 255));
-        Chlorine.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Chlorine.setText("Cl");
-        Chlorine.setToolTipText("17 Chlorine");
-        Chlorine.setPreferredSize(new java.awt.Dimension(50, 50));
-        Chlorine.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ChlorineActionPerformed(evt);
+                aboutActionPerformed(evt);
             }
         });
 
@@ -1510,462 +1552,69 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
             }
         });
 
-        Iodine.setBackground(new java.awt.Color(51, 153, 255));
-        Iodine.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Iodine.setText("I");
-        Iodine.setToolTipText("53 Iodine");
-        Iodine.setPreferredSize(new java.awt.Dimension(50, 50));
-        Iodine.addActionListener(new java.awt.event.ActionListener() {
+        Platinum.setBackground(new java.awt.Color(240, 243, 14));
+        Platinum.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Platinum.setText("Pt");
+        Platinum.setToolTipText("78 Platinum");
+        Platinum.setPreferredSize(new java.awt.Dimension(50, 50));
+        Platinum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IodineActionPerformed(evt);
+                PlatinumActionPerformed(evt);
             }
         });
 
-        Astatine.setBackground(new java.awt.Color(51, 153, 255));
-        Astatine.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Astatine.setText("At");
-        Astatine.setToolTipText("85 Astatine");
-        Astatine.setPreferredSize(new java.awt.Dimension(50, 50));
-        Astatine.addActionListener(new java.awt.event.ActionListener() {
+        Titanium.setBackground(new java.awt.Color(240, 243, 14));
+        Titanium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Titanium.setText("Ti");
+        Titanium.setToolTipText("22 Titanium");
+        Titanium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Titanium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AstatineActionPerformed(evt);
+                TitaniumActionPerformed(evt);
             }
         });
 
-        Tennessine.setBackground(new java.awt.Color(51, 153, 255));
-        Tennessine.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Tennessine.setText("Ts");
-        Tennessine.setToolTipText("117 Tennessine");
-        Tennessine.setPreferredSize(new java.awt.Dimension(50, 50));
-        Tennessine.addActionListener(new java.awt.event.ActionListener() {
+        Rhenium.setBackground(new java.awt.Color(240, 243, 14));
+        Rhenium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Rhenium.setText("Re");
+        Rhenium.setToolTipText("75 Rhenium");
+        Rhenium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Rhenium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TennessineActionPerformed(evt);
+                RheniumActionPerformed(evt);
             }
         });
 
-        Neon.setBackground(new java.awt.Color(126, 0, 255));
-        Neon.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Neon.setText("Ne");
-        Neon.setToolTipText("10 Neon");
-        Neon.setPreferredSize(new java.awt.Dimension(50, 50));
-        Neon.addActionListener(new java.awt.event.ActionListener() {
+        Californium.setBackground(new java.awt.Color(240, 37, 176));
+        Californium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Californium.setText("Cf");
+        Californium.setToolTipText("98 Californium");
+        Californium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Californium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NeonActionPerformed(evt);
+                CaliforniumActionPerformed(evt);
             }
         });
 
-        Argon.setBackground(new java.awt.Color(126, 0, 255));
-        Argon.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Argon.setText("Ar");
-        Argon.setToolTipText("18 Argon");
-        Argon.setPreferredSize(new java.awt.Dimension(50, 50));
-        Argon.addActionListener(new java.awt.event.ActionListener() {
+        Beryllium.setBackground(new java.awt.Color(240, 114, 5));
+        Beryllium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Beryllium.setText("Be");
+        Beryllium.setToolTipText("4 Beryllium");
+        Beryllium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Beryllium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ArgonActionPerformed(evt);
+                BerylliumActionPerformed(evt);
             }
         });
 
-        Krypton.setBackground(new java.awt.Color(126, 0, 255));
-        Krypton.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Krypton.setText("Kr");
-        Krypton.setToolTipText("36 Krypton");
-        Krypton.setPreferredSize(new java.awt.Dimension(50, 50));
-        Krypton.addActionListener(new java.awt.event.ActionListener() {
+        Osmium.setBackground(new java.awt.Color(240, 243, 14));
+        Osmium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Osmium.setText("Os");
+        Osmium.setToolTipText("76 Osmium");
+        Osmium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Osmium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                KryptonActionPerformed(evt);
-            }
-        });
-
-        Xenon.setBackground(new java.awt.Color(126, 0, 255));
-        Xenon.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Xenon.setText("Xe");
-        Xenon.setToolTipText("54 Xenon");
-        Xenon.setPreferredSize(new java.awt.Dimension(50, 50));
-        Xenon.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                XenonActionPerformed(evt);
-            }
-        });
-
-        Radon.setBackground(new java.awt.Color(126, 0, 255));
-        Radon.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Radon.setText("Rn");
-        Radon.setToolTipText("86 Radon");
-        Radon.setPreferredSize(new java.awt.Dimension(50, 50));
-        Radon.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RadonActionPerformed(evt);
-            }
-        });
-
-        Oganesson.setBackground(new java.awt.Color(126, 0, 255));
-        Oganesson.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        Oganesson.setText("Og");
-        Oganesson.setToolTipText("118 Oganesson");
-        Oganesson.setPreferredSize(new java.awt.Dimension(50, 50));
-        Oganesson.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OganessonActionPerformed(evt);
-            }
-        });
-
-        period1.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        period1.setText("1");
-        period1.setToolTipText("Period 1");
-        period1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        period1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                period1MouseClicked(evt);
-            }
-        });
-
-        period2.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        period2.setText("2");
-        period2.setToolTipText("Period 2");
-        period2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        period2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                period2MouseClicked(evt);
-            }
-        });
-
-        period3.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        period3.setText("3");
-        period3.setToolTipText("Period 3");
-        period3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        period3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                period3MouseClicked(evt);
-            }
-        });
-
-        period4.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        period4.setText("4");
-        period4.setToolTipText("Period 4");
-        period4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        period4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                period4MouseClicked(evt);
-            }
-        });
-
-        period5.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        period5.setText("5");
-        period5.setToolTipText("Period 5");
-        period5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        period5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                period5MouseClicked(evt);
-            }
-        });
-
-        period6.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        period6.setText("6");
-        period6.setToolTipText("Period 6");
-        period6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        period6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                period6MouseClicked(evt);
-            }
-        });
-
-        period7.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        period7.setText("7");
-        period7.setToolTipText("Period 7");
-        period7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        period7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                period7MouseClicked(evt);
-            }
-        });
-
-        group1.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        group1.setText("1");
-        group1.setToolTipText("Group 1 (Alkali Metals)");
-        group1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        group1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                group1MouseClicked(evt);
-            }
-        });
-
-        groupIA.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        groupIA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        groupIA.setText("IA");
-        groupIA.setToolTipText("Group IA (Alkali Metals)");
-        groupIA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        groupIA.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                groupIAMouseClicked(evt);
-            }
-        });
-
-        group2.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        group2.setText("2");
-        group2.setToolTipText("Group 2 (Alkaline Earth Metals)");
-        group2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        group2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                group2MouseClicked(evt);
-            }
-        });
-
-        groupIIA.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        groupIIA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        groupIIA.setText("IIA");
-        groupIIA.setToolTipText("Group IIA (Alkaline Earth Metals)");
-        groupIIA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        groupIIA.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                groupIIAMouseClicked(evt);
-            }
-        });
-
-        group3.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        group3.setText("3");
-        group3.setToolTipText("Group 3");
-        group3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        group3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                group3MouseClicked(evt);
-            }
-        });
-
-        groupIIIB.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        groupIIIB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        groupIIIB.setText("IIIB");
-        groupIIIB.setToolTipText("Group IIIB");
-        groupIIIB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        groupIIIB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                groupIIIBMouseClicked(evt);
-            }
-        });
-
-        group4.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        group4.setText("4");
-        group4.setToolTipText("Group 4");
-        group4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        group4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                group4MouseClicked(evt);
-            }
-        });
-
-        groupIVB.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        groupIVB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        groupIVB.setText("IVB");
-        groupIVB.setToolTipText("Group IVB");
-        groupIVB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        groupIVB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                groupIVBMouseClicked(evt);
-            }
-        });
-
-        group5.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        group5.setText("5");
-        group5.setToolTipText("Group 5");
-        group5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        group5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                group5MouseClicked(evt);
-            }
-        });
-
-        groupVB.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        groupVB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        groupVB.setText("VB");
-        groupVB.setToolTipText("Group VB");
-        groupVB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        groupVB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                groupVBMouseClicked(evt);
-            }
-        });
-
-        group6.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        group6.setText("6");
-        group6.setToolTipText("Group 6");
-        group6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        group6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                group6MouseClicked(evt);
-            }
-        });
-
-        groupVIB.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        groupVIB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        groupVIB.setText("VIB");
-        groupVIB.setToolTipText("Group VIB");
-        groupVIB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        groupVIB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                groupVIBMouseClicked(evt);
-            }
-        });
-
-        group7.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        group7.setText("7");
-        group7.setToolTipText("Group 7");
-        group7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        group7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                group7MouseClicked(evt);
-            }
-        });
-
-        groupVIIB.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        groupVIIB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        groupVIIB.setText("VIIB");
-        groupVIIB.setToolTipText("Group VIIB");
-        groupVIIB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        groupVIIB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                groupVIIBMouseClicked(evt);
-            }
-        });
-
-        group8.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        group8.setText("8");
-        group8.setToolTipText("Group 8");
-        group8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        group8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                group8MouseClicked(evt);
-            }
-        });
-
-        group9.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        group9.setText("9");
-        group9.setToolTipText("Group 9");
-        group9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        group9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                group9MouseClicked(evt);
-            }
-        });
-
-        group10.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        group10.setText("10");
-        group10.setToolTipText("Group 10");
-        group10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        group10.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                group10MouseClicked(evt);
-            }
-        });
-
-        group11.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        group11.setText("11");
-        group11.setToolTipText("Group 11");
-        group11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        group11.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                group11MouseClicked(evt);
-            }
-        });
-
-        group12.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        group12.setText("12");
-        group12.setToolTipText("Group 12");
-        group12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        group12.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                group12MouseClicked(evt);
-            }
-        });
-
-        groupVIIIB.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        groupVIIIB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        groupVIIIB.setText("VIIIB");
-        groupVIIIB.setToolTipText("Group VIIIB");
-        groupVIIIB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        groupVIIIB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                groupVIIIBMouseClicked(evt);
-            }
-        });
-
-        jLabel28.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel28.setText("-->");
-
-        jLabel29.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel29.setText("<--");
-
-        groupIB.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        groupIB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        groupIB.setText("IB");
-        groupIB.setToolTipText("Group IB");
-        groupIB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        groupIB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                groupIBMouseClicked(evt);
-            }
-        });
-
-        groupIIB.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        groupIIB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        groupIIB.setText("IIB");
-        groupIIB.setToolTipText("Group IIB");
-        groupIIB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        groupIIB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                groupIIBMouseClicked(evt);
-            }
-        });
-
-        group13.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        group13.setText("13");
-        group13.setToolTipText("Group 13 (Boron Group)");
-        group13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        group13.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                group13MouseClicked(evt);
-            }
-        });
-
-        groupIIIA.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        groupIIIA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        groupIIIA.setText("IIIA");
-        groupIIIA.setToolTipText("Group IIIA (Boron Group)");
-        groupIIIA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        groupIIIA.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                groupIIIAMouseClicked(evt);
-            }
-        });
-
-        group14.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        group14.setText("14");
-        group14.setToolTipText("Group 14 (Carbon Group)");
-        group14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        group14.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                group14MouseClicked(evt);
-            }
-        });
-
-        groupIVA.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        groupIVA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        groupIVA.setText("IVA");
-        groupIVA.setToolTipText("Group IVA (Carbon Group)");
-        groupIVA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        groupIVA.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                groupIVAMouseClicked(evt);
-            }
-        });
-
-        group15.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        group15.setText("15");
-        group15.setToolTipText("Group 15 (Pnicogens)");
-        group15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        group15.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                group15MouseClicked(evt);
+                OsmiumActionPerformed(evt);
             }
         });
 
@@ -1980,34 +1629,67 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
             }
         });
 
-        group16.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        group16.setText("16");
-        group16.setToolTipText("Group 16 (Chalcogens)");
-        group16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        group16.addMouseListener(new java.awt.event.MouseAdapter() {
+        period1.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        period1.setText("1");
+        period1.setToolTipText("Period 1");
+        period1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        period1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                group16MouseClicked(evt);
+                period1MouseClicked(evt);
             }
         });
 
-        groupVIA.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        groupVIA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        groupVIA.setText("VIA");
-        groupVIA.setToolTipText("Group VIA (Chalcogens)");
-        groupVIA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        groupVIA.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                groupVIAMouseClicked(evt);
+        Astatine.setBackground(new java.awt.Color(51, 153, 255));
+        Astatine.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Astatine.setText("At");
+        Astatine.setToolTipText("85 Astatine");
+        Astatine.setPreferredSize(new java.awt.Dimension(50, 50));
+        Astatine.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AstatineActionPerformed(evt);
             }
         });
 
-        group17.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        group17.setText("17");
-        group17.setToolTipText("Group 17 (Halogens)");
-        group17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        group17.addMouseListener(new java.awt.event.MouseAdapter() {
+        groupIB.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        groupIB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        groupIB.setText("IB");
+        groupIB.setToolTipText("Group IB");
+        groupIB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        groupIB.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                group17MouseClicked(evt);
+                groupIBMouseClicked(evt);
+            }
+        });
+
+        groupVB.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        groupVB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        groupVB.setText("VB");
+        groupVB.setToolTipText("Group VB");
+        groupVB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        groupVB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                groupVBMouseClicked(evt);
+            }
+        });
+
+        basicMetals.setBackground(new java.awt.Color(240, 115, 154));
+        basicMetals.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        basicMetals.setText("Basic Metals");
+        basicMetals.setToolTipText("");
+        basicMetals.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                basicMetalsActionPerformed(evt);
+            }
+        });
+
+        groupIVA.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        groupIVA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        groupIVA.setText("IVA");
+        groupIVA.setToolTipText("Group IVA (Carbon Group)");
+        groupIVA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        groupIVA.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                groupIVAMouseClicked(evt);
             }
         });
 
@@ -2022,14 +1704,123 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
             }
         });
 
-        groupVIIIA.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
-        groupVIIIA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        groupVIIIA.setText("VIIIA");
-        groupVIIIA.setToolTipText("Group VIIIA (Noble Gases)");
-        groupVIIIA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        groupVIIIA.addMouseListener(new java.awt.event.MouseAdapter() {
+        Sulfur.setBackground(new java.awt.Color(0, 224, 202));
+        Sulfur.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Sulfur.setText("S");
+        Sulfur.setToolTipText("16 Sulfur or Sulphur");
+        Sulfur.setBorderPainted(false);
+        Sulfur.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Sulfur.setPreferredSize(new java.awt.Dimension(50, 50));
+        Sulfur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SulfurActionPerformed(evt);
+            }
+        });
+
+        Berkelium.setBackground(new java.awt.Color(240, 37, 176));
+        Berkelium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Berkelium.setText("Bk");
+        Berkelium.setToolTipText("97 Berkelium");
+        Berkelium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Berkelium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BerkeliumActionPerformed(evt);
+            }
+        });
+
+        halogens.setBackground(new java.awt.Color(51, 153, 255));
+        halogens.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        halogens.setText("Halogens");
+        halogens.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                halogensActionPerformed(evt);
+            }
+        });
+
+        Polonium.setBackground(new java.awt.Color(0, 102, 0));
+        Polonium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Polonium.setText("Po");
+        Polonium.setToolTipText("84 Polonium");
+        Polonium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Polonium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PoloniumActionPerformed(evt);
+            }
+        });
+
+        Darmstadtium.setBackground(new java.awt.Color(240, 243, 14));
+        Darmstadtium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Darmstadtium.setText("Ds");
+        Darmstadtium.setToolTipText("110 Darmstadtium");
+        Darmstadtium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Darmstadtium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DarmstadtiumActionPerformed(evt);
+            }
+        });
+
+        group8.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        group8.setText("8");
+        group8.setToolTipText("Group 8");
+        group8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        group8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                groupVIIIAMouseClicked(evt);
+                group8MouseClicked(evt);
+            }
+        });
+
+        Europium.setBackground(new java.awt.Color(0, 221, 30));
+        Europium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Europium.setText("Eu");
+        Europium.setToolTipText("63 Europium");
+        Europium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Europium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EuropiumActionPerformed(evt);
+            }
+        });
+
+        alkalineEarthMetals.setBackground(new java.awt.Color(240, 114, 5));
+        alkalineEarthMetals.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        alkalineEarthMetals.setText("Alkaline Earth Metals");
+        alkalineEarthMetals.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                alkalineEarthMetalsActionPerformed(evt);
+            }
+        });
+
+        jLabel49.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        jLabel49.setText("States:");
+
+        Arsenic.setBackground(new java.awt.Color(0, 102, 0));
+        Arsenic.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Arsenic.setText("As");
+        Arsenic.setToolTipText("33 Arsenic");
+        Arsenic.setPreferredSize(new java.awt.Dimension(50, 50));
+        Arsenic.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ArsenicActionPerformed(evt);
+            }
+        });
+
+        Niobium.setBackground(new java.awt.Color(240, 243, 14));
+        Niobium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Niobium.setText("Nb");
+        Niobium.setToolTipText("41 Niobium");
+        Niobium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Niobium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NiobiumActionPerformed(evt);
+            }
+        });
+
+        group13.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        group13.setText("13");
+        group13.setToolTipText("Group 13 (Boron Group)");
+        group13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        group13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                group13MouseClicked(evt);
             }
         });
 
@@ -2043,144 +1834,90 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
             }
         });
 
-        alkaliMetals.setBackground(new java.awt.Color(255, 0, 0));
-        alkaliMetals.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        alkaliMetals.setText("Alkali Metals");
-        alkaliMetals.addActionListener(new java.awt.event.ActionListener() {
+        Meitnerium.setBackground(new java.awt.Color(240, 243, 14));
+        Meitnerium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Meitnerium.setText("Mt");
+        Meitnerium.setToolTipText("109 Meitnerium");
+        Meitnerium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Meitnerium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                alkaliMetalsActionPerformed(evt);
+                MeitneriumActionPerformed(evt);
             }
         });
 
-        alkalineEarthMetals.setBackground(new java.awt.Color(240, 114, 5));
-        alkalineEarthMetals.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        alkalineEarthMetals.setText("Alkaline Earth Metals");
-        alkalineEarthMetals.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                alkalineEarthMetalsActionPerformed(evt);
-            }
-        });
-
-        transitionMetals.setBackground(new java.awt.Color(240, 243, 14));
-        transitionMetals.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        transitionMetals.setText("Transition Metals");
-        transitionMetals.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                transitionMetalsActionPerformed(evt);
-            }
-        });
-
-        lanthanideSeries.setBackground(new java.awt.Color(0, 221, 30));
-        lanthanideSeries.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        lanthanideSeries.setText("Lanthanide Series");
-        lanthanideSeries.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lanthanideSeriesActionPerformed(evt);
-            }
-        });
-
-        actinideSeries.setBackground(new java.awt.Color(240, 37, 176));
-        actinideSeries.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        actinideSeries.setText("Actinide Series");
-        actinideSeries.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                actinideSeriesActionPerformed(evt);
-            }
-        });
-
-        basicMetals.setBackground(new java.awt.Color(240, 115, 154));
-        basicMetals.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        basicMetals.setText("Basic Metals");
-        basicMetals.setToolTipText("");
-        basicMetals.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                basicMetalsActionPerformed(evt);
-            }
-        });
-
-        metalloids.setBackground(new java.awt.Color(0, 102, 0));
-        metalloids.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        metalloids.setText("Metalloids");
-        metalloids.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                metalloidsActionPerformed(evt);
-            }
-        });
-
-        nonmetals.setBackground(new java.awt.Color(0, 224, 202));
-        nonmetals.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        nonmetals.setText("Nonmetals");
-        nonmetals.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nonmetalsActionPerformed(evt);
-            }
-        });
-
-        halogens.setBackground(new java.awt.Color(51, 153, 255));
-        halogens.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        halogens.setText("Halogens");
-        halogens.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                halogensActionPerformed(evt);
-            }
-        });
-
-        nobleGases.setBackground(new java.awt.Color(126, 0, 255));
-        nobleGases.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        nobleGases.setText("Noble Gases");
-        nobleGases.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nobleGasesActionPerformed(evt);
-            }
-        });
-
-        thePeriodicTableOfElements.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 36)); // NOI18N
-        thePeriodicTableOfElements.setText("The Periodic Table of the Elements");
-        thePeriodicTableOfElements.setToolTipText("Exactly what it is. :\")");
-        thePeriodicTableOfElements.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        thePeriodicTableOfElements.addMouseListener(new java.awt.event.MouseAdapter() {
+        group4.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        group4.setText("4");
+        group4.setToolTipText("Group 4");
+        group4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        group4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                thePeriodicTableOfElementsMouseClicked(evt);
+                group4MouseClicked(evt);
             }
         });
 
-        temperatureInKelvin.setMaximum(6000);
-        temperatureInKelvin.setToolTipText("Termperature Gauge --> Enter no higher than 6000 K into the textbox to the left.");
-        temperatureInKelvin.setValue(273);
-        temperatureInKelvin.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                temperatureInKelvinStateChanged(evt);
-            }
-        });
-
-        tempInKelvinTextField.setFont(new java.awt.Font("Berlin Sans FB", 0, 11)); // NOI18N
-        tempInKelvinTextField.setToolTipText("What temperature is it? (K)");
-        tempInKelvinTextField.addActionListener(new java.awt.event.ActionListener() {
+        Nickel.setBackground(new java.awt.Color(240, 243, 14));
+        Nickel.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Nickel.setText("Ni");
+        Nickel.setToolTipText("28 Nickel");
+        Nickel.setPreferredSize(new java.awt.Dimension(50, 50));
+        Nickel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tempInKelvinTextFieldActionPerformed(evt);
+                NickelActionPerformed(evt);
             }
         });
 
-        jLabel45.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        jLabel45.setText("C --> Solid");
-        jLabel45.setToolTipText("Black text indicates a solid substance.");
-
-        jLabel46.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        jLabel46.setForeground(new java.awt.Color(0, 0, 204));
-        jLabel46.setText("C --> Liquid");
-        jLabel46.setToolTipText("Blue text indicates a liquid substance.");
-
-        jLabel47.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        jLabel47.setForeground(new java.awt.Color(102, 0, 0));
-        jLabel47.setText("C --> Gas");
-        jLabel47.setToolTipText("Red text indicates a gaseous substance.");
-
-        playRelaxingMusic.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
-        playRelaxingMusic.setText("Click here to play relaxing music!");
-        playRelaxingMusic.setToolTipText("Do it. Chemistry is stressful!");
-        playRelaxingMusic.addActionListener(new java.awt.event.ActionListener() {
+        Mercury.setBackground(new java.awt.Color(240, 243, 14));
+        Mercury.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Mercury.setText("Hg");
+        Mercury.setToolTipText("80 Mercury");
+        Mercury.setPreferredSize(new java.awt.Dimension(50, 50));
+        Mercury.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                playRelaxingMusicActionPerformed(evt);
+                MercuryActionPerformed(evt);
+            }
+        });
+
+        groupVIA.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        groupVIA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        groupVIA.setText("VIA");
+        groupVIA.setToolTipText("Group VIA (Chalcogens)");
+        groupVIA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        groupVIA.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                groupVIAMouseClicked(evt);
+            }
+        });
+
+        groupVIIIB.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        groupVIIIB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        groupVIIIB.setText("VIIIB");
+        groupVIIIB.setToolTipText("Group VIIIB");
+        groupVIIIB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        groupVIIIB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                groupVIIIBMouseClicked(evt);
+            }
+        });
+
+        Helium.setBackground(new java.awt.Color(126, 0, 255));
+        Helium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Helium.setText("He");
+        Helium.setToolTipText("2 Helium");
+        Helium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Helium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HeliumActionPerformed(evt);
+            }
+        });
+
+        Uranium.setBackground(new java.awt.Color(240, 37, 176));
+        Uranium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Uranium.setText("U");
+        Uranium.setToolTipText("92 Uranium");
+        Uranium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Uranium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UraniumActionPerformed(evt);
             }
         });
 
@@ -2193,21 +1930,57 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
             }
         });
 
-        memoryGame.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        memoryGame.setText("The Periodic Table Memory Game");
-        memoryGame.setToolTipText("Test how well your know the names of the elements!");
-        memoryGame.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                memoryGameActionPerformed(evt);
+        group9.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        group9.setText("9");
+        group9.setToolTipText("Group 9");
+        group9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        group9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                group9MouseClicked(evt);
             }
         });
 
-        about.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        about.setText("About the Table");
-        about.setToolTipText("Instructions on how to use the table and credits.");
-        about.addActionListener(new java.awt.event.ActionListener() {
+        groupIA.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        groupIA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        groupIA.setText("IA");
+        groupIA.setToolTipText("Group IA (Alkali Metals)");
+        groupIA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        groupIA.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                groupIAMouseClicked(evt);
+            }
+        });
+
+        Neodymium.setBackground(new java.awt.Color(0, 221, 30));
+        Neodymium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Neodymium.setText("Nd");
+        Neodymium.setToolTipText("60 Neodymium");
+        Neodymium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Neodymium.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aboutActionPerformed(evt);
+                NeodymiumActionPerformed(evt);
+            }
+        });
+
+        Protactinium.setBackground(new java.awt.Color(240, 37, 176));
+        Protactinium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Protactinium.setText("Pa");
+        Protactinium.setToolTipText("91 Protactinium");
+        Protactinium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Protactinium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProtactiniumActionPerformed(evt);
+            }
+        });
+
+        Neptunium.setBackground(new java.awt.Color(240, 37, 176));
+        Neptunium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Neptunium.setText("Np");
+        Neptunium.setToolTipText("93 Neptunium");
+        Neptunium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Neptunium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NeptuniumActionPerformed(evt);
             }
         });
 
@@ -2216,28 +1989,258 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
         jLabel48.setText("C--> Unknown");
         jLabel48.setToolTipText("Grey text indicates the state of the element is unknown.");
 
-        jLabel49.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        jLabel49.setText("States:");
-
-        stopMusic.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
-        stopMusic.setText("Stop all music!");
-        stopMusic.setToolTipText("You can stop the relaxing music if you so wish to. :\"(");
-        stopMusic.addActionListener(new java.awt.event.ActionListener() {
+        nonmetals.setBackground(new java.awt.Color(0, 224, 202));
+        nonmetals.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        nonmetals.setText("Nonmetals");
+        nonmetals.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                stopMusicActionPerformed(evt);
+                nonmetalsActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        Livermorium.setBackground(new java.awt.Color(240, 115, 154));
+        Livermorium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Livermorium.setText("Lv");
+        Livermorium.setToolTipText("116 Livermorium");
+        Livermorium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Livermorium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LivermoriumActionPerformed(evt);
+            }
+        });
+
+        Hafnium.setBackground(new java.awt.Color(240, 243, 14));
+        Hafnium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Hafnium.setText("Hf");
+        Hafnium.setToolTipText("72 Halfnium");
+        Hafnium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Hafnium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HafniumActionPerformed(evt);
+            }
+        });
+
+        Oganesson.setBackground(new java.awt.Color(126, 0, 255));
+        Oganesson.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Oganesson.setText("Og");
+        Oganesson.setToolTipText("118 Oganesson");
+        Oganesson.setPreferredSize(new java.awt.Dimension(50, 50));
+        Oganesson.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OganessonActionPerformed(evt);
+            }
+        });
+
+        alkaliMetals.setBackground(new java.awt.Color(255, 0, 0));
+        alkaliMetals.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        alkaliMetals.setText("Alkali Metals");
+        alkaliMetals.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                alkaliMetalsActionPerformed(evt);
+            }
+        });
+
+        groupIIIA.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        groupIIIA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        groupIIIA.setText("IIIA");
+        groupIIIA.setToolTipText("Group IIIA (Boron Group)");
+        groupIIIA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        groupIIIA.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                groupIIIAMouseClicked(evt);
+            }
+        });
+
+        Zinc.setBackground(new java.awt.Color(240, 243, 14));
+        Zinc.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Zinc.setText("Zn");
+        Zinc.setToolTipText("30 Zinc");
+        Zinc.setPreferredSize(new java.awt.Dimension(50, 50));
+        Zinc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ZincActionPerformed(evt);
+            }
+        });
+
+        Bismuth.setBackground(new java.awt.Color(240, 115, 154));
+        Bismuth.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Bismuth.setText("Bi");
+        Bismuth.setToolTipText("83 Bismuth");
+        Bismuth.setPreferredSize(new java.awt.Dimension(50, 50));
+        Bismuth.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BismuthActionPerformed(evt);
+            }
+        });
+
+        Tantalum.setBackground(new java.awt.Color(240, 243, 14));
+        Tantalum.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Tantalum.setText("Ta");
+        Tantalum.setToolTipText("73 Tantalum");
+        Tantalum.setPreferredSize(new java.awt.Dimension(50, 50));
+        Tantalum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TantalumActionPerformed(evt);
+            }
+        });
+
+        group6.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        group6.setText("6");
+        group6.setToolTipText("Group 6");
+        group6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        group6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                group6MouseClicked(evt);
+            }
+        });
+
+        period7.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        period7.setText("7");
+        period7.setToolTipText("Period 7");
+        period7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        period7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                period7MouseClicked(evt);
+            }
+        });
+
+        Germanium.setBackground(new java.awt.Color(0, 102, 0));
+        Germanium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Germanium.setText("Ge");
+        Germanium.setToolTipText("32 Germanium");
+        Germanium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Germanium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GermaniumActionPerformed(evt);
+            }
+        });
+
+        group12.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        group12.setText("12");
+        group12.setToolTipText("Group 12");
+        group12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        group12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                group12MouseClicked(evt);
+            }
+        });
+
+        Palladium.setBackground(new java.awt.Color(240, 243, 14));
+        Palladium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Palladium.setText("Pd");
+        Palladium.setToolTipText("46 Palladium");
+        Palladium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Palladium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PalladiumActionPerformed(evt);
+            }
+        });
+
+        transitionMetals.setBackground(new java.awt.Color(240, 243, 14));
+        transitionMetals.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        transitionMetals.setText("Transition Metals");
+        transitionMetals.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transitionMetalsActionPerformed(evt);
+            }
+        });
+
+        Tellurium.setBackground(new java.awt.Color(0, 102, 0));
+        Tellurium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Tellurium.setText("Te");
+        Tellurium.setToolTipText("52 Tellurium");
+        Tellurium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Tellurium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TelluriumActionPerformed(evt);
+            }
+        });
+
+        Molybdenum.setBackground(new java.awt.Color(240, 243, 14));
+        Molybdenum.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Molybdenum.setText("Mo");
+        Molybdenum.setToolTipText("42 Molybdenum");
+        Molybdenum.setPreferredSize(new java.awt.Dimension(50, 50));
+        Molybdenum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MolybdenumActionPerformed(evt);
+            }
+        });
+
+        Krypton.setBackground(new java.awt.Color(126, 0, 255));
+        Krypton.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Krypton.setText("Kr");
+        Krypton.setToolTipText("36 Krypton");
+        Krypton.setPreferredSize(new java.awt.Dimension(50, 50));
+        Krypton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KryptonActionPerformed(evt);
+            }
+        });
+
+        lanthanideSeries.setBackground(new java.awt.Color(0, 221, 30));
+        lanthanideSeries.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        lanthanideSeries.setText("Lanthanide Series");
+        lanthanideSeries.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lanthanideSeriesActionPerformed(evt);
+            }
+        });
+
+        Neon.setBackground(new java.awt.Color(126, 0, 255));
+        Neon.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Neon.setText("Ne");
+        Neon.setToolTipText("10 Neon");
+        Neon.setPreferredSize(new java.awt.Dimension(50, 50));
+        Neon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NeonActionPerformed(evt);
+            }
+        });
+
+        Strontium.setBackground(new java.awt.Color(240, 114, 5));
+        Strontium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Strontium.setText("Sr");
+        Strontium.setToolTipText("38 Strontium");
+        Strontium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Strontium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StrontiumActionPerformed(evt);
+            }
+        });
+
+        groupVIIIA.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        groupVIIIA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        groupVIIIA.setText("VIIIA");
+        groupVIIIA.setToolTipText("Group VIIIA (Noble Gases)");
+        groupVIIIA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        groupVIIIA.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                groupVIIIAMouseClicked(evt);
+            }
+        });
+
+        Rubidium.setBackground(new java.awt.Color(255, 0, 0));
+        Rubidium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        Rubidium.setText("Rb");
+        Rubidium.setToolTipText("37 Rubidium");
+        Rubidium.setPreferredSize(new java.awt.Dimension(50, 50));
+        Rubidium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RubidiumActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 24, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(period3, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(period1, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(period2, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -2246,35 +2249,35 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                             .addComponent(period6, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(period7, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(Sodium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(7, 7, 7)
                                         .addComponent(Magnesium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(Lithium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(Beryllium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(22, 22, 22)
                                         .addComponent(group1))
-                                    .addGroup(layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(12, 12, 12)
                                         .addComponent(groupIA, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(30, 30, 30)
                                         .addComponent(group3))
-                                    .addGroup(layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(18, 18, 18)
                                         .addComponent(groupIIIB)))
                                 .addGap(20, 20, 20)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addComponent(Protactinium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(Uranium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2300,7 +2303,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                                 .addComponent(Nobelium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(Lawrencium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createSequentialGroup()
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addComponent(Praseodymium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(Neodymium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2328,9 +2331,9 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                                 .addComponent(Lutetium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(stopMusic))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(layout.createSequentialGroup()
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addComponent(Rutherfordium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(Dubnium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2352,9 +2355,9 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                                 .addComponent(Nihonium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(Flerovium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                    .addGroup(layout.createSequentialGroup()
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                         .addComponent(Hafnium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                         .addComponent(Tantalum, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2372,7 +2375,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                                         .addComponent(Gold, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                         .addComponent(Mercury, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(layout.createSequentialGroup()
+                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                         .addComponent(Zicronium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                         .addComponent(Niobium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2391,102 +2394,102 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                         .addComponent(Cadmium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(layout.createSequentialGroup()
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                         .addComponent(Indium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                         .addComponent(Tin, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(layout.createSequentialGroup()
+                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                         .addComponent(Thallium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                         .addComponent(Lead, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(Titanium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGroup(layout.createSequentialGroup()
+                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                         .addGap(10, 10, 10)
                                                         .addComponent(groupIVB))
-                                                    .addGroup(layout.createSequentialGroup()
+                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                         .addGap(21, 21, 21)
                                                         .addComponent(group4)))
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                            .addGroup(jPanel1Layout.createSequentialGroup()
                                                                 .addGap(21, 21, 21)
-                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                                                     .addComponent(groupVB)
-                                                                    .addGroup(layout.createSequentialGroup()
+                                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                                         .addComponent(group5)
                                                                         .addGap(13, 13, 13)))
-                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                    .addGroup(layout.createSequentialGroup()
+                                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                                         .addComponent(groupVIB)
                                                                         .addGap(29, 29, 29))
-                                                                    .addGroup(layout.createSequentialGroup()
+                                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                                         .addGap(42, 42, 42)
                                                                         .addComponent(group6)
                                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                                     .addComponent(groupVIIB)
-                                                                    .addGroup(layout.createSequentialGroup()
+                                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                                         .addGap(12, 12, 12)
                                                                         .addComponent(group7))))
-                                                            .addGroup(layout.createSequentialGroup()
+                                                            .addGroup(jPanel1Layout.createSequentialGroup()
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                                     .addComponent(tempConverter, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                    .addGroup(layout.createSequentialGroup()
+                                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                                         .addComponent(Vanadium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                         .addComponent(Chromium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                         .addComponent(Manganese, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                                     .addComponent(about, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                                                 .addGap(140, 140, 140)
                                                                 .addComponent(tempInKelvinTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                            .addGroup(layout.createSequentialGroup()
-                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                                         .addGap(7, 7, 7)
-                                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                            .addGroup(layout.createSequentialGroup()
+                                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                            .addGroup(jPanel1Layout.createSequentialGroup()
                                                                                 .addComponent(Iron, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                                 .addGap(6, 6, 6))
-                                                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                                                                 .addComponent(jLabel29)
                                                                                 .addGap(18, 18, 18)))
-                                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                                             .addComponent(Cobalt, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                             .addComponent(groupVIIIB, javax.swing.GroupLayout.Alignment.TRAILING))
-                                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                            .addGroup(layout.createSequentialGroup()
+                                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                            .addGroup(jPanel1Layout.createSequentialGroup()
                                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                                 .addComponent(Nickel, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                                 .addComponent(Copper, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                                 .addComponent(Zinc, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                            .addGroup(layout.createSequentialGroup()
+                                                                            .addGroup(jPanel1Layout.createSequentialGroup()
                                                                                 .addGap(23, 23, 23)
                                                                                 .addComponent(jLabel28)
                                                                                 .addGap(98, 98, 98)
                                                                                 .addComponent(groupIIB))))
-                                                                    .addGroup(layout.createSequentialGroup()
+                                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                                             .addComponent(temperatureInKelvin, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                             .addComponent(playRelaxingMusic, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                             .addComponent(memoryGame, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                                                 .addGap(6, 6, 6))
-                                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                                                 .addGap(30, 30, 30)
-                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                                     .addComponent(groupIB)
-                                                                    .addGroup(layout.createSequentialGroup()
+                                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                                         .addComponent(group8)
                                                                         .addGap(49, 49, 49)
                                                                         .addComponent(group9)
@@ -2497,41 +2500,41 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                                 .addComponent(group12)
                                                                 .addGap(27, 27, 27)))
-                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                            .addGroup(layout.createSequentialGroup()
+                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addGroup(jPanel1Layout.createSequentialGroup()
                                                                 .addComponent(Gallium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                 .addComponent(Germanium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                 .addGap(0, 0, Short.MAX_VALUE))
-                                                            .addGroup(layout.createSequentialGroup()
+                                                            .addGroup(jPanel1Layout.createSequentialGroup()
                                                                 .addComponent(Aluminium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                                 .addComponent(Silicon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                                                 .addGap(0, 0, Short.MAX_VALUE)
                                                                 .addComponent(Boron, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                 .addComponent(Carbon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                            .addGroup(layout.createSequentialGroup()
+                                                            .addGroup(jPanel1Layout.createSequentialGroup()
                                                                 .addGap(13, 13, 13)
-                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                    .addGroup(layout.createSequentialGroup()
+                                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                                         .addComponent(groupIIIA)
                                                                         .addGap(18, 18, 18)
                                                                         .addComponent(groupIVA))
-                                                                    .addGroup(layout.createSequentialGroup()
+                                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                                         .addComponent(group13)
                                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                                         .addComponent(group14)
                                                                         .addGap(27, 27, 27))))))
-                                                    .addGroup(layout.createSequentialGroup()
+                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                         .addGap(6, 6, 6)
                                                         .addComponent(thePeriodicTableOfElements)))))
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(layout.createSequentialGroup()
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                         .addComponent(Phosphorus, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                         .addComponent(Sulfur, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2539,7 +2542,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                                         .addComponent(Chlorine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                         .addComponent(Argon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(layout.createSequentialGroup()
+                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                         .addComponent(Arsenic, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                         .addComponent(Selenium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2547,7 +2550,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                                         .addComponent(Bromine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                         .addComponent(Krypton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(layout.createSequentialGroup()
+                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                         .addComponent(Bismuth, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                         .addComponent(Polonium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2555,7 +2558,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                                         .addComponent(Astatine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                         .addComponent(Radon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(layout.createSequentialGroup()
+                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                         .addComponent(Antimony, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                         .addComponent(Tellurium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2563,7 +2566,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                                         .addComponent(Iodine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                         .addComponent(Xenon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                                         .addComponent(Nitrogen, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                         .addComponent(Oxygen, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2571,7 +2574,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                                         .addComponent(Fluorine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                         .addComponent(Neon, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                            .addGroup(layout.createSequentialGroup()
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addGap(6, 6, 6)
                                                 .addComponent(Moscovium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2580,87 +2583,84 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                                 .addComponent(Tennessine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(Oganesson, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(group18)
                                                 .addGap(23, 23, 23))
-                                            .addGroup(layout.createSequentialGroup()
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addGap(13, 13, 13)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(layout.createSequentialGroup()
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                                         .addComponent(groupVA)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                            .addGroup(layout.createSequentialGroup()
-                                                                .addGap(10, 10, 10)
+                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                                                 .addComponent(groupVIA)
-                                                                .addGap(30, 30, 30)
-                                                                .addComponent(groupVIIA))
-                                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(groupVIIA)
+                                                                .addGap(12, 12, 12))
+                                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                                                 .addComponent(group16)
-                                                                .addGap(48, 48, 48)
+                                                                .addGap(37, 37, 37)
                                                                 .addComponent(group17)
-                                                                .addGap(17, 17, 17))))
+                                                                .addGap(28, 28, 28))))
                                                     .addComponent(group15))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(groupVIIIA)
                                                     .addComponent(Helium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                        .addGap(59, 59, 59))))
-                            .addGroup(layout.createSequentialGroup()
+                                        .addGap(48, 48, 48))))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(Hydrogen, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(groupIIA, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(9, 9, 9)
                                         .addComponent(group2)))
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel45)
                                     .addComponent(jLabel47)
                                     .addComponent(jLabel46)
-                                    .addGroup(layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel48))
                                     .addComponent(jLabel49)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(Francium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(Radium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(Lanthanum, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(actinideSeriesRange, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Cerium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(Cesium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Barium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lanthanideSeriesRange, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(Rubidium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Strontium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Yttrium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(Potassium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Calcium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Scandium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(64, 64, 64)
                                 .addComponent(Actinium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Thorium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 7, Short.MAX_VALUE)
-                        .addComponent(textArea1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
+                                .addComponent(Thorium, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(alkaliMetals)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(alkalineEarthMetals)
@@ -2679,74 +2679,71 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(halogens)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(nobleGases)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addComponent(nobleGases)))
+                .addContainerGap())
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(textArea1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(684, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(group13)
                                             .addComponent(group14))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(groupIVA)
                                             .addComponent(groupIIIA)))
-                                    .addGroup(layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(thePeriodicTableOfElements)
                                         .addGap(30, 30, 30)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel49)
-                                            .addGroup(layout.createSequentialGroup()
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addComponent(temperatureInKelvin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                     .addComponent(memoryGame)
                                                     .addComponent(about)))))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addGap(14, 14, 14)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(group17)
-                                                    .addComponent(group16)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                        .addGap(13, 13, 13)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(group16)
+                                                        .addComponent(group17))
                                                     .addComponent(group15))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                     .addComponent(groupVIIA)
                                                     .addComponent(groupVIA)
                                                     .addComponent(groupVA)))
-                                            .addGroup(layout.createSequentialGroup()
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addComponent(group18)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(groupVIIIA)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(Helium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                 .addComponent(Boron, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(Carbon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(Nitrogen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(Oxygen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                 .addComponent(Fluorine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(Neon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(Aluminium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(Silicon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(Phosphorus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2754,18 +2751,18 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                             .addComponent(Chlorine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(Argon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(63, 63, 63))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(playRelaxingMusic)
                                             .addComponent(tempConverter))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                                 .addComponent(group5)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(groupVB))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                     .addComponent(group7)
                                                     .addComponent(group6)
                                                     .addComponent(group8)
@@ -2774,9 +2771,9 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                                     .addComponent(group11)
                                                     .addComponent(group12))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(groupVIIIB, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                         .addComponent(groupVIIB)
                                                         .addComponent(groupVIB)
                                                         .addComponent(jLabel29)
@@ -2784,7 +2781,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                                         .addComponent(groupIB)
                                                         .addComponent(groupIIB)))))
                                         .addGap(64, 64, 64)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(Cadmium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Silver, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Palladium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2800,7 +2797,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                     .addComponent(Iodine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Xenon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(Mercury, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Gold, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Platinum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2816,7 +2813,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                     .addComponent(Astatine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Radon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(Copernicium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Livermorium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Moscovium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2824,7 +2821,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                     .addComponent(Nihonium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Tennessine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Oganesson, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel45)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel46)
@@ -2833,15 +2830,15 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel48)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(group4)
                                     .addComponent(group3))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(groupIVB)
                                     .addComponent(groupIIIB))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(Titanium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Manganese, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Chromium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2862,7 +2859,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Hafnium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(Rutherfordium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Dubnium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Seaborgium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2871,11 +2868,11 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                     .addComponent(Meitnerium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Darmstadtium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Roentgenium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(28, 28, 28)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(Praseodymium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(Neodymium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(Promethium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2884,14 +2881,14 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                         .addComponent(Gadolinium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(Terbium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(Dysprosium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(Erbium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(Holmium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(Thulium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(Ytterbium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(Lutetium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(Protactinium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Uranium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Neptunium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2905,70 +2902,70 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                                     .addComponent(Mendelevium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Nobelium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Lawrencium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(stopMusic)
                                 .addGap(41, 41, 41))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(group1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(groupIA)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(Hydrogen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(period1)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(group2)
                                     .addComponent(tempInKelvinTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(groupIIA)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Lithium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Beryllium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(period2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Sodium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Magnesium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(period3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Scandium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Potassium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Calcium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(period4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Rubidium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Strontium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Yttrium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(period5))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lanthanideSeriesRange, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Cesium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Barium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(period6))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(actinideSeriesRange, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Francium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Radium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(period7))
                         .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Lanthanum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Cerium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Actinium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Thorium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(alkaliMetals)
                     .addComponent(alkalineEarthMetals)
                     .addComponent(transitionMetals)
@@ -2979,7 +2976,25 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
                     .addComponent(nonmetals)
                     .addComponent(halogens)
                     .addComponent(nobleGases))
-                .addGap(19, 19, 19))
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(1274, Short.MAX_VALUE)
+                .addComponent(textArea1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(11, Short.MAX_VALUE)
+                .addComponent(textArea1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(675, 675, 675))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -8077,6 +8092,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton lanthanideSeries;
     private javax.swing.JTextField lanthanideSeriesRange;
     private javax.swing.JButton memoryGame;
