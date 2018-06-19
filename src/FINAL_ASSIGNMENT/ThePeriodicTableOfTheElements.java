@@ -271,7 +271,7 @@ public class ThePeriodicTableOfTheElements extends javax.swing.JFrame implements
 
         textArea1.setVisible(false);
 
-        jPanel1.setBackground(new java.awt.Color(153, 255, 153));
+        jPanel1.setBackground(new java.awt.Color(153, 153, 255));
 
         Francium.setBackground(new java.awt.Color(255, 0, 0));
         Francium.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N

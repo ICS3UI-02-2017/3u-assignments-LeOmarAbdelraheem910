@@ -195,7 +195,7 @@ public class PeriodicTableMemoryGame extends javax.swing.JFrame implements Actio
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(153, 255, 153));
+        jPanel1.setBackground(new java.awt.Color(153, 153, 255));
 
         Bismuth.setEditable(false);
         Bismuth.setBackground(new java.awt.Color(0, 0, 0));
